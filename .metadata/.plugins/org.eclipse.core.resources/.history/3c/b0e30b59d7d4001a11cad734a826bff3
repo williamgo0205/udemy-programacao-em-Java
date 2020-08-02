@@ -1,0 +1,10 @@
+// A Função main()
+
+// Linguagem Orientada a objeto
+public class Programa03 {
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

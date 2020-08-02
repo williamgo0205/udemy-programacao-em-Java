@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1595173287838_2" label="Programação_Em_Java_Basico_ao_Avançado" name="Programação_Em_Java_Basico_ao_Avançado">
+<item elementID="=GeekJava" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=JavaEssencial" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1595172201537_0" label="Window Working Set" name="Aggregate for window 1595172201537"/>
+</workingSetManager>
