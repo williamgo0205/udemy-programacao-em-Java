@@ -1,0 +1,15 @@
+// If, else, if else
+public class Programa04 {
+
+	public static void main(String[] args) {
+		// Declarando e inicializando a variável
+		int numero = 9;
+		
+		// Se
+		if (numero > 5) {
+			System.out.println("Sim o número "+ numero +" é maior que 5");
+		}
+		
+	}
+
+}
