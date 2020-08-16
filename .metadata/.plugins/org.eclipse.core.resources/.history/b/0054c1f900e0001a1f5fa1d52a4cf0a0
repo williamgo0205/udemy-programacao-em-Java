@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+// While e Do While
+public class Programa07 {
+
+	public static void main(String[] args) {
+        // Para receber dados do usuário via teclado
+		Scanner teclado = new Scanner(System.in);
+		
+	}
+
+}
