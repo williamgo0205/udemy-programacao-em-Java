@@ -1,0 +1,13 @@
+// Tipos de dados
+// Números (Inteiros e Reais)
+public class Programa12 {
+
+	// Tipos primitivos/primitivos
+	// Por padrão os números reais em Java são considerados double
+	float preco1 = 23.4f;
+	double preco2 = 23.4;
+
+	public static void main(String[] args) {
+
+	}
+}

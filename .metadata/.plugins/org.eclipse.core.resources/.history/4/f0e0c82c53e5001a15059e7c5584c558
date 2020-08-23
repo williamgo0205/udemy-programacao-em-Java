@@ -1,0 +1,18 @@
+// Tipo de dados Alfanuméricos
+// Caracteres e Strings
+public class Programa13 {
+
+	public static void main(String[] args) {
+		// Tipos Primitivos
+		char letra1 = 'a';
+		char letra2 = 97; // 97 em deciaml é o caractere "a" na tabela ASCII
+		letra2 = (char) (letra2 + 1); // cast
+
+		System.out.println("Letra1: " + letra1);
+		System.out.println("Letra2: " + letra2);
+		
+		// Tipos não primitivos
+		
+	}
+
+}
