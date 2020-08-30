@@ -1,0 +1,3 @@
+1598802041114	Extract method 'cadastrar_dados'
+1598802180257	Extract method 'imprime_dados'
+1598802473454	Rename method 'imprime_dados'

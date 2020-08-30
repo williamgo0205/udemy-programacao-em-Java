@@ -1,0 +1,33 @@
+// Criando npssas próprias funções
+
+/*
+Faça um programa, que receba diversos nomes 
+de frutas do usuário e no final imprima essas 
+frutas em ordem contrária. 
+
+O programa deve
+solicitar ao usuário quantas frutas ele quer 
+informar. 
+
+Informe quantas frutas deseja Cadastrar:
+2
+
+Informe o nome de uma fruta:
+Manga
+
+Informe o nome de uma fruta:
+Goiaba
+
+Goiaba
+Manga
+*/
+
+public class Programa20 {
+
+	public static void main(String[] args) {
+		
+		
+		
+	}
+
+}
