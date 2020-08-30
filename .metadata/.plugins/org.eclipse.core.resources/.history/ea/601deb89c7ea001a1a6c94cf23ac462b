@@ -1,0 +1,18 @@
+// Vetores Parte 2
+public class Programa17 {
+
+	public static void main(String[] args) {
+		// Declaração e definição de tamanhp do vetor
+		int numeros[] = new int[10];
+		
+		System.out.println("Tamanho do vetor " + numeros.length);
+		
+		for(int i = 0; i < numeros.length; i++) {
+			numeros[i] = i + 3;
+		}
+		
+		System.out.println("Primeiro Elemento do vetor " + numeros[0]); // Primeiro Elemento
+		System.out.println("Última Elemento do vetor " + numeros[9]); // Ultimo Elemento
+	}
+
+}
