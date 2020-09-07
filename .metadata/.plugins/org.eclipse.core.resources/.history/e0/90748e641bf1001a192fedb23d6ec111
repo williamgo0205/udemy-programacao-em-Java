@@ -1,0 +1,31 @@
+// Classes
+
+// Atributos
+
+// Metodos
+
+// Construtotes
+
+/*
+- Sempre um construtor vazio tem a seguinte forma:
+
+public NomeDaClasse() {}
+*/
+package classes;
+
+public class Pessoa {
+	public String nome, email;
+	public int ano_nascimento;
+	
+	//Construtir Vazio
+	public Pessoa() {}
+	
+	// Construtor com Parâmetros
+	public Pessoa(String nome, String email, int ano_nascimento) {
+		super();
+		this.nome = nome;
+		this.email = email;
+		this.ano_nascimento = ano_nascimento;
+	}
+
+}

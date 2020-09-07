@@ -1,0 +1,20 @@
+// Aula Classes
+
+/*
+- O nome da classe se inicia com letra maiúscula
+- O nome não deveconter acentuação, caracteres especiais, espaço
+- Nas classes Java não eiste a implementação da função Main()
+- O nome da classe Java DEVE ser o mesmo nome do arquivo Java.
+- Toda classe Java possui a seguinte forma:
+
+public class NomeDaClasse{
+
+}
+*/
+package classes;
+
+public class Produto {
+	
+	
+
+}

@@ -7,4 +7,7 @@
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="javax.annotation.Generated"/>
+<fullyQualifiedTypeName name="classes.Produto"/>
+<fullyQualifiedTypeName name="classes.Pessoa"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,10 @@
+// Classes
+
+// Atributos
+package classes;
+
+public class Pessoa {
+	String nome;
+	int ano_nascimento;
+
+}

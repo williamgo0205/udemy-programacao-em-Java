@@ -1,0 +1,12 @@
+// Classes
+
+// Atributos
+
+// Metodos
+package classes;
+
+public class Pessoa {
+	public String nome, email;
+	public int ano_nascimento;
+
+}

@@ -1,0 +1,22 @@
+import classes.Produto;
+
+// Objetos
+
+/*
+- Objetos são produtos/instaâncias da classe.
+*/
+public class Programa22 {
+
+	public static void main(String[] args) {
+		
+		// Declaração de um objeto
+		Produto p0;
+		
+		// Declaração e instanciação/iniciação do objeto
+		Produto p1 = new Produto();
+		
+		System.out.println(p1);
+		System.out.println(p0);
+	}
+
+}

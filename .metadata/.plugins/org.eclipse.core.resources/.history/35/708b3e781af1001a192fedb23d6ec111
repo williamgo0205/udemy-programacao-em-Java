@@ -1,0 +1,18 @@
+import classes.Pessoa;
+
+// Construtor
+public class Programa24 {
+
+	public static void main(String[] args) {
+		Pessoa pessoa1 = new Pessoa(); // (Método) Construtor
+		
+		pessoa1.nome = "Felicity Jones";
+		pessoa1.email = "felicity@gmail.com";
+		pessoa1.ano_nascimento = 1986;
+		
+		System.out.println("Nome: " + pessoa1.nome);
+		System.out.println("E-Mail: " + pessoa1.email);
+		System.out.println("Ano de Nascimento: " + pessoa1.ano_nascimento);
+	}
+
+}

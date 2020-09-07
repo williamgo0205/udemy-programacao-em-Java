@@ -9,6 +9,118 @@
 	<atom:link rel="self" href="http://planeteclipse.org/rss20.xml" type="application/rss+xml"/>
 
 <item>
+	<title>Tom Schindl: Observing your Quarkus Server with “JFR Event Streaming” via Websockets</title>
+	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5275</guid>
+	<link>https://tomsondev.bestsolution.at/2020/09/05/observing-your-quarkus-server-with-jfr-event-streaming-via-websockets/</link>
+	<description>&lt;p&gt;Having reviewed thousands lines if code last week I had the urgent need to code something for fun and inspired by &lt;a href=&quot;https://www.morling.dev/&quot;&gt;Gunnar Morlings&lt;/a&gt; tweets on &lt;a href=&quot;https://openjdk.java.net/jeps/349&quot;&gt;“JFR Event Streaming – JEP 349”&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;embed-twitter&quot;&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;&lt;img alt=&quot;ðŸ“¢&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f4e2.png&quot; style=&quot;height: 1em;&quot; /&gt; Very happy to announce &lt;a href=&quot;https://twitter.com/hashtag/JmFrX?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#JmFrX&lt;/a&gt;, a bridge from JMX to the JDK Flight Recorder &lt;img alt=&quot;ðŸŽ‰&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f389.png&quot; style=&quot;height: 1em;&quot; /&gt;!&lt;/p&gt;
+&lt;p&gt;&quot;JmFrX allows you to periodically record the attributes from any JMX MBean into JFR files, which you then can analyse using JDK Mission Control.&quot; Feedback welcome!&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;ðŸ“�&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f4dd.png&quot; style=&quot;height: 1em;&quot; /&gt; &lt;a href=&quot;https://t.co/QoZJy3K77S&quot;&gt;https://t.co/QoZJy3K77S&lt;/a&gt; &lt;a href=&quot;https://t.co/8ntFjMN5z1&quot;&gt;pic.twitter.com/8ntFjMN5z1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;— Gunnar Morling &lt;img alt=&quot;ðŸŒ�&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f30d.png&quot; style=&quot;height: 1em;&quot; /&gt; (@gunnarmorling) &lt;a href=&quot;https://twitter.com/gunnarmorling/status/1295747784151359488?ref_src=twsrc%5Etfw&quot;&gt;August 18, 2020&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;I hacked this afternoon in the sun and I’m now able to observe an Quarkus-Server via Websockets retrieving JFR Events rendering them via &lt;a href=&quot;https://www.chartjs.org/&quot; rel=&quot;nofollow&quot;&gt;https://www.chartjs.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;This is a very early draft implementation who is only able to observe the “jdk.CPULoad”-Event and just a PoC to see if this is possible at all but I’m quite happy with my afternoon work (well now it is already 10pm &lt;img alt=&quot;ðŸ™‚&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;</description>
+	<pubDate>Sat, 05 Sep 2020 20:15:40 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Dirigible: Release 5.2</title>
+	<guid isPermaLink="false">http://dirigible.io/release/2020/09/02/news_new_release_5_2</guid>
+	<link>http://dirigible.io/release/2020/09/02/news_new_release_5_2.html</link>
+	<description>&lt;p&gt;New version &lt;a href=&quot;https://download.eclipse.org/dirigible/drops/R-5.2-202009020052/index.html&quot;&gt;5.2&lt;/a&gt; has been released.&lt;/p&gt;
+
+&lt;p&gt;Release is of &lt;em&gt;Type A&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OData generation from Entity Data Model&lt;/li&gt;
+  &lt;li&gt;OData rest layer added by default in the full stack application&lt;/li&gt;
+  &lt;li&gt;Expand support for OData in templates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fixes&quot;&gt;Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fix bpmn editor works with older version of jquery&lt;/li&gt;
+  &lt;li&gt;Minor fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;statistics&quot;&gt;Statistics&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;54K+ Users&lt;/li&gt;
+  &lt;li&gt;77K+ Sessions&lt;/li&gt;
+  &lt;li&gt;184 Countries&lt;/li&gt;
+  &lt;li&gt;395 Repositories in DirigibleLabs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;operational&quot;&gt;Operational&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Available packages for download - &lt;a href=&quot;https://download.eclipse.org/dirigible/drops/R-5.2-202009020052/index.html&quot;&gt;https://download.eclipse.org/dirigible/drops/R-5.2-202009020052/index.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Docker images at Docker Hub under DirigibleLabs organization:	&lt;a href=&quot;https://hub.docker.com/u/dirigiblelabs/&quot;&gt;https://hub.docker.com/u/dirigiblelabs/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Maven Central artifacts by org.eclipse.dirigible namespace: &lt;a href=&quot;https://search.maven.org/search?q=org.eclipse.dirigible&quot;&gt;https://search.maven.org/search?q=org.eclipse.dirigible&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The full list of bug-fixes and enhancements can be found here: &lt;a href=&quot;https://github.com/eclipse/dirigible/milestone/36?closed=1&quot;&gt;https://github.com/eclipse/dirigible/milestone/36?closed=1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The source code is available at GitHub repository here: &lt;a href=&quot;https://github.com/eclipse/dirigible/tree/5.2.0&quot;&gt;https://github.com/eclipse/dirigible/tree/5.2.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The instant trial is updated accordingly with the released version here: &lt;a href=&quot;http://trial.dirigible.io&quot;&gt;http://trial.dirigible.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;enjoy&quot;&gt;Enjoy!&lt;/h4&gt;</description>
+	<pubDate>Wed, 02 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Ditto: Announcing Eclipse Ditto Release 1.2.0</title>
+	<guid isPermaLink="true">https://www.eclipse.org/ditto/2020-08-31-release-announcement-120.html</guid>
+	<link>https://www.eclipse.org/ditto/2020-08-31-release-announcement-120.html</link>
+	<description>&lt;p&gt;Today, the Ditto team is happy to announce the second minor (feature) update of Ditto &lt;code class=&quot;highlighter-rouge&quot;&gt;1.x&lt;/code&gt;:&lt;br /&gt;
+&lt;strong&gt;Eclipse Ditto 1.2.0&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1.2.0 focuses on the following areas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;“At least once” (QoS 1) processing of messages consumed/sent via Ditto’s managed &lt;a href=&quot;https://www.eclipse.org/ditto/basic-connections.html&quot;&gt;connections&lt;/a&gt;
+ (via &lt;a href=&quot;https://www.eclipse.org/ditto/basic-acknowledgements.html&quot;&gt;acknowledgements&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Addition of a &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;_created&quot;&lt;/code&gt; timestamp for newly created digital twins (things)&lt;/li&gt;
+  &lt;li&gt;Possibility to inject arbitrary &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;_metadata&quot;&lt;/code&gt; when modifying digital twins (things)&lt;/li&gt;
+  &lt;li&gt;Authenticate HTTP push connections with client certificates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please have a look at the &lt;a href=&quot;https://www.eclipse.org/ditto/release_notes_120.html&quot;&gt;1.2.0 release notes&lt;/a&gt; for a more detailed information on the release.&lt;/p&gt;
+
+&lt;h2 id=&quot;artifacts&quot;&gt;Artifacts&lt;/h2&gt;
+
+&lt;p&gt;The new Java artifacts have been published at the &lt;a href=&quot;https://repo.eclipse.org/content/repositories/ditto/&quot;&gt;Eclipse Maven repository&lt;/a&gt;
+as well as &lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/ditto/&quot;&gt;Maven central&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also the &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Ditto Java client&lt;/a&gt;’s artifacts were published to Maven central.&lt;/p&gt;
+
+&lt;p&gt;The Docker images have been pushed to Docker Hub:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-policies/&quot;&gt;eclipse/ditto-policies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things/&quot;&gt;eclipse/ditto-things&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things-search/&quot;&gt;eclipse/ditto-things-search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-gateway/&quot;&gt;eclipse/ditto-gateway&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-connectivity/&quot;&gt;eclipse/ditto-connectivity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-concierge/&quot;&gt;eclipse/ditto-concierge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kubernetes-ready-helm-chart&quot;&gt;Kubernetes ready: Helm chart&lt;/h2&gt;
+
+&lt;p&gt;In order to run Eclipse Ditto in a Kubernetes environment, best rely on the official 
+&lt;a href=&quot;https://hub.helm.sh/charts/eclipse-iot/ditto&quot;&gt;Helm chart&lt;/a&gt; and deploy Ditto via the Helm package manager.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;–&lt;br /&gt;
+The Eclipse Ditto team&lt;/p&gt;</description>
+	<pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>Donald Raab: Eclipse Collections has both object and primitive collections supporting all Java primitive types.</title>
 	<guid isPermaLink="false">https://medium.com/p/10e61f3b4989</guid>
 	<link>https://medium.com/@donraab/eclipse-collections-has-both-object-and-primitive-collections-supporting-all-java-primitive-types-10e61f3b4989?source=rss-df39b86e9f04------2</link>
@@ -2334,55 +2446,6 @@ will do the right thing.&lt;/p&gt;</description>
 	<pubDate>Tue, 30 Jun 2020 15:22:14 +0000</pubDate>
 </item>
 <item>
-	<title>Eclipse Dirigible: Eclipse Dirigible 5.0 - celebrating 5 years in open source with 5 killer features</title>
-	<guid isPermaLink="false">http://dirigible.io/blogs/2020/06/29/celebrating_5_years_in_open_source</guid>
-	<link>http://dirigible.io/blogs/2020/06/29/celebrating_5_years_in_open_source.html</link>
-	<description>&lt;p&gt;Eclipse Dirigible just turned five years in open source. Five years in Eclipse Foundation within the Eclipse Cloud Development group. Five years of innovations with many friends around the globe, lots of realised dreams, first-class happiness.&lt;/p&gt;
-
-&lt;h4 id=&quot;graalvms-graaljs&quot;&gt;&lt;a href=&quot;https://www.graalvm.org/&quot;&gt;GraalVM&lt;/a&gt;â€™s &lt;a href=&quot;https://github.com/graalvm/graaljs&quot;&gt;GraalJS&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Fast, easy-to-use, easy-to-upgrade from Nashorn or Rhino, ECMA 2020 compliant, deeply integrated with the host JVM, fast interoperability with JVM languages like Scala and Kotlin, embeddable, JVM agnostic, stable, robustâ€¦ just perfect for our needs. We were quite happy so far by using Mozilla Rhino as the default scripting engine, but its slow adoption of the most recent ECMA specs was definitely an issue. Hence, we were kind of forced to look for another option for the future development of the stack. The biggest surprise was about the time and efforts it took to adapt our API layer to use GraalJS instead of Rhino - literally zero. How many projects or products support straigthforward and compatible migration from one major version to another? The fact that GraalJS is even a totally different project, driven by different people and still provides a smooth migration path from Rhino, deserves admirations.&lt;/p&gt;
-
-&lt;h4 id=&quot;chrome-devtools&quot;&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools&quot;&gt;Chrome DevTools&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Another invaluable gift coming along with GraalJS is the Chrome DevTools debug protocol support. A few years ago we tried to adapt Rhino and V8 debug API and to expose them to the Chrome DevTools, but it was quite unstable due to the lack of public specification of the debug protocol itself and on the other hand not so trivial behavior of the tools themselves. So, you can imagine how speechless we were left once we tried to connect the dots and it just worked. The decision to replace our Debug Perspectiveâ€™s own tools with the well-known yet very powerful Chrome DevTools came naturally.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Debug GraalJS in Chrome DevTools&quot; class=&quot;img-responsive&quot; src=&quot;http://dirigible.io/img/posts/20200629/debug_graaljs_chromedevtools.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;xtermjs&quot;&gt;&lt;a href=&quot;https://xtermjs.org/&quot;&gt;Xterm.js&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;We were also happy to add one more jewel in the most recent release was the Xterm.js terminal interface written in JavaScript and run entirely in the browser. It is adopted quite widely by many tools already as most prominent ones are the VSCode itslef and Eclipse Theia/Che projects. It connects to the server-side endpoint via websocket, so no need to open the port 22 on the server as it was a security-related requirement from our side. It integrates nicely with the ttyd terminal server, which we have embedded in the stack as well.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Xterm.js&quot; class=&quot;img-responsive&quot; src=&quot;http://dirigible.io/img/posts/20200629/terminal_xtermjs.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;monaco&quot;&gt;&lt;a href=&quot;https://microsoft.github.io/monaco-editor/&quot;&gt;Monaco&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Major advantage of VSCode is its editor - Monaco. During the past few years it became the most advanced open source code editor, thatâ€™s easy to embed and enhance. The investment and support by Microsoft in VSCode and Monaco in particular, gives a good perspective and confidence of the projectâ€™s future. We were quite happy by using Orion, but recently we decided to bet on Monaco as the default code editor for version 5.0 and above of Dirigible. All the innovations and integrations related to writing source code assumed to go to Monaco now. Another benefit of using Monaco is its diff editor, which became a part of the last but not least major feature of 5.0 release.&lt;/p&gt;
-
-&lt;h4 id=&quot;git-support&quot;&gt;Git Support&lt;/h4&gt;
-
-&lt;p&gt;Git support in Dirigible was available, since the very beginning. You could clone, push pull or share projects. So far, the supported operations were over-simplified due to the fact that the file system (workspaces, projects, files) was abstracted. It was possible to have workspaces stored in a RDBMS for instance. This had its advantage when you had to run Dirigible on a platform with limited functionalities or by some other reasons. Of course, the drawback was the very limited support of Git integrations, which in fact is more important for developers than having an abstract file system. In 5.0 we decided to first stick to the native file system only, then it was possible to implement a full-fledged Git perspective with listing and changes of branches, low-level operations on files for staging, diff editor, etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;New Git Perspective&quot; class=&quot;img-responsive&quot; src=&quot;http://dirigible.io/img/posts/20200629/git_perspective_new.png&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
-
-&lt;p&gt;With the latest release we set the future direction of the Dirigible project from a technology perspective. We fixed the problematic dependencies by betting on new and emerging projects as well as reverted some of the questionable architectural decisions from the past the future of Dirigible looks quite bright.&lt;/p&gt;
-
-&lt;p&gt;Whatâ€™s next? Now, we can safely focus on what Eclipse Dirigible always was supposed to give to developers - high-productivity application development platform. Many improvements to the MDA tools are planned already related to the built-in extensibility of the entities, distributed models, security validations and role-based access management in generation templates. The unified inbox for process events as well as better integration of user tasks are examples of what we see in the BPM related tools as next steps.&lt;/p&gt;
-
-&lt;p&gt;Do you want to join forces with us in this endeavor?&lt;/p&gt;
-
-&lt;h4 id=&quot;graduation&quot;&gt;Graduation&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;One more good news came along with this release - completed graduation review!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;We are mature - ayeeeee!&lt;/strong&gt; ğŸ’ƒ ğŸ•º ğŸ§‘â€�ğŸ�“ğŸ‘¨â€�ğŸ�“ğŸ§‘â€�ğŸ�¤ğŸ‘¨â€�ğŸ�¤ğŸ‘©â€�ğŸ�¤ğŸ¤µğŸ‘°ğŸ‘¨â€�ğŸ¦³ğŸ§‘â€�ğŸ¦³ğŸ‘©â€�ğŸš€ğŸ§‘â€�ğŸš’ğŸ§‘â€�ğŸŒ¾   &lt;strong&gt;OMG!&lt;/strong&gt;  ğŸ¤¦â€�â™‚ï¸�&lt;/p&gt;</description>
-	<pubDate>Mon, 29 Jun 2020 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>JBoss Tools Team: JBoss Tools 4.16.0.AM1 for Eclipse 2020-06</title>
 	<guid isPermaLink="true">https://tools.jboss.org/blog/4.16.0.am1.html</guid>
 	<link>https://tools.jboss.org/blog/4.16.0.am1.html</link>
@@ -3317,516 +3380,6 @@ Preferences: General &amp;gt; Appearance &amp;gt; Theme: Clean Sheet&lt;/p&gt;
 	<pubDate>Thu, 16 Apr 2020 20:30:00 +0000</pubDate>
 </item>
 <item>
-	<title>Eclipse Ditto: Digital twins of devices connected via LoRaWAN to TTN</title>
-	<guid isPermaLink="true">https://www.eclipse.org/ditto/2020-04-16-connecting-to-ttn-via-mqtt.html</guid>
-	<link>https://www.eclipse.org/ditto/2020-04-16-connecting-to-ttn-via-mqtt.html</link>
-	<description>&lt;figure&gt;&lt;img alt=&quot;TTVC logo&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/2020-04-16-Logo_TTVC_color.png&quot; style=&quot;padding-left: 1em; float: right;&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;A workshop of the &lt;a href=&quot;https://www.thethingsnetwork.org/article/the-things-virtual-conference&quot;&gt;2020 The Things Virtual Conference&lt;/a&gt;
-on April 16th 2020 is/was about how to connect Eclipse Ditto to “The Things Network” via TTN’s MQTT broker in order to 
-automatically update digital twins of devices connected via LoRaWAN to the TTN backend.&lt;/p&gt;
-
-&lt;p&gt;You can find the slides &lt;a href=&quot;https://www.eclipse.org/ditto/slides/2020_04_16-ttn-virtual-conference/index.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This blogpost helps setting up this kind of connection and shall also be used as a step-by-step tutorial during
- the workshop.&lt;/p&gt;
-
-
-
-&lt;h2 id=&quot;requirements&quot;&gt;Requirements&lt;/h2&gt;
-
-&lt;p&gt;You’ll need:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;an operating system capable of running Docker (best use a Linux distribution)&lt;/li&gt;
-  &lt;li&gt;4 CPU cores and 4GB of RAM are advised (less can work, but the Ditto cluster startup is more fragile then)&lt;/li&gt;
-  &lt;li&gt;to have installed: &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Also, you’ll need a TTN account and an existing application with at least one device if you want to follow the hands-on
-part and want to create digital twins of your devices connected to TTN.&lt;/p&gt;
-
-&lt;h2 id=&quot;preparation&quot;&gt;Preparation&lt;/h2&gt;
-
-&lt;p&gt;Please follow these initial preparation steps (if you don’t already have Docker and Docker Compose installed).&lt;/p&gt;
-
-&lt;p&gt;When you have access to a Kubernetes cluster and already have worked with &lt;a href=&quot;https://helm.sh&quot;&gt;Helm&lt;/a&gt; (the package manager
-for Kubernetes), you can alternatively install Ditto via its official 
-&lt;a href=&quot;https://hub.helm.sh/charts/eclipse-iot/ditto&quot;&gt;Helm chart&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;install-docker&quot;&gt;Install Docker&lt;/h3&gt;
-
-&lt;p&gt;Assumption: You’re running a Debian or Ubuntu based Linux distribution containing the &lt;code class=&quot;highlighter-rouge&quot;&gt;apt&lt;/code&gt; package manager.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt install docker.io
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service docker start
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;usermod &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-G&lt;/span&gt; docker &amp;lt;your-username&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Logout and login again so that your user gets the “docker” group.&lt;/p&gt;
-
-&lt;h3 id=&quot;install-docker-compose&quot;&gt;Install Docker Compose&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.docker.com/compose/install/&quot;&gt;Follow the installation guide here&lt;/a&gt;, in short:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;curl &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;uname &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;uname &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-o&lt;/span&gt; /usr/local/bin/docker-compose
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;chmod +x /usr/local/bin/docker-compose
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;clone-ditto-codebase&quot;&gt;Clone Ditto codebase&lt;/h3&gt;
-
-&lt;p&gt;That is required to get the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yaml&lt;/code&gt; file and other resources required to run Ditto with Docker Compose.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone &lt;span class=&quot;nt&quot;&gt;--depth&lt;/span&gt; 1 https://github.com/eclipse/ditto.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;startup-ditto-cluster&quot;&gt;Startup Ditto cluster&lt;/h2&gt;
-
-&lt;p&gt;Change directory into the just cloned git repository - optionally adjust the &lt;code class=&quot;highlighter-rouge&quot;&gt;DITTO_EXTERNAL_PORT&lt;/code&gt; variable to where 
-Ditto is reachable after the start:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;ditto/deployment/docker/
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DITTO_EXTERNAL_PORT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;80
-docker-compose up &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Verify that Ditto is running:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose ps
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The output should look similar like this:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;         Name                       Command               State           Ports         
-----------------------------------------------------------------------------------------
-docker_concierge_1       /sbin/tini -- java -jar st ...   Up      8080/tcp              
-docker_connectivity_1    /sbin/tini -- java -jar st ...   Up      8080/tcp              
-docker_gateway_1         /sbin/tini -- java -Dditto ...   Up      0.0.0.0:8081-&amp;gt;8080/tcp
-docker_mongodb_1         docker-entrypoint.sh mongo ...   Up      27017/tcp             
-docker_nginx_1           nginx -g daemon off;             Up      0.0.0.0:80-&amp;gt;80/tcp    
-docker_policies_1        /sbin/tini -- java -jar st ...   Up      8080/tcp              
-docker_swagger-ui_1      nginx -g daemon off;             Up      80/tcp, 8080/tcp      
-docker_things-search_1   /sbin/tini -- java -jar st ...   Up      8080/tcp              
-docker_things_1          /sbin/tini -- java -jar st ...   Up      8080/tcp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Verify that your Ditto cluster is healthy. Please give it ~1 minute in order to properly start up.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; devops:foobar http://localhost:&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DITTO_EXTERNAL_PORT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/status/health
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The returned output should start with:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;roles&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If your Ditto cluster has trouble starting up (e.g. because you only have less CPU cores than advised), try the following
-startup command instead:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose start mongodb&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sleep 30&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; docker-compose start policies things&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sleep 60&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; docker-compose start concierge&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sleep 60&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; docker-compose start things-search&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sleep 60&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; docker-compose start connectivity&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; sleep 60&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; docker-compose up &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;configure-connection-to-ttn-mqtt-broker&quot;&gt;Configure connection to TTN MQTT broker&lt;/h2&gt;
-
-&lt;p&gt;The Things Network provides a built in MQTT broker which you can connect to using your TTN application credentials.
-For a more detailed description on that topic, please refer to the 
-&lt;a href=&quot;https://www.thethingsnetwork.org/docs/applications/mqtt/quick-start.html&quot;&gt;TTN MQTT Quick Start&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Eclipse Ditto can establish connections to MQTT brokers. This is a schematic picture of what we now will do:&lt;/p&gt;
-
-&lt;figure&gt;&lt;img alt=&quot;TTN to Ditto via MQTT&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/slides/images/ttn-ditto-via-mqtt.png&quot; style=&quot;padding-left: 1em;&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;In order to connect to your own TTN application, perform the following steps.&lt;/p&gt;
-
-&lt;p&gt;You can find the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;AppId&amp;gt;&lt;/code&gt; (application ID) and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;AppKey&amp;gt;&lt;/code&gt; (access key) in your TTN console of your application.
-For &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Region&amp;gt;&lt;/code&gt;, e.g. choose &lt;code class=&quot;highlighter-rouge&quot;&gt;'eu'&lt;/code&gt; when your application is in handled by the Handler ‘ttn-handler-eu’.&lt;/p&gt;
-
-&lt;p&gt;Please export your application’s credentials locally to environment variables:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_REGION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;Region&amp;gt;'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_APP_ID&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;AppID&amp;gt;'&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_APP_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;AppKey&amp;gt;'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After having done that, you can already create the connection of Ditto to the TTN MQTT broker:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; devops:foobar &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{
-    &quot;targetActorSelection&quot;: &quot;/system/sharding/connection&quot;,
-    &quot;headers&quot;: {
-        &quot;aggregate&quot;: false
-    },
-    &quot;piggybackCommand&quot;: {
-        &quot;type&quot;: &quot;connectivity.commands:createConnection&quot;,
-        &quot;connection&quot;: {
-            &quot;id&quot;: &quot;ttn-connection-via-mqtt&quot;,
-            &quot;name&quot;: &quot;TTN-MQTT&quot;,
-            &quot;connectionType&quot;: &quot;mqtt&quot;,
-            &quot;connectionStatus&quot;: &quot;open&quot;,
-            &quot;uri&quot;: &quot;tcp://'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_APP_ID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;':'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_APP_KEY&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'@'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_REGION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.thethings.network:1883&quot;,
-            &quot;failoverEnabled&quot;: true,
-            &quot;clientCount&quot;: 1,
-            &quot;validateCertificates&quot;: false,
-            &quot;sources&quot;: [{
-                &quot;addresses&quot;: [
-                    &quot;'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_APP_ID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/devices/+/up&quot;
-                ],
-                &quot;consumerCount&quot;: 1,
-                &quot;qos&quot;: 0,
-                &quot;authorizationContext&quot;: [
-                  &quot;pre-authenticated:ttn-connection&quot;
-                ],
-                &quot;enforcement&quot;: {
-                    &quot;input&quot;: &quot;{{ source:address }}&quot;,
-                    &quot;filters&quot;: [
-                        &quot;'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_APP_ID&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/devices/{{ thing:name }}/up&quot;
-                    ]
-                },
-                &quot;replyTarget&quot;: {
-                    &quot;enabled&quot;: false
-                },
-                &quot;payloadMapping&quot;: [
-                    &quot;ttn-demo-mapping&quot;
-                ]
-            }],
-            &quot;mappingDefinitions&quot;: {
-                &quot;ttn-demo-mapping&quot;: {
-                     &quot;mappingEngine&quot;: &quot;JavaScript&quot;,
-                     &quot;options&quot;: {
-                         &quot;incomingScript&quot;: &quot;function mapToDittoProtocolMsg(\n  headers,\n  textPayload,\n  bytePayload,\n  contentType\n) {\n\n  let ttnJson = JSON.parse(textPayload);\n  let deviceId = ttnJson['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dev_id'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'];\n  let payloadFields = ttnJson['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'payload_fields'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'];\n  \n  let attributesObj = {\n    hardwareSerial: ttnJson['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hardware_serial'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'],\n    ttnCounter: ttnJson['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'counter'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;']\n  };\n  \n  let featuresObj = {\n    temperature: {\n      properties: {\n        value: payloadFields['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'temperature_7'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;']\n      }\n    },\n    pressure: {\n      properties: {\n        value: payloadFields['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'barometric_pressure_10'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;']\n      }\n    },\n    humidity: {\n      properties: {\n        value: payloadFields['&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'relative_humidity_8'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;']\n      }\n    }\n  };\n  \n  let thing = {\n    attributes: attributesObj,\n    features: featuresObj\n  };\n  \n  let dittoHeaders = {\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'response-required'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;': false,\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'If-Match'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;': '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'\n  };\n\n  return Ditto.buildDittoProtocolMsg(\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'org.eclipse.ditto.ttn.demo'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',\n    deviceId,\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'things'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'twin'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'commands'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'modify'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',\n    '&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;',\n    dittoHeaders,\n    thing\n  );\n}&quot;,
-                         &quot;outgoingScript&quot;: &quot;function mapFromDittoProtocolMsg() { return null; }&quot;,
-                         &quot;loadBytebufferJS&quot;: &quot;false&quot;,
-                         &quot;loadLongJS&quot;: &quot;false&quot;
-                     }
-                }
-            }
-        }
-    }
-}'&lt;/span&gt; http://localhost:&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DITTO_EXTERNAL_PORT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/devops/piggyback/connectivity?timeout&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8s
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Explanation - what is done here:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;using curl with the &lt;code class=&quot;highlighter-rouge&quot;&gt;devops&lt;/code&gt; (admin) user and its initial password &lt;code class=&quot;highlighter-rouge&quot;&gt;foobar&lt;/code&gt; we create a connection of type &lt;code class=&quot;highlighter-rouge&quot;&gt;mqtt&lt;/code&gt; 
-(you can find further information on that in Ditto’s &lt;a href=&quot;https://www.eclipse.org/ditto/connectivity-protocol-bindings-mqtt.html&quot;&gt;MQTT docs&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;we use the TTN application credentials in the configured &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;uri&quot;&lt;/code&gt;, connect via plain TCP 
-(SSL is also possible but in this case a little more complicated as the server certificate of the TTN MQTT broker
- would have to be imported)&lt;/li&gt;
-  &lt;li&gt;we add an entry in &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;sources&quot;&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;defining the MQTT topic (&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;addresses&quot;&lt;/code&gt;) to subscribe to&lt;/li&gt;
-      &lt;li&gt;specifying in which &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;authorizationContext&quot;&lt;/code&gt; messages from this connection shall be executed&lt;/li&gt;
-      &lt;li&gt;defining in the &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;enforcement&quot;&lt;/code&gt; that, based on the MQTT topic, a device may only update the Ditto twin having the same name&lt;/li&gt;
-      &lt;li&gt;declaring that a custom payload mapping shall be applied for each incoming message&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;in the &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;mappingDefinitions&quot;&lt;/code&gt; we define the previously used “ttn-demo-mapping” as JavaScript based mapping:
-    &lt;ul&gt;
-      &lt;li&gt;only an “incoming” script is defined as we don’t handle downstream messages to TTN in this example&lt;/li&gt;
-      &lt;li&gt;when you want to understand the script in more depth, please take a look at the &lt;a href=&quot;https://www.eclipse.org/ditto/feed.xml#javascript-payload-mapping-script-in-detail&quot;&gt;details about it&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;alert alert-success&quot;&gt;&lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt; &lt;b&gt;Tip:&lt;/b&gt; As you have other custom &lt;code class=&quot;highlighter-rouge&quot;&gt;payload_fields&lt;/code&gt; for your TTN devices, please adjust the script 
-                             if you want to see the device’s custom payload fields in your Ditto twins.&lt;/div&gt;
-
-&lt;h2 id=&quot;create-a-common-policy-for-the-twins-to-be-created&quot;&gt;Create a common policy for the twins to be created&lt;/h2&gt;
-
-&lt;p&gt;Eclipse Ditto secures each API access to the managed twins by applying authorization of the authenticated user.&lt;br /&gt;
-Those “rules” which authenticated user may access which twins are defined in &lt;a href=&quot;https://www.eclipse.org/ditto/basic-policy.html&quot;&gt;Policies&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In order to proceed with our scenario, we create a single Policy which shall be used for all twins we create in a later 
-step:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; ditto:ditto &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{
-   &quot;policyId&quot;: &quot;org.eclipse.ditto.ttn.demo:twin-policy&quot;,
-   &quot;entries&quot;: {
-       &quot;USER&quot;: {
-           &quot;subjects&quot;: {
-              &quot;nginx:ditto&quot;: {
-                  &quot;type&quot;: &quot;basic auth user authenticated via nginx&quot;
-              }
-           },
-           &quot;resources&quot;: {
-               &quot;thing:/&quot;: {
-                   &quot;grant&quot;: [&quot;READ&quot;, &quot;WRITE&quot;],
-                   &quot;revoke&quot;: []
-               },
-               &quot;policy:/&quot;: {
-                   &quot;grant&quot;: [&quot;READ&quot;, &quot;WRITE&quot;],
-                   &quot;revoke&quot;: []
-               },
-               &quot;message:/&quot;: {
-                   &quot;grant&quot;: [&quot;READ&quot;, &quot;WRITE&quot;],
-                   &quot;revoke&quot;: []
-               }
-           }
-       },
-       &quot;TTN&quot;: {
-           &quot;subjects&quot;: {
-              &quot;pre-authenticated:ttn-connection&quot;: {
-                  &quot;type&quot;: &quot;used in the connections authorizationContext to the TTN MQTT&quot;
-              }
-           },
-           &quot;resources&quot;: {
-               &quot;thing:/&quot;: {
-                   &quot;grant&quot;: [&quot;WRITE&quot;],
-                   &quot;revoke&quot;: []
-               }
-           }
-       }
-   }
-}'&lt;/span&gt; http://localhost:&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DITTO_EXTERNAL_PORT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/api/2/policies/org.eclipse.ditto.ttn.demo:twin-policy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Explanation - what is done here:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;we create a new Policy with the ID &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;org.eclipse.ditto.ttn.demo:twin-policy&quot;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;it contains 2 entries:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;USER&quot;&lt;/code&gt;: this Policy entry contains the authorization information of the user of the twin APIs (authenticated via the contained “nginx” acting as reverse proxy). 
- This user may READ+WRITE the things (twins), this created policy and may also send and receive messages.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;TTN&quot;&lt;/code&gt;: this Policy entry contains the authorization information of the connection to the TTN MQTT broker (the subject was configured as &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;authorizationContext&quot;&lt;/code&gt; when we created the connection. 
- This connection may only WRITE (update) the things (twins).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;create-digital-twins&quot;&gt;Create digital twins&lt;/h2&gt;
-
-&lt;p&gt;Now we have everything in place in order to create digital twins for our devices connected to TTN.&lt;/p&gt;
-
-&lt;p&gt;Please export all device ids you want to create digital twins for as comma separated environment variable:&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_DEVICE_IDS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'&amp;lt;comma-separated-list-of-your-device-ids&amp;gt;'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After having done that, we can already create the twins in Ditto as the &lt;code class=&quot;highlighter-rouge&quot;&gt;ditto&lt;/code&gt; user:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;dev_id &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TTN_DEVICE_IDS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;//,/ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# call your procedure/other scripts here below&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Creating digital twin with Thing ID: org.eclipse.ditto.ttn.demo:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dev_id&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-    curl &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; PUT &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; ditto:ditto &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Content-Type: application/json'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{
-       &quot;policyId&quot;: &quot;org.eclipse.ditto.ttn.demo:twin-policy&quot;
-    }'&lt;/span&gt; http://localhost:&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DITTO_EXTERNAL_PORT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;/api/2/things/org.eclipse.ditto.ttn.demo:&lt;span class=&quot;nv&quot;&gt;$dev_id&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Explanation - what is done here:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;we split the passed in &lt;code class=&quot;highlighter-rouge&quot;&gt;TTN_DEVICE_IDS&lt;/code&gt; environment variable by &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; and iterate over all contained device ids&lt;/li&gt;
-  &lt;li&gt;for each device ID we create a new Thing (twin) referencing the already previously created Policy&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;access-your-digital-twins-via-api&quot;&gt;Access your digital twins via API&lt;/h2&gt;
-
-&lt;p&gt;Congratulations, if you have done it so far your TTN devices do now have digital twin representations in Eclipse Ditto.&lt;/p&gt;
-
-&lt;div class=&quot;alert alert-success&quot;&gt;&lt;i class=&quot;fa fa-check-square-o&quot;&gt;&lt;/i&gt; &lt;b&gt;Tip:&lt;/b&gt; Install the command line tool &lt;code class=&quot;highlighter-rouge&quot;&gt;jq&lt;/code&gt; and pipe the output of the below &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; commands to it in order to get
-                             prettified and colored JSON&lt;/div&gt;
-
-&lt;div class=&quot;alert alert-info&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; &lt;b&gt;Note:&lt;/b&gt; Alternatively to &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt;, you may also use the locally deployed swagger-ui at http://localhost:${DITTO_EXTERNAL_PORT}/apidoc/ 
-                              in order to try out Ditto’s HTTP API - &lt;em&gt;make sure to select&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;/api/2 - local Ditto&lt;/code&gt; in the ‘Servers’ 
-                              section - when asked for credentials, use username ‘ditto’ and password ‘ditto’&lt;/div&gt;
-
-&lt;p&gt;You can now, for example, use Ditto’s HTTP APIs in order&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;to retrieve the latest reported values: &lt;code class=&quot;highlighter-rouge&quot;&gt;curl -u ditto:ditto http://localhost:${DITTO_EXTERNAL_PORT}/api/2/things/org.eclipse.ditto.ttn.demo:&amp;lt;dev_id&amp;gt;&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;to get a live stream of updates to the twins using SSE (Server Sent Events): &lt;code class=&quot;highlighter-rouge&quot;&gt;curl --http2 -u ditto:ditto -H 'Accept:text/event-stream' -N http://localhost:${DITTO_EXTERNAL_PORT}/api/2/things&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;to list all available twins via the search API: &lt;code class=&quot;highlighter-rouge&quot;&gt;curl -u ditto:ditto http://localhost:${DITTO_EXTERNAL_PORT}/api/2/search/things&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;alternatively, use your browser and open http://localhost:${DITTO_EXTERNAL_PORT}/api/2/search/things&lt;/li&gt;
-      &lt;li&gt;when asked for credentials, use username “ditto” and password “ditto”&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;formulate a search query, e.g. only searching for twins with a temperature above 24°, sorted by the last modification, the most recent first
-to get the most active twin as first result:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;curl -u ditto:ditto &quot;http://localhost:${DITTO_EXTERNAL_PORT}/api/2/search/things?filter=gt(features/temperature/properties/value,24.0)&amp;amp;option=sort(-_modified),size(5)&amp;amp;fields=thingId,policyId,attributes,features,_modified,_revision&quot;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;which-other-possibilities-do-we-now-have&quot;&gt;Which other possibilities do we now have?&lt;/h2&gt;
-
-&lt;p&gt;Now you have all the possibilities Eclipse Ditto as digital twin framework provides, e.g.:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;directly use your device’s data in a web application consuming Ditto’s HTTP API&lt;/li&gt;
-  &lt;li&gt;directly use your device’s data in a mobile app using Ditto’s bidirectional &lt;a href=&quot;https://www.eclipse.org/ditto/httpapi-protocol-bindings-websocket.html&quot;&gt;WebSocket&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;make use of the &lt;a href=&quot;https://github.com/eclpise/ditto-clients/&quot;&gt;Eclipse Ditto Java or JavaScript clients&lt;/a&gt; which also use the WebSocket to integrate your device’s data&lt;/li&gt;
-  &lt;li&gt;create another connection (optionally also applying JavaScript based payload mapping)
-    &lt;ul&gt;
-      &lt;li&gt;to e.g. &lt;a href=&quot;https://www.eclipse.org/ditto/connectivity-protocol-bindings-kafka2.html&quot;&gt;Apache Kafka&lt;/a&gt; and forward all the modifications made to your devices to there&lt;/li&gt;
-      &lt;li&gt;or using &lt;a href=&quot;https://www.eclipse.org/ditto/connectivity-protocol-bindings-http.html&quot;&gt;HTTP push&lt;/a&gt; in order to call another HTTP API (e.g. insert time series data into an InfluxDB via its HTTP API)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;For time reasons we do not go deeper into additional topics, they are possible however, please consult the Ditto
-documentation:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the WebSocket channel and subscribing for change notifications&lt;/li&gt;
-  &lt;li&gt;sending downward messages to devices&lt;/li&gt;
-  &lt;li&gt;live commands (not retrieving persisted data of devices, but live data)&lt;/li&gt;
-  &lt;li&gt;a more detailed introduction into authentication mechanisms (&lt;a href=&quot;https://www.eclipse.org/ditto/installation-operating.html#openid-connect&quot;&gt;OpenID Connect with OAuth2.0 is possible&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;possibilities to configure your Policies on every resource level, e.g. allowing individuals to only access certain values of a twin&lt;/li&gt;
-  &lt;li&gt;and many other things..&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;additional-resources&quot;&gt;Additional resources&lt;/h2&gt;
-
-&lt;h3 id=&quot;cleanup-after-the-workshop&quot;&gt;Cleanup after the workshop&lt;/h3&gt;
-
-&lt;p&gt;Simply perform in the &lt;code class=&quot;highlighter-rouge&quot;&gt;ditto/deployment/docker&lt;/code&gt; folder:&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker-compose down
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;And unistall docker + docker-compose (for docker-compose, just remove the downloaded file) again, if you don’t need it.&lt;/p&gt;
-
-&lt;h3 id=&quot;javascript-payload-mapping-script-in-detail&quot;&gt;JavaScript payload mapping script in detail&lt;/h3&gt;
-
-&lt;p&gt;Similar to the TTN console’s decoding/converting capabilities of “Payload Formats” of an TTN application, Ditto is able
-to apply a custom JavaScript function for each consumed message.&lt;br /&gt;
-That is necessary in order to convert the received data into a &lt;a href=&quot;https://www.eclipse.org/ditto/protocol-overview.html&quot;&gt;Ditto Protocol&lt;/a&gt; message 
-including the JSON hierarchy of a so called &lt;a href=&quot;https://www.eclipse.org/ditto/basic-thing.html&quot;&gt;Thing&lt;/a&gt; being the representation of a digital twin.&lt;/p&gt;
-
-&lt;p&gt;As the above injected JavaScript payload mapping script is formatted in a single line, this is the script we used pretty
- formatted, including the jsdoc of the provided function and some other inline comments.&lt;/p&gt;
-
-&lt;p&gt;If you need to adjust the script in order to use your own &lt;code class=&quot;highlighter-rouge&quot;&gt;payload_fields&lt;/code&gt;, please replace all newlines with &lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt; and
-escape the single quotes &lt;code class=&quot;highlighter-rouge&quot;&gt;'&lt;/code&gt; in the script with the following replacement: &lt;code class=&quot;highlighter-rouge&quot;&gt;'&quot;'&quot;'&lt;/code&gt;. Otherwise the single quotes won’t get
-correctly escaped in the bash. You can remove the comments before making a single line of the script.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
- * Maps the passed parameters to a Ditto Protocol message.
- * @param {Object.&amp;lt;string, string&amp;gt;} headers - The headers Object containing all received header values
- * @param {string} [textPayload] - The String to be mapped
- * @param {ArrayBuffer} [bytePayload] - The bytes to be mapped as ArrayBuffer
- * @param {string} [contentType] - The received Content-Type, e.g. &quot;application/json&quot;
- * @returns {(DittoProtocolMessage|Array&amp;lt;DittoProtocolMessage&amp;gt;)} dittoProtocolMessage(s) -
- *  The mapped Ditto Protocol message,
- *  an array of Ditto Protocol messages or
- *  &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; if the message could/should not be mapped
- */&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mapToDittoProtocolMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;textPayload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;bytePayload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ttnJson&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;textPayload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;          &lt;span class=&quot;c1&quot;&gt;// we simply parse the incoming TTN message as JSON&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;deviceId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ttnJson&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'dev_id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;// and extract some fields we require&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payloadFields&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ttnJson&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'payload_fields'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// the 'payload_fields' content is - obviously - different for your application&lt;/span&gt;
-  
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;attributesObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                           &lt;span class=&quot;c1&quot;&gt;// the attributes of a Thing are meant for unstructured data &lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;hardwareSerial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ttnJson&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hardware_serial'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;ttnCounter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ttnJson&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'counter'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;featuresObj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                             &lt;span class=&quot;c1&quot;&gt;// the features of a Thing e.g. contain sensor data of devices&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;temperature&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payloadFields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'temperature_7'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;pressure&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payloadFields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'barometric_pressure_10'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;humidity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;na&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payloadFields&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'relative_humidity_8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;thing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;                                   &lt;span class=&quot;c1&quot;&gt;// a Thing can contain both attributes and features&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;attributesObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;features&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;featuresObj&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-  
-  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dittoHeaders&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'response-required'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// we don't expect a response sent back to TTN&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'If-Match'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'*'&lt;/span&gt;                 &lt;span class=&quot;c1&quot;&gt;// we only want to update the thing if it already exists&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Ditto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;buildDittoProtocolMsg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'org.eclipse.ditto.ttn.demo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// this is the namespace used as prefix for Ditto Thing IDs&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;deviceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                       &lt;span class=&quot;c1&quot;&gt;// the TTN device ID is used as &quot;name&quot; part of the Ditto Thing ID &lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'things'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'twin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'commands'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'modify'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;'/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;dittoHeaders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;thing&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;An example message received from the TTN MQTT broker:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;app_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;iot-campus-be12&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dev_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;node0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hardware_serial&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;70B3D5499A2D3954&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;port&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;counter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9449&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;payload_raw&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;B2cA6AhoKwpzJ8oEAwH4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;payload_fields&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;analog_out_4&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;5.04&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;barometric_pressure_10&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1018.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;relative_humidity_8&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;21.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;temperature_7&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;23.2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;metadata&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;would be transformed to the following Ditto Protocol message:&lt;/p&gt;
-&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;topic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;org.eclipse.ditto/node0/things/twin/commands/modify&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;path&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;attributes&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;hardwareSerial&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;70B3D5499A2D3954&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ttnCounter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9449&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;features&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;temperature&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-         &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;properties&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;23.2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pressure&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;properties&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1018.6&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;humidity&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;properties&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-          &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;21.5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;–&lt;br /&gt;
-The Eclipse Ditto team&lt;/p&gt;</description>
-	<pubDate>Thu, 16 Apr 2020 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Eclipse Announcements: Add Your Voice to the 2020 Jakarta EE Developer Survey</title>
 	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/BgIQC6uoC7Y/add-your-voice-2020-jakarta-ee-developer-survey</guid>
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/BgIQC6uoC7Y/add-your-voice-2020-jakarta-ee-developer-survey</link>
@@ -4259,109 +3812,6 @@ Usually, we would implement&lt;/p&gt;
 	<link>http://blog.matbooth.co.uk/13-eclipse-handling-content-types.html</link>
 	<description>&lt;p&gt;Getting deep desktop integration on Linux.&lt;/p&gt;</description>
 	<pubDate>Thu, 06 Feb 2020 15:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Tom Schindl: Setting up e(fx)clipse RCP development for Java11+ and PDE</title>
-	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5197</guid>
-	<link>https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/</link>
-	<description>&lt;p&gt;As I’m currently converting a Java-8 project to AdoptJDK-11 and JavaFX-11+ I thought it would be a good idea document the steps involved.&lt;/p&gt;
-&lt;h2&gt;Prequisits&lt;/h2&gt;
-&lt;p&gt;I assume you have installed:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Eclipse 2019-12 – &lt;a href=&quot;http://download.eclipse.org/eclipse/&quot; rel=&quot;nofollow&quot;&gt;http://download.eclipse.org/eclipse/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Installed e(fx)clipse 3.6.0 or above – &lt;a href=&quot;https://marketplace.eclipse.org/content/efxclipse&quot; rel=&quot;nofollow&quot;&gt;https://marketplace.eclipse.org/content/efxclipse&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;AdoptJDK-11 – &lt;a href=&quot;https://adoptopenjdk.net/?variant=openjdk11&amp;amp;jvmVariant=hotspot&quot; rel=&quot;nofollow&quot;&gt;https://adoptopenjdk.net/?variant=openjdk11&amp;amp;jvmVariant=hotspot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Downloaded and extracted the JavaFX-SDK-11 – &lt;a href=&quot;https://openjfx.io/&quot; rel=&quot;nofollow&quot;&gt;https://openjfx.io/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Configure your Eclipse&lt;/h2&gt;
-&lt;h3&gt;Java Settings&lt;/h3&gt;
-&lt;p&gt;Make AdoptJDK-11 the default JRE unless it is already the default.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-03-59/&quot; rel=&quot;attachment wp-att-5203&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5203&quot; height=&quot;585&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.03.59.png?w=640&amp;amp;h=585&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Make sure AdoptJDK-11 is used for the Java-SE-11 EE&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-05-46/&quot; rel=&quot;attachment wp-att-5205&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5205&quot; height=&quot;362&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.05.46.png?w=640&amp;amp;h=362&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;e(fx)clipse Settings&lt;/h3&gt;
-&lt;p&gt;Open the JavaFX-Preference Page and point it to your JavaFX-11-SDK&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-10-44/&quot; rel=&quot;attachment wp-att-5208&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5208&quot; height=&quot;472&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.10.44.png?w=640&amp;amp;h=472&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This step is required because JavaFX is not part of AdoptJDK-11 and hence Eclipse won’t find the libraries and your code won’t compile inside the IDE (we’ll revisit this topic below once more)&lt;/p&gt;
-&lt;h3&gt;Setup a target platform&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-15-43/&quot; rel=&quot;attachment wp-att-5233&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5233&quot; height=&quot;618&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.15.43.png?w=640&amp;amp;h=618&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-17-54/&quot; rel=&quot;attachment wp-att-5235&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5235&quot; height=&quot;593&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.17.54.png?w=640&amp;amp;h=593&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-19-06/&quot; rel=&quot;attachment wp-att-5237&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5237&quot; height=&quot;684&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.19.06.png?w=640&amp;amp;h=684&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Create your project&lt;/h2&gt;
-&lt;h3&gt;Bootstrap your project&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-22-27/&quot; rel=&quot;attachment wp-att-5216&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5216&quot; height=&quot;584&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.22.27.png?w=640&amp;amp;h=584&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-24-19/&quot; rel=&quot;attachment wp-att-5217&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5217&quot; height=&quot;584&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.24.19.png?w=640&amp;amp;h=584&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-24-40/&quot; rel=&quot;attachment wp-att-5219&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5219&quot; height=&quot;584&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.24.40.png?w=640&amp;amp;h=584&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Check your project setup&lt;/h3&gt;
-&lt;p&gt;Check if Eclipse correctly recognized the javafx-library and magically added them to your plug-in dependendencies&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-27-01/&quot; rel=&quot;attachment wp-att-5221&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5221&quot; height=&quot;591&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.27.01.png?w=640&amp;amp;h=591&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Implement the UI&lt;/h2&gt;
-&lt;h3&gt;Add javax.annotation to your MANIFEST.MF&lt;/h3&gt;
-&lt;p&gt;Before you can write the Java-Code for your UI you need to add javax.annotation-package to your bundle (this used to ship with Java-8 has been removed since then)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-32-48/&quot; rel=&quot;attachment wp-att-5223&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5223&quot; height=&quot;346&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.32.48.png?w=640&amp;amp;h=346&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Create a Java-Class&lt;/h3&gt;
-&lt;pre class=&quot;brush: java; title: ; notranslate&quot;&gt;package my.app.app;
-
-import javax.annotation.PostConstruct;
-
-import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-
-public class SamplePart {
-  @PostConstruct
-  void init(BorderPane root) {
-    root.setCenter(
-      new Label(System.getProperty(&quot;javafx.version&quot;))
-    );
-  }
-}
-&lt;/pre&gt;
-&lt;h3&gt;Adapt your e4xmi&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-13-38-34/&quot; rel=&quot;attachment wp-att-5228&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5228&quot; height=&quot;514&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-13.38.34.png?w=640&amp;amp;h=514&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Running your application&lt;/h2&gt;
-&lt;p&gt;While everything happily compiles running the application would fail because in the initial steps we only satisfied the Eclipse compiler by magically injecting the JavaFX-Libraries in your Plug-in-Dependency (see above).&lt;/p&gt;
-&lt;p&gt;To run the application we need to decide how we’d like to ship JavaFX:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;next to your application in a folder&lt;/li&gt;
-&lt;li&gt;as part of your eclipse application inside the the plugins-directory&lt;/li&gt;
-&lt;li&gt;you jlink yourself a JDK&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We’ll not take a look at the 3rd solution as part of this blog post!&lt;/p&gt;
-&lt;h3&gt;Running with an external folder&lt;/h3&gt;
-&lt;p&gt;Open the generated launch configuration and append &lt;code&gt;-Defxclipse.java-modules.dir=PATH_TO_YOUR_JAVAFX_LIBS&lt;/code&gt; in the VM arguments-field&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-21-04/&quot; rel=&quot;attachment wp-att-5239&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5239&quot; height=&quot;487&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.21.04.png?w=640&amp;amp;h=487&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Running with bundled javafx-modules&lt;/h3&gt;
-&lt;p&gt;We provide OSGi-Bundles who contain the original and unmodified JavaFX-Modules (note you can NOT use them are OSGi-Dependencies!) you can use them by adding &lt;a href=&quot;http://downloads.efxclipse.bestsolution.at/p2-repos/openjfx-11/repository/&quot; rel=&quot;nofollow&quot;&gt;http://downloads.efxclipse.bestsolution.at/p2-repos/openjfx-11/repository/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-32-02/&quot; rel=&quot;attachment wp-att-5241&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5241&quot; height=&quot;633&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.32.02.png?w=640&amp;amp;h=633&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-32-48/&quot; rel=&quot;attachment wp-att-5242&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5242&quot; height=&quot;597&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.32.48.png?w=640&amp;amp;h=597&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Add them to your launch configuration&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-35-44/&quot; rel=&quot;attachment wp-att-5244&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5244&quot; height=&quot;489&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.35.44.png?w=640&amp;amp;h=489&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Exporting your application&lt;/h2&gt;
-&lt;p&gt;The project wizard already generated the basic infrastructure for you but we need to make some small changes. We assume you’ve chosen to option to ship the JavaFX-modules as part of the plugins-directory to keep it simple.&lt;/p&gt;
-&lt;p&gt;The wizard already added the JavaFX-Standard-Feature into your product-File&lt;br /&gt;
-&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-44-17/&quot; rel=&quot;attachment wp-att-5246&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5246&quot; height=&quot;489&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.44.17.png?w=640&amp;amp;h=489&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;It also added the parts to satisfy the compiler in your releng/pom.xml&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-14-45-50/&quot; rel=&quot;attachment wp-att-5248&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5248&quot; height=&quot;489&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-14.45.50.png?w=640&amp;amp;h=489&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;While most of the stuff is already in place we need to make 2 small modifications:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Update the tycho-version property to 1.5.0&lt;/li&gt;
-&lt;li&gt;Change the export environment to match the operation-system(s) you want to target
-&lt;ul&gt;
-&lt;li&gt;Windows: os=win32, ws=win32, arch=x86_64&lt;/li&gt;
-&lt;li&gt;Linux: os=linux, ws=gtk, arch=x86_64&lt;/li&gt;
-&lt;li&gt;OS-X: os=macosx, ws=cocoa, arch=x86_64&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-15-07-53/&quot; rel=&quot;attachment wp-att-5250&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5250&quot; height=&quot;384&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-15.07.53.png?w=640&amp;amp;h=384&quot; width=&quot;640&quot; /&gt;&lt;/a&gt; &lt;/p&gt;
-&lt;h3&gt;Producing a native launcher&lt;/h3&gt;
-&lt;p&gt;As we anyway have to produce a platform-dependent we can also add the creation of a native launcher. For that open your .product-File:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Tick the “The product includes native launcher artifacts”&lt;/li&gt;
-&lt;li&gt;Change the application to main-thread-application&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/01/28/setting-up-efxclipse-rcp-development-for-java11-and-pde/bildschirmfoto-2020-01-28-um-15-53-49/&quot; rel=&quot;attachment wp-att-5254&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5254&quot; height=&quot;384&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/01/bildschirmfoto-2020-01-28-um-15.53.49.png?w=640&amp;amp;h=384&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Tue, 28 Jan 2020 15:00:08 +0000</pubDate>
 </item>
 <item>
 	<title>Jeremie Bresson: JDT without Eclipse</title>
