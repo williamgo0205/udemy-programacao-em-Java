@@ -9,6 +9,14 @@
 	<atom:link rel="self" href="http://planeteclipse.org/rss20.xml" type="application/rss+xml"/>
 
 <item>
+	<title>N4JS: N4JS goes LSP</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-7569987920628430132.post-7424128506048625084</guid>
+	<link>https://n4js.blogspot.com/2020/09/n4js-goes-lsp.html</link>
+	<description>&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; font-weight: 700; white-space: pre-wrap;&quot;&gt;A few weeks ago we started to publish a VSCode extension for N4JS to the VSCode Marketplace. This was one of the last steps on our road to support LSP-based development tools. We chose to make this major change because of several reasons that affected both users and developers of N4JS.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-F2efQTbpqKM/X1YXgPPtOzI/AAAAAAAAARA/6GuSg2_-kc8F_CWYnhfQ0dUw1XL5bRmUgCLcBGAsYHQ/s1822/N4JS_VSCODE.png&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-F2efQTbpqKM/X1YXgPPtOzI/AAAAAAAAARA/6GuSg2_-kc8F_CWYnhfQ0dUw1XL5bRmUgCLcBGAsYHQ/s16000/N4JS_VSCODE.png&quot; width=&quot;600&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;An N4JS project in VSCode with the N4JS language extension&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span id=&quot;docs-internal-guid-302ce6de-7fff-db87-f1b6-82f1bec7268d&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;Our &lt;/span&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=n4js.n4js-vscode-extension&quot;&gt;&lt;span style=&quot;color: #1155cc; font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;language extension for N4JS&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt; is hosted at the Microsoft VSCode Marketplace and will be updated regularly by our Jenkins jobs. Versions will be kept in sync with the language version, compiler version and version of the N4JS libraries to avoid incompatible setups. At the moment, the LSP server supports all main features of the language server protocol (LSP) such as validation, content assist, outline view, jump to definition and implementation, open symbol, the rename refactoring and many more. In addition, it will also generate output files whenever a source change is detected. We therefore heavily improved the incremental LSP builder of the Xtext framework and plan to migrate back those changes to the Xtext repository. For the near future we plan to work on stability, performance and also to support some of the less frequently used LSP features.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;When looking back, development of N4JS has been based on the Xtext framework from the start and thus it was straightforward to build an Eclipse-based IDE as our main development tool. Later on, we also implemented a headless compiler used for manual and automated testing from the command line. The development of the compiler already indicated some problems stemming from the tight integration of the Eclipse and the Xtext frameworks together with our language specific implementations. To name an example, we had two separate builder implementations: one for the IDE and the other for the headless compiler. Since the Eclipse IDE is using a specific workspace and project model, we also had two implementations for this abstraction. Another important problem we faced with developing an Eclipse-based IDE was that at some points we had to implement UI tests using the SWTBot framework. For us, SWTBot tests turned out to be very hard to develop, to maintain, and to keep from becoming flaky. Shifting to LSP-based development tools, i.e. the headless compiler and an LSP server, allows us to overcome the aforementioned problems.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;Users of N4JS now have the option to either use our extension for VSCode or integrate our LSP server into their favorite IDE themselves, even into the Eclipse IDE. They also benefit from more lightweight tools regarding disk size and start-up performance, as well as a better integration into well-known tools from the JavaScript development ecosystem.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: right;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</description>
+	<pubDate>Tue, 08 Sep 2020 11:00:11 +0000</pubDate>
+	<author>noreply@blogger.com (n4js dev)</author>
+</item>
+<item>
 	<title>Tom Schindl: Observing your Quarkus Server with “JFR Event Streaming” via Websockets</title>
 	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5275</guid>
 	<link>https://tomsondev.bestsolution.at/2020/09/05/observing-your-quarkus-server-with-jfr-event-streaming-via-websockets/</link>
@@ -4516,61 +4524,6 @@ You can &lt;a href=&quot;https://news.obeo.fr/en/post/world-cleanup-day-obeo-sup
 &lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;https://track.hubspot.com/__ptq.gif?a=761475&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fblogs.itemis.com%2Fde%2Flanguage-workbench-fuer-testsprachen&amp;amp;bu=https%253A%252F%252Fblogs.itemis.com&amp;amp;bvt=rss&quot; style=&quot;width: 1px!important;&quot; width=&quot;1&quot; /&gt;</description>
 	<pubDate>Fri, 13 Sep 2019 14:12:14 +0000</pubDate>
 	<author>adeutsch@itemis.de (Arne Deutsch)</author>
-</item>
-<item>
-	<title>Cedric Brun: The Rising Adoption of Capella</title>
-	<guid isPermaLink="false">https://cedric.brun.io/eclipse/rising-adoption-of-MBSE-capella</guid>
-	<link>https://cedric.brun.io/eclipse/rising-adoption-of-MBSE-capella/</link>
-	<description>&lt;p&gt;Witnessing an OSS technology getting together with a wide group of users is something I find exhilarating, I have experienced it with Acceleo, EMF Compare and Eclipse Sirius along the years, each time in different contexts and at different scales but discovering what is being done by others with a technology is always a source of excitement to me.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.polarsys.org/capella/&quot; target=&quot;_blank&quot;&gt;Capella&lt;/a&gt;  was contributed by Thales to the Eclipse communities a few years ago already and fueled by the growing need to design Systems in a better way, by the interest in Model Based System Engineering and the qualities of the product in itself we can clearly see an acceleration in the last few months.&lt;/p&gt;
-
-&lt;p&gt;If you are wondering what is Capella and what it’s used for, here is a 2-minute video we prepared for you:&lt;/p&gt;
-
-
-
-&lt;p&gt;Worldwide awareness of this solution grows and adoption rises, organizations from Europe, North America and Asia are now using Capella and experiencing the benefits of using a tool which implements a method (coined “&lt;a href=&quot;https://www.polarsys.org/capella/arcadia.html&quot; target=&quot;_blank&quot;&gt;Arcadia&lt;/a&gt;”) and &lt;strong&gt;not only a language.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;https://cedric.brun.io/images/blog/capelladay2019/forum-activity.png&quot;&gt;&lt;img src=&quot;https://cedric.brun.io/images/blog/capelladay2019/forum-activity.png&quot; /&gt;&lt;/a&gt;  
-    &lt;figcaption&gt;Capella Forum Activity&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Looking at the numbers, &lt;strong&gt;just for this summer : more than 1200 downloads each month&lt;/strong&gt;, a forum actvity which has been growing with a nice looking curve and monthly stats on &lt;a href=&quot;https://www.youtube.com/channel/UCfgwbb2h10V3tgJ59sbGBnQ/videos&quot; target=&quot;_blank&quot;&gt;YouTube&lt;/a&gt; reaching more than 2000 views: considering the size of the target audience this is a significant acceleration and that is without counting the deployment of &lt;a href=&quot;https://www.plm.automation.siemens.com/global/en/products/collaboration/product-architecture.html&quot; target=&quot;_blank&quot;&gt;System Modeling Workbench&lt;/a&gt; provided by Siemens which includes the technology.&lt;/p&gt;
-
-&lt;p&gt;Adopters not only use it but speak about it and as with any other tool having an opportunity to understanding how others are using it is highly valuable.&lt;/p&gt;
-
-&lt;p&gt;Rolls Royce, ArianeGroup or the Singapore University: they all have shared valuable information through the recent webinars :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://fr.slideshare.net/Obeo_corp/webinar-july-2019-introduction-to-capella-and-arcadia-with-a-simple-system&quot; target=&quot;_blank&quot;&gt;Introduction to Arcadia Capella with a toy catapult project&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=njW_zdE_FzI&quot; target=&quot;_blank&quot;&gt;Capella for large complex mechanical systems&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;MBSE must become a team sport !&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;More are coming and many already available through the &lt;a href=&quot;https://www.polarsys.org/capella/resources.html&quot; target=&quot;_blank&quot;&gt;Resources Page&lt;/a&gt;! BTW we can’t always get the authorization to keep them available online so your safest option is to register and attend.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;https://polarsys.org/capella/capella_day_munich_2019.html&quot;&gt;&lt;img src=&quot;https://cedric.brun.io/images/blog/capelladay2019/munich.jpg&quot; /&gt;&lt;/a&gt;  
-    &lt;figcaption&gt;Munich (Germany)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;We also make sure to setup « in Real Life » opportunities to discuss Capella and MBSE. Occasions to talk with the team behind Capella and the experts arounds the world. Next up is Capella Day Munich 2019 in a couple of weeks (the 16th of September) organized by Thales and Obeo in conjunction with the  &lt;a href=&quot;https://modelsconf19.org/&quot;&gt;Models Conference 2019&lt;/a&gt;. Here is a glimpse of the program :&lt;/p&gt;
-
-&lt;p&gt;The agenda is filled with general presentations, feedback by industrial users about their Capella deployment or specific add-ons/integration.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&quot;https://polarsys.org/capella/capella_day_munich_2019.html#program&quot;&gt;&lt;img src=&quot;https://cedric.brun.io/images/blog/capelladay2019/program.png&quot; /&gt;&lt;/a&gt;  
-    &lt;figcaption&gt;The program of Capella Day Munich 2019&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;You might &lt;a href=&quot;https://polarsys.org/capella/capella_day_munich_2019.html&quot; target=&quot;_blank&quot;&gt;want to hurry as we are almost sold out&lt;/a&gt; and such occasions are pretty unique!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I sincerely hope you’ll enjoy it, we are working hard to make it a success :-), if you can’t make it this time then know there are more occasions to come: &lt;a href=&quot;https://www.incose.org/events-and-news/search-events/2019/10/17/default-calendar/asia-oceania-systems-engineering-conference-2019---call-for-papers&quot; target=&quot;_blank&quot;&gt;AOSEC&lt;/a&gt; in Bangalore, EclipseCon in Germany (again!) where there might be a workshop focused on “MBSE at Eclipse” (Please add your name and interest on &lt;a href=&quot;https://wiki.eclipse.org/ECE2019_MBSE_at_Eclipse&quot; target=&quot;_blank&quot;&gt;the corresponding wiki page&lt;/a&gt; )&lt;/p&gt;
-
-
-    &lt;p&gt;&lt;a href=&quot;https://cedric.brun.io/eclipse/rising-adoption-of-MBSE-capella/&quot;&gt;The Rising Adoption of Capella&lt;/a&gt; was originally published by Cédric Brun at &lt;a href=&quot;https://cedric.brun.io&quot;&gt;CEO @ Obeo&lt;/a&gt; on September 04, 2019.&lt;/p&gt;</description>
-	<pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-	<author>cedric.brun@obeo.fr (Cédric Brun)</author>
 </item>
 
 </channel>
