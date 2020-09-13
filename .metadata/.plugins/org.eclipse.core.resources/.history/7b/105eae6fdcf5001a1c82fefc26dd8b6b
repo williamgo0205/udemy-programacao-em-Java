@@ -1,0 +1,25 @@
+package br.com.geekuniversity.secao11;
+
+public class Cliente {
+	private String nome;
+	private String endereco;
+	
+	public Cliente(String nome, String endereco) {
+		super();
+		this.nome = nome;
+		this.endereco = endereco;
+	}
+			
+	public String getNome() {
+		return nome;
+	}
+	
+	public String getEndereco() {
+		return endereco;
+	}
+
+	void dizer_oi() {
+		System.out.println(this.nome + " está dizendo Oi...");
+	}
+	
+}

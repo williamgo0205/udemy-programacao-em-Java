@@ -1,0 +1,16 @@
+package br.com.geekuniversity.secao11;
+
+public class Conta {
+	int numero;
+	float saldo;
+	float limite;
+	Cliente cliente;
+	
+	public Conta(int numero, float saldo, float limite, Cliente cliente) {
+		super();
+		this.numero = numero;
+		this.saldo = saldo;
+		this.limite = limite;
+		this.cliente = cliente;
+	}
+}

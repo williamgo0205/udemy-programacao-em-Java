@@ -1,0 +1,29 @@
+package br.com.geekuniversity.secao11;
+
+public class Conta {
+	private int numero;
+	private float saldo;
+	private float limite;
+	private Cliente cliente;
+
+	public Conta(int numero, float saldo, float limite, Cliente cliente) {
+		super();
+		this.numero = numero;
+		this.saldo = saldo + limite;
+		this.limite = limite;
+		this.cliente = cliente;
+	}
+
+	protected void sacar(float valor) {
+		if (valor <= this.saldo) {
+			this.saldo = this.saldo - valor;
+		}else {
+			System.out.println("Saldo insuficiente");
+		}
+	}
+
+	protected void depositar(float valor) {
+		this.saldo = this.saldo + valor;
+	}
+
+}
