@@ -9,29 +9,433 @@
 	<atom:link rel="self" href="http://planeteclipse.org/rss20.xml" type="application/rss+xml"/>
 
 <item>
+	<title>Tanja Obradovic: Jakarta EE Community Update September 2020</title>
+	<guid isPermaLink="false">6854 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/tanja-obradovic/jakarta-ee-community-update-september-2020</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;After a pause with blogs in August, I am happy to report that momentum toward the Jakarta EE 9 final release is building, we have a release date, and there are a number of virtual events that will help you stay up to date on the latest advances in Jakarta EE and the Java ecosystem. Read on for details.&lt;br /&gt;
+ &lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;The Jakarta EE Working Group Is Growing&lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;We’re very pleased to share the news that Jelastic has joined the Jakarta EE Working Group as a Participant member. Jelastic develops turnkey, multi-cloud Platform as a Service (PaaS) solutions that unify and automate cloud infrastructure management.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Welcome to the Jakarta EE Working Group, Jelastic!&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;For a complete list of Jakarta EE Working Group members, click&lt;a href=&quot;https://jakarta.ee/membership/members/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt; &lt;/h2&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;More Tooling, IDE, and Cloud Providers Are Supporting Jakarta EE&lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Implementing the new namespace in Jakarta EE 9 allows vendors and solution providers to migrate faster and more cost effectively than waiting until Jakarta EE 10, which will also include new features, enhancements, and other major changes.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; Here are two of the most recent companies to announce their support of Jakarta EE 9:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  The Jelastic Platform as a Service (PaaS) team is actively integrating Jakarta EE 9 within the Jelastic cloud platform. For details, click&lt;a href=&quot;https://jelastic.com/blog/jakartaee-9-release/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  The IntelliJ IDEA has also been migrated to the new Jakarta EE namespace. To help its users learn more about Jakarta EE 9, IntelliJ hosted a webinar entitled “Jakarta EE 9 and Beyond” by Ivar Grimstad, the Eclipse Foundation’s Jakarta EE developer advocate. To view a replay of the webinar, click&lt;a href=&quot;https://blog.jetbrains.com/idea/2020/09/webinar-jakarta-ee-9-and-beyond/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;To help companies make the transition, the Jakarta EE community has developed a data sheet summarizing the namespace migration challenge and opportunity. You can download the data sheet,&lt;a href=&quot;https://jakarta.ee/resources/JakartaEE-Datasheet-July172020_final.pdf&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt; &lt;/h2&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;We Have a Jakarta EE 9 Final Release Date&lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;With more Jakarta EE 9 specifications being approved and many others close to receiving approval, the Jakarta EE 9 final release date has been set for November 20, 2020. Here’s a visual summary of the latest approval status.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://blogs.eclipse.org/sites/default/files/users/user180/CapturePieChart.PNG&quot; style=&quot;height: 345px; width: 554px;&quot; /&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;Save the Date: JakartaOne Livestream Is December 8&lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;To coincide with the Jakarta EE 9 final release, the JakartaOne Livestream event will take place on December 8.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;This one-day virtual conference is a great way for everyone in the community to learn more about the technical benefits and architectural advances that become possible with cloud native Java, Jakarta EE, Eclipse MicroProfile, and Java EE technologies.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;If you have expertise or insight you’d like to share with attendees, there’s still time to submit a paper. The call for papers (CFP) deadline has been extended to October 1, 2020.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Stay tuned for registration details. In the meantime:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  &lt;a href=&quot;https://jakartaone.org/2020/&quot;&gt;Visit the JakartaOne Livestream website&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  &lt;a href=&quot;https://www.papercall.io/jakartaone-2020&quot;&gt;Submit a paper&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Follow @JakartaOneConf on Twitter for live event updates, speaker announcements, news, and more&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;JakartaOne Livestream — Brazil: Watch the Replay&lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;The JakartaOne Livestream event in Brazil on August 29 was a huge success with 330 registered individuals: almost 200 people attending the live event and more than 130 watching the replay. The event included a keynote, vendor talks about compatible implementations by Red Hat, Tomitribe, Payara, and Oracle, and five technical talks.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; To see the session topics, click&lt;a href=&quot;https://jakartaone.org/2020/brazil/#plan-of-the-day&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; To watch the session replays, click&lt;a href=&quot;https://www.youtube.com/watch?v=gA5I4ilfs5k&amp;amp;list=PLutlXcN4EAwCMnHdqcRPfXBne5D7_hDZd&quot;&gt; here&lt;/a&gt;. Note that the sessions are delivered in Portuguese.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;Upcoming Events &lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;There are a number of upcoming events related to Jakarta EE. Here are brief summaries to help you choose the ones you want to attend.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;September 19: Delhi and NCR JUG Talk&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;This online event hosted by the Delhi and NCR Java User Group (JUG) will feature a talk on “Jakarta EE 9 and Beyond” by myself and Ivar Grimstad:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Time: 6:00 p.m. IST&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Details and registration:&lt;a href=&quot;https://www.meetup.com/Delhi-NCR-JUG/events/273027423/&quot;&gt; Delhi and NCR JUG Meetup site&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Twitter:&lt;a href=&quot;https://twitter.com/DelhiJUG&quot;&gt; twitter.com/DelhiJUG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;October 12: JakartaOne Livestream — Español&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Event details:&lt;a href=&quot;https://jakartaone.org/2020/hispano/&quot;&gt; jakartaone.org/2020/hispano&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Registration:&lt;a href=&quot;https://www.crowdcast.io/e/jakartaone-livestream/register?utm_source=profile&amp;amp;utm_medium=profile_web&amp;amp;utm_campaign=profile&quot;&gt; Register through Crowdcast&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Sessions are in Spanish&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;October 13-14: Virtual Community Booth at the J4K Conference&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Because the community has expressed interest in public Steering Committee calls, the next &lt;em&gt;&lt;u&gt;Steering Committee call will take place on October 13 at 1:30 p.m. EDT from the J4K Conference virtual booth&lt;/u&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Also, our next &lt;em&gt;&lt;u&gt;Jakarta EE community update call will take place October 14 at 11:00 a.m. EDT at our virtual booth at the J4K Conference&lt;/u&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Finally, Jakarta EE and MicroProfile community experts will be hosting short talks, demos, and Q&amp;amp;A sessions at the virtual booth.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Be sure to register to visit the virtual booth. We’ll provide the links as soon as they’re available.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Join Community Update Calls&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Jakarta EE community calls are open to everyone! For upcoming dates and connection details, see the&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Community Calendar&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;The next call will be October 14 at 11:00 a.m. EDT. This month’s call coincides with the virtual J4K Conference so we’ll take the opportunity to open the call to a wider audience by hosting it at the conference.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;Topics will include:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Progress update on Jakarta EE 9 release&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  New on Jakarta EE 9 from Eclipse Foundation&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Topics and questions from the community&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;We know it’s not always possible to join calls in real time, so here are links to the recordings and presentations:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  &lt;a href=&quot;https://drive.google.com/drive/folders/16HhtBhtE-BWwO6ZmfusUoNRWwX2oFh-g&quot;&gt;September call presentations&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  &lt;a href=&quot;https://www.youtube.com/playlist?list=PLy7t4z5SYNaSY0Um6Vbez3G5Lc2AMaMw7&quot;&gt;The complete playlist&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+
+&lt;h2 dir=&quot;ltr&quot;&gt;Stay Connected With the Jakarta EE Community&lt;/h2&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;The Jakarta EE community is very active and there are a number of channels to help you stay up to date with all of the latest and greatest news and information. Subscribe to your preferred channels today:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Social media:&lt;a href=&quot;https://twitter.com/jakartaee&quot;&gt; Twitter&lt;/a&gt;,&lt;a href=&quot;https://www.facebook.com/JakartaEE/&quot;&gt; Facebook&lt;/a&gt;,&lt;a href=&quot;https://www.linkedin.com/groups/13597511/&quot;&gt; LinkedIn Group&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Mailing lists: jakarta.ee-community@eclipse.org, jakarta.ee-wg@eclipse.org,&lt;a href=&quot;https://jakarta.ee/connect/mailing-lists/&quot;&gt; project mailing lists&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Newsletters, blogs, and emails:&lt;a href=&quot;https://www.eclipse.org/community/eclipse_newsletter/&quot;&gt; Eclipse newsletter&lt;/a&gt;,&lt;a href=&quot;https://jakartablogs.ee/#main-content&quot;&gt; Jakarta EE blogs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·  Meetings:&lt;a href=&quot;https://www.meetup.com/jakartatechtalks_/&quot;&gt; Jakarta Tech Talks&lt;/a&gt;,&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Update&lt;/a&gt;, Jakarta Town Hall, and Eclipse Foundation events and conferences&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; You can find the complete list of channels,&lt;a href=&quot;https://jakarta.ee/connect/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; To help shape the future of open source, cloud native Java, get involved in the&lt;a href=&quot;https://jakarta.ee/membership/&quot;&gt; Jakarta EE Working Group&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; To learn more about Jakarta EE-related plans and check the date for the next Jakarta Tech Talk, be sure to bookmark the&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Community Calendar&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/tk-ljFPnfL0y-xZ-CYwl-1W9qG9yhPo4lDSXSRhiYHSOmfP8MoF3RjxU3jIZFBtH9774PBlKSU0g6KRJC5YgP8qPUqa04BPQxCbU3R2ppT87DjKRqkQy89g1aPf4aBFIRZBMws9R&quot; style=&quot;height: 161px; width: 263px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Fri, 18 Sep 2020 15:33:20 +0000</pubDate>
+</item>
+<item>
+	<title>Donald Raab: Exception Handling in Eclipse Collections</title>
+	<guid isPermaLink="false">https://medium.com/p/9e37a68fc6a9</guid>
+	<link>https://medium.com/javarevisited/exception-handling-in-eclipse-collections-9e37a68fc6a9?source=rss-df39b86e9f04------2</link>
+	<description>&lt;p&gt;Some strategies for handling exceptions in &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; before and after Java 8&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*PQd876my5P5hED-Ay9SRag.jpeg&quot; /&gt;&lt;figcaption&gt;Handling checked exceptions with iteration patterns and lambdas can feel like walking on ice&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;The Inspiration for this post&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/u/584c4eb5fcd9&quot;&gt;Brian Vermeer&lt;/a&gt; wrote a great blog on Exception Handling in Java Streams.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://dev.to/brianverm/exception-handling-in-java-streams-2mjh&quot;&gt;Exception Handling in Java Streams&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The post reminded me of the exception handling support we have had in &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; for a few years now. I thought I would show some simple examples of handling Checked Exceptions using Eclipse Collections before and after Java 8. I will also show examples that will work with &lt;a href=&quot;https://medium.com/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14&quot;&gt;Java Streams&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;The Dependable Appendable&lt;/h3&gt;&lt;p&gt;There is an interface in Java named Appendable. Appendable is a parent interface of StringBuilder, StringBuffer, PrintStream and several other classes. The interface has been around since Java 5. It defines a method append as follows:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*P-XpHDRslrkrCdsFRpI0kA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;If I create a MutableList of String, and attempt to use append as a method reference with the forEach method, my IDE gives me a warning saying there is an Unhandled Exception: java.io.IOException.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*OWzuxQegtqJbSQIPKbp9dg.png&quot; /&gt;&lt;figcaption&gt;Unhandled Exception: java.io.IOException&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;As it turns out, StringBuilder doesn’t actually throw a java.io.IOException in its method signature for the append method. So if I change the type to StringBuilder, the exception will go away.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*D9AUogMJXiusU9260QFv1g.png&quot; /&gt;&lt;figcaption&gt;The StringBuilder accept method doesn’t throw java.io.IOException&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;The same would be true if I changed the code to use StringBuffer. However, all Appendable implementations that deal with files will most likely throw the exception. So if I use the interface, and not specific implementations, I will have to handle the exception. The ugly way of handling the exception &lt;strong&gt;prior to Java 8&lt;/strong&gt;, might look as follows.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*MspVJ_iLw9KZDFEmTe13Dw.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;This is a common pattern, catching a checked exception and throwing a RuntimeException. It was common enough for us before Java 8 that we had specific “Checked” versions of the different functional interfaces in Eclipse Collections. There is a package named “checked” in each of the functional interface packages (function, predicate, procedure). Using a &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/procedure/checked/CheckedProcedure.html&quot;&gt;CheckedProcedure&lt;/a&gt;, we could simplify the code as follows:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*hkm_easz_NcOoYl59ApjAA.png&quot; /&gt;&lt;figcaption&gt;How to deal with checked exceptions before Java 8&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;If an exception is thrown by the Appendable, the exception will be caught and if it is a RuntimeException, it will be bubbled up. If it is a checked exception, a RuntimeException will be created and thrown with the checked exception set as the cause.&lt;/p&gt;&lt;p&gt;After Java 8, we introduced new interfaces to deal with Checked Exceptions. For each Functional Interface type (Function, Predicate, Procedure) there is a corresponding “throwing” type (&lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/function/checked/ThrowingFunction.html&quot;&gt;ThrowingFunction&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/predicate/checked/ThrowingPredicate.html&quot;&gt;ThrowingPredicate&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/procedure/checked/ThrowingProcedure.html&quot;&gt;ThrowingProcedure&lt;/a&gt;). There are also corresponding methods on the factories for the the functional interfaces (&lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/factory/Functions.html#throwing(org.eclipse.collections.impl.block.function.checked.ThrowingFunction)&quot;&gt;Functions.throwing&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/factory/Predicates.html#throwing(org.eclipse.collections.impl.block.predicate.checked.ThrowingPredicate)&quot;&gt;Predicates.throwing&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/factory/Procedures.html#throwing(org.eclipse.collections.impl.block.procedure.checked.ThrowingProcedure)&quot;&gt;Procedures.throwing&lt;/a&gt;). Using the combination of these features with Java 8 or above we can now write the following:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*w-ugred-W9RA1WqXjceVAQ.png&quot; /&gt;&lt;figcaption&gt;Dealing with checked exceptions with Java 8 or above&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;You can also use the same approach with &lt;a href=&quot;https://javarevisited.blogspot.com/2020/04/top-5-courses-to-learn-java-collections-and-streams.html#axzz6XMFoMrEo&quot;&gt;Java Collections&lt;/a&gt; and &lt;a href=&quot;https://javarevisited.blogspot.com/2018/08/top-5-java-8-courses-to-learn-online.html&quot;&gt;Java Streams&lt;/a&gt;.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*E3H0kT_NrTDgOu6PutPdeQ.png&quot; /&gt;&lt;figcaption&gt;Using Java 8+ forEach method on Iterable which takes Consumer&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;This code works, because the Procedure interface in Eclipse Collections extends the Consumer interface. The code will work using as a Stream as well.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*rZ4vpSKI1Tm-2dH7HK04LQ.png&quot; /&gt;&lt;figcaption&gt;Using Stream forEach which also takes Consumer&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Throwing your own RuntimeExceptions&lt;/h3&gt;&lt;p&gt;If you want to control the type of RuntimeException that is thrown, there is an overloaded version of the throwing method that supports this.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*xpFexOQP8YHhWqjo9WSJCg.png&quot; /&gt;&lt;figcaption&gt;The Function2 takes the current element, the exception caught and the RuntimeException type to rethrow&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;Let’s say I want to rethrow an UndependableAppendableException in case an IOException is caught in the call to append. The code might look as follows:&lt;/p&gt;&lt;figure&gt;&lt;a href=&quot;https://www.java67.com/2018/10/java-8-stream-and-functional-programming-interview-questions-answers.html&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*m9jaAWGPmrstZIveW1bsrg.png&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;The UndependableAppendableException constructor matches the Function2 signature defined in throwing&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;Notice, I kept the code here working with Java Stream. It would work the same using forEach on a List or a MutableList from Eclipse Collections.&lt;/p&gt;&lt;h3&gt;But wait, what about…&lt;/h3&gt;&lt;p&gt;This is the exception handling capability that exists today in Eclipse Collections. If there are additional capabilities you would like, consider submitting issues requesting features or making contributions via pull requests to the Eclipse Collection project. We welcome new contributors to Eclipse Collections. Check out the following blog for more information on how to get started.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@donraab/help-wanted-b1acf25d8c8d&quot;&gt;Help Wanted!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=9e37a68fc6a9&quot; width=&quot;1&quot; /&gt;&lt;hr /&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/javarevisited/exception-handling-in-eclipse-collections-9e37a68fc6a9&quot;&gt;Exception Handling in Eclipse Collections&lt;/a&gt; was originally published in &lt;a href=&quot;https://medium.com/javarevisited&quot;&gt;Javarevisited&lt;/a&gt; on Medium, where people are continuing the conversation by highlighting and responding to this story.&lt;/p&gt;</description>
+	<pubDate>Fri, 18 Sep 2020 14:09:19 +0000</pubDate>
+</item>
+<item>
+	<title>vert.x project: Eclipse Vert.x 3.9.3 released!</title>
+	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-3-9-3-released</guid>
+	<link>https://vertx.io/blog/eclipse-vert-x-3-9-3-released</link>
+	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce that the Eclipse Vert.x version 3.9.3 has been released.&lt;/p&gt;
+&lt;p&gt;Since the release of Vert.x 3.9.3, quite a few bugs have been reported. We would like to thank you all for reporting these issues.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.3-Release-Notes&quot;&gt;3.9.3 release notes&lt;/a&gt; can be found on the wiki, as well as the
+list of &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.3-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Docker images are available on &lt;a href=&quot;https://hub.docker.com/u/vertx/&quot;&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Vert.x distribution can be downloaded on the website but is also available from &lt;a href=&quot;http://sdkman.io/index.html&quot;&gt;SDKMan&lt;/a&gt; and &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The event bus client using the SockJS bridge is available from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/vertx3-eventbus-client&quot;&gt;NPM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/vertx-bus-bower&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webjars.org/&quot;&gt;WebJars&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.vertx%22%20AND%20v%3A%223.9.3%22&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://bintray.com/vertx/downloads/distribution/3.9.3/view&quot;&gt;Bintray&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thatâ€™s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
+&lt;/article&gt;</description>
+	<pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Webtools News: WTP 3.19 Released!</title>
+	<guid isPermaLink="false">http://www.eclipse.org/webtools/news.php#permalink193</guid>
+	<link>http://eclipse.org/webtools/releases/3.19</link>
+	<description>&lt;div&gt;
+		The Eclipse Web Tools Platform 3.19 has been released!
+		&lt;a href=&quot;https://wiki.eclipse.org/WTP_FAQ#How_do_I_install_WTP.3F&quot;&gt;Installation&lt;/a&gt;
+		and updates can be performed using the
+		Eclipse IDE 2020-09
+		&lt;a href=&quot;http://download.eclipse.org/releases/2020-09/&quot;&gt;Update Site&lt;/a&gt;
+		or through the
+		&lt;a href=&quot;https://marketplace.eclipse.org/user/nitind/listings&quot;&gt;Eclipse Marketplace&lt;/a&gt;
+		.
+		Release 3.19 is included in the 2020-09
+		&lt;a href=&quot;https://www.eclipse.org/downloads/packages/release/2020-09/r/eclipse-ide-enterprise-java-developers&quot;&gt;
+			Eclipse IDE for Enterprise Java Developers
+		&lt;/a&gt;
+		, with selected portions also included in several
+		&lt;a href=&quot;http://www.eclipse.org/downloads/compare.php&quot;&gt;other packages&lt;/a&gt;
+		. Adopters can download
+		&lt;a href=&quot;http://download.eclipse.org/webtools/downloads/&quot;&gt;the R3.19.0 p2 repository&lt;/a&gt;
+		directly and combine it with the necessary dependencies.&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org/webtools/news.php#permalink193&quot;&gt;More news&lt;/a&gt;&lt;/p&gt;</description>
+	<pubDate>Wed, 16 Sep 2020 22:55:18 +0000</pubDate>
+</item>
+<item>
+	<title>Maximilian and Jonas: EMF Forms and EMF Client Platform 1.25.0 released!</title>
+	<guid isPermaLink="false">https://eclipsesource.com/?p=43598</guid>
+	<link>https://eclipsesource.com/blogs/2020/09/16/emf-forms-and-emf-client-platform-1-25-0-released/</link>
+	<description>&lt;p&gt;We are happy to announce that with the Eclipse Release 2020-09, we have also shipped  EMF Forms and EMF Client Platform...&lt;/p&gt;&lt;p&gt;The post &lt;a href=&quot;https://eclipsesource.com/blogs/2020/09/16/emf-forms-and-emf-client-platform-1-25-0-released/&quot; rel=&quot;nofollow&quot;&gt;EMF Forms and EMF Client Platform 1.25.0 released!&lt;/a&gt; appeared first on &lt;a href=&quot;https://eclipsesource.com&quot; rel=&quot;nofollow&quot;&gt;EclipseSource&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Wed, 16 Sep 2020 14:35:03 +0000</pubDate>
+</item>
+<item>
+	<title>JBoss Tools Team: JBoss Tools 4.17.0.AM1 for Eclipse 2020-09</title>
+	<guid isPermaLink="true">https://tools.jboss.org/blog/4.17.0.am1.html</guid>
+	<link>https://tools.jboss.org/blog/4.17.0.am1.html</link>
+	<description>&lt;div&gt;&lt;div id=&quot;preamble&quot;&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Happy to announce 4.17.0.AM1 (Developer Milestone 1) build for Eclipse 2020-09.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Downloads available at &lt;a href=&quot;https://tools.jboss.org/downloads/jbosstools/2020-09/4.17.0.AM1.html&quot;&gt;JBoss Tools 4.17.0 AM1&lt;/a&gt;.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect1&quot;&gt;
+      &lt;h2 id=&quot;what-is-new&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#what-is-new&quot;&gt;&lt;/a&gt;What is New?&lt;/h2&gt;
+      &lt;div class=&quot;sectionbody&quot;&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Full info is at &lt;a href=&quot;https://tools.jboss.org/documentation/whatsnew/jbosstools/4.17.0.AM1.html&quot;&gt;this page&lt;/a&gt;. Some highlights are below.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;quarkus&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#quarkus&quot;&gt;&lt;/a&gt;Quarkus&lt;/h3&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;support-for-yaml-configuration-file&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#support-for-yaml-configuration-file&quot;&gt;&lt;/a&gt;Support for YAML configuration file&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Quarkus supports configuration through YAML format. For more information,
+      see the &lt;a href=&quot;https://quarkus.io/guides/config#yaml&quot;&gt;Quarkus documentation&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;In order to use it, follow the steps:&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;ulist&quot;&gt;
+      &lt;ul&gt;
+      &lt;li&gt;
+      &lt;p&gt;create a Quarkus project using the new Quarkus wizard&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+      &lt;p&gt;create a new &lt;code&gt;application.yaml&lt;/code&gt; or &lt;code&gt;application.yml&lt;/code&gt; next to the &lt;code&gt;application.properties&lt;/code&gt; in &lt;code&gt;src/main/resources&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The editor will open and you will get content assist and syntax validation.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect2&quot;&gt;
+      &lt;h3 id=&quot;hibernate-tools&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#hibernate-tools&quot;&gt;&lt;/a&gt;Hibernate Tools&lt;/h3&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A number of additions and updates have been performed on the available Hibernate runtime  providers.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;new-runtime-provider&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#new-runtime-provider&quot;&gt;&lt;/a&gt;New Runtime Provider&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;A new runtime provider has been added for Hibernate 6.0. It incorporates Hibernate Core version 6.0.0.Alpha6 and Hibernate Tools version 6.0.0.Alpha2.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;sect3&quot;&gt;
+      &lt;h4 id=&quot;runtime-provider-updates&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#runtime-provider-updates&quot;&gt;&lt;/a&gt;Runtime Provider Updates&lt;/h4&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Hibernate 5.4 runtime provider now incorporates Hibernate Core version 5.4.21.Final and Hibernate Tools version 5.4.21.Final.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;The Hibernate 5.3 runtime provider now incorporates Hibernate Core version 5.3.18.Final and Hibernate Tools version 5.3.18.Final.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Enjoy!&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;paragraph&quot;&gt;
+      &lt;p&gt;Jeff Maury&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Wed, 16 Sep 2020 13:27:44 +0000</pubDate>
+</item>
+<item>
+	<title>Tom Schindl: Browser like BoxShadow for JavaFX coming with e(fx)clipse 3.7.0</title>
+	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5298</guid>
+	<link>https://tomsondev.bestsolution.at/2020/09/16/browser-like-boxshadow-for-javafx-coming-with-efxclipse-3-7-0/</link>
+	<description>&lt;p&gt;Using &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow&quot;&gt;BoxShadow&lt;/a&gt; is a very common thing in modern UIs, so it might not be suprising that designers defining UIs often also use them heavily.&lt;/p&gt;
+&lt;p&gt;Unfortunately &lt;a href=&quot;https://openjfx.io/&quot;&gt;JavaFX&lt;/a&gt; has NO 100% compatible effect and even worse one who is closest (&lt;a href=&quot;https://openjfx.io/javadoc/14/javafx.graphics/javafx/scene/effect/DropShadow.html&quot;&gt;DropShadow&lt;/a&gt;) leads to a massive performance hit as shown in this video&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;On the left hand side is a Node who has a &lt;a href=&quot;https://openjfx.io/javadoc/14/javafx.graphics/javafx/scene/effect/DropShadow.html&quot;&gt;DropShadow-Effect&lt;/a&gt; applied to it and you notice that once the effect is applied that the animation isn’t smooth any more. On the right hand side you see a new Node we’ll release with &lt;a href=&quot;https://www.eclipse.org/efxclipse/index.html&quot;&gt;e(fx)clipse&lt;/a&gt; 3.7.0 who provides a new BoxShadow-Node (named BoxShadow2).&lt;/p&gt;
+&lt;p&gt;Beside getting a huge performance win, the BoxShadow-Node uses the same semantics the browser counterpart does so you can port CSS definition to your JavaFX-Application. &lt;/p&gt;
+&lt;p&gt;For completness here’s the code for this demo video.&lt;/p&gt;
+&lt;pre class=&quot;brush: java; title: ; notranslate&quot;&gt;package org.eclipse.fx.ui.controls.demo;
+
+import org.eclipse.fx.ui.controls.effects.BoxShadow2;
+
+import javafx.animation.Animation;
+import javafx.animation.Animation.Status;
+import javafx.animation.TranslateTransition;
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+public class InTheShadow extends Application {
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		BorderPane p = new BorderPane();
+		p.setPadding(new Insets(20));
+
+		Button shadowMe = new Button(&quot;Toggle Shadow&quot;);
+		p.setTop(shadowMe);
+
+		Region pane;
+
+		if (Boolean.getBoolean(&quot;efxclipse-shadow&quot;)) {
+			BoxShadow2 shadow = new BoxShadow2(createComplexUI());
+			shadow.setShadowVisible(false);
+			pane = shadow;
+		} else {
+			pane = new StackPane(createComplexUI());
+		}
+
+		p.setCenter(pane);
+
+		shadowMe.setOnAction(evt -&amp;gt; toggleShadow(pane));
+
+		Scene s = new Scene(p, 1200, 800);
+		primaryStage.setTitle(&quot;efxclipse-shadow: &quot; + Boolean.getBoolean(&quot;efxclipse-shadow&quot;));
+		primaryStage.setScene(s);
+		primaryStage.show();
+	}
+
+	private void toggleShadow(Region pane) {
+		if (pane instanceof BoxShadow2) {
+			BoxShadow2 s = (BoxShadow2) pane;
+			s.setShadowVisible(!s.isShadowVisible());
+		} else {
+			if (pane.getEffect() != null) {
+				pane.setEffect(null);
+			} else {
+				DropShadow dropShadow = new DropShadow();
+				dropShadow.setRadius(5.0);
+				dropShadow.setOffsetX(3.0);
+				dropShadow.setOffsetY(3.0);
+				dropShadow.setColor(Color.color(0.4, 0.5, 0.5));
+				pane.setEffect(dropShadow);
+			}
+		}
+	}
+
+	private Node createComplexUI() {
+		StackPane pane = new StackPane();
+		pane.setStyle(&quot;-fx-background-color: white&quot;);
+
+		for (int i = 0; i &amp;lt; 100; i++) {
+			Button b = new Button(&quot;Button &quot; + i);
+			b.setTranslateX(i % 100);
+			pane.getChildren().add(b);
+		}
+
+		Button animated = new Button(&quot;Animated&quot;);
+		StackPane.setAlignment(animated, Pos.BOTTOM_CENTER);
+
+		TranslateTransition t = new TranslateTransition(Duration.millis(1000), animated);
+		t.setAutoReverse(true);
+		t.setFromX(-300);
+		t.setToX(300);
+		t.setCycleCount(Animation.INDEFINITE);
+		animated.setOnAction(evt -&amp;gt; {
+			if (t.getStatus() == Status.RUNNING) {
+				t.pause();
+			} else {
+				t.play();
+			}
+		});
+
+		pane.getChildren().add(animated);
+
+		return pane;
+	}
+
+}
+&lt;/pre&gt;</description>
+	<pubDate>Wed, 16 Sep 2020 09:54:08 +0000</pubDate>
+</item>
+<item>
+	<title>Tom Schindl: JavaFlightRecorder-Event Documentation</title>
+	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5282</guid>
+	<link>https://tomsondev.bestsolution.at/2020/09/14/javaflightrecorder-event-documentation/</link>
+	<description>&lt;p&gt;So while &lt;a href=&quot;https://tomsondev.wordpress.com/2020/09/05/observing-your-quarkus-server-with-jfr-event-streaming-via-websockets/&quot;&gt;exploring the JFR-Event-Stream-System&lt;/a&gt; I came across the problem that there’s no (human readable) documentation what JFR-Events are available in a given JDK-Version.&lt;/p&gt;
+&lt;p&gt;Erik Gahlin who works on JavaFlightRecorder pointed me to a command one can use to dump the information &lt;/p&gt;
+&lt;div class=&quot;embed-twitter&quot;&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
+&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;The events and attributes come with a label, and sometimes a description, but there is no additional documentation.&lt;/p&gt;
+&lt;p&gt;The easiest way to see what is available is to do:&lt;/p&gt;
+&lt;p&gt;$ java -XX:StartFlightRecording:filename=rec.jfr -version&lt;br /&gt;$ jfr metadata rec.jfr&lt;/p&gt;
+&lt;p&gt;— Erik Gahlin (@ErikGahlin) &lt;a href=&quot;https://twitter.com/ErikGahlin/status/1304497221589753859?ref_src=twsrc%5Etfw&quot;&gt;September 11, 2020&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;The output you get from such a command is something like:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/09/14/javaflightrecorder-event-documentation/bildschirmfoto-2020-09-14-um-15-36-58/&quot; rel=&quot;attachment wp-att-5287&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5287&quot; height=&quot;370&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/09/bildschirmfoto-2020-09-14-um-15.36.58.png?w=640&amp;amp;h=370&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So this is some structured text (well it’s fairly simple Java-Code). So I crafted a simple parser using &lt;a href=&quot;https://www.eclipse.org/Xtext/&quot;&gt;Xtext&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/09/14/javaflightrecorder-event-documentation/bildschirmfoto-2020-09-11-um-22-52-41/&quot; rel=&quot;attachment wp-att-5285&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5285&quot; height=&quot;343&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/09/bildschirmfoto-2020-09-11-um-22.52.41.png?w=640&amp;amp;h=343&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;wrote an HTML-Generator using &lt;a href=&quot;https://www.eclipse.org/xtend/&quot;&gt;Xtend&lt;/a&gt;, threw some CSS-Framework (&lt;a href=&quot;https://getuikit.com/&quot; rel=&quot;nofollow&quot;&gt;https://getuikit.com/&lt;/a&gt;) on it to get&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/09/14/javaflightrecorder-event-documentation/bildschirmfoto-2020-09-14-um-15-41-21/&quot; rel=&quot;attachment wp-att-5291&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5291&quot; height=&quot;421&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/09/bildschirmfoto-2020-09-14-um-15.41.21.png?w=640&amp;amp;h=421&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Created a github-repo so that you can browse that yourself – &lt;a href=&quot;https://bestsolution-at.github.io/jfr-doc/openjdk-14.html&quot; rel=&quot;nofollow&quot;&gt;https://bestsolution-at.github.io/jfr-doc/openjdk-14.html&lt;/a&gt;&lt;/p&gt;</description>
+	<pubDate>Mon, 14 Sep 2020 13:50:31 +0000</pubDate>
+</item>
+<item>
 	<title>N4JS: N4JS goes LSP</title>
 	<guid isPermaLink="false">tag:blogger.com,1999:blog-7569987920628430132.post-7424128506048625084</guid>
 	<link>https://n4js.blogspot.com/2020/09/n4js-goes-lsp.html</link>
 	<description>&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; font-weight: 700; white-space: pre-wrap;&quot;&gt;A few weeks ago we started to publish a VSCode extension for N4JS to the VSCode Marketplace. This was one of the last steps on our road to support LSP-based development tools. We chose to make this major change because of several reasons that affected both users and developers of N4JS.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-F2efQTbpqKM/X1YXgPPtOzI/AAAAAAAAARA/6GuSg2_-kc8F_CWYnhfQ0dUw1XL5bRmUgCLcBGAsYHQ/s1822/N4JS_VSCODE.png&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-F2efQTbpqKM/X1YXgPPtOzI/AAAAAAAAARA/6GuSg2_-kc8F_CWYnhfQ0dUw1XL5bRmUgCLcBGAsYHQ/s16000/N4JS_VSCODE.png&quot; width=&quot;600&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;An N4JS project in VSCode with the N4JS language extension&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span id=&quot;docs-internal-guid-302ce6de-7fff-db87-f1b6-82f1bec7268d&quot;&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;Our &lt;/span&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=n4js.n4js-vscode-extension&quot;&gt;&lt;span style=&quot;color: #1155cc; font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;language extension for N4JS&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt; is hosted at the Microsoft VSCode Marketplace and will be updated regularly by our Jenkins jobs. Versions will be kept in sync with the language version, compiler version and version of the N4JS libraries to avoid incompatible setups. At the moment, the LSP server supports all main features of the language server protocol (LSP) such as validation, content assist, outline view, jump to definition and implementation, open symbol, the rename refactoring and many more. In addition, it will also generate output files whenever a source change is detected. We therefore heavily improved the incremental LSP builder of the Xtext framework and plan to migrate back those changes to the Xtext repository. For the near future we plan to work on stability, performance and also to support some of the less frequently used LSP features.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;When looking back, development of N4JS has been based on the Xtext framework from the start and thus it was straightforward to build an Eclipse-based IDE as our main development tool. Later on, we also implemented a headless compiler used for manual and automated testing from the command line. The development of the compiler already indicated some problems stemming from the tight integration of the Eclipse and the Xtext frameworks together with our language specific implementations. To name an example, we had two separate builder implementations: one for the IDE and the other for the headless compiler. Since the Eclipse IDE is using a specific workspace and project model, we also had two implementations for this abstraction. Another important problem we faced with developing an Eclipse-based IDE was that at some points we had to implement UI tests using the SWTBot framework. For us, SWTBot tests turned out to be very hard to develop, to maintain, and to keep from becoming flaky. Shifting to LSP-based development tools, i.e. the headless compiler and an LSP server, allows us to overcome the aforementioned problems.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;p dir=&quot;ltr&quot; style=&quot;line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt;&quot;&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;Users of N4JS now have the option to either use our extension for VSCode or integrate our LSP server into their favorite IDE themselves, even into the Eclipse IDE. They also benefit from more lightweight tools regarding disk size and start-up performance, as well as a better integration into well-known tools from the JavaScript development ecosystem.&lt;/span&gt;&lt;/p&gt;&lt;div&gt;&lt;span style=&quot;font-family: Arial; font-size: 11pt; vertical-align: baseline; white-space: pre-wrap;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: right;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;</description>
 	<pubDate>Tue, 08 Sep 2020 11:00:11 +0000</pubDate>
 	<author>noreply@blogger.com (n4js dev)</author>
-</item>
-<item>
-	<title>Tom Schindl: Observing your Quarkus Server with “JFR Event Streaming” via Websockets</title>
-	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5275</guid>
-	<link>https://tomsondev.bestsolution.at/2020/09/05/observing-your-quarkus-server-with-jfr-event-streaming-via-websockets/</link>
-	<description>&lt;p&gt;Having reviewed thousands lines if code last week I had the urgent need to code something for fun and inspired by &lt;a href=&quot;https://www.morling.dev/&quot;&gt;Gunnar Morlings&lt;/a&gt; tweets on &lt;a href=&quot;https://openjdk.java.net/jeps/349&quot;&gt;“JFR Event Streaming – JEP 349”&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;embed-twitter&quot;&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;
-&lt;p dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;&lt;img alt=&quot;ðŸ“¢&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f4e2.png&quot; style=&quot;height: 1em;&quot; /&gt; Very happy to announce &lt;a href=&quot;https://twitter.com/hashtag/JmFrX?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#JmFrX&lt;/a&gt;, a bridge from JMX to the JDK Flight Recorder &lt;img alt=&quot;ðŸŽ‰&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f389.png&quot; style=&quot;height: 1em;&quot; /&gt;!&lt;/p&gt;
-&lt;p&gt;&quot;JmFrX allows you to periodically record the attributes from any JMX MBean into JFR files, which you then can analyse using JDK Mission Control.&quot; Feedback welcome!&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;ðŸ“�&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f4dd.png&quot; style=&quot;height: 1em;&quot; /&gt; &lt;a href=&quot;https://t.co/QoZJy3K77S&quot;&gt;https://t.co/QoZJy3K77S&lt;/a&gt; &lt;a href=&quot;https://t.co/8ntFjMN5z1&quot;&gt;pic.twitter.com/8ntFjMN5z1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;— Gunnar Morling &lt;img alt=&quot;ðŸŒ�&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f30d.png&quot; style=&quot;height: 1em;&quot; /&gt; (@gunnarmorling) &lt;a href=&quot;https://twitter.com/gunnarmorling/status/1295747784151359488?ref_src=twsrc%5Etfw&quot;&gt;August 18, 2020&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;I hacked this afternoon in the sun and I’m now able to observe an Quarkus-Server via Websockets retrieving JFR Events rendering them via &lt;a href=&quot;https://www.chartjs.org/&quot; rel=&quot;nofollow&quot;&gt;https://www.chartjs.org/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;This is a very early draft implementation who is only able to observe the “jdk.CPULoad”-Event and just a PoC to see if this is possible at all but I’m quite happy with my afternoon work (well now it is already 10pm &lt;img alt=&quot;ðŸ™‚&quot; class=&quot;wp-smiley&quot; src=&quot;https://s0.wp.com/wp-content/mu-plugins/wpcom-smileys/twemoji/2/72x72/1f642.png&quot; style=&quot;height: 1em;&quot; /&gt;&lt;/p&gt;</description>
-	<pubDate>Sat, 05 Sep 2020 20:15:40 +0000</pubDate>
 </item>
 <item>
 	<title>Eclipse Dirigible: Release 5.2</title>
@@ -162,38 +566,6 @@ The Eclipse Ditto team&lt;/p&gt;</description>
 &lt;p&gt;&lt;a href=&quot;https://bugs.eclipse.org/bugs/showdependencytree.cgi?id=566455&quot;&gt;&lt;img alt=&quot;Screenshot of dependency tree&quot; src=&quot;https://www.chrisguindon.com/uploads/eclipse-membership-bug-list.jpg&quot; title=&quot;Screenshot of dependency tree&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;To learn more about the Eclipse Foundation transition to Europe, please visit &lt;a href=&quot;https://www.eclipse.org/europe&quot;&gt;eclipse.org/europe&lt;/a&gt;.&lt;/p&gt;</description>
 	<pubDate>Fri, 28 Aug 2020 13:25:00 +0000</pubDate>
-</item>
-<item>
-	<title>Tom Schindl: News from DriftFX: Approaching v1.0</title>
-	<guid isPermaLink="false">http://tomsondev.bestsolution.at/?p=5258</guid>
-	<link>https://tomsondev.bestsolution.at/2020/08/28/news-from-dirftfx-approaching-v1-0/</link>
-	<description>&lt;p&gt;It’s been a long time since we gave an update on DriftFX (we announced our PoC roughly 1.5 years ago) but I’m pleased to share with you that we’ve worked hard on it for the past half year to turn the PoC-Code into something we think will get v1.0 of DriftFX.&lt;/p&gt;
-&lt;p&gt;While our first implementation was focused on the usecase of the main sponsor (and is used in product already) we took the stuff we learned from it and hopefully came up without repeating mistakes we made in our PoC. &lt;/p&gt;
-&lt;p&gt;Before going into detail let me repeat what DriftFX is (and what it is not): &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DriftFX is an OpenJFX Node and an API to draw textures within this Node. (the textures could come from anywhere but the main focus is currently OpenGL)&lt;/li&gt;
-&lt;li&gt;DriftFX provides transfer modes to bypass main memory for Windows and MacOS (the texture never leaves the GPU memory)&lt;/li&gt;
-&lt;li&gt;DriftFX is NOT an OpenGL context creation/management library (use one of your own choice e.g. GLFW, ..)&lt;/li&gt;
-&lt;li&gt;DriftFX is NOT an OpenGL API library (use one of your own choice e.g. LWJGL, JOGL, GLEW, ..)&lt;/li&gt;
-&lt;li&gt;DriftFX is NOT a rendering or game engine, its sole purpose is the transport of rendered textures to OpenJFX&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;So let’s take a closer look what we worked on for the last couple of months: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Rewrote the complete internal structure and moved as much code as possible to Java (formerly a lot stuff was in C++)&lt;/li&gt;
-&lt;li&gt;Rewrote the complete API implementing a Swap-Chain approach allowing us to deal with the fact that the old API had to allocate textures on a per frame basis&lt;/li&gt;
-&lt;li&gt;Provided a Java-API so that people don’t have to write Native-Code&lt;/li&gt;
-&lt;li&gt;Provided an CPP-API which wraps the Java-API. It is distributed in source form, so no more linking against DriftFX binaries is needed.&lt;/li&gt;
-&lt;li&gt;Because of the new Java-API direct support for LWJGL is available (there’s been an experimental LWJGL-Support provided by the LWJGL-maintainers)&lt;/li&gt;
-&lt;li&gt;Moved the demos to its own repo, so that we may include samples which are not EPL.&lt;/li&gt;
-&lt;li&gt;Demo Application running out of the box&lt;/li&gt;
-&lt;li&gt;Building with GitHub-Actions and publishing p2 and maven artifacts&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The video below shows a LWJGL-Demo we adapted to use DriftFX&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://tomsondev.bestsolution.at/2020/08/28/news-from-dirftfx-approaching-v1-0/bildschirmfoto-2020-08-07-um-14-29-45/&quot; rel=&quot;attachment wp-att-5268&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-5268&quot; height=&quot;373&quot; src=&quot;https://tomsondev.files.wordpress.com/2020/08/bildschirmfoto-2020-08-07-um-14.29.45.png?w=640&amp;amp;h=373&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;You can find the source code of DriftFX at &lt;a href=&quot;https://github.com/eclipse-efx/efxclipse-drift/&quot; rel=&quot;nofollow&quot;&gt;https://github.com/eclipse-efx/efxclipse-drift/&lt;/a&gt; and our Demo-Project at &lt;a href=&quot;https://github.com/BestSolution-at/efxclipse-drift-samples&quot; rel=&quot;nofollow&quot;&gt;https://github.com/BestSolution-at/efxclipse-drift-samples&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;While we are still fixing some details, write some documentation we’d like to get feedback from the wider OpenSource-Community. &lt;/p&gt;</description>
-	<pubDate>Fri, 28 Aug 2020 11:31:46 +0000</pubDate>
 </item>
 <item>
 	<title>Thabang Mashologu: 5 Talks IoT and Edge Developers Won’t Want to Miss at EclipseCon 2020</title>
@@ -344,7 +716,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] Building random-generator 0.0.1&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --------------------------------[ jar ]---------------------------------&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0-rc-1:build (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0:build (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Running in Kubernetes mode&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Building Docker image in Kubernetes mode&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Running generator spring-boot&lt;/span&gt;
@@ -370,7 +742,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] Building random-generator 0.0.1&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --------------------------------[ jar ]---------------------------------&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0-rc-1:push (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0:push (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Running in Kubernetes mode&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Building Docker image in Kubernetes mode&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Running generator spring-boot&lt;/span&gt;
@@ -407,7 +779,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] Building random-generator 0.0.1&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --------------------------------[ jar ]---------------------------------&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0-rc-1:resource (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0:resource (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Running generator spring-boot&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: spring-boot: Using Docker image quay.io/jkube/jkube-java-binary-s2i:0.0.7 as base / builder&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: jkube-controller: Adding a default Deployment&lt;/span&gt;
@@ -446,7 +818,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] Building random-generator 0.0.1&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --------------------------------[ jar ]---------------------------------&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0-rc-1:apply (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0:apply (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Using Kubernetes at https://192.168.39.145:8443/ in namespace default with manifest /home/rohaan/work/repos/eclipse-jkube-demo-project/target/classes/META-INF/jkube/kubernetes.yml &lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Using namespace: default&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Creating a Service from kubernetes.yml namespace default name random-generator&lt;/span&gt;
@@ -501,7 +873,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] Building random-generator 0.0.1&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --------------------------------[ jar ]---------------------------------&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0-rc-1:undeploy (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- kubernetes-maven-plugin:1.0.0:undeploy (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Using Kubernetes at https://192.168.39.145:8443/ in namespace default with manifest /home/rohaan/work/repos/eclipse-jkube-demo-project/target/classes/META-INF/jkube/kubernetes.yml &lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Using namespace: default&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] k8s: Deleting resource Deployment default/random-generator&lt;/span&gt;
@@ -578,7 +950,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] Building random-generator 0.0.1&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --------------------------------[ jar ]---------------------------------&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- openshift-maven-plugin:1.0.0-rc-1:build (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- openshift-maven-plugin:1.0.0:build (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Using OpenShift build with strategy S2I&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Running in OpenShift mode&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Running generator spring-boot&lt;/span&gt;
@@ -643,7 +1015,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Found tag on ImageStream random-generator tag: sha256:aa9e1a380c04ef9174ba56459c13d44420ebe653ebf32884d60fe4306b17306d&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: ImageStream random-generator written to /home/rohaan/work/repos/eclipse-jkube-demo-project/target/random-generator-is.yml&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- openshift-maven-plugin:1.0.0-rc-1:resource (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- openshift-maven-plugin:1.0.0:resource (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Using docker image name of namespace: default&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Running generator spring-boot&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: spring-boot: Using Docker image quay.io/jkube/jkube-java-binary-s2i:0.0.7 as base / builder&lt;/span&gt;
@@ -653,7 +1025,7 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: jkube-healthcheck-spring-boot: Adding liveness probe on port 8080, path='/actuator/health', scheme='HTTP', with initial delay 180 seconds&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: jkube-revision-history: Adding revision history limit to 2&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] &lt;/span&gt;
-&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- openshift-maven-plugin:1.0.0-rc-1:apply (default-cli) @ random-generator ---&lt;/span&gt;
+&lt;span style=&quot;color: #888888;&quot;&gt;[INFO] --- openshift-maven-plugin:1.0.0:apply (default-cli) @ random-generator ---&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Using OpenShift at https://api.crc.testing:6443/ in namespace default with manifest /home/rohaan/work/repos/eclipse-jkube-demo-project/target/classes/META-INF/jkube/openshift.yml &lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: OpenShift platform detected&lt;/span&gt;
 &lt;span style=&quot;color: #888888;&quot;&gt;[INFO] oc: Using project: default&lt;/span&gt;
@@ -873,13 +1245,6 @@ With Sirius Web, modeling tools developed with Sirius can be installed on a web 
 	<description>&lt;p&gt;For the 2020-09 Eclipse Simultaneous Release, the Eclipse IDE will require Java 11 or higher to run.  If the user doesn't have that installed, Eclipse simply won't start, instead popping up this dialog:  &lt;br /&gt;&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-0sWgK4UlI2w/XzuCCZMXseI/AAAAAAAAC3Q/2p5CYOLDLt4Az5NpyV6aCpPTGAHoNzp0gCLcBGAsYHQ/s584/IncompatibleJVM.png&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;131&quot; src=&quot;https://1.bp.blogspot.com/-0sWgK4UlI2w/XzuCCZMXseI/AAAAAAAAC3Q/2p5CYOLDLt4Az5NpyV6aCpPTGAHoNzp0gCLcBGAsYHQ/w320-h131/IncompatibleJVM.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;That of course begs the question, what should I do now? The Eclipse Installer itself is an Eclipse application so it too will fail to start for the same reason.  At least on Windows the Eclipse Installer is distributed as a native executable, so it will open a &lt;a href=&quot;https://download.eclipse.org/oomph/jre/?vm=1_11_0_0_64_0&amp;amp;pn=Eclipse%20Installer&amp;amp;pu=http://wiki.eclipse.org/Eclipse_Installer&amp;amp;pi=http://download.eclipse.org/oomph/jre/128x128.png&quot;&gt;semi-helpful page&lt;/a&gt; in the browser to direct the user find a suitable JRE or JDK to install rather than popping up the above dialog.&lt;/p&gt;&lt;p&gt;Of course we are concerned that many users will update 2020-06 to 2020-09 only to find that Eclipse fails to start afterwards because they are currently running with Java 8.  But Mickael Istria has planned ahead for this as part of the 2020-06 release, adding a validation check during the update process to determine if the current JVM is suitable for the update, thereby helping prevent this particular problem.&lt;/p&gt;&lt;p&gt;Now that &lt;a href=&quot;https://www.eclipse.org/justj/&quot;&gt;JustJ&lt;/a&gt; is available for building Eclipse products with an embedded JRE, we can do even better.  Several of the Eclipse Packaging Project's products will include a JustJ JRE in the packages for 2020-09, i.e., the C/C++, Rust, and JavaScript packages.  Also the Eclipse Installer for 2020-09 will provide product variants that include a JustJ JRE.  So they all will simply run out of the box regardless of which version of Java is installed and of course even when Java is not installed at all.&lt;/p&gt;&lt;p&gt;Even better, the Eclipse Installer will provide JustJ JREs as choices in the dialogs.  A user who does not have Java installed will be offered JustJ JRE 14.02 as the default JRE. &lt;br /&gt;&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-xpZhpceqWL4/XzuCM0P-TGI/AAAAAAAAC3U/-1gvMtOltfws79deVlTd96b3Yfbjuir7QCLcBGAsYHQ/s937/EclipseInstallerJustJ.png&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;203&quot; src=&quot;https://1.bp.blogspot.com/-xpZhpceqWL4/XzuCM0P-TGI/AAAAAAAAC3U/-1gvMtOltfws79deVlTd96b3Yfbjuir7QCLcBGAsYHQ/w320-h203/EclipseInstallerJustJ.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Choices of JustJ JREs will always be available in the Eclipse Installer; it will be the default only if no suitable version of Java is currently installed on the machine.&lt;/p&gt;&lt;p&gt;Eclipse Installers with an embedded JustJ JRE will be available starting with 2020-09 M3 for all supported platforms.  For a sneak preview, you can find them in the &lt;a href=&quot;https://download.eclipse.org/justj/?file=oomph/products/latest&quot;&gt;nightly builds folder&lt;/a&gt;.  The ones with &quot;-jre&quot; in the name contain an embedded JRE (and the ones with &quot;-restricted&quot; in the name will only install 2020-09 versions of the products).&lt;/p&gt;&lt;p&gt;It was a &lt;b&gt;lot of work &lt;/b&gt;getting this all in place, both building the JREs and updating Oomph's build to consume them.  Not only that, just this week I had to rework EMF's build so that it functions with the latest platform where some of the JDT bundles have incremented their BREEs to Java 11.  There's always something disruptive that creates a lot of work.  I should point out that no one funds this work, so I often question how this is all actually sustainable in the long term (not to mention questioning my personal sanity).&lt;/p&gt;&lt;p&gt;I did found a small GmbH here in Switzerland.  It's very pretty here!&lt;/p&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-0B499FykO6A/XzuG-sxC9xI/AAAAAAAAC3k/VUgeP9BoWc4CO-MRFireV7E9cRrNQ60hwCLcBGAsYHQ/s5184/IMG_3326.JPG&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;240&quot; src=&quot;https://1.bp.blogspot.com/-0B499FykO6A/XzuG-sxC9xI/AAAAAAAAC3k/VUgeP9BoWc4CO-MRFireV7E9cRrNQ60hwCLcBGAsYHQ/w320-h240/IMG_3326.JPG&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;If you need help, consider that &lt;a href=&quot;https://www.macromodeling.com/&quot;&gt;help is available&lt;/a&gt;. If no one pays for anything, at some point you will only get what you pay for, i.e., nothing. But that's a topic for another blog...&lt;/p&gt;</description>
 	<pubDate>Tue, 18 Aug 2020 07:50:06 +0000</pubDate>
 	<author>noreply@blogger.com (Ed Merks)</author>
-</item>
-<item>
-	<title>Donald Raab: Eclipse Collections 10.3 Released</title>
-	<guid isPermaLink="false">https://medium.com/p/1ee8ea3cf6e1</guid>
-	<link>https://medium.com/oracledevs/eclipse-collections-10-3-released-1ee8ea3cf6e1?source=rss-df39b86e9f04------2</link>
-	<description>&lt;p&gt;This is the release we’ve been waiting for.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*QNgOHCcdnBICcVP_JTzD7w.jpeg&quot; /&gt;&lt;figcaption&gt;Mt. Fuji in 2006&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Thank you to the community&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; &lt;a href=&quot;https://github.com/eclipse/eclipse-collections/releases/tag/10.2.0&quot;&gt;10.2&lt;/a&gt; was released in February 2020 and was a relatively small bug fix release after the somewhat monumental &lt;a href=&quot;https://github.com/eclipse/eclipse-collections/releases/tag/10.0.0&quot;&gt;10.0 release&lt;/a&gt;. I am happy to say that six months later, the &lt;a href=&quot;https://github.com/eclipse/eclipse-collections/releases/tag/10.3.0&quot;&gt;10.3 release&lt;/a&gt; has a lot of new features submitted by our outstanding community of contributors.&lt;/p&gt;&lt;p&gt;Thank you so much to all of the contributors who donated their valuable time to making Eclipse Collections more feature rich and even higher quality. Your efforts are very much appreciated.&lt;/p&gt;&lt;p&gt;If you’re thinking about contributing to an open source project but aren’t sure, check out this great blog from one of our community contributors. In the blog &lt;a href=&quot;https://medium.com/u/8fe7c47c374f&quot;&gt;Sirisha Pratha&lt;/a&gt; explains some of the benefits she has experienced as she has become an active contributor in the OSS community.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@pratha.sirisha/50-first-contributions-fa698a060b6c&quot;&gt;50 First Contributions&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We are always looking for new contributors to join the Eclipse Collections community. Please consider contributing to Eclipse Collections if you are looking for a project to get started on your journey.&lt;/p&gt;&lt;h4&gt;Recognition&lt;/h4&gt;&lt;p&gt;Eclipse Collections received an amazing and humbling honor in a Java Magazine article in June when it was named one of “The 25 Greatest Java Apps Ever Written.”&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://blogs.oracle.com/javamagazine/the-top-25-greatest-java-apps-ever-written&quot;&gt;The 25 greatest Java apps ever written&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The credit belongs to the entire Eclipse Collections community. Your hard work and patience contributing to this library is being recognized. Congratulations and thank you to our entire community. Keep up the great work! You all rock!&lt;/p&gt;&lt;h4&gt;Loads of new features and several contributor blogs&lt;/h4&gt;&lt;p&gt;There are so many features included in &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; 10.3, that it is going to take me a bit longer to write good examples leveraging all of them. The good news is that I’ve already gotten some help from the community. Some contributors blogged about the features they added before I started writing this blog.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/fipro78&quot;&gt;Dirk Fauth&lt;/a&gt; wrote a blog where he evaluated whether there would be any performance and memory improvements including Eclipse Collections in &lt;a href=&quot;https://www.eclipse.org/nattable/&quot;&gt;NatTable&lt;/a&gt;. He also raised an issue for a missing feature, contributed the feature, and then updated the blog!&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://blog.vogella.com/2020/06/25/nattable-eclipse-collections-performance-memory-improvements/&quot;&gt;NatTable + Eclipse Collections = Performance &amp;amp; Memory improvements ?&lt;/a&gt;&lt;/p&gt;&lt;p&gt;I thanked Dirk for both the blog and code contribution, and he said something in response on Twitter that I found very inspirational.&lt;/p&gt;&lt;blockquote&gt;IMHO this is the way OSS works. Use it, like it, write about it. Find an issue, report it, fix it, contribute back.&lt;/blockquote&gt;&lt;p&gt;Well done, and well said! This is exactly the spirit of community that keeps me working happily in open source.&lt;/p&gt;&lt;h4&gt;A suggestion for future releases and future bloggers&lt;/h4&gt;&lt;p&gt;Feature blogging is something I would love to see more of in the future from contributors. This is a great way to make sure the features you contribute get discovered by other developers. This may in turn encourage developers to upgrade to the latest release. It is also a great way to help build your own personal brand, as I will link to your feature blogs from the release blog. I will also be happy to like and retweet your blog and thank you publicly for the contribution. You are saving me time explaining how the feature you added works in the release blog, so trust me I will be very thankful and happy to help socialize your hard work!&lt;/p&gt;&lt;h3&gt;The Feature Summary&lt;/h3&gt;&lt;h4&gt;Features with blogs shared by contributors&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/@goldbal/ec-by-example-aggregateby-in-mapiterable-to-aggregate-on-key-and-value-55516f1b6d9c&quot;&gt;AggregateBy in &lt;/a&gt;&lt;a href=&quot;https://medium.com/@goldbal/ec-by-example-aggregateby-in-mapiterable-to-aggregate-on-key-and-value-55516f1b6d9c&quot;&gt;MapIterable to aggregate on key and value&lt;/a&gt; — by &lt;a href=&quot;https://medium.com/u/da10a7c5350&quot;&gt;Alex Goldberg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/@goldbal/ec-by-example-flatcollect-into-primitive-collections-43d40c16eb85&quot;&gt;FlatCollect into primitive collections&lt;/a&gt; — by &lt;a href=&quot;https://medium.com/u/da10a7c5350&quot;&gt;Alex Goldberg&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://dev.to/brianverm/eclipse-collections-now-supports-triples-dkl&quot;&gt;Implemented &lt;/a&gt;&lt;a href=&quot;https://dev.to/brianverm/eclipse-collections-now-supports-triples-dkl&quot;&gt;Triples&lt;/a&gt; — by &lt;a href=&quot;https://twitter.com/BrianVerm&quot;&gt;Brian Vermeer&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/@zakhav/eclipse-collections-now-supports-indirect-sorting-of-primitive-lists-e2447ca5dbc3&quot;&gt;Support sorting of primitive lists by indirect comparison &lt;/a&gt;— by &lt;a href=&quot;https://medium.com/u/7db07b72520d&quot;&gt;Vladimir Zakharov&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/@nikhilnanivadekar/mapiterable-getordefault-new-but-not-so-new-api-1fbf2c38a508&quot;&gt;Implemented &lt;/a&gt;&lt;a href=&quot;https://medium.com/@nikhilnanivadekar/mapiterable-getordefault-new-but-not-so-new-api-1fbf2c38a508&quot;&gt;MapIterable.getOrDefault() to allow easy inter-op&lt;/a&gt;—by &lt;a href=&quot;https://medium.com/u/4285d8a2ca86&quot;&gt;Nikhil Nanivadekar&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/fusing-methods-for-productivity-c15c9eb2d666?source=friends_link&amp;amp;sk=ddde162c6aab068bda4619266d3b3bfb&quot;&gt;ContainsBy on &lt;/a&gt;&lt;a href=&quot;https://medium.com/javarevisited/fusing-methods-for-productivity-c15c9eb2d666?source=friends_link&amp;amp;sk=ddde162c6aab068bda4619266d3b3bfb&quot;&gt;RichIterable&lt;/a&gt; — by &lt;a href=&quot;https://medium.com/u/df39b86e9f04&quot;&gt;Donald Raab&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;h4&gt;New Website Translation&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://www.eclipse.org/collections/hi/index.html&quot;&gt;Hindi Translation&lt;/a&gt; of Eclipse Collections website.&lt;/p&gt;&lt;h4&gt;New Functionality&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;Added withMap() to MutableMap.&lt;/li&gt;&lt;li&gt;Added forEachInBoth to ListIterable with javadoc.&lt;/li&gt;&lt;li&gt;Added new APIs ofOccurrences and withOccurrences, to bag mutable and immutable factories.&lt;/li&gt;&lt;li&gt;Added wrapCopy() to primitive lists to mirror functionality in FastList.&lt;/li&gt;&lt;li&gt;Added singly-linked implementation of immutable stacks.&lt;/li&gt;&lt;li&gt;Added withInitialCapacity() to primitive List and Set factories.&lt;/li&gt;&lt;li&gt;Added toArray() method to primitive iterables which takes an array as a parameter to store the elements of the iterable.&lt;/li&gt;&lt;li&gt;Added default aggregateBy method to RichIterable that takes a target Map.&lt;/li&gt;&lt;li&gt;Implemented Tuples.identicalTwin(), Tuples.identicalTriplet().&lt;/li&gt;&lt;li&gt;Added shuffleThis() operation to primitive lists.&lt;/li&gt;&lt;li&gt;Added fromToExclusive in Interval.&lt;/li&gt;&lt;li&gt;Implemented swap() method on mutable primitive lists.&lt;/li&gt;&lt;li&gt;Implemented subList() on IntInterval.&lt;/li&gt;&lt;li&gt;Introduced pitest mutation testing.&lt;/li&gt;&lt;li&gt;Implemented LongInterval.&lt;/li&gt;&lt;li&gt;Implemented aggregateBy for MapIterable with a variant to aggregate on key and value.&lt;/li&gt;&lt;li&gt;Implemented Null Safe Comparators by Function.&lt;/li&gt;&lt;/ol&gt;&lt;h3&gt;Other Improvements&lt;/h3&gt;&lt;h4&gt;Documentation Updates&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;Added badges to README.md for GitHub Actions build.&lt;/li&gt;&lt;li&gt;Added Working with GitHub wiki page.&lt;/li&gt;&lt;li&gt;Added Javadocs for immutableObjectPrimitiveMap, immutablePrimitiveObjectMap, immutablePrimitivePrimitiveMap.&lt;/li&gt;&lt;li&gt;Added Javadocs for mutableObjectPrimitiveMap, mutablePrimitiveObjectMap, mutablePrimitivePrimitiveMap, mutablePrimitiveValuesMap.&lt;/li&gt;&lt;li&gt;Added Javadocs for primitiveObjectMaps, primitivePrimitiveMaps, primitiveValuesMaps, objectPrimitiveMaps.&lt;/li&gt;&lt;li&gt;Improved documentation of Function2, Function3 and MutableCollection#injectIntoWith.&lt;/li&gt;&lt;li&gt;Added README_EXAMPLES.md.&lt;/li&gt;&lt;li&gt;Fixed Gradle dependency settings in website.&lt;/li&gt;&lt;/ol&gt;&lt;h4&gt;Bug Fixes&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;Fixed size edge case issues in Interval and IntInterval.&lt;/li&gt;&lt;li&gt;Fixed Javadoc warnings, code generation errors.&lt;/li&gt;&lt;li&gt;Fixed inspections, line-wrapping and whitespace violations.&lt;/li&gt;&lt;li&gt;Fixed symmetry issues with factory methods in Multimaps factory.&lt;/li&gt;&lt;li&gt;Added CheckStyle checks for comma-separated lists that are partially wrapped.&lt;/li&gt;&lt;/ol&gt;&lt;h4&gt;Tech Debt Reduction&lt;/h4&gt;&lt;ol&gt;&lt;li&gt;Optimized removeIf() implementation on BooleanArrayList.&lt;/li&gt;&lt;li&gt;Increased test coverage for reduceIfEmpty on primitive iterables, MapIterable.getIfAbsent*(), MultimapsTest.&lt;/li&gt;&lt;li&gt;Used org.eclipse.collections.api.factory instead of org.eclipse.collections.impl.factory wherever possible.&lt;/li&gt;&lt;li&gt;Made primitive*HashMap.keySet() serializable.&lt;/li&gt;&lt;li&gt;Made sun.misc an optional Import-Package in OSGi metadata.&lt;/li&gt;&lt;li&gt;Moved primitiveSort.stg to impl/utility.&lt;/li&gt;&lt;li&gt;Optimized collect methods for primitive Immutable Singleton Bag, Set and List.&lt;/li&gt;&lt;li&gt;Optimized implementations of aggregateBy in Bags to use forEachWithOccurrences.&lt;/li&gt;&lt;li&gt;Pulled up ListIterable.binarySearch(), OrderedIterable.toStack(), RichIterable.groupByUniqueKey(),aggregateBy() as default methods.&lt;/li&gt;&lt;li&gt;Implemented with(), without(), withAll(), withoutAll() as default methods.&lt;/li&gt;&lt;li&gt;Refactored PersonAndPetKatatTest to use newer APIs.&lt;/li&gt;&lt;li&gt;Removed duplicate forEach overrides.&lt;/li&gt;&lt;li&gt;Created a simple utility to aid in Javadoc creation.&lt;/li&gt;&lt;li&gt;Updated common primitive stack template for BooleanArrayStack code generation.&lt;/li&gt;&lt;li&gt;Used direct formulas to calculate sum(), mean(), and average() on IntInterval.&lt;/li&gt;&lt;li&gt;Memoized size() value on IntInterval and Interval.&lt;/li&gt;&lt;li&gt;Optimized toImmutable() method on FastList and Primitive Lists to avoids creating a redundant array copy.&lt;/li&gt;&lt;li&gt;Added @Override annotations for tap() (and one toString()) implementations.&lt;/li&gt;&lt;/ol&gt;&lt;h3&gt;Thank you&lt;/h3&gt;&lt;p&gt;From all the contributors and committers to the entire Eclipse Collections community… thank you for using Eclipse Collections. We hope you enjoy all of the new features and improvements in the &lt;a href=&quot;https://github.com/eclipse/eclipse-collections/releases/tag/10.3.0&quot;&gt;10.3 release&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=1ee8ea3cf6e1&quot; width=&quot;1&quot; /&gt;&lt;hr /&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/oracledevs/eclipse-collections-10-3-released-1ee8ea3cf6e1&quot;&gt;Eclipse Collections 10.3 Released&lt;/a&gt; was originally published in &lt;a href=&quot;https://medium.com/oracledevs&quot;&gt;Oracle Groundbreakers&lt;/a&gt; on Medium, where people are continuing the conversation by highlighting and responding to this story.&lt;/p&gt;</description>
-	<pubDate>Tue, 11 Aug 2020 14:06:23 +0000</pubDate>
 </item>
 <item>
 	<title>Nikhil Nanivadekar: MapIterable.getOrDefault() : New but not so new API</title>
@@ -1914,68 +2279,6 @@ npm/npmjs/@yarnpkg/lockfile/1.1.0, unknown, &lt;strong&gt;restricted&lt;/strong&
 	<pubDate>Tue, 21 Jul 2020 07:00:37 +0000</pubDate>
 </item>
 <item>
-	<title>vert.x project: Eclipse Vert.x 3.9.2 released!</title>
-	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-3-9-2-released</guid>
-	<link>https://vertx.io/blog/eclipse-vert-x-3-9-2-released</link>
-	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce that the Eclipse Vert.x version 3.9.2 has been released.&lt;/p&gt;
-&lt;p&gt;Among all bug fixes you can find in 3.9.2 this enhancement&lt;/p&gt;
-&lt;h4 id=&quot;meet-the-reactive-db2-client&quot;&gt;Meet the Reactive DB2 Client&lt;/h4&gt;
-&lt;p&gt;The Reactive SQL Client family gets a new child with an implementation contributed by our fellow maintainer
-&lt;a href=&quot;https://twitter.com/andrew_guibert&quot;&gt;Andy Guibert&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Using DB2 client is as straightforward as its elder sibblings:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;DB2ConnectOptions connectOptions = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; DB2ConnectOptions()
-  .setPort(&lt;span class=&quot;hljs-number&quot;&gt;50000&lt;/span&gt;)
-  .setHost(&lt;span class=&quot;hljs-string&quot;&gt;&quot;the-host&quot;&lt;/span&gt;)
-  .setDatabase(&lt;span class=&quot;hljs-string&quot;&gt;&quot;the-db&quot;&lt;/span&gt;)
-  .setUser(&lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;)
-  .setPassword(&lt;span class=&quot;hljs-string&quot;&gt;&quot;secret&quot;&lt;/span&gt;);
-
-&lt;span class=&quot;hljs-comment&quot;&gt;// Create the client pool&lt;/span&gt;
-DB2Pool client = DB2Pool.pool(connectOptions, poolOptions);
-
-&lt;span class=&quot;hljs-comment&quot;&gt;// A simple query&lt;/span&gt;
-client
-  .query(&lt;span class=&quot;hljs-string&quot;&gt;&quot;SELECT * FROM users WHERE id='julien'&quot;&lt;/span&gt;)
-  .execute(ar -&amp;gt; {
-  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
-    RowSet result = ar.result();
-    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Got &quot;&lt;/span&gt; + result.size() + &lt;span class=&quot;hljs-string&quot;&gt;&quot; rows &quot;&lt;/span&gt;);
-  } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
-    System.out.println(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Failure: &quot;&lt;/span&gt; + ar.cause().getMessage());
-  }
-
-  &lt;span class=&quot;hljs-comment&quot;&gt;// Now close the pool&lt;/span&gt;
-  client.close();
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;reactive-mysql-client-domain-socket-support&quot;&gt;Reactive MySQL Client domain socket support&lt;/h4&gt;
-&lt;p&gt;The MySQL reactive Client can now connect using &lt;a href=&quot;https://github.com/eclipse-vertx/vertx-sql-client/issues/521&quot;&gt;domain sockets&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// Connect Options&lt;/span&gt;
-&lt;span class=&quot;hljs-comment&quot;&gt;// Socket file name /var/run/mysqld/mysqld.sock&lt;/span&gt;
-MySQLConnectOptions connectOptions = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; MySQLConnectOptions()
-    .setHost(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/var/run/mysqld/mysqld.sock&quot;&lt;/span&gt;)
-    .setDatabase(&lt;span class=&quot;hljs-string&quot;&gt;&quot;the-db&quot;&lt;/span&gt;);
-
-&lt;span class=&quot;hljs-comment&quot;&gt;// Create the pooled client&lt;/span&gt;
-MySQLPool client = MySQLPool.pool(connectOptions, &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; PoolOptions().setMaxSize(&lt;span class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;));&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;finally&quot;&gt;Finally&lt;/h4&gt;
-&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.2-Release-Notes&quot;&gt;3.9.2 release notes&lt;/a&gt; can be found on the wiki, as well as the
-list of &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.2-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Docker images are available on &lt;a href=&quot;https://hub.docker.com/u/vertx/&quot;&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The Vert.x distribution can be downloaded on the website but is also available from &lt;a href=&quot;http://sdkman.io/index.html&quot;&gt;SDKMan&lt;/a&gt; and &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The event bus client using the SockJS bridge is available from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/vertx3-eventbus-client&quot;&gt;NPM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/vertx-bus-bower&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.webjars.org/&quot;&gt;WebJars&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.vertx%22%20AND%20v%3A%223.9.2%22&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://bintray.com/vertx/downloads/distribution/3.9.2/view&quot;&gt;Bintray&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Thatâ€™s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
-&lt;/article&gt;</description>
-	<pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Scott Lewis: ECF 3.14.12 released - Now with gRPC for OSGi Remote Services</title>
 	<guid isPermaLink="false">tag:blogger.com,1999:blog-20358640.post-6714142835918115475</guid>
 	<link>http://eclipseecf.blogspot.com/2020/07/ecf-31412-released-now-with-grpc-for.html</link>
@@ -2454,87 +2757,6 @@ will do the right thing.&lt;/p&gt;</description>
 	<pubDate>Tue, 30 Jun 2020 15:22:14 +0000</pubDate>
 </item>
 <item>
-	<title>JBoss Tools Team: JBoss Tools 4.16.0.AM1 for Eclipse 2020-06</title>
-	<guid isPermaLink="true">https://tools.jboss.org/blog/4.16.0.am1.html</guid>
-	<link>https://tools.jboss.org/blog/4.16.0.am1.html</link>
-	<description>&lt;div&gt;&lt;div id=&quot;preamble&quot;&gt;
-      &lt;div class=&quot;sectionbody&quot;&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;Happy to announce 4.16.0.AM1 (Developer Milestone 1) build for Eclipse 2020-06.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;Downloads available at &lt;a href=&quot;https://tools.jboss.org/downloads/jbosstools/2020-06/4.16.0.AM1.html&quot;&gt;JBoss Tools 4.16.0 AM1&lt;/a&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;sect1&quot;&gt;
-      &lt;h2 id=&quot;what-is-new&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#what-is-new&quot;&gt;&lt;/a&gt;What is New?&lt;/h2&gt;
-      &lt;div class=&quot;sectionbody&quot;&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;Full info is at &lt;a href=&quot;https://tools.jboss.org/documentation/whatsnew/jbosstools/4.16.0.AM1.html&quot;&gt;this page&lt;/a&gt;. Some highlights are below.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;sect2&quot;&gt;
-      &lt;h3 id=&quot;openshift&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#openshift&quot;&gt;&lt;/a&gt;OpenShift&lt;/h3&gt;
-      &lt;div class=&quot;sect3&quot;&gt;
-      &lt;h4 id=&quot;secure-url-support&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#secure-url-support&quot;&gt;&lt;/a&gt;Secure URL support&lt;/h4&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;It is now possible to create secured URLs in the Application Explorer View.
-      If you select this option, the created URL will be accessible through &lt;code&gt;https&lt;/code&gt;.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;imageblock&quot;&gt;
-      &lt;div class=&quot;content&quot;&gt;
-      &lt;img alt=&quot;secure url&quot; src=&quot;https://tools.jboss.org/documentation/whatsnew/openshift/images/secure-url.png&quot; width=&quot;600&quot; /&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;When such an URL is displayed in the tree, the icon now has a secure lock indicator.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;imageblock&quot;&gt;
-      &lt;div class=&quot;content&quot;&gt;
-      &lt;img alt=&quot;secure url1&quot; src=&quot;https://tools.jboss.org/documentation/whatsnew/openshift/images/secure-url1.png&quot; width=&quot;600&quot; /&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;sect2&quot;&gt;
-      &lt;h3 id=&quot;hibernate-tools&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#hibernate-tools&quot;&gt;&lt;/a&gt;Hibernate Tools&lt;/h3&gt;
-      &lt;div class=&quot;sect3&quot;&gt;
-      &lt;h4 id=&quot;hibernate-runtime-provider-updates&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#hibernate-runtime-provider-updates&quot;&gt;&lt;/a&gt;Hibernate Runtime Provider Updates&lt;/h4&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;A number of additions and updates have been performed on the available Hibernate runtime  providers.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;sect3&quot;&gt;
-      &lt;h4 id=&quot;runtime-provider-updates&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#runtime-provider-updates&quot;&gt;&lt;/a&gt;Runtime Provider Updates&lt;/h4&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;The Hibernate 5.4 runtime provider now incorporates Hibernate Core version 5.4.17.Final and Hibernate Tools version 5.4.14.Final.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;The Hibernate 5.3 runtime provider now incorporates Hibernate Core version 5.3.17.Final and Hibernate Tools version 5.3.16.Final.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;sect2&quot;&gt;
-      &lt;h3 id=&quot;server-tools&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#server-tools&quot;&gt;&lt;/a&gt;Server Tools&lt;/h3&gt;
-      &lt;div class=&quot;sect3&quot;&gt;
-      &lt;h4 id=&quot;wildfly-20-server-adapter&quot;&gt;&lt;a class=&quot;anchor&quot; href=&quot;https://tools.jboss.org/blog/news.atom#wildfly-20-server-adapter&quot;&gt;&lt;/a&gt;Wildfly 20 Server Adapter&lt;/h4&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;A server adapter has been added to work with Wildfly 20. It adds support for
-      Java EE 8, Jakarta EE 8 and Microprofile 3.3.&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;Enjoy!&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;paragraph&quot;&gt;
-      &lt;p&gt;Jeff Maury&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Fri, 26 Jun 2020 10:30:14 +0000</pubDate>
-</item>
-<item>
 	<title>Wayne Beaton: Updates to the Eclipse IP Due Diligence Process</title>
 	<guid isPermaLink="false">http://waynebeaton.wordpress.com/?p=5705</guid>
 	<link>https://waynebeaton.wordpress.com/2020/06/25/updates-to-the-eclipse-ip-due-diligence-process/</link>
@@ -2748,142 +2970,6 @@ public interface LaunchService {
 		&lt;a href=&quot;http://download.eclipse.org/webtools/downloads/&quot;&gt;the R3.18.0 p2 repository&lt;/a&gt;
 		directly and combine it with the necessary dependencies.&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org/webtools/news.php#permalink192&quot;&gt;More news&lt;/a&gt;&lt;/p&gt;</description>
 	<pubDate>Wed, 17 Jun 2020 23:55:18 +0000</pubDate>
-</item>
-<item>
-	<title>Tanja Obradovic: Jakarta EE Community Update June 2020</title>
-	<guid isPermaLink="false">6828 at https://blogs.eclipse.org</guid>
-	<link>https://blogs.eclipse.org/post/tanja-obradovic/jakarta-ee-community-update-june-2020</link>
-	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;As always, there’s a lot going on in the Jakarta EE community, but the Jakarta EE 9 milestone release is definitely the highlight!&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Get Involved in Jakarta EE 9 Milestone Release Activities&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;We invite all Jakarta EE developers and Java User Group (JUG) members to help us celebrate the Jakarta EE 9 milestone release and test the software.&lt;/p&gt;
-
-&lt;p&gt;Please &lt;a href=&quot;https://www.crowdcast.io/e/jakartaee9_milestonereleaseparty&quot;&gt;register for the Jakarta EE Milestone Release party&lt;/a&gt; today!&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; We’ll start with the celebration. On June 23 at 11:00 EDT, we’re hosting a virtual release party for the entire Jakarta EE community. To mark the occasion, and as it is a milestone release - we’ll celebrate with a small cake - cupcake! We’re encouraging everyone to do the same, but even more so, once you start trying out the milestone release, please  make your own cupcake (recipe suggestions &lt;a href=&quot;https://sallysbakingaddiction.com/super-moist-chocolate-cupcakes/&quot;&gt;chocolate&lt;/a&gt; or &lt;a href=&quot;https://www.lifeloveandsugar.com/moist-vanilla-cupcakes/&quot;&gt;vanilla&lt;/a&gt;), complete it with a celebratory&lt;a href=&quot;https://drive.google.com/file/d/1HgX90VX1jpmsMTqTAdMAY_y2nFkXj6_O/view?usp=sharing&quot;&gt; Jakarta EE flag&lt;/a&gt;, and share a selfie picture of it on social media (tag it with #JakartaEE or use our handle @JakartaEE). If cupcakes are not your thing, you can take a selfie with the flag only as well! You can also use the example Twitter card below illustrates the idea.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://blogs.eclipse.org/sites/default/files/users/user180/cupcake_card.PNG&quot; style=&quot;height: 192px; width: 351px;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Help ensure the Jakarta EE 9 software is ready for full release in fall 2020! You will have all details after the Milestone Release party on the June 23th, so you be able to &lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Download the milestone release and run/ test your application and plan the work namespace changes if needed&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Use the Eclipse Transformer project for the namespace changes. &lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Report issues you come across&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Also, review the Jakarta EE 9 specification documents to make sure all “Jakartafication” is done properly&lt;/p&gt;
-
-&lt;p&gt;_________________________________&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Subscribe to Jakarta EE Mailing Lists&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Simply scan the QR code below to choose the mailing lists you want to subscribe to. You can also access the complete listing&lt;a href=&quot;https://jakarta.ee/connect/mailing-lists/&quot;&gt; here&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://blogs.eclipse.org/sites/default/files/users/user180/mailing_lists_Q.PNG&quot; style=&quot;height: 273px; width: 455px;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;_________________________________&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Get a First-Time Contributor’s Perspective&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Ken Fogel’s Jakarta Tech Talk —&lt;a href=&quot;https://www.crowdcast.io/e/jun9_2020_jakartatechtalk/register&quot;&gt; My First Pull Request: The Jakarta EE Examples Adventure&lt;/a&gt; — is ideal for anyone who is new to the Jakarta EE community and wondering how to make their first contribution.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; We have a great lineup of Jakarta Tech Talks scheduled. To stay up to date on our latest talks, visit the&lt;a href=&quot;https://www.meetup.com/jakartatechtalks_/&quot;&gt; Jakarta Tech Talks webpage&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;_________________________________&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;NEW: Friends of Jakarta EE Monthly Call&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Exciting news for the Community: We have now set up Friends of Jakarta EE monthly calls that will be held on the fourth Wednesday of every month. This call is by the community, for the community. The call plays no formal role in Jakarta EE Working Group activities, it’s simply an opportunity for the community to get together virtually, set their own agenga and talk once a month.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; On this call, the people who attend are the right people, the topics discussed are the right topics, and the outcomes are the right outcomes.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; Here are the details for our first call:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Date: Wednesday, June 24 at 11:00 a.m. EDT&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Agenda:&lt;a href=&quot;https://bit.ly/2zkgQWc&quot;&gt; https://bit.ly/2zkgQWc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Zoom:&lt;a href=&quot;https://eclipse.zoom.us/j/92996495448&quot;&gt; https://eclipse.zoom.us/j/92996495448&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Calendar:&lt;a href=&quot;https://bit.ly/2XKpcQa&quot;&gt; https://bit.ly/2XKpcQa&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; _________________________________&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Join Community Update Calls&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Jakarta EE community calls are open to everyone! For upcoming dates and connection details, see the&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Community Calendar&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The next call will be July 8 at 11:00 a.m. EDT and topics will include:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://docs.google.com/presentation/d/1lqTnvoSi4-5e8MNTxwbqDm1SP3Wv2YKb4kUtQRl9uMk/edit#slide=id.g887e63b301_4_29&quot;&gt; Update on TCK work&lt;/a&gt;: Scott Marlow, Cesar Hernandez&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  &lt;a href=&quot;https://drive.google.com/open?id=1liZGUikSlMjDcNa1Sk3fKcTje2vcJjwH&quot;&gt;Jakarta EE 9 release update&lt;/a&gt;: Kevin Sutter&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  &lt;a href=&quot;https://drive.google.com/open?id=1y9vGgFBaDnY3GjNFZpckgDvnVkho0FIl&quot;&gt;Tools support for Jakarta EE 9 and help from the community&lt;/a&gt;: Neil Patterson&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  &lt;a href=&quot;https://drive.google.com/open?id=1hmxkb9i5lvX14o2EqSfPGH8zxEbRIjPK6SsFuWDtxkM&quot;&gt;Update from the Eclipse Foundation&lt;/a&gt;: Ivar Grimstad, Shabnam Mayel, Tanja Obradovic&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; We know it’s not always possible to join calls in real time, so here are links to the recordings and presentations:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      June 10 call and&lt;a href=&quot;https://docs.google.com/presentation/d/1hmxkb9i5lvX14o2EqSfPGH8zxEbRIjPK6SsFuWDtxkM/edit#slide=id.g5133619cbc_0_0&quot;&gt; presentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.youtube.com/playlist?list=PLy7t4z5SYNaSY0Um6Vbez3G5Lc2AMaMw7&quot;&gt; The complete playlist&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; _____________________________&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Participate in Upcoming JUG Meetups&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Check the list below for the JUG meetup that works best for you:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      &lt;a href=&quot;https://nisjug.org/&quot;&gt;Niš JUG&lt;/a&gt; (Niš, Serbia) and &lt;a href=&quot;http://jug.mk/&quot;&gt;MKJUG&lt;/a&gt; (Macedonia): Thursday, June 18 at 6:00 p.m. CEST with speaker Tanja Obradovic from the Eclipse Foundation.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·  &lt;a href=&quot;https://www.meetup.com/KansasCityJUG/&quot;&gt;KCJUG &lt;/a&gt;(Kansas City, United States): Thursday, June 18 at 5:30 p.m. CDT with speakers Kevin Sutter and Billy Korando from IBM.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; For the complete list of JUG meetups, locations, and times, click&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1YDTAyynuhlNVBJK-Clb4XAW7gVw0TLu5R0uV3FUkW20/edit#gid=0&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; _________________________________&lt;/p&gt;
-
-&lt;p&gt; &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Stay Connected With the Jakarta EE Community&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The Jakarta EE community is very active and there are a number of channels to help you stay up to date with all of the latest and greatest news and information. Subscribe to your preferred channels today:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·  Social media:&lt;a href=&quot;https://twitter.com/jakartaee&quot;&gt; Twitter&lt;/a&gt;,&lt;a href=&quot;https://www.facebook.com/JakartaEE/&quot;&gt; Facebook&lt;/a&gt;,&lt;a href=&quot;https://www.linkedin.com/groups/13597511/&quot;&gt; LinkedIn Group&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·  Mailing lists: jakarta.ee-community@eclipse.org, jakarta.ee-wg@eclipse.org,&lt;a href=&quot;https://jakarta.ee/connect/mailing-lists/&quot;&gt; project mailing lists&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·  Newsletters, blogs, and emails:&lt;a href=&quot;https://www.eclipse.org/community/eclipse_newsletter/&quot;&gt; Eclipse newsletter&lt;/a&gt;,&lt;a href=&quot;https://jakartablogs.ee/#main-content&quot;&gt; Jakarta EE blogs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·  Meetings:&lt;a href=&quot;https://www.meetup.com/jakartatechtalks_/&quot;&gt; Jakarta Tech Talks&lt;/a&gt;,&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Update&lt;/a&gt;, Jakarta Town Hall, and Eclipse Foundation events and conferences&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; You can find the complete list of channels&lt;a href=&quot;https://jakarta.ee/connect/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; And, get involved in the&lt;a href=&quot;https://jakarta.ee/membership/&quot;&gt; Jakarta EE Working Group&lt;/a&gt; to help shape the future of open source, cloud native Java.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; To learn more about Jakarta EE-related plans and check the date for the next Jakarta Tech Talk, be sure to bookmark the&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Community Calendar&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; _________________________________&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt; &lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Wed, 17 Jun 2020 20:23:36 +0000</pubDate>
 </item>
 <item>
 	<title>Melanie Bats: SiriusCon 2020: Sirius to the Web with Obeo Cloud Platform</title>
@@ -3259,13 +3345,6 @@ spec:
 	<author>noreply@blogger.com (Scott Lewis)</author>
 </item>
 <item>
-	<title>Maximilian and Jonas: How to create/develop an Eclipse Theia IDE plugin</title>
-	<guid isPermaLink="false">https://eclipsesource.com/?p=42954</guid>
-	<link>https://eclipsesource.com/blogs/2020/05/04/how-to-create-develop-an-eclipse-theia-ide-plugin/</link>
-	<description>&lt;p&gt;This article provides an overview on how to develop a Eclipse Theia plugin and thereby extend the Theia IDE with new...&lt;/p&gt;&lt;p&gt;The post &lt;a href=&quot;https://eclipsesource.com/blogs/2020/05/04/how-to-create-develop-an-eclipse-theia-ide-plugin/&quot; rel=&quot;nofollow&quot;&gt;How to create/develop an Eclipse Theia IDE plugin&lt;/a&gt; appeared first on &lt;a href=&quot;https://eclipsesource.com&quot; rel=&quot;nofollow&quot;&gt;EclipseSource&lt;/a&gt;.&lt;/p&gt;</description>
-	<pubDate>Mon, 04 May 2020 11:18:08 +0000</pubDate>
-</item>
-<item>
 	<title>Eclipse Ditto: Announcing Eclipse Ditto Release 1.1.0</title>
 	<guid isPermaLink="true">https://www.eclipse.org/ditto/2020-04-29-release-announcement-110.html</guid>
 	<link>https://www.eclipse.org/ditto/2020-04-29-release-announcement-110.html</link>
@@ -3432,30 +3511,6 @@ showIntro=false&lt;/pre&gt;
 &lt;p&gt;Then put the above mentioned preference content as &lt;em&gt;Content&lt;/em&gt; value.&lt;/p&gt;
 &lt;p&gt;&lt;img alt=&quot;&quot; class=&quot;alignnone size-full wp-image-1058&quot; height=&quot;344&quot; src=&quot;https://kthoms.files.wordpress.com/2020/03/oomph_disable_welcome_page.png?w=584&amp;amp;h=344&quot; width=&quot;584&quot; /&gt;&lt;/p&gt;</description>
 	<pubDate>Thu, 19 Mar 2020 16:37:54 +0000</pubDate>
-</item>
-<item>
-	<title>Webtools News: WTP 3.17 Released!</title>
-	<guid isPermaLink="false">http://www.eclipse.org/webtools/news.php#permalink191</guid>
-	<link>http://eclipse.org/webtools/releases/3.17</link>
-	<description>&lt;div&gt;
-		The Eclipse Web Tools Platform 3.17 has been released!
-		&lt;a href=&quot;https://wiki.eclipse.org/WTP_FAQ#How_do_I_install_WTP.3F&quot;&gt;Installation&lt;/a&gt;
-		and updates can be performed using the
-		Eclipse IDE 2020-03
-		&lt;a href=&quot;http://download.eclipse.org/releases/2020-03/&quot;&gt;Update Site&lt;/a&gt;
-		or through the
-		&lt;a href=&quot;https://marketplace.eclipse.org/user/nitind/listings&quot;&gt;Eclipse Marketplace&lt;/a&gt;
-		.
-		Release 3.17 is included in the 2020-03
-		&lt;a href=&quot;https://www.eclipse.org/downloads/packages/release/2020-03/r/eclipse-ide-enterprise-java-developers-includes-incubating-components&quot;&gt;
-			Eclipse IDE for Enterprise Java Developers
-		&lt;/a&gt;
-		, with selected portions also included in several
-		&lt;a href=&quot;http://www.eclipse.org/downloads/compare.php&quot;&gt;other packages&lt;/a&gt;
-		. Adopters can download
-		&lt;a href=&quot;http://download.eclipse.org/webtools/downloads/&quot;&gt;the R3.17 build&lt;/a&gt;
-		directly and combine it with the necessary dependencies.&lt;/div&gt;&lt;p&gt;&lt;a href=&quot;http://www.eclipse.org/webtools/news.php#permalink191&quot;&gt;More news&lt;/a&gt;&lt;/p&gt;</description>
-	<pubDate>Wed, 18 Mar 2020 15:30:59 +0000</pubDate>
 </item>
 <item>
 	<title>Niko Stotz: MPS’ Quest of the Holy GraalVM of Interpreters</title>

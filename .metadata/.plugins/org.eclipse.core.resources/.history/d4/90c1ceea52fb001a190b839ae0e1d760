@@ -1,0 +1,37 @@
+package br.com.geekuniversity.secao12;
+
+/* Beneficios da Herança
+- Evita a repetição de código;
+- Facilita a manutenção do Programa;
+- ...... 
+- Classe Especifica;
+- Sub-classe;
+- Classe filha
+*/
+// Aluno é uma pessoa
+/*
+ - Quado uma classe herda de outra classe ela ganha:
+   - Todos os atrubutos e métodos da classe herdada
+*/
+public class Aluno extends Pessoa{
+	private String ra;
+	
+	public Aluno(String nome, int ano_nascimento, String ra, String email) {
+		super(nome, ano_nascimento, email);
+		this.ra = ra;
+	}
+	
+	public String getRa() {
+		return ra;
+	}
+	
+	public void setRA(String ra) {
+		this.ra = ra;
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno [ra=" + ra + "]";
+	}
+	
+}

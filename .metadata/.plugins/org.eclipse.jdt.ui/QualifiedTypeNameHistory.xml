@@ -10,4 +10,8 @@
 <fullyQualifiedTypeName name="javax.annotation.Generated"/>
 <fullyQualifiedTypeName name="classes.Produto"/>
 <fullyQualifiedTypeName name="classes.Pessoa"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao11.classes.Cliente"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao11.classes.Conta"/>
+<fullyQualifiedTypeName name="javax.naming.LimitExceededException"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao11.Cliente"/>
 </qualifiedTypeNameHistroy>

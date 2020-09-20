@@ -1,0 +1,27 @@
+package br.com.geekuniversity.secao12;
+
+/* Beneficios da Herança
+- Evita a repetição de código 
+- Facilita a manutenção do Programa
+- ...... 
+*/
+public class Aluno extends Pessoa{
+	private String ra;
+	
+	public Aluno(String ra) {
+		this.ra = ra;
+	}
+	
+	public String getRa() {
+		return ra;
+	}
+	
+	public void setRA(String ra) {
+		this.ra = ra;
+	}
+	
+
+	
+
+
+}

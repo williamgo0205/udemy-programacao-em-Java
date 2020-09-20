@@ -1,0 +1,19 @@
+package br.com.geekuniversity.secao12;
+
+// Herança
+public class Programa28 {
+
+	public static void main(String[] args) {
+		
+		Pessoa p1 = new Pessoa("Pedro da Silva", 1987);
+		
+		System.out.println(p1.getNome());
+		System.out.println(p1.getAnoNascimento());
+		
+		
+		Aluno a1 = new Aluno("Vanessa da Silva", 2001, "123456");
+				
+		System.out.println(a1.getNome());
+	}
+
+}

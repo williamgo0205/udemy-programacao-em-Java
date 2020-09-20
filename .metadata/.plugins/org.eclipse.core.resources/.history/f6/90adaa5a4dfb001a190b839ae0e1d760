@@ -1,0 +1,11 @@
+package br.com.geekuniversity.secao12;
+
+// Herança
+public class Programa28 {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

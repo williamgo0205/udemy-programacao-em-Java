@@ -1,0 +1,23 @@
+package br.com.geekuniversity.secao12;
+
+public class Pessoa {
+	private String nome;
+	private int ano_nascimento;
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public int getAnoNascimento() {
+		return ano_nascimento;
+	}
+	
+	public void setAnoNascimento(int ano_nascimento) {
+		this.ano_nascimento = ano_nascimento;
+	}
+	
+}
