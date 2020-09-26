@@ -16,11 +16,11 @@ public class Programa28 {
 
 	public static void main(String[] args) {
 		
-		Pessoa p1 = new Pessoa("Pedro da Silva", 1987, "pedro@gmail.com");
-		
-		System.out.println("******************* Pessoa *******************");
-		System.out.println(p1);
-		System.out.println(p1.getNome());
+//		Pessoa p1 = new Pessoa("Pedro da Silva", 1987, "pedro@gmail.com");
+//		
+//		System.out.println("******************* Pessoa *******************");
+//		System.out.println(p1);
+//		System.out.println(p1.getNome());
 		
 		Aluno a1 = new Aluno("Vanessa da Silva", 2001, "vanessa@gmail.com", "123456");
 				

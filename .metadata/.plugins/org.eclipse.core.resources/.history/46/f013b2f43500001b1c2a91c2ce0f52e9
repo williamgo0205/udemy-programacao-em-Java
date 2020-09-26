@@ -1,0 +1,13 @@
+package br.com.geekuniversity.secao13;
+
+// Template Method
+public abstract class Treinamento {
+	
+	// Template Method
+	final void treinoDiario() {
+		preparoFisico();
+		jogoTreino();
+		treinoTatico();
+	}
+
+}

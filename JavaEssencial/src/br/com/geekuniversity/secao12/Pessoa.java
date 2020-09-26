@@ -7,7 +7,21 @@ package br.com.geekuniversity.secao12;
  - Super classe
  - Classe genérica
 */
-public class Pessoa {
+
+// Agora como classe abstrata
+/*
+ - Desta forma, impossibilitamos a criação de objetos dessa classe
+ - Uma classe abstrata pode ter:
+   - Atributos;
+   - Métodos;
+   - Métodos abstratos;
+   
+ - Métodos Abstratos
+   - São métodos que não possuem implemetação, possuem apenas declaração, e, 
+     obrigatoriamente, as classes que herdarem dessa classe com métodos abstratos, 
+     precisa implementar esses métodos.
+*/
+public abstract class Pessoa {
 	private String nome;
 	private int ano_nascimento;
 	private String email;
@@ -64,4 +78,8 @@ public class Pessoa {
 	public void mensagem(String msg, int num) {
 		System.out.println(msg + "-" + num);
 	}
+	
+	// Declaração de um método abstrato
+	public abstract void outra_Mensagem(String texto);
+
 }

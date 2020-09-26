@@ -9,6 +9,300 @@
 	<atom:link rel="self" href="http://planeteclipse.org/rss20.xml" type="application/rss+xml"/>
 
 <item>
+	<title>vert.x project: Eclipse Vert.x 4 beta 3 released!</title>
+	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-4-beta-3-released</guid>
+	<link>https://vertx.io/blog/eclipse-vert-x-4-beta-3-released</link>
+	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce the third 4.0 beta release of Eclipse Vert.x .&lt;/p&gt;
+&lt;p&gt;Vert.x 4 is the evolution of the Vert.x 3.x series that will bring key features to Vert.x.&lt;/p&gt;
+&lt;h4 id=&quot;http-client-request-creation&quot;&gt;HTTP client request creation&lt;/h4&gt;
+&lt;p&gt;Until Beta3, HTTP client has created lazy HTTP requests, since then creating a request
+has become an asynchronous operation guaranteeing that a slot for performing the request
+is granted:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// Created a request&lt;/span&gt;
+HttpClientRequest request = client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/some-uri&quot;&lt;/span&gt;);
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Connect to the server or reuse a connection from the pool and then try to send the request&lt;/span&gt;
+request.end();
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Since Beta3&lt;/span&gt;
+client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/some-uri&quot;&lt;/span&gt;, ar -&amp;gt; {
+  &lt;span class=&quot;hljs-comment&quot;&gt;// The client connected to the server or reused a connection from the pool&lt;/span&gt;
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+    HttpClientRequest request = ar.result();
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Send the request&lt;/span&gt;
+    request.end();
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Another (hidden) motivation to switch to this model is avoiding data races when the
+HTTP client is used outside the event-loop using futures.&lt;/p&gt;
+&lt;p&gt;Previously you could write code like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Future get = client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;some-uri&quot;&lt;/span&gt;);
+
+&lt;span class=&quot;hljs-comment&quot;&gt;// Assuming we have a client that returns a future response&lt;/span&gt;
+&lt;span class=&quot;hljs-comment&quot;&gt;// assuging this is *not* on the event-loop&lt;/span&gt;
+Future fut = get.send().compose(response -&amp;gt; {
+
+  &lt;span class=&quot;hljs-comment&quot;&gt;// Response events might have happen already&lt;/span&gt;
+  &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; response.body();
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now you can write instead:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Future fut = client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;some-uri&quot;&lt;/span&gt;).compose(request -&amp;gt; {
+  request.send().compose(response -&amp;gt; response.body())
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;httpserverresponse-send-method&quot;&gt;HttpServerResponse send method&lt;/h4&gt;
+&lt;p&gt;In the previous beta, HTTP client request got a new simplified &lt;code&gt;send&lt;/code&gt; method to send
+a body or a stream. We did the same for the HTTP server response API:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;server.requestHandler(req -&amp;gt; {
+  req.pause();
+  getSomeStream().onSuccess(stream -&amp;gt; {
+    req.response().send(stream);
+  });
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;http-tunnel-improvements&quot;&gt;HTTP tunnel improvements&lt;/h4&gt;
+&lt;p&gt;Creating an HTTP tunnel has now become more natural:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;client.request(HttpMethod.CONNECT, &lt;span class=&quot;hljs-string&quot;&gt;&quot;some-uri&quot;&lt;/span&gt;)
+  .onSuccess(request -&amp;gt; {
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Connect to the server&lt;/span&gt;
+    request.connect(ar -&amp;gt; {
+      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+        HttpClientResponse response = ar.result();
+
+        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (response.statusCode() != &lt;span class=&quot;hljs-number&quot;&gt;200&lt;/span&gt;) {
+          &lt;span class=&quot;hljs-comment&quot;&gt;// Connect failed for some reason&lt;/span&gt;
+        } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
+          &lt;span class=&quot;hljs-comment&quot;&gt;// Tunnel created, raw buffers are transmitted on the wire&lt;/span&gt;
+          NetSocket socket = response.netSocket();
+        }
+      }
+    });
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The new &lt;code&gt;connect&lt;/code&gt; method tells the client that when a &lt;code&gt;201&lt;/code&gt; response is received
+from the server then the connection should be switched to not interpret HTTP
+data anymore.&lt;/p&gt;
+&lt;p&gt;On the server, the API has become asynchronous and renamed to &lt;code&gt;toNetSocket()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;server.requestHandler(request -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (request.method() == HttpMethod.CONNECT) {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Will send an HTTP 201 status code and switch the connection to use raw buffers&lt;/span&gt;
+    request.toNetSocket(ar -&amp;gt; {
+      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+        NetSocket socket = ar.result();
+      }
+    });
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;websocket-upgrade-improvements&quot;&gt;WebSocket upgrade improvements&lt;/h4&gt;
+&lt;p&gt;The server WebSocket manual upgrade operation has also become asynchronous and renamed
+to &lt;code&gt;toWebSocket()&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;server.requestHandler(request -&amp;gt; {
+  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (request.method() == HttpMethod.GET &amp;amp;&amp;amp; &lt;span class=&quot;hljs-string&quot;&gt;&quot;Upgrade&quot;&lt;/span&gt;.equals(request.getHeader(&lt;span class=&quot;hljs-string&quot;&gt;&quot;connection&quot;&lt;/span&gt;))) {
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Will do the WebSocket handshake&lt;/span&gt;
+    request.toWebSocket(ar -&amp;gt; {
+      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
+        ServerWebSocket socket = ar.result();
+      }
+    });
+  }
+});&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;row-to-json-conversion&quot;&gt;Row to JSON conversion&lt;/h4&gt;
+&lt;p&gt;SQL client can now easily transform a &lt;code&gt;Row&lt;/code&gt; into a JSON object, this can be convienient
+for applications directly transferring JSON results to the client:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;client
+  .preparedQuery(&lt;span class=&quot;hljs-string&quot;&gt;&quot;SELECT * FROM USERS WHERE ID=$1&quot;&lt;/span&gt;)
+  .execute(Tuple.of(id))
+  .onSuccess(row -&amp;gt; {
+    &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (row.size() == &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;) {
+      JsonObject json = row.iterator().next().toJson();
+    }
+  });&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;oauth2-oidc-pkce&quot;&gt;OAuth2/OIDC PKCE&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;OAuth2Handler&lt;/code&gt; can now handle &lt;a href=&quot;https://tools.ietf.org/html/rfc7636&quot;&gt;PKCE&lt;/a&gt;, which means another layer of security to your application.&lt;/p&gt;
+&lt;h4 id=&quot;redis-resp3&quot;&gt;Redis RESP3&lt;/h4&gt;
+&lt;p&gt;The redis client can now speak &lt;code&gt;RESP3&lt;/code&gt; with redis servers. This means it can handle all the new types and APIs available on redis from all versions (RESP2, redis &amp;lt; 6) and (RESP3, redis &amp;gt;= 6).&lt;/p&gt;
+&lt;h4 id=&quot;finally&quot;&gt;Finally&lt;/h4&gt;
+&lt;p&gt;This is the Beta3 relase of Vert.x 4, you can of course expect another beta as we get feedback from the community and fix issues that we failed to catch before.&lt;/p&gt;
+&lt;p&gt;You can also read the milestone announces to know more about the overral changes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-beta-1-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-beta-1-released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-4-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-4-released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-3-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-3-released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-2-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-2-released&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-1-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-1-released&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/4.0.0-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;
+ can be found on the wiki.&lt;/p&gt;
+&lt;p&gt;For this release there are no Docker images.&lt;/p&gt;
+&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;https://search.maven.org/search?q=g:io.vertx%20AND%20v:4.0.0.Beta1&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://repo1.maven.org/maven2/io/vertx/vertx-stack-manager/4.0.0.Beta1/&quot;&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can bootstrap a Vert.x 4.0.0.Beta3 project using &lt;a href=&quot;https://start.vertx.io&quot;&gt;https://start.vertx.io&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The documentation has been deployed on this preview web-site &lt;a href=&quot;https://vertx-web-site.github.io/docs/&quot;&gt;https://vertx-web-site.github.io/docs/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thatâ€™s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
+&lt;/article&gt;</description>
+	<pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Nikhil Nanivadekar: MapIterable.getOrDefault() : New but not so new API</title>
+	<guid isPermaLink="false">https://medium.com/p/1fbf2c38a508</guid>
+	<link>https://medium.com/@nikhilnanivadekar/mapiterable-getordefault-new-but-not-so-new-api-1fbf2c38a508?source=rss-4285d8a2ca86------2</link>
+	<description>&lt;h3&gt;MapIterable.getOrDefault() : New but not so new API&lt;/h3&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*-BHnBBED8fcOaR9hl1hVLA.jpeg&quot; /&gt;&lt;figcaption&gt;Sunset at Port Hardy (June 2019)&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;Eclipse Collections comes with it’s own List, Set, and Map implementations. These implementations extend the JDK List, Set, and Map implementations for easy interoperability. In Eclipse Collections 10.3.0, I introduced a new API MapIterable.getOrDefault(). In Java 8, &lt;a href=&quot;https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Map.html#getOrDefault(java.lang.Object,V)&quot;&gt;Map.getOrDefault()&lt;/a&gt; was introduced, so what makes it a new API for Eclipse Collections 10.3.0? Technically, it is new but not so new API! Consider the code snippets below, prior to Eclipse Collections 10.3.0:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*LGa2c3g3lUQrySCraWm9Ew.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;MutableMap&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*Dm8GxkyqNWByQ3dpB7MaOQ.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;ImmutableMap&lt;/strong&gt;.getOrDefault() does not compile&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;As you can see in the code, MutableMap has getOrDefault() available, however ImmutableMap does not have it. But there is no reason why ImmutableMap should not have this read-only API. I found that MapIterable already had getIfAbsentValue() which has the same behavior. Then why did I still add getOrDefault() to MapIterable?&lt;/p&gt;&lt;p&gt;I added MapIterable.getOrDefault() mainly for easy interoperability. Firstly, most Java developers will be aware of the getOrDefault() method, only Eclipse Collections users would be aware of getIfAbsentValue(). By providing the API same as the JDK it reduces the necessity to learn a new API. Secondly, even though getOrDefault() is available on MutableMap, it is not available on the highest Map interface of Eclipse Collections. Thirdly, I got to learn a Java compiler check which I had not experienced before. I will elaborate this check a bit more in detail because I find it interesting.&lt;/p&gt;&lt;p&gt;After I added getOrDefault() to MapIterable, various Map interfaces in Eclipse Collections started giving compiler errors with messages like: &lt;em&gt;org.eclipse.collections.api.map.MutableMapIterable inherits unrelated defaults for getOrDefault(Object, V) from types org.eclipse.collections.api.map.MapIterable and java.util.Map&lt;/em&gt;. This I thought was cool, because at compile time, the Java compiler is ensuring that if there is an API with default implementation in more than one interface in a multi-interface scenario, then Java will not decide which implementation to pick but rather throw compiler errors. Hence, Java ensures at compile time that there is no ambiguity regarding which implementation will be used at runtime. How awesome is that?!? In order to fix the compile time errors, I had to add a default implementations on the interfaces which gave the errors. I always believe in Compiler Errors are better than Runtime Exceptions.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/stuartmarks&quot;&gt;Stuart Marks&lt;/a&gt; has put together an &lt;a href=&quot;https://stuartmarks.wordpress.com/2020/09/22/incompatibilities-with-jdk-15-charsequence-isempty/&quot;&gt;awesome blog&lt;/a&gt; which covers the specifics of such scenarios. I suggest reading that for in-depth understanding of how and why this behavior is observed.&lt;/p&gt;&lt;p&gt;Post Eclipse Collections 10.3.0 the below code samples will work:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*ZHp2pOKpKMgAlYdf97aLcw.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;&lt;em&gt;MapIterable&lt;/em&gt;&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*MO5NLHLmkm7SlTdVYqc_Pg.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;MutableMap&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*-4uxJkMTp5NPT620jGzOhQ.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;ImmutableMap&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/releases/tag/10.3.0&quot;&gt;Eclipse Collections 10.3.0&lt;/a&gt; was released on 08/08/2020 and is one of our most feature packed releases. The release constitutes numerous contributions from the Java community.&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Show your support &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/stargazers&quot;&gt;&lt;em&gt;star us on GitHub&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Eclipse Collections Resources:&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; comes with it’s own implementations of &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/impl/list/mutable/FastList.html&quot;&gt;List&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/impl/set/mutable/UnifiedSet.html&quot;&gt;Set&lt;/a&gt; and &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/impl/map/mutable/UnifiedMap.html&quot;&gt;Map&lt;/a&gt;. It also has additional data structures like &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/api/multimap/Multimap.html&quot;&gt;Multimap&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/api/bag/Bag.html&quot;&gt;Bag&lt;/a&gt; and an entire Primitive Collections hierarchy. Each of our collections have a rich API for commonly required iteration patterns.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://www.eclipse.org/collections/&quot;&gt;Website&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Source code on GitHub&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;Contribution Guide&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/docs/guide.md#eclipse-collections-reference-guide&quot;&gt;Reference Guide&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=1fbf2c38a508&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Wed, 23 Sep 2020 02:30:30 +0000</pubDate>
+</item>
+<item>
+	<title>Scott Lewis: Using gRPC-java code generation to create OSGi Services</title>
+	<guid isPermaLink="false">tag:blogger.com,1999:blog-20358640.post-7451999693674560058</guid>
+	<link>http://eclipseecf.blogspot.com/2020/09/using-grpc-java-code-generation-to.html</link>
+	<description>&lt;p&gt;OSGi Services are usually first created by declaring a java service interface class.  As an OSGi service, this interface class serves as both the name for the service in the service registry, and defines the service contract (i.e. the interface method signatures...i.e. the method name, argument types, and return types) for that version of the service.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://grpc.io/&quot;&gt;gRPC &lt;/a&gt;(Google RPC) is a popular and high-performance rpc approach that allows developers to define networked services based upon protocol buffers (&lt;a href=&quot;https://developers.google.com/protocol-buffers/docs/proto3&quot;&gt;proto3&lt;/a&gt;).&lt;/p&gt;&lt;p&gt;By extending &lt;a href=&quot;https://bndtools.org/&quot;&gt;bndtools &lt;/a&gt;recently-added &lt;a href=&quot;https://bnd.bndtools.org/instructions/generate.html&quot;&gt;code generation capability&lt;/a&gt;, it's now possible to generate an OSGi (remote) service API from just a proto3 service declaration.  All the classes necessary for an OSGi Remote Service API (service interface, arg and return types) can be generated by bndtools within Eclipse from a single proto3 file, immediately and completely.&lt;/p&gt;&lt;p&gt;Ready to implement-and-consume OSGi Services can be generated by Eclipse+bndtools + a proto3 service declaration.&lt;/p&gt;&lt;p&gt;Further, the proto3 service declaration can be modified, and the tooling will immediately generate new service API classes, compile, and package them into a bundle, all from within Eclipse+bndtools.&lt;/p&gt;&lt;p&gt;To get this bndtools-grpc generation with an example see &lt;a href=&quot;https://github.com/ECF/bndtools.grpc&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</description>
+	<pubDate>Tue, 22 Sep 2020 16:21:03 +0000</pubDate>
+	<author>noreply@blogger.com (Scott Lewis)</author>
+</item>
+<item>
+	<title>Tanja Obradovic: 5 Talks Java Developers Won’t Want to Miss at EclipseCon 2020</title>
+	<guid isPermaLink="false">6856 at https://blogs.eclipse.org</guid>
+	<link>https://blogs.eclipse.org/post/tanja-obradovic/5-talks-java-developers-won%E2%80%99t-want-miss-eclipsecon-2020</link>
+	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;Java is a major technology focus area for many members of the Eclipse community, and EclipseCon is always a great opportunity to expand and deepen your knowledge in this space. Last year’s EclipseCon featured about 20 Java-related sessions, and they’ve been popular&lt;a href=&quot;https://www.youtube.com/playlist?list=PLy7t4z5SYNaT_yo5Dhajb9i-Pf0LbQ3z8&quot;&gt; YouTube replays&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;This year’s EclipseCon features another great lineup of Java-related sessions, including talks on Jakarta EE, Eclipse MicroProfile, and Java Development Tools (JDT). To help you plan your&lt;a href=&quot;https://www.eclipsecon.org/2020&quot;&gt; EclipseCon 2020&lt;/a&gt; experience, here are brief summaries of five talks you won’t want to miss:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.eclipsecon.org/node/3111&quot;&gt; Boost your APIs With GraphQL&lt;/a&gt;. GraphQL is an open source API query language originally developed by Facebook. Jean-François James will explain how GraphQL relates to REST and how it can be used. To demonstrate the potential, Jean-François will show you an&lt;a href=&quot;https://microprofile.io/&quot;&gt; Eclipse MicroProfile&lt;/a&gt; GraphQL project.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.eclipsecon.org/node/3141&quot;&gt; What's New in Java?&lt;/a&gt; With its six-month release cycle and preview features, Java evolves at a rapid pace. Manoj Palat will explore Java 14 and Java 15 features, including switch expressions, records, text blocks, pattern InstanceOf, and sealed types to help you understand how and when to use them. Manoj will also review features in upcoming Java releases&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.eclipsecon.org/node/3249&quot;&gt; What's New in JDT?&lt;/a&gt; Since last year’s EclipseCon, there have been four&lt;a href=&quot;https://www.eclipse.org/jdt/&quot;&gt; Eclipse JDT&lt;/a&gt; releases. Jeff Johnston will take you through new JDT features, focusing on those that aren’t part of supporting new Java language features. You’ll learn about new cleanup and quick fixes, enhanced completion support, formatting, and debug enhancements. Jeff will also provide live demos of the features and share related code samples.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.eclipsecon.org/node/3167&quot;&gt; AdoptOpenJDK — Making Java Free Again&lt;/a&gt;. With more than 140 million downloads in the last year, AdoptOpenJDK is a serious contender for production use of Java. Hendrik Eggers and George Adams will explain how they use AdoptOpenJDK to build on more than 15 different platforms, execute more than 87 million tests, and distribute OpenJDK binaries to millions of users. They’ll also explain how AdoptOpenJDK binaries compare to the Java binaries you use today.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.eclipsecon.org/node/3190&quot;&gt; Make your Microservices as Robust as Mission-Critical Systems With MicroProfile and Jakarta EE.&lt;/a&gt; Kenji Kazumura explains how to use and fine-tune Eclipse MicroProfile functions, such as fault tolerance, metrics, and OpenTracing to build microservices for mission-critical enterprise systems. You’ll also learn how to use these parameters in conjunction with Istio and tools such as Grafana and Kiali to monitor microservices.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; &lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;Register for EclipseCon 2020 Today&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;EclipseCon is a virtual event this year and it’s being held October 19-22. There’s no cost to attend the sessions, but you do need to register. Space is limited, so be sure to register early to reserve your spot.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/2020/registration&quot;&gt;Get all the registration details and register now.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt; For event details, visit&lt;a href=&quot;https://www.eclipsecon.org/2020&quot;&gt; eclipsecon.org/2020&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;To join the EclipseCon conversation and get the latest updates:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·      Use #EclipseCon on social media&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·      Follow @EclipseCon on Twitter&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;And stay tuned for more insight into EclipseCon 2020. Our upcoming blogs will focus on:&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·      Community Day events&lt;/p&gt;
+
+&lt;p dir=&quot;ltr&quot;&gt;·      Tips to get the most out of EclipseCon&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
+	<pubDate>Tue, 22 Sep 2020 12:57:04 +0000</pubDate>
+</item>
+<item>
+	<title>Rohan Kumar: Migrating from Fabric8 Maven Plugin to Eclipse JKube 1.0.0</title>
+	<guid isPermaLink="false">https://developers.redhat.com/blog/?p=781287</guid>
+	<link>https://developers.redhat.com/blog/2020/09/21/migrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0/</link>
+	<description>&lt;p&gt;The &lt;a href=&quot;https://developers.redhat.com/blog/2020/09/09/cloud-native-java-applications-made-easy-eclipse-jkube-1-0-0-now-available/&quot;&gt;recent release of Eclipse JKube 1.0.0&lt;/a&gt; means that the &lt;a href=&quot;https://github.com/fabric8io/fabric8-maven-plugin&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Fabric8 Maven Plugin&lt;/a&gt; is no longer supported. If you are currently using the Fabric8 Maven Plugin, this article provides instructions for migrating to &lt;a href=&quot;https://www.eclipse.org/jkube/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;JKube&lt;/a&gt; instead. I will also explain the relationship between Eclipse JKube and the Fabric8 Maven Plugin (they’re the same thing) and introduce the highlights of the new Eclipse JKube 1.0.0 release. These migration instructions are for developers working on the &lt;a href=&quot;https://developers.redhat.com/topics/kubernetes&quot;&gt;Kubernetes&lt;/a&gt; and &lt;a href=&quot;https://developers.redhat.com/products/openshift/overview&quot;&gt;Red Hat OpenShift&lt;/a&gt; platforms.&lt;/p&gt;
+&lt;h2&gt;Eclipse JKube is the Fabric8 Maven Plugin&lt;/h2&gt;
+&lt;p&gt;Eclipse JKube and the Fabric8 Maven Plugin are one and the same. Eclipse JKube was first released in 2014 under the name of Fabric8 Maven Plugin. The development team changed the name when we pre-released Eclipse JKube 0.1.0 in December 2019. For more about the name change, see my recent &lt;a href=&quot;https://developers.redhat.com/blog/2020/01/28/introduction-to-eclipse-jkube-java-tooling-for-kubernetes-and-red-hat-openshift/&quot;&gt;introduction to Eclipse JKube&lt;/a&gt;. This article focuses on the migration path to JKube 1.0.0.&lt;/p&gt;
+&lt;p&gt;&lt;span id=&quot;more-781287&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;What’s new in Eclipse JKube 1.0.0&lt;/h2&gt;
+&lt;p&gt;If you are hesitant about migrating to JKube, the following highlights from the new 1.0.0 release might change your mind:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Targeted migration with the new &lt;a href=&quot;https://search.maven.org/artifact/org.eclipse.jkube/kubernetes-maven-plugin&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Kubernetes Maven Plugin&lt;/a&gt; and &lt;a href=&quot;https://search.maven.org/search?q=a:openshift-maven-plugin&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;OpenShift Maven Plugin&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://quay.io/organization/jkube&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Improved base images&lt;/a&gt; based on &lt;a href=&quot;https://developers.redhat.com/articles/ubi-faq&quot;&gt;Red Hat Universal Base Images&lt;/a&gt; (UBI) and &lt;a href=&quot;https://developers.redhat.com/topics/enterprise-java&quot;&gt;JDK 11&lt;/a&gt;. (Fabric8 Maven Plugin’s images are based on JDK 8.)&lt;/li&gt;
+&lt;li&gt;No coupling to the &lt;a href=&quot;http://fabric8.io/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;fabric8.io&lt;/a&gt; platform.&lt;/li&gt;
+&lt;li&gt;Source-to-Image (S2I) support for web applications and &lt;a href=&quot;https://developers.redhat.com/products/quarkus/getting-started&quot;&gt;Quarkus&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Better support for &lt;a href=&quot;https://developers.redhat.com/topics/containers&quot;&gt;containerizing&lt;/a&gt; your applications with &lt;a href=&quot;https://www.eclipse.org/jkube/docs/kubernetes-maven-plugin#_jib_java_image_builder&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;JIB integration&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.eclipse.org/jkube/docs/kubernetes-maven-plugin#jkube:helm&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Helm support&lt;/a&gt; in the Kubernetes Maven Plugin and OpenShift Maven Plugin.&lt;/li&gt;
+&lt;li&gt;Based on &lt;a href=&quot;https://github.com/eclipse/jkube/tree/master/jkube-kit&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;JKube Kit&lt;/a&gt;, which is independent of both &lt;a href=&quot;https://maven.apache.org/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Maven&lt;/a&gt; and &lt;a href=&quot;https://gradle.org/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Gradle&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Support for &lt;a href=&quot;https://github.com/eclipse/jkube/issues/66&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Podman and Buildah&lt;/a&gt; is coming soon in Eclipse JKube 1.1.0.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fabric8 Maven Plugin generates both Kubernetes and Red Hat OpenShift artifacts, and it automatically detects and deploys resources to the underlying cluster. But developers who use Kubernetes don’t need OpenShift artifacts, and OpenShift developers don’t need Kubernetes manifests. We addressed this issue by splitting Fabric8 Maven Plugin into two plugins for &lt;a href=&quot;https://github.com/eclipse/jkube&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Eclipse JKube&lt;/a&gt;: Kubernetes Maven Plugin and OpenShift Maven Plugin.&lt;/p&gt;
+&lt;h2&gt;Eclipse JKube migration made easy&lt;/h2&gt;
+&lt;p&gt;Eclipse JKube has a &lt;code&gt;migrate&lt;/code&gt; goal that automatically updates Fabric8 Maven Plugin references in your &lt;code&gt;pom.xml&lt;/code&gt; to the Kubernetes Maven Plugin or OpenShift Maven Plugin. In the next sections, I’ll show you how to migrate a Fabric8 Maven Plugin-based project to either platform.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/09/Untitled-Diagram.jpg&quot;&gt;&lt;img alt=&quot;Replace the code for the Fabric8 Maven plugin with either the code for the Kubernetes Maven plugin or the OpenShft Maven plugin.&quot; class=&quot; aligncenter  wp-image-781297 &quot; height=&quot;350&quot; src=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/09/Untitled-Diagram-1024x560.jpg&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For demonstration purposes, we can use my old random generator application, which displays a random JSON response at a &lt;code&gt;/random&lt;/code&gt; endpoint. To start, clone this repository:&lt;/p&gt;
+&lt;pre&gt;$ git clone https://github.com/rohanKanojia/fmp-demo-project.git
+cd fmp-demo-project
+&lt;/pre&gt;
+&lt;p&gt;Then build the project:&lt;/p&gt;
+&lt;pre&gt;$ mvn clean install
+&lt;/pre&gt;
+&lt;h2&gt;Eclipse JKube migration for Kubernetes users&lt;/h2&gt;
+&lt;p&gt;Use the following goal to migrate to Eclipse JKube’s Kubernetes Maven Plugin. Note that we have to specify a complete &lt;code&gt;artifactId&lt;/code&gt; and &lt;code&gt;groupId&lt;/code&gt; because the plugin is not automatically included in the &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;$ mvn org.eclipse.jkube:kubernetes-maven-plugin:migrate
+&lt;/pre&gt;
+&lt;p&gt;Here are the logs for the &lt;code&gt;migrate&lt;/code&gt; goal:&lt;/p&gt;
+&lt;pre&gt;fmp-demo-project : $ mvn org.eclipse.jkube:kubernetes-maven-plugin:migrate
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------&amp;lt; meetup:random-generator &amp;gt;-----------------------
+[INFO] Building random-generator 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- kubernetes-maven-plugin:1.0.0-rc-1:migrate (default-cli) @ random-generator ---
+[INFO] k8s: Found Fabric8 Maven Plugin in pom with version 4.4.1
+[INFO] k8s: Renamed src/main/fabric8 to src/main/jkube
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.154 s
+[INFO] Finished at: 2020-09-08T19:32:01+05:30
+[INFO] ------------------------------------------------------------------------
+fmp-demo-project : $
+&lt;/pre&gt;
+&lt;p&gt;You’ll notice that all of the Fabric8 Maven Plugin references have been replaced by references to Eclipse JKube. The Kubernetes Maven Plugin is the same as the Fabric8 Maven Plugin. The only differences are the &lt;code&gt;k8s&lt;/code&gt; prefix and that it generates Kubernetes manifests.&lt;/p&gt;
+&lt;p&gt;Once you’ve installed the Kubernetes Maven Plugin, you can deploy your application as usual:&lt;/p&gt;
+&lt;pre&gt;$ mvn k8s:build k8s:resource k8s:deploy
+&lt;/pre&gt;
+&lt;h2&gt;Eclipse JKube migration for OpenShift users&lt;/h2&gt;
+&lt;p&gt;Use the same migration process for the OpenShift Maven Plugin as you would for the Kubernetes Maven Plugin. Run the &lt;code&gt;migrate&lt;/code&gt; goal but with the OpenShift MavenPlugin specified:&lt;/p&gt;
+&lt;pre&gt;$ mvn org.eclipse.jkube:openshift-maven-plugin:migrate
+&lt;/pre&gt;
+&lt;p&gt;Here are the logs for this &lt;code&gt;migrate&lt;/code&gt; goal:&lt;/p&gt;
+&lt;pre&gt;fmp-demo-project : $ mvn org.eclipse.jkube:openshift-maven-plugin:migrate
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------&amp;lt; meetup:random-generator &amp;gt;-----------------------
+[INFO] Building random-generator 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- openshift-maven-plugin:1.0.0-rc-1:migrate (default-cli) @ random-generator ---
+[INFO] k8s: Found Fabric8 Maven Plugin in pom with version 4.4.1
+[INFO] k8s: Renamed src/main/fabric8 to src/main/jkube
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.227 s
+[INFO] Finished at: 2020-09-08T19:41:34+05:30
+[INFO] ------------------------------------------------------------------------
+&lt;/pre&gt;
+&lt;p&gt;This goal replaces all of your Fabric8 Maven Plugin references with references to &lt;a href=&quot;https://www.eclipse.org/jkube/docs/openshift-maven-plugin&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;OpenShift Maven Plugin&lt;/a&gt;. You can then deploy your application to Red Hat OpenShift just as you normally would:&lt;/p&gt;
+&lt;pre&gt;$ mvn oc:build oc:resource oc:deploy
+&lt;/pre&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://www.eclipse.org/jkube/docs/migration-guide/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Eclipse JKube migration guide&lt;/a&gt; for more about migrating from the Fabric8 Maven Plugin on OpenShift or Kubernetes. Feel free to create a &lt;a href=&quot;https://github.com/eclipse/jkube/issues/new&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;GitHub issue&lt;/a&gt; to report any problems that you encounter during the migration. We really value your feedback, so please report bugs, ask for improvements, and tell us about your migration experience.&lt;/p&gt;
+&lt;p&gt;Whether you are already using Eclipse JKube or just curious about it, don’t be shy about joining our welcoming community:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Provide feedback on &lt;a href=&quot;https://github.com/eclipse/jkube/issues&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Craft code and &lt;a href=&quot;https://github.com/quarkusio/quarkus/pulls&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;push&lt;/a&gt; a &lt;a href=&quot;https://github.com/eclipse/jkube/pulls&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;pull request&lt;/a&gt; to the Eclipse JKube repository.&lt;/li&gt;
+&lt;li&gt;Interact with the Eclipse JKube team on &lt;a href=&quot;https://gitter.im/eclipse/jkube&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Gitter&lt;/a&gt; and the &lt;a href=&quot;https://accounts.eclipse.org/mailing-list/jkube-dev&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;JKube mailing list&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Ask questions and get answers on &lt;a href=&quot;https://stackoverflow.com/questions/tagged/jkube&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Stack Overflow&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&quot;a2a_button_facebook&quot; href=&quot;https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_twitter&quot; href=&quot;https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_linkedin&quot; href=&quot;https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;LinkedIn&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_email&quot; href=&quot;https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Email&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_print&quot; href=&quot;https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Print&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_reddit&quot; href=&quot;https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Reddit&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_flipboard&quot; href=&quot;https://www.addtoany.com/add_to/flipboard?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;linkname=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Flipboard&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_dd addtoany_share_save addtoany_share&quot; href=&quot;https://www.addtoany.com/share#url=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F09%2F21%2Fmigrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0%2F&amp;amp;title=Migrating%20from%20Fabric8%20Maven%20Plugin%20to%20Eclipse%20JKube%201.0.0&quot;&gt;&lt;img alt=&quot;Share&quot; src=&quot;https://static.addtoany.com/buttons/favicon.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The post &lt;a href=&quot;https://developers.redhat.com/blog/2020/09/21/migrating-from-fabric8-maven-plugin-to-eclipse-jkube-1-0-0/&quot; rel=&quot;nofollow&quot;&gt;Migrating from Fabric8 Maven Plugin to Eclipse JKube 1.0.0&lt;/a&gt; appeared first on &lt;a href=&quot;https://developers.redhat.com/blog&quot; rel=&quot;nofollow&quot;&gt;Red Hat Developer&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Mon, 21 Sep 2020 07:00:19 +0000</pubDate>
+</item>
+<item>
 	<title>Tanja Obradovic: Jakarta EE Community Update September 2020</title>
 	<guid isPermaLink="false">6854 at https://blogs.eclipse.org</guid>
 	<link>https://blogs.eclipse.org/post/tanja-obradovic/jakarta-ee-community-update-september-2020</link>
@@ -1247,233 +1541,6 @@ With Sirius Web, modeling tools developed with Sirius can be installed on a web 
 	<author>noreply@blogger.com (Ed Merks)</author>
 </item>
 <item>
-	<title>Nikhil Nanivadekar: MapIterable.getOrDefault() : New but not so new API</title>
-	<guid isPermaLink="false">https://medium.com/p/1fbf2c38a508</guid>
-	<link>https://medium.com/@nikhilnanivadekar/mapiterable-getordefault-new-but-not-so-new-api-1fbf2c38a508?source=rss-4285d8a2ca86------2</link>
-	<description>&lt;h3&gt;MapIterable.getOrDefault() : New but not so new API&lt;/h3&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*-BHnBBED8fcOaR9hl1hVLA.jpeg&quot; /&gt;&lt;figcaption&gt;Sunset at Port Hardy (June 2019)&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;Eclipse Collections comes with it’s own List, Set, and Map implementations. These implementations extend the JDK List, Set, and Map implementations for easy interoperability. In Eclipse Collections 10.3.0, I introduced a new API MapIterable.getOrDefault(). In Java 8, &lt;a href=&quot;https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/util/Map.html#getOrDefault(java.lang.Object,V)&quot;&gt;Map.getOrDefault()&lt;/a&gt; was introduced, so what makes it a new API for Eclipse Collections 10.3.0? Technically, it is new but not so new API! Consider the code snippets below, prior to Eclipse Collections 10.3.0:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*LGa2c3g3lUQrySCraWm9Ew.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;MutableMap&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*Dm8GxkyqNWByQ3dpB7MaOQ.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;ImmutableMap&lt;/strong&gt;.getOrDefault() does not compile&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;As you can see in the code, MutableMap has getOrDefault() available, however ImmutableMap does not have it. But there is no reason why ImmutableMap should not have this read-only API. I found that MapIterable already had getIfAbsentValue() which has the same behavior. Then why did I still add getOrDefault() to MapIterable?&lt;/p&gt;&lt;p&gt;I added MapIterable.getOrDefault() mainly for easy interoperability. Firstly, most Java developers will be aware of the getOrDefault() method, only Eclipse Collections users would be aware of getIfAbsentValue(). By providing the API same as the JDK it reduces the necessity to learn a new API. Secondly, even though getOrDefault() is available on MutableMap, it is not available on the highest Map interface of Eclipse Collections. Thirdly, I got to learn a Java compiler check which I had not experienced before. I will elaborate this check a bit more in detail because I find it interesting.&lt;/p&gt;&lt;p&gt;After I added getOrDefault() to MapIterable, various Map interfaces in Eclipse Collections started giving compiler errors with messages like: &lt;em&gt;org.eclipse.collections.api.map.MutableMapIterable inherits unrelated defaults for getOrDefault(Object, V) from types org.eclipse.collections.api.map.MapIterable and java.util.Map&lt;/em&gt;. This I thought was cool, because at compile time, the Java compiler is ensuring that if there is an API with default implementation in more than one interface in a multi-interface scenario, then Java will not decide which implementation to pick but rather throw compiler errors. Hence, Java ensures at compile time that there is no ambiguity regarding which implementation will be used at runtime. How awesome is that?!? In order to fix the compile time errors, I had to add a default implementations on the interfaces which gave the errors. I always believe in Compiler Errors are better than Runtime Exceptions.&lt;/p&gt;&lt;p&gt;Post Eclipse Collections 10.3.0 the below code samples will work:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*ZHp2pOKpKMgAlYdf97aLcw.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;&lt;em&gt;MapIterable&lt;/em&gt;&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*MO5NLHLmkm7SlTdVYqc_Pg.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;MutableMap&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*-4uxJkMTp5NPT620jGzOhQ.png&quot; /&gt;&lt;figcaption&gt;&lt;strong&gt;ImmutableMap&lt;/strong&gt;.getOrDefault() compiles and works fine&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/releases/tag/10.3.0&quot;&gt;Eclipse Collections 10.3.0&lt;/a&gt; was released on 08/08/2020 and is one of our most feature packed releases. The release constitutes numerous contributions from the Java community.&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;Show your support &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/stargazers&quot;&gt;&lt;em&gt;star us on GitHub&lt;/em&gt;&lt;/a&gt;&lt;em&gt;.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Eclipse Collections Resources:&lt;/strong&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; comes with it’s own implementations of &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/impl/list/mutable/FastList.html&quot;&gt;List&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/impl/set/mutable/UnifiedSet.html&quot;&gt;Set&lt;/a&gt; and &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/impl/map/mutable/UnifiedMap.html&quot;&gt;Map&lt;/a&gt;. It also has additional data structures like &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/api/multimap/Multimap.html&quot;&gt;Multimap&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/9.0.0/org/eclipse/collections/api/bag/Bag.html&quot;&gt;Bag&lt;/a&gt; and an entire Primitive Collections hierarchy. Each of our collections have a rich API for commonly required iteration patterns.&lt;/p&gt;&lt;ol&gt;&lt;li&gt;&lt;a href=&quot;https://www.eclipse.org/collections/&quot;&gt;Website&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Source code on GitHub&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;Contribution Guide&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/docs/guide.md#eclipse-collections-reference-guide&quot;&gt;Reference Guide&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=1fbf2c38a508&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Sun, 09 Aug 2020 14:04:07 +0000</pubDate>
-</item>
-<item>
-	<title>vert.x project: Eclipse Vert.x 4 beta 1 released!</title>
-	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-4-beta-1-released</guid>
-	<link>https://vertx.io/blog/eclipse-vert-x-4-beta-1-released</link>
-	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce the first 4.0 beta release of Eclipse Vert.x .&lt;/p&gt;
-&lt;p&gt;Vert.x 4 is the evolution of the Vert.x 3.x series that will bring key features to Vert.x.&lt;/p&gt;
-&lt;h4 id=&quot;sql-client-metrics&quot;&gt;SQL client metrics&lt;/h4&gt;
-&lt;p&gt;Vert.x 4 supports metrics for clients which are critical for monitoring application performance.&lt;/p&gt;
-&lt;p&gt;While the capabilities are generic and can apply to any client, each client needs a specific integration.
-Obviously the SQL client was the perfect candidate in mind for this new feature.&lt;/p&gt;
-&lt;p&gt;Micrometer metrics will report these metrics as&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;vertx_sql_queue_pending: number of requests scheduled but not yet executed&lt;/li&gt;
-&lt;li&gt;vertx_sql_queue_time: time spent in queue before processing&lt;/li&gt;
-&lt;li&gt;vertx_sql_processing_pending: number of request being processed&lt;/li&gt;
-&lt;li&gt;vertx_sql_processing_time: requests latencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;a-better-api-for-jdbc-client&quot;&gt;A better API for JDBC Client&lt;/h4&gt;
-&lt;p&gt;Our JDBC client will not go away in Vert.x 4, we do recknognize that JDBC is important because it supports
-the most important number of databases in the ecosystem.&lt;/p&gt;
-&lt;p&gt;When we designed the SQL client API we strived a lot to come with the simplest and most powerful API
-for asynchonous SQL client.&lt;/p&gt;
-&lt;p&gt;This release brings an implementation of the SQL client API for JDBC.&lt;/p&gt;
-&lt;p&gt;The 3.x API series will continue to be supported for the lifetime of Vert.x 4.&lt;/p&gt;
-&lt;h4 id=&quot;event-loop-affinity&quot;&gt;Event loop affinity&lt;/h4&gt;
-&lt;p&gt;Using Vert.x from a non Vert.x thread is a very common use case we have been supporting since Vert.x 3.&lt;/p&gt;
-&lt;p&gt;When you use a Vert.x resource (like a client) from a non Vert.x thread, Vert.x 3 obtains a new event-loop
-everytime it happens.&lt;/p&gt;
-&lt;p&gt;In Vert.x 4 we decided to pin the first event loop to the non Vert.x thread. The goal is to prevent
-some data races and also makes reasonning about this easier.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;Vertx vertx = Vertx.vertx();
-
-&lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;hljs-built_in&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;;i &amp;lt; &lt;span class=&quot;hljs-number&quot;&gt;4&lt;/span&gt;;i++) {
-  &lt;span class=&quot;hljs-keyword&quot;&gt;String&lt;/span&gt; msg = &lt;span class=&quot;hljs-string&quot;&gt;&quot;Message &quot;&lt;/span&gt; + i;
-  vertx.runOnContext(v -&amp;gt; {
-    System.out.&lt;span class=&quot;hljs-built_in&quot;&gt;println&lt;/span&gt;(i);
-  });
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Running this with Vert.x 3 will print the 4 lines but they are likely to not be reordered, this code could
-also be running in parallel (that is two different threads running at the same time on a different CPU core).&lt;/p&gt;
-&lt;p&gt;Running this with Vert.x 4 will print the 4 lines in the correct order and always with the same thread. This
-eliminates some potential data races and also allows to reason about what will happen at runtime.&lt;/p&gt;
-&lt;h4 id=&quot;vert-x-json-schema-supports-draft2019-09&quot;&gt;Vert.x Json Schema supports Draft2019-09&lt;/h4&gt;
-&lt;p&gt;The new &lt;a href=&quot;https://github.com/eclipse-vertx/vertx-json-schema&quot;&gt;vertx-json-schema&lt;/a&gt; module now supports the latest Json Schema &lt;a href=&quot;http://json-schema.org/specification.html&quot;&gt;Draft2019-09 spec&lt;/a&gt;. You can finally play with the new &lt;code&gt;$recursiveRef&lt;/code&gt; to build extensible recursive schemas and with &lt;code&gt;unevaluatedProperties&lt;/code&gt;/&lt;code&gt;unevaluatedItems&lt;/code&gt; to define strict schemas. Look at the module &lt;a href=&quot;https://vertx-web-site.github.io/docs/vertx-json-schema/java/&quot;&gt;documentation&lt;/a&gt; to start using it.&lt;/p&gt;
-&lt;h4 id=&quot;clustering-configuration-simplified&quot;&gt;Clustering configuration simplified&lt;/h4&gt;
-&lt;p&gt;In Vert.x 3, cluster host was set to &lt;code&gt;localhost&lt;/code&gt; by default in &lt;code&gt;EventBusOptions&lt;/code&gt;.
-Consequently, a lot of new users were confused about why event bus consumers and producers were not able to communicate even if the underlying cluster manager was configured correctly.&lt;/p&gt;
-&lt;p&gt;Also, when using the CLI tool or the &lt;code&gt;Launcher&lt;/code&gt; class, Vert.x tried to find a host among available network interfaces if none was provided with the &lt;code&gt;-cluster-host&lt;/code&gt; argument.
-Sometimes, the host chosen by the cluster manager and Vert.x were not the same.&lt;/p&gt;
-&lt;p&gt;Starting with Vert.x 4 beta 1, the cluster host default has been removed and, if users don’t provide any, Vert.x will ask the cluster manager which one it picked before trying to find one itself.
-This applies whether Vert.x is embedded in any Java program or started with the CLI tool or with the &lt;code&gt;Launcher&lt;/code&gt; class.&lt;/p&gt;
-&lt;p&gt;So far, only &lt;code&gt;vertx-hazelcast&lt;/code&gt; and &lt;code&gt;vertx-infinispan&lt;/code&gt; cluster managers can provide Vert.x with a cluster host.
-When other cluster managers are used, Vert.x will choose one itself.&lt;/p&gt;
-&lt;h4 id=&quot;cluster-manager-upgrades&quot;&gt;Cluster manager upgrades&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;vertx-hazelcast&lt;/code&gt; has been upgraded to Hazelcast 4.0.2 and &lt;code&gt;vertx-infinispan&lt;/code&gt; to Infinispan 11.0.1.Final.&lt;/p&gt;
-&lt;h4 id=&quot;finally&quot;&gt;Finally&lt;/h4&gt;
-&lt;p&gt;This is the Beta1 relase of Vert.x 4, you can of course expect more betas as we get feedback from the community and fix issues that we failed to catch before.&lt;/p&gt;
-&lt;p&gt;You can also read the milestone announces to know more about the overral changes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-4-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-4-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-3-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-3-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-2-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-2-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-1-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-1-released&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/4.0.0-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;
- can be found on the wiki.&lt;/p&gt;
-&lt;p&gt;For this release there are no Docker images.&lt;/p&gt;
-&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;https://search.maven.org/search?q=g:io.vertx%20AND%20v:4.0.0.Beta1&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://repo1.maven.org/maven2/io/vertx/vertx-stack-manager/4.0.0.Beta1/&quot;&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can bootstrap a Vert.x 4.0.0.Beta1 project using &lt;a href=&quot;https://start.vertx.io&quot;&gt;https://start.vertx.io&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The documentation has been deployed on this preview web-site &lt;a href=&quot;https://vertx-web-site.github.io/docs/&quot;&gt;https://vertx-web-site.github.io/docs/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;That’s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
-&lt;/article&gt;</description>
-	<pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>Tanja Obradovic: Jakarta EE Community Update July 2020</title>
-	<guid isPermaLink="false">6839 at https://blogs.eclipse.org</guid>
-	<link>https://blogs.eclipse.org/post/tanja-obradovic/jakarta-ee-community-update-july-2020</link>
-	<description>&lt;div class=&quot;field field-name-body field-type-text-with-summary field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;p dir=&quot;ltr&quot;&gt;With the Jakarta EE 9 milestone release out, upcoming JakartaOne Livestream events, and a new Jakarta EE community for Chinese-speaking developers, there are more ways than ever to get involved in cloud native technologies for Java.&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Heads Up: JakartaOne Livestream Is Fall 2020 &lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The JakartaOne Livestream virtual conference showcases the technical benefits and architectural advances that become possible with cloud native Java, Eclipse MicroProfile, Jakarta EE, and Java EE technologies.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; This one-day event (date to be announces shortly) is a great way for the Java community, developers, and architects to share best practices, technical insight, experiences, use cases, and innovations and to discuss the future of Jakarta EE.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; This year’s JakartaOne Livestream event builds on the success of last year’s event — our first-ever — which attracted more than 1,400 participants and was very well received by attendees.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; Stay tuned for registration details. In the meantime:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://jakartaone.org/2020/&quot;&gt; Visit the JakartaOne Livestream website&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.papercall.io/jakartaone-2020&quot;&gt; Submit a paper:&lt;/a&gt; The call for papers closes early August&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Follow&lt;a href=&quot;https://twitter.com/JakartaOneConf&quot;&gt; @JakartaOneConf&lt;/a&gt; on Twitter for live event updates, speaker announcements, news, and more&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;JakartaOne Livestream Events in Portuguese and Spanish&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;We’re very pleased to tell you about two additional JakartaOne Livestream events that will help more community members benefit from the expertise of our global Jakarta EE community.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; These events follow the similar format and have the same benefits as the JakartaOne Livestream event in English on September 16, but sessions are presented in the local language.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; &lt;a href=&quot;https://jakartaone.org/2020/brazil/&quot;&gt;JakartaOne Livestream – Brazil, August 29&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.crowdcast.io/e/jakartaonebr/register&quot;&gt; Registration is open&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Sessions are in Portuguese&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;a href=&quot;https://jakartaone.org/2020/hispano/&quot;&gt;JakartaOne Livestream – Español, October 12&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.papercall.io/jakarta-one-es&quot;&gt; Call for papers&lt;/a&gt;: Closes August 10&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Sessions are in Spanish&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Stay tuned for registration details!&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;The Jakarta EE 9 Milestone Release Is Out and Needs Your Feedback&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Now that the Jakarta EE 9 milestone release is available, we’re asking the entire Jakarta EE community to use the software and report back on any issues. Your efforts will go a long way toward helping our community ensure the quality and timeliness of the General Availability release.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Here are the basic steps:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Download the milestone release and run/test your application to plan your namespace changes, if needed.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Use the Eclipse Transformer project to make the namespace changes.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Report any issues you come across.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Also, please review the Jakarta EE 9 specification documents to make sure all “Jakartafication” is done properly.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;For inspiration, visit&lt;a href=&quot;https://headcrashing.wordpress.com/2020/07/11/jakarta-ee-9-milestone-1-sneak-peek/&quot;&gt; Markus Karg’s website&lt;/a&gt;. Markus is actively using the milestone release and, as you’ll see in the video on his site, got into the spirit of our virtual release party with his own, very impressive-looking cupcake.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Speaking of the release party, it was a great success, with more than 200 people attending live or watching the replay as of June 30. If you haven’t seen the replay, you can register for it&lt;a href=&quot;https://www.crowdcast.io/e/JakartaEE9_Milestonereleaseparty/register&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;One final note on Jakarta EE 9: We encourage everyone in the Jakarta EE community to reach out to the companies that create their favorite developer tools and ask them to support Jakarta EE 9! You can always point developers' tools vendors to &lt;a href=&quot;https://jakarta.ee/resources/JakartaEE-Datasheet-July172020_final.pdf&quot;&gt;Jakarta EE 9 Tools Vendors Datasheet &lt;/a&gt;to help them out. &lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;2020 Jakarta EE Developer Survey Results Are Available&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;With more than 2,100 survey responses, this year’s survey results provide considerable insight into how the cloud native world for enterprise Java is unfolding and what that means for the Java ecosystem.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; To access the complete survey results, register&lt;a href=&quot;https://outreach.jakartaee.org/2020-developer-survey-report&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; For more insight into the significance of the survey results and the Jakarta EE 9 milestone release:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://blogs.eclipse.org/post/mike-milinkovich/jakarta-ee-taking&quot;&gt; Read Mike Milinkovich’s blog on the tremendous growth we’re seeing in Jakarta EE.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://newsroom.eclipse.org/news/announcements/amid-growth-cloud-native-enterprise-java-adoption-eclipse-foundation-announces&quot;&gt; Read the press release.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Join Community Update Calls&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Jakarta EE community calls are open to everyone! For upcoming dates and connection details, see the&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Community Calendar&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; The next call will be August 12 at 11:00 a.m. EDT. Topics will include:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  &lt;a href=&quot;https://docs.google.com/presentation/d/1B5q-BBkLK-nLAKjP76Mpl8XcLux504G0EH4hsROnvgI/edit#slide=id.g8a9c5635ef_0_0&quot;&gt;Jakarta EE 9 update and Java SE 8 and Java SE 11 direction&lt;/a&gt;: Kevin Sutter&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  &lt;a href=&quot;https://docs.google.com/presentation/d/1qfCxo1G38B7gXPR3FE4GuxrRnM8CSZKf2gSDg2X_zk4/edit?usp=sharing&quot;&gt;Developer tools support for Jakarta EE 9&lt;/a&gt;: David Blevins&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  &lt;a href=&quot;https://docs.google.com/presentation/d/1EZXvOqSXGAodEdnTUW7rSXMyDmjpvcHxw963XUe6UrQ/edit&quot;&gt;Update from the Eclipse Foundation&lt;/a&gt; on news, events, programs, and marketing: Ivar Grimstad, Shabnam Mayel, and Tanja Obradovic&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;●  Topics and questions from the community&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;We know it’s not always possible to join calls in real time, so here are links to the recordings and presentations:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      July 15 call and&lt;a href=&quot;https://docs.google.com/presentation/d/1B5q-BBkLK-nLAKjP76Mpl8XcLux504G0EH4hsROnvgI/edit#slide=id.g8a9c5635ef_0_0&quot;&gt; presentations&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·     &lt;a href=&quot;https://www.youtube.com/playlist?list=PLy7t4z5SYNaSY0Um6Vbez3G5Lc2AMaMw7&quot;&gt; The complete playlist&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;NEW: Chinese-Speaking Jakarta EE Community&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;We’re super-excited to share the news that the Jakarta EE Community China is being formed by individuals and organizations interested in Jakarta EE.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;All communications and work done in this community will be in Chinese. The goals are to:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Engage more Chinese-speaking developers in the Jakarta EE community&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Ensure vendor neutrality&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; To get involved in the community, please complete&lt;a href=&quot;https://www.wjx.top/jq/84705755.aspx&quot;&gt; this form in Chinese&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt; If you’re an English-speaking member of the Jakarta EE community and are just curious about the form, here’s a&lt;a href=&quot;https://www.wjx.top/jq/81812941.aspx&quot;&gt; translated version&lt;/a&gt; for your information.&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;The Next Friends of Jakarta EE Call Is August 26&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The Friends of Jakarta EE monthly calls are held on the fourth Wednesday of every month. This call is by the community, for the community — simply an opportunity for everyone to get together virtually and talk once a month.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;Here are the details for our next call:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Date: Wednesday, August 26 at 11:00 a.m. EDT&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Agenda:&lt;a href=&quot;https://bit.ly/2zkgQWc&quot;&gt; https://bit.ly/2zkgQWc&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Zoom:&lt;a href=&quot;https://eclipse.zoom.us/j/92996495448&quot;&gt; https://eclipse.zoom.us/j/92996495448&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Calendar:&lt;a href=&quot;https://bit.ly/2XKpcQa&quot;&gt; https://bit.ly/2XKpcQa&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 dir=&quot;ltr&quot;&gt;Stay Connected With the Jakarta EE Community&lt;/h2&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;The Jakarta EE community is very active and there are a number of channels to help you stay up to date with all of the latest and greatest news and information. Subscribe to your preferred channels today:&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Social media:&lt;a href=&quot;https://twitter.com/jakartaee&quot;&gt; Twitter&lt;/a&gt;,&lt;a href=&quot;https://www.facebook.com/JakartaEE/&quot;&gt; Facebook&lt;/a&gt;,&lt;a href=&quot;https://www.linkedin.com/groups/13597511/&quot;&gt; LinkedIn Group&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Mailing lists: jakarta.ee-community@eclipse.org, jakarta.ee-wg@eclipse.org,&lt;a href=&quot;https://jakarta.ee/connect/mailing-lists/&quot;&gt; project mailing lists&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Newsletters, blogs, and emails:&lt;a href=&quot;https://www.eclipse.org/community/eclipse_newsletter/&quot;&gt; Eclipse newsletter&lt;/a&gt;,&lt;a href=&quot;https://jakartablogs.ee/#main-content&quot;&gt; Jakarta EE blogs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;·      Meetings:&lt;a href=&quot;https://www.meetup.com/jakartatechtalks_/&quot;&gt; Jakarta Tech Talks&lt;/a&gt;,&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Update&lt;/a&gt;, Jakarta Town Hall, and Eclipse Foundation events and conferences&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;You can find the complete list of channels&lt;a href=&quot;https://jakarta.ee/connect/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;To help shape the future of open source, cloud native Java, get involved in the&lt;a href=&quot;https://jakarta.ee/membership/&quot;&gt; Jakarta EE Working Group&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;To learn more about Jakarta EE-related plans and check the date for the next Jakarta Tech Talk, be sure to bookmark the&lt;a href=&quot;https://calendar.google.com/calendar/embed?src=eclipse-foundation.org_3281qms6riu4kdf354jn5idon0%40group.calendar.google.com&amp;amp;ctz=America%2FToronto&quot;&gt; Jakarta EE Community Calendar&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p dir=&quot;ltr&quot;&gt;&lt;strong&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/YXIYe-0VL1lRbEX1QyqyCkM-iQC-TxpbiJytCZJEoaun0_dYFiIRfa-fQJrsKJEYmDqsYknu4edtbil1TDuYzYFubZSe1Jm7pZK-7R-Fi0_3mPqYEOyrbaTgfodzZ8DlfIKW136p&quot; style=&quot;height: 161px; width: 263px;&quot; /&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
-	<pubDate>Sat, 25 Jul 2020 12:44:02 +0000</pubDate>
-</item>
-<item>
 	<title>Maximilian and Jonas: A web-based modeling tool based on Eclipse Theia</title>
 	<guid isPermaLink="false">https://eclipsesource.com/?p=42896</guid>
 	<link>https://eclipsesource.com/blogs/2020/07/24/a-web-based-modeling-tool-based-on-eclipse-theia/</link>
@@ -1482,13 +1549,13 @@ When other cluster managers are used, Vert.x will choose one itself.&lt;/p&gt;
 </item>
 <item>
 	<title>Patrick Paulin: Eclipse RCP and REST – JAX-RS Extensions</title>
-	<guid isPermaLink="false">https://www.modumind.com/?p=4520</guid>
-	<link>https://www.modumind.com/2020/07/23/eclipse-rcp-and-rest-jax-rs-extensions/</link>
+	<guid isPermaLink="false">https://modumind.com/?p=4520</guid>
+	<link>https://modumind.com/2020/07/23/eclipse-rcp-and-rest-jax-rs-extensions/</link>
 	<description>&lt;p&gt;This is a continuation of a series of blog posts demonstrating the use of the &lt;a href=&quot;https://github.com/ECF/JaxRSProviders&quot;&gt;ECF Remote Services JAX-RS Jersey Client&lt;/a&gt; within an Eclipse RCP application. The previous posts are:&lt;/p&gt;
 
 
 
-&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.modumind.com/2020/05/19/eclipse-rcp-and-rest-an-introduction/&quot;&gt;Eclipse RCP and REST: An Introduction&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.modumind.com/2020/06/18/eclipse-rcp-and-rest-making-asynchronous-calls/&quot;&gt;Eclipse RCP and REST: Making Asynchronous Calls&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://modumind.com/2020/05/19/eclipse-rcp-and-rest-an-introduction/&quot;&gt;Eclipse RCP and REST: An Introduction&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://modumind.com/2020/06/18/eclipse-rcp-and-rest-making-asynchronous-calls/&quot;&gt;Eclipse RCP and REST: Making Asynchronous Calls&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 
 
 
@@ -2836,9 +2903,9 @@ Edit #2: Add link to Apache TomEE download&lt;br /&gt;
 </item>
 <item>
 	<title>Patrick Paulin: Eclipse RCP and REST – Making Asynchronous Calls</title>
-	<guid isPermaLink="false">https://www.modumind.com/?p=4499</guid>
-	<link>https://www.modumind.com/2020/06/18/eclipse-rcp-and-rest-making-asynchronous-calls/</link>
-	<description>&lt;p&gt;In my &lt;a href=&quot;https://www.modumind.com/2020/05/19/eclipse-rcp-and-rest-an-introduction/&quot;&gt;last blog post&lt;/a&gt; I described how to access REST services from an Eclipse RCP application using the &lt;a href=&quot;https://github.com/ECF/JaxRSProviders&quot;&gt;ECF Remote Services JAX-RS Jersey Client Provider&lt;/a&gt;. It turns out that with a few minor changes we can also access these REST services asynchronously.&lt;/p&gt;
+	<guid isPermaLink="false">https://modumind.com/?p=4499</guid>
+	<link>https://modumind.com/2020/06/18/eclipse-rcp-and-rest-making-asynchronous-calls/</link>
+	<description>&lt;p&gt;In my &lt;a href=&quot;https://modumind.com/2020/05/19/eclipse-rcp-and-rest-an-introduction/&quot;&gt;last blog post&lt;/a&gt; I described how to access REST services from an Eclipse RCP application using the &lt;a href=&quot;https://github.com/ECF/JaxRSProviders&quot;&gt;ECF Remote Services JAX-RS Jersey Client Provider&lt;/a&gt;. It turns out that with a few minor changes we can also access these REST services asynchronously.&lt;/p&gt;
 
 
 
@@ -3088,261 +3155,6 @@ Preferences: General &amp;gt; Appearance &amp;gt; Theme: Clean Sheet&lt;/p&gt;
 &lt;p&gt;To have your say, click&lt;a href=&quot;https://www.surveymonkey.com/r/ThabangMashologu20&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/foundation&quot;&gt;Foundation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipse-iot-0&quot;&gt;Eclipse IoT&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/edge&quot;&gt;edge&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/sparkplug&quot;&gt;sparkplug&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/open-source&quot;&gt;Open Source&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
 	<pubDate>Thu, 21 May 2020 13:42:52 +0000</pubDate>
-</item>
-<item>
-	<title>Rohan Kumar: Getting started with the fabric8 Kubernetes Java client</title>
-	<guid isPermaLink="false">https://developers.redhat.com/blog/?p=711637</guid>
-	<link>https://developers.redhat.com/blog/2020/05/20/getting-started-with-the-fabric8-kubernetes-java-client/</link>
-	<description>&lt;p&gt;&lt;a href=&quot;https://github.com/fabric8io/kubernetes-client&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Fabric8&lt;/a&gt; has been available as a Java client for &lt;a href=&quot;https://developers.redhat.com/topics/kubernetes/&quot;&gt;Kubernetes&lt;/a&gt; since 2015, and today is one of the most popular client libraries for Kubernetes. (The most popular is &lt;a href=&quot;https://github.com/kubernetes/client-go&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;client-go&lt;/a&gt;, which is the client library for the Go programming language on Kubernetes.) In recent years, fabric8 has evolved from a Java client for the Kubernetes REST API to a full-fledged alternative to the &lt;code&gt;kubectl&lt;/code&gt; command-line tool for Java-based development.&lt;/p&gt;
-&lt;p&gt;&lt;span id=&quot;more-711637&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Fabric8 is much more than a simple Java Kubernetes REST client. Its features include a rich domain-specific language (DSL), a model for advanced code handling and manipulation, extension hooks, a mock server for testing, and many client-side utilities. In addition to hooks for building new extensions, the fabric8 Kubernetes Java client has extensions for &lt;a href=&quot;https://developers.redhat.com/topics/serverless-architecture/&quot;&gt;Knative&lt;/a&gt;, &lt;a href=&quot;https://github.com/tektoncd&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Tekton&lt;/a&gt;, &lt;a href=&quot;https://github.com/kubernetes-sigs/service-catalog&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Kubernetes Service Catalog&lt;/a&gt;, &lt;a href=&quot;https://docs.openshift.com/container-platform/4.1/applications/service_brokers/installing-service-catalog.html&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Red Hat OpenShift Service Catalog&lt;/a&gt;, and &lt;a href=&quot;https://github.com/fabric8io/kubernetes-assertions&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Kubernetes Assertions&lt;/a&gt;.&lt;/p&gt;
-&lt;table style=&quot;height: 1542px;&quot; width=&quot;814&quot;&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img alt=&quot;&quot; class=&quot; alignnone  wp-image-755227 &quot; height=&quot;117&quot; src=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/05/k8s-alt_1x.png&quot; width=&quot;122&quot; /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://search.maven.org/artifact/io.fabric8/kubernetes-client/4.10.3/jar&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Kubernetes client&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.fabric8&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;kubernetes-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.10.3&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img alt=&quot;&quot; class=&quot;  alignnone   wp-image-755247 &quot; height=&quot;143&quot; src=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/05/openshift-logo.png&quot; width=&quot;143&quot; /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://search.maven.org/artifact/io.fabric8/openshift-client/4.10.3/jar&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;OpenShift client&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.fabric8&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;openshift-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.10.3&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img alt=&quot;&quot; class=&quot;  alignnone   wp-image-755257 &quot; height=&quot;152&quot; src=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/05/download.jpeg&quot; width=&quot;137&quot; /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://search.maven.org/artifact/io.fabric8/tekton-client/4.10.3/jar&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Tekton client&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.fabric8&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;tekton-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.10.3&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img alt=&quot;&quot; class=&quot;  alignnone   wp-image-755267 &quot; height=&quot;141&quot; src=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/05/35583233.png&quot; width=&quot;141&quot; /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://search.maven.org/artifact/io.fabric8/knative-client/4.10.3/jar&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Knative client &lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.fabric8&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;knative-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.10.3&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;img alt=&quot;&quot; class=&quot;  alignnone   wp-image-755277 &quot; height=&quot;162&quot; src=&quot;https://developers.redhat.com/blog/wp-content/uploads/2020/05/23534644.png&quot; width=&quot;162&quot; /&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://search.maven.org/artifact/me.snowdrop/istio-client&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Istio client&lt;/a&gt;&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;me.snowdrop&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;istio-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.6.5-Beta2&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://search.maven.org/artifact/io.fabric8/servicecatalog-client/4.10.3/bundle&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Service Catalog client&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt; 
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.fabric8&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;servicecatalog-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.10.3&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;  
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;type&amp;gt;&lt;/span&gt;bundle&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/type&amp;gt;&lt;/span&gt;
-&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p style=&quot;padding-left: 40px;&quot;&gt;&lt;strong&gt;Note&lt;/strong&gt;: The Istio client is not a direct part of the fabric8 repository, but is based on fabric8).&lt;/p&gt;
-&lt;p&gt;Also, many popular projects use fabric8 Kubernetes client extensions, including &lt;a href=&quot;https://developers.redhat.com/products/quarkus/getting-started&quot;&gt;Quarkus&lt;/a&gt;, &lt;a href=&quot;https://camel.apache.org/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Apache Camel&lt;/a&gt;, &lt;a href=&quot;https://spark.apache.org/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Apache Spark&lt;/a&gt;, and many more. See &lt;a href=&quot;https://github.com/fabric8io/kubernetes-client#who-uses-kubernetes--openshift-java-client&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;which projects work with this Kubernetes and OpenShift Java client here.&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Using fabric8 with Kubernetes&lt;/h2&gt;
-&lt;p&gt;Using fabric8 is straightforward, especially because it offers an API for accessing Kubernetes resources. To get started with the Java client, you just add it as a dependency in your Maven &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-    &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;io.fabric8&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-    &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;kubernetes-client&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;4.10.3&lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span style=&quot;color: #007700;&quot;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Alternatively, you could use &lt;code&gt;build.gradle&lt;/code&gt;:&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;dependencies {
-    compile 'io.fabric8:kubernetes-client:4.10.3'
-}
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Next, we’ll look at a couple of common examples.&lt;/p&gt;
-&lt;h3&gt;Example 1: Listing pods in a namespace&lt;/h3&gt;
-&lt;p&gt;Here’s an example of listing all of the client pods in a namespace:&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;KubernetesClient client &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;new&lt;/span&gt; DefaultKubernetesClient&lt;span style=&quot;color: #333333;&quot;&gt;())&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;{&lt;/span&gt;
-
-    client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;pods&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;list&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getItems&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;forEach&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;
-            pod &lt;span style=&quot;color: #333333;&quot;&gt;-&amp;gt;&lt;/span&gt; System&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;out&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;pod&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;())&lt;/span&gt;
-    &lt;span style=&quot;color: #333333;&quot;&gt;);&lt;/span&gt;
-
-&lt;span style=&quot;color: #333333;&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;catch&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;KubernetesClientException ex&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;{&lt;/span&gt;
-    &lt;span style=&quot;color: #888888;&quot;&gt;// Handle exception&lt;/span&gt;
-    ex&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;printStackTrace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-&lt;span style=&quot;color: #333333;&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h3&gt;Example 2: Server authentication&lt;/h3&gt;
-&lt;p&gt;When you use &lt;code&gt;DefaultKubernetesClient&lt;/code&gt;, it will try to read the &lt;code&gt;~/.kube/config&lt;/code&gt; file in your home directory and load information required for authenticating with the Kubernetes API server. You can override this configuration with the system property &lt;code&gt;KUBECONFIG&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If you are using &lt;code&gt;DefaultKubernetesClient&lt;/code&gt; from inside a &lt;code&gt;Pod&lt;/code&gt;, it will load &lt;code&gt;~/.kube/config&lt;/code&gt; from the &lt;code&gt;ServiceAccount&lt;/code&gt; volume mounted inside the &lt;code&gt;Pod&lt;/code&gt;. For a more complex configuration, you can simply pass a &lt;code&gt;Config&lt;/code&gt; object inside &lt;code&gt;DefaultKubernetesClient&lt;/code&gt;, like this:&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;Config config &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;new&lt;/span&gt; ConfigBuilder&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-        &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withMasterUrl&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;https://api.rh-idev.openshift.com:443&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-        &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;build&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-&lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;KubernetesClient client &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;new&lt;/span&gt; DefaultKubernetesClient&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;config&lt;span style=&quot;color: #333333;&quot;&gt;))&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;{&lt;/span&gt;
-
-    client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;pods&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;list&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getItems&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;forEach&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;
-            pod &lt;span style=&quot;color: #333333;&quot;&gt;-&amp;gt;&lt;/span&gt; System&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;out&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;println&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;pod&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;())&lt;/span&gt;
-    &lt;span style=&quot;color: #333333;&quot;&gt;);&lt;/span&gt;
-
-&lt;span style=&quot;color: #333333;&quot;&gt;}&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;catch&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;KubernetesClientException ex&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;{&lt;/span&gt;
-    &lt;span style=&quot;color: #888888;&quot;&gt;// Handle exception&lt;/span&gt;
-    ex&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;printStackTrace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-&lt;span style=&quot;color: #333333;&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h3&gt;Example 3: Creating a Simple Deployment:&lt;/h3&gt;
-&lt;p&gt;Suppose you want to build up a quick &lt;code&gt;Deployment&lt;/code&gt; object and apply it onto Kubernetes Cluster. You can easily leverage on rich builder classes provided by fabric8 to construct your Kubernetes resources on the fly. Here is an example of building up a simple Nginx&lt;code&gt;Deployment&lt;/code&gt;:&lt;br /&gt;
-&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;&lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;try&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;KubernetesClient client &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;new&lt;/span&gt; DefaultKubernetesClient&lt;span style=&quot;color: #333333;&quot;&gt;())&lt;/span&gt; &lt;span style=&quot;color: #333333;&quot;&gt;{&lt;/span&gt;
-    Deployment deployment &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; &lt;span style=&quot;color: #008800; font-weight: bold;&quot;&gt;new&lt;/span&gt; DeploymentBuilder&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withNewMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;nginx-deployment&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;addToLabels&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;app&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;nginx&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withNewSpec&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withReplicas&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #0000dd; font-weight: bold;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withNewSelector&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                   &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;addToMatchLabels&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;app&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;nginx&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endSelector&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withNewTemplate&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                   &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withNewMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                      &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;addToLabels&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;app&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;nginx&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-                   &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                   &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withNewSpec&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                      &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;addNewContainer&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                          &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;nginx&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-                          &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withImage&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;nginx:1.7.9&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-                          &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;addNewPort&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withContainerPort&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #0000dd; font-weight: bold;&quot;&gt;80&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endPort&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                      &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endContainer&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-                   &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endSpec&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-               &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endTemplate&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endSpec&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;build&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-
-    client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;apps&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;deployments&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;createOrReplace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;deployment&lt;span style=&quot;color: #333333;&quot;&gt;);&lt;/span&gt;
-&lt;span style=&quot;color: #333333;&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;h3&gt;Example 4: Loading your Kubernetes resource YAMLs into Java Objects:&lt;/h3&gt;
-&lt;p&gt;With Fabric8 Kubernetes Client, you can easily load your resource manifests into Java objects provided by it’s Kubernetes Model. Suppose you have a &lt;code&gt;Service&lt;/code&gt;YAML like this one:&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;apiVersion: v1
-kind: Service
-metadata:
-  name: my-service
-spec:
-  selector:
-    app: MyApp
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Now in order to load this YAML object into a Kubernetes &lt;code&gt;Service&lt;/code&gt; object. You need to do something like this:&lt;br /&gt;
-&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;Service service &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;services&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-        &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;load&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;LoadServiceYaml&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;getResourceAsStream&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;/test-svc.yml&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;))&lt;/span&gt;
-        &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;get&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h3&gt;Example 5: Doing CRUD operations for Kubernetes resource using Client:&lt;/h3&gt;
-&lt;p&gt;You can easily create, replace, edit, or delete your Kubernetes resources using Fabric8 Kubernetes Client API. We provide a rich DSL to achieve these operations. Here is an example of basic CRUD operations of a &lt;code&gt;Deployment&lt;/code&gt; object:&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;div style=&quot;background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;&quot;&gt;
-&lt;pre style=&quot;margin: 0; line-height: 125%;&quot;&gt;    &lt;span style=&quot;color: #888888;&quot;&gt;// Create&lt;/span&gt;
-    client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;apps&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;deployments&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;create&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;deployment&lt;span style=&quot;color: #333333;&quot;&gt;);&lt;/span&gt;
-
-    &lt;span style=&quot;color: #888888;&quot;&gt;// Get&lt;/span&gt;
-    Deployment deploy &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;apps&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;deployments&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;deploy1&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;get&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-
-    &lt;span style=&quot;color: #888888;&quot;&gt;// Update, adding dummy annotation&lt;/span&gt;
-    Deployment updatedDeploy &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;apps&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;deployments&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;deploy1&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;edit&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;editMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;addToAnnotations&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;foo&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;,&lt;/span&gt; &lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;bar&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;).&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;endMetadata&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;done&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-
-    &lt;span style=&quot;color: #888888;&quot;&gt;// Deletion&lt;/span&gt;
-    Boolean isDeleted &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;apps&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;deployments&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;deploy1&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;delete&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-
-    &lt;span style=&quot;color: #888888;&quot;&gt;// Deletion with some propagation policy&lt;/span&gt;
-    Boolean bDeleted &lt;span style=&quot;color: #333333;&quot;&gt;=&lt;/span&gt; client&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;apps&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;().&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;deployments&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;()&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;inNamespace&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;default&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withName&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: #fff0f0;&quot;&gt;&quot;deploy1&quot;&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;withPropagationPolicy&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;(&lt;/span&gt;DeletionPropagation&lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;BACKGROUND&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;)&lt;/span&gt;
-            &lt;span style=&quot;color: #333333;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #0000cc;&quot;&gt;delete&lt;/span&gt;&lt;span style=&quot;color: #333333;&quot;&gt;();&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt; &lt;/p&gt;
-&lt;h2&gt;Learn more about fabric8&lt;/h2&gt;
-&lt;p&gt;Fabric8’s development team consists of mostly Java developers, so a Java developer’s perspective heavily influences this client. In this article, I’ve demonstrated just a few of fabric8’s features for using Kubernetes APIs in a Java environment. For more examples, see the &lt;strong&gt;&lt;a href=&quot;https://github.com/fabric8io/kubernetes-client/tree/master/kubernetes-examples/src/main/java/io/fabric8/kubernetes/examples&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Kubernetes Java client examples repository&lt;/a&gt;.&lt;/strong&gt; And for a deep dive into using fabric8, visit the&lt;strong&gt; &lt;a href=&quot;https://github.com/fabric8io/kubernetes-client/blob/master/doc/CHEATSHEET.md&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Fabric8 Kubernetes Java Client Cheat Sheet&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;a2a_button_facebook&quot; href=&quot;https://www.addtoany.com/add_to/facebook?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_twitter&quot; href=&quot;https://www.addtoany.com/add_to/twitter?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_linkedin&quot; href=&quot;https://www.addtoany.com/add_to/linkedin?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;LinkedIn&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_email&quot; href=&quot;https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Email&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_print&quot; href=&quot;https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Print&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_reddit&quot; href=&quot;https://www.addtoany.com/add_to/reddit?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Reddit&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_button_flipboard&quot; href=&quot;https://www.addtoany.com/add_to/flipboard?linkurl=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;linkname=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot; rel=&quot;nofollow noopener&quot; target=&quot;_blank&quot; title=&quot;Flipboard&quot;&gt;&lt;/a&gt;&lt;a class=&quot;a2a_dd addtoany_share_save addtoany_share&quot; href=&quot;https://www.addtoany.com/share#url=https%3A%2F%2Fdevelopers.redhat.com%2Fblog%2F2020%2F05%2F20%2Fgetting-started-with-the-fabric8-kubernetes-java-client%2F&amp;amp;title=Getting%20started%20with%20the%20fabric8%20Kubernetes%20Java%20client&quot;&gt;&lt;img alt=&quot;Share&quot; src=&quot;https://static.addtoany.com/buttons/favicon.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The post &lt;a href=&quot;https://developers.redhat.com/blog/2020/05/20/getting-started-with-the-fabric8-kubernetes-java-client/&quot; rel=&quot;nofollow&quot;&gt;Getting started with the fabric8 Kubernetes Java client&lt;/a&gt; appeared first on &lt;a href=&quot;https://developers.redhat.com/blog&quot; rel=&quot;nofollow&quot;&gt;Red Hat Developer&lt;/a&gt;.&lt;/p&gt;</description>
-	<pubDate>Wed, 20 May 2020 07:00:21 +0000</pubDate>
-</item>
-<item>
-	<title>Scott Lewis: Using Google's grpc-java for OSGi Remote Services</title>
-	<guid isPermaLink="false">tag:blogger.com,1999:blog-20358640.post-1851540261476891477</guid>
-	<link>http://eclipseecf.blogspot.com/2020/05/using-googles-grpc-java-for-osgi-remote.html</link>
-	<description>&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;A cool thing about &lt;a href=&quot;https://grpc.io/&quot;&gt;Google's grpc&lt;/a&gt; is that a service creator can declare a service via a protocol buffers file (.proto file), and then the protoc compiler (along with grpc-java compiler plugin) generates many of the Java classes for both implementing and using that service&lt;b&gt;.&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;OSGi Remote Services require a service interface to represent the service contract, and this service interface is usually created directly by the programmer.   Through a &lt;a href=&quot;https://github.com/ECF/grpc-osgi-generator&quot;&gt;additional plugin&lt;/a&gt;, protoc can now generate a &lt;b&gt;OSGi service interface along with all grpc classes...&lt;/b&gt; from the .proto file service declaration.   &lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;For example, consider the following protocol buffers input file:&lt;/div&gt;&lt;blockquote class=&quot;tr_bq&quot;&gt;syntax = &quot;proto3&quot;;&lt;br /&gt;package grpc.health.v1;&lt;br /&gt;option java_multiple_files = true;&lt;br /&gt;option java_outer_classname = &quot;HealthProto&quot;;&lt;br /&gt;option java_package = &quot;io.grpc.health.v1&quot;;&lt;br /&gt;message HealthCheckRequest {&lt;br /&gt;  string message = 1;&lt;br /&gt;}&lt;br /&gt;message HealthCheckResponse {&lt;br /&gt;  enum ServingStatus {&lt;br /&gt;    UNKNOWN = 0;&lt;br /&gt;    SERVING = 1;&lt;br /&gt;    NOT_SERVING = 2;&lt;br /&gt;    SERVICE_UNKNOWN = 3;  // Used only by the Watch method.&lt;br /&gt;  }&lt;br /&gt;  ServingStatus status = 1;&lt;br /&gt;}&lt;br /&gt;service HealthCheck {&lt;br /&gt;  // Unary method&lt;br /&gt;  rpc Check(HealthCheckRequest) returns (HealthCheckResponse);&lt;br /&gt;  // Streaming method&lt;br /&gt;  rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);&lt;br /&gt;}&lt;/blockquote&gt;&lt;div&gt;Running protoc+grpc-java+grpc-osgi-generator on this file results in generation of a &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/blob/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api/src/main/java/io/grpc/health/v1/HealthCheckService.java&quot;&gt;HealthCheckService &lt;/a&gt;class along with all message classes (e.g. HealthCheckRequest, HealthCheckResponse, HealthProto, etc).   All of the Java classes in &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api/src/main/java/io/grpc/health/v1&quot;&gt;this example directory&lt;/a&gt; were created simply by running protoc+grpc-java+grpc-osgi-generator on the above proto file.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The generated Java classes can then be used to implement an OSGi Remote Service, with HealthCheckService as the service interface.   Tt runtime, the &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/blob/master/examples/org.eclipse.ecf.examples.provider.grpc.health.impl/src/org/eclipse/ecf/examples/provider/grpc/health/impl/HealthServiceImpl.java&quot;&gt;HealthCheckServiceImpl&lt;/a&gt; can be exported (via the Grpc Provider) which uses grpc to provide the comm and json serialization for the HealthCheckService method calls.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The net effect is that remote service programmers can easily and quickly go from abstract service declaration (in proto file) to a running/functioning OSGi remote service:&lt;/div&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;Declare a service in proto file -- &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/blob/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api/src/main/proto/health.proto&quot;&gt;example proto file&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Run &lt;a href=&quot;https://github.com/ECF/grpc-osgi-generator&quot;&gt;protoc+grpc-java+grpc-osgi-generator &lt;/a&gt;to generate the Java code for the declared service - &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api/src/main/java/io/grpc/health/v1&quot;&gt;example Java generated code&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Implement the service API - &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/blob/master/examples/org.eclipse.ecf.examples.provider.grpc.health.impl/src/org/eclipse/ecf/examples/provider/grpc/health/impl/HealthServiceImpl.java&quot;&gt;example service implementation&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Use Declarative Services to export using ECF Remote Services + Grpc Distribution Provider - &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.impl&quot;&gt;example&lt;/a&gt; (see @Component annotation for OSGi Remote Services-required service properties to trigger export)&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;div&gt;The remote service programmer writes no communication nor serialization code (both are provided by the Grpc distribution provider).   See &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.api&quot;&gt;here&lt;/a&gt; for the complete generated healthcheck api plugin, &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.impl&quot;&gt;here&lt;/a&gt; for the impl plugin, and &lt;a href=&quot;https://github.com/ECF/grpc-RemoteServicesProvider/tree/master/examples/org.eclipse.ecf.examples.provider.grpc.health.consumer&quot;&gt;here&lt;/a&gt; for a simple remote service consumer.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;</description>
-	<pubDate>Wed, 06 May 2020 00:25:18 +0000</pubDate>
-	<author>noreply@blogger.com (Scott Lewis)</author>
 </item>
 <item>
 	<title>Eclipse Ditto: Announcing Eclipse Ditto Release 1.1.0</title>

@@ -25,5 +25,10 @@ public class Professor extends Pessoa{
 	public String toString() {
 		return super.toString() + ", Matricula: " + this.matricula;
 	}
+
+	@Override
+	public void outra_Mensagem(String texto) {
+		System.out.println(texto);
+	}
 	
 }

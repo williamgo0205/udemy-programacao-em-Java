@@ -9,13 +9,13 @@ package br.com.geekuniversity.secao12;
 public class Programa29 {
 
 	public static void main(String[] args) {
-		Pessoa p1 = new Pessoa();
+//		Pessoa p1 = new Pessoa();
 		
-		p1.mensagem();
-		
-		p1.mensagem("Minha mensagem é diferente!!!");
-		
-		p1.mensagem("Minha mensagem é outra diferente!!!", 77);
+//		p1.mensagem();
+//		
+//		p1.mensagem("Minha mensagem é diferente!!!");
+//		
+//		p1.mensagem("Minha mensagem é outra diferente!!!", 77);
 	}
 
 }

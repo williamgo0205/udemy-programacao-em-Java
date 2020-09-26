@@ -1,0 +1,6 @@
+package br.com.geekuniversity.secao13;
+
+// Template Method
+public abstract class Treinamento {
+
+}
