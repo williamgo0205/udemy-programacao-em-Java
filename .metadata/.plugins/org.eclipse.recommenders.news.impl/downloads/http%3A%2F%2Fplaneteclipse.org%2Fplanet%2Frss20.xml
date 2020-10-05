@@ -9,6 +9,517 @@
 	<atom:link rel="self" href="http://planeteclipse.org/rss20.xml" type="application/rss+xml"/>
 
 <item>
+	<title>Melanie Bats: T-16:00 Obeo approves “load-and-go” fueling: EMF-JSON onboard!</title>
+	<guid isPermaLink="true">http://localhost:4000/2020/10/05/emf-json/</guid>
+	<link>http://localhost:4000/2020/10/05/emf-json/</link>
+	<description>&lt;p&gt;At Nantes Dev Force Station Launch Complex 42A, valves are open and code source is beginning to flow into Obeoâ€™s rocket. The first open source project released by the SIRIUS-II Mission is: EMF-JSON.&lt;/p&gt;
+
+&lt;p&gt;The EMF-JSON project will soon be part of the Eclipse Sirius project. It provides a JSON-based implementation of EMF resources which can be used as a drop-in replacement for the default XMI-based format.&lt;/p&gt;
+
+
+
+&lt;p&gt;Although it is part of Sirius, this new EMF resource type can actually be used by any EMF-based application as it does not depend on the rest of the Sirius platform (neither the existing Sirius Desktop nor the upcoming Sirius Web).&lt;/p&gt;
+
+&lt;p&gt;Liftoff on the SIRIUS-II mission to the Eclipse Foundation remains planned for an instantaneous launch window on &lt;a href=&quot;https://www.eclipsecon.org/2020/sessions/sirius-web-100-open-source-cloud-modeling-platform&quot;&gt;October 21 at 2:00 p.m CET&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Mon, 05 Oct 2020 10:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Dirigible: Release 5.3</title>
+	<guid isPermaLink="false">http://dirigible.io/release/2020/10/05/news_new_release_5_3</guid>
+	<link>http://dirigible.io/release/2020/10/05/news_new_release_5_3.html</link>
+	<description>&lt;p&gt;New version &lt;a href=&quot;https://download.eclipse.org/dirigible/drops/R-5.3-202010050300/index.html&quot;&gt;5.3&lt;/a&gt; has been released.&lt;/p&gt;
+
+&lt;p&gt;Release is of &lt;em&gt;Type A&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Select Partial Generation&lt;/li&gt;
+  &lt;li&gt;Views ordering&lt;/li&gt;
+  &lt;li&gt;Monaco - code completion of published modules&lt;/li&gt;
+  &lt;li&gt;Add Tiles for the Generic Templates in Welcome Page&lt;/li&gt;
+  &lt;li&gt;Add support for properties mapping in OData&lt;/li&gt;
+  &lt;li&gt;Add support for nullable properties in OData&lt;/li&gt;
+  &lt;li&gt;OpenUI5 starter pack&lt;/li&gt;
+  &lt;li&gt;Generated REST API - add support for the produced content type&lt;/li&gt;
+  &lt;li&gt;Git Share multiple projects to the same git repository&lt;/li&gt;
+  &lt;li&gt;readEntitySimpleProperty and readEntitySimplePropertyValue in OData&lt;/li&gt;
+  &lt;li&gt;Add a generic template for *.websocket sample&lt;/li&gt;
+  &lt;li&gt;Add support for “many-to-one” associations in OData&lt;/li&gt;
+  &lt;li&gt;Add support for create entity in OData&lt;/li&gt;
+  &lt;li&gt;Add support for delete entity in OData&lt;/li&gt;
+  &lt;li&gt;Add support for update entity in OData&lt;/li&gt;
+  &lt;li&gt;Add support for autoIncrement property in DAO&lt;/li&gt;
+  &lt;li&gt;Add Commit Id Info in About page&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fixes&quot;&gt;Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTTP Client Async - class not found&lt;/li&gt;
+  &lt;li&gt;Feed properties serialization issues&lt;/li&gt;
+  &lt;li&gt;Add support for optional OData generation&lt;/li&gt;
+  &lt;li&gt;Set on focus the selected view from the launchpad&lt;/li&gt;
+  &lt;li&gt;Tolerant Foreign Keys in Schema&lt;/li&gt;
+  &lt;li&gt;Default value support in DAO&lt;/li&gt;
+  &lt;li&gt;Schema SQL is not correct&lt;/li&gt;
+  &lt;li&gt;Missing Default Value property in the Schema Modeler&lt;/li&gt;
+  &lt;li&gt;Missing quotes for default value in materializing&lt;/li&gt;
+  &lt;li&gt;Protect the service path for OData&lt;/li&gt;
+  &lt;li&gt;Git Share project leads to broken project in the workspace&lt;/li&gt;
+  &lt;li&gt;NullPointerException on stop container&lt;/li&gt;
+  &lt;li&gt;Fix duplicated reference keys during OData transformation in OData&lt;/li&gt;
+  &lt;li&gt;Cannot see first project in Workbench on smaller screens&lt;/li&gt;
+  &lt;li&gt;SAP CF - Import Project Fails&lt;/li&gt;
+  &lt;li&gt;SAP CF - Missing Database Binding Configuration&lt;/li&gt;
+  &lt;li&gt;SAP CF - Add Support for Binding of HANA Schema&lt;/li&gt;
+  &lt;li&gt;Minor fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;statistics&quot;&gt;Statistics&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;55K+ Users&lt;/li&gt;
+  &lt;li&gt;79K+ Sessions&lt;/li&gt;
+  &lt;li&gt;184 Countries&lt;/li&gt;
+  &lt;li&gt;407 Repositories in DirigibleLabs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;operational&quot;&gt;Operational&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Available packages for download - &lt;a href=&quot;https://download.eclipse.org/dirigible/drops/R-5.3-202010050300/index.html&quot;&gt;https://download.eclipse.org/dirigible/drops/R-5.3-202010050300/index.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Docker images at Docker Hub under DirigibleLabs organization:	&lt;a href=&quot;https://hub.docker.com/u/dirigiblelabs/&quot;&gt;https://hub.docker.com/u/dirigiblelabs/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Maven Central artifacts by org.eclipse.dirigible namespace: &lt;a href=&quot;https://search.maven.org/search?q=org.eclipse.dirigible&quot;&gt;https://search.maven.org/search?q=org.eclipse.dirigible&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The full list of bug-fixes and enhancements can be found here: &lt;a href=&quot;https://github.com/eclipse/dirigible/milestone/37?closed=1&quot;&gt;https://github.com/eclipse/dirigible/milestone/37?closed=1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The source code is available at GitHub repository here: &lt;a href=&quot;https://github.com/eclipse/dirigible/tree/5.3.0&quot;&gt;https://github.com/eclipse/dirigible/tree/5.3.0&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The instant trial is updated accordingly with the released version here: &lt;a href=&quot;http://trial.dirigible.io&quot;&gt;http://trial.dirigible.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;enjoy&quot;&gt;Enjoy!&lt;/h4&gt;</description>
+	<pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>vert.x project: JWT Authorization for Vert.x with Keycloak</title>
+	<guid isPermaLink="true">https://vertx.io/blog/jwt-authorization-for-vert-x-with-keycloak</guid>
+	<link>https://vertx.io/blog/jwt-authorization-for-vert-x-with-keycloak</link>
+	<description>&lt;article&gt;&lt;h1 id=&quot;jwt-authorization-for-vert-x-with-keycloak&quot;&gt;JWT Authorization for Vert.x with Keycloak&lt;/h1&gt;
+&lt;h2 id=&quot;tl-dr&quot;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;In this blog post you’ll learn:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JWT foundations&lt;/li&gt;
+&lt;li&gt;How to protect routes with a JWT Authorization&lt;/li&gt;
+&lt;li&gt;How to extract claims from a JWT encoded token&lt;/li&gt;
+&lt;li&gt;How to apply RBAC with Keycloak Realm roles&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;hello-again&quot;&gt;Hello again&lt;/h3&gt;
+&lt;p&gt;Hi there! In my last blog post &lt;a href=&quot;https://vertx.io/blog/easy-sso-for-vert-x-with-keycloak/&quot;&gt;Easy SSO for Vert.x with Keycloak&lt;/a&gt; we learned how to configure single sign-on for a Vert.x web application with Keycloak and OpenID connect. This time we’ll see how we can protect an application with Vert.x’s &lt;a href=&quot;https://vertx.io/docs/vertx-web/java/#_jwt_authorisation&quot;&gt;JWT Authorization&lt;/a&gt; support and Keycloak.&lt;/p&gt;
+&lt;h3 id=&quot;keycloak-setup&quot;&gt;Keycloak Setup&lt;/h3&gt;
+&lt;p&gt;To secure our Vert.x app, we need to use a Keycloak server for obtaining JWT tokens. Although &lt;a href=&quot;https://www.keycloak.org/docs/latest/getting_started/&quot;&gt;Keycloak has a great getting started guide&lt;/a&gt; I wanted to make it a bit easier to put everything together, therefore I prepared a local Keycloak docker container &lt;a href=&quot;https://github.com/thomasdarimont/vertx-playground/tree/master/jwt-service-vertx#start-keycloak-with-the-vertx-realm&quot;&gt;as described here&lt;/a&gt;, which comes with all the required configuration in place, that you can start easily.&lt;/p&gt;
+&lt;p&gt;The preconfigured Keycloak realm &lt;code&gt;vertx&lt;/code&gt; contains a &lt;code&gt;vertx-service&lt;/code&gt; OpenID connect client for our Vert.x app and a set
+of users for testing. To ease testing, the &lt;code&gt;vertx-service&lt;/code&gt; is configured with &lt;code&gt;Direct Access Grant&lt;/code&gt; enabled in Keycloak, which
+enables support for the OAuth2 resource owner password credentials grant (ROPC) flow.&lt;/p&gt;
+&lt;p&gt;To start Keycloak with the preconfigured realm, just start the docker container with the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;docker run \
+  -&lt;span class=&quot;ruby&quot;&gt;it \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;-name vertx-keycloak \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;-rm \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;e &lt;span class=&quot;hljs-constant&quot;&gt;KEYCLOAK_USER&lt;/span&gt;=admin \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;e &lt;span class=&quot;hljs-constant&quot;&gt;KEYCLOAK_PASSWORD&lt;/span&gt;=admin \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;e &lt;span class=&quot;hljs-constant&quot;&gt;KEYCLOAK_IMPORT&lt;/span&gt;=&lt;span class=&quot;hljs-regexp&quot;&gt;/tmp/vertx&lt;/span&gt;-realm.json \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;v &lt;span class=&quot;hljs-variable&quot;&gt;$PWD&lt;/span&gt;/vertx-realm.&lt;span class=&quot;hljs-symbol&quot;&gt;json:&lt;/span&gt;/tmp/vertx-realm.json \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;v &lt;span class=&quot;hljs-variable&quot;&gt;$PWD&lt;/span&gt;/&lt;span class=&quot;hljs-symbol&quot;&gt;data:&lt;/span&gt;/opt/jboss/keycloak/standalone/data \
+&lt;/span&gt;  -&lt;span class=&quot;ruby&quot;&gt;p &lt;span class=&quot;hljs-number&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;hljs-symbol&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;hljs-number&quot;&gt;8080&lt;/span&gt; \
+&lt;/span&gt;  quay.io/keycloak/keycloak:11.0.2&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;vert-x-app&quot;&gt;Vert.x App&lt;/h2&gt;
+&lt;p&gt;The example app consists of a single &lt;code&gt;Verticle&lt;/code&gt;, that runs on &lt;code&gt;http://localhost:3000&lt;/code&gt; and provides a few routes with protected resources. &lt;a href=&quot;https://github.com/thomasdarimont/vertx-playground/tree/master/jwt-service-vertx/src/main/java/demo/MainVerticle.java&quot;&gt;You can find the complete example here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Our web app contains the following protected routes with handlers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/api/greet&lt;/code&gt; - The greeting resource, which returns a greeting message, only authenticated users can access this resource.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/api/user&lt;/code&gt; - The user resource, which returns some information about the user, only users with role &lt;code&gt;user&lt;/code&gt; can access this resource.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/api/admin&lt;/code&gt; - The user resource, which returns some information about the admin, only users with role &lt;code&gt;admin&lt;/code&gt; can access this resource.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This example is built with Vert.x version 3.9.3.&lt;/p&gt;
+&lt;h3 id=&quot;running-the-app-in-the-console&quot;&gt;Running the app in the console&lt;/h3&gt;
+&lt;p&gt;To run the app, we need to build it first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;cd jwt-&lt;span class=&quot;hljs-keyword&quot;&gt;service&lt;/span&gt;-vertx
+mvn clean &lt;span class=&quot;hljs-keyword&quot;&gt;package&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This creates a jar, which we can run:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;java&lt;/span&gt; -jar target/&lt;span class=&quot;hljs-regexp&quot;&gt;*.jar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note, that we need to start Keycloak first, since our app fetches the configuration from Keycloak on startup.&lt;/p&gt;
+&lt;h3 id=&quot;running-the-app-in-the-ide&quot;&gt;Running the app in the IDE&lt;/h3&gt;
+&lt;p&gt;We can also run the app directly from your favourite IDE like IntelliJ Idea or Eclipse.
+To run the app from an IDE, we need to create a launch configuration and use the main class &lt;code&gt;io.vertx.core.Launcher&lt;/code&gt;. Then set the the program arguments to
+&lt;code&gt;run demo.MainVerticle&lt;/code&gt; and use the classpath of the &lt;code&gt;jwt-service-vertx&lt;/code&gt; module. 
+With that in place we should be able to run the app.&lt;/p&gt;
+&lt;h2 id=&quot;jwt-authorization&quot;&gt;JWT Authorization&lt;/h2&gt;
+&lt;h3 id=&quot;jwt-foundations&quot;&gt;JWT Foundations&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://tools.ietf.org/html/rfc7519&quot;&gt;JSON Web Token (JWT)&lt;/a&gt; is an open standard to securely exchange information between two parties in the form 
+of &lt;a href=&quot;https://base64.guru/standards/base64url&quot;&gt;Base64URL&lt;/a&gt; encoded JSON objects. 
+A standard JWT is just a string which comprises three base64url encoded parts header, payload and a signature, which are separated by a “&lt;code&gt;.&lt;/code&gt;“ character. 
+There are other variants of JWT that can have more parts.&lt;/p&gt;
+&lt;p&gt;An example JWT can look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;eyJhbGciOiJSUzI&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;NiIsInR5&lt;/span&gt;cCIgOiAiSldUIiwia&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;lkIiA&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;ICJj&lt;span class=&quot;hljs-label&quot;&gt;N00&lt;/span&gt;xX&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;hkWjAtWD&lt;span class=&quot;hljs-label&quot;&gt;NyZTl1&lt;/span&gt;dmZLSFRDUWRxYXJQY&lt;span class=&quot;hljs-label&quot;&gt;nBMblVJMHltdkF0&lt;/span&gt;U&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;RzI&lt;span class=&quot;hljs-label&quot;&gt;n0&lt;/span&gt;.eyJleHAiOjE&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;MDEzMT&lt;span class=&quot;hljs-keyword&quot;&gt;g0&lt;/span&gt;MjIsImlhdCI&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;MTYwMTMxODEyMiwia&lt;span class=&quot;hljs-label&quot;&gt;nRpIjoiNzYzNWY1&lt;/span&gt;YTEtZjFk&lt;span class=&quot;hljs-label&quot;&gt;Ny00&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;NTdkLWI4&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;NjktYWQ0&lt;/span&gt;OTIz&lt;span class=&quot;hljs-label&quot;&gt;NTJmNGQyIiwiaXNzIjoiaHR0&lt;/span&gt;cDovL&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;xvY&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;Fsa&lt;span class=&quot;hljs-keyword&quot;&gt;G9&lt;/span&gt;zdD&lt;span class=&quot;hljs-preprocessor&quot;&gt;o4&lt;/span&gt;MDgwL&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;F&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;dGg&lt;span class=&quot;hljs-title&quot;&gt;vcmVhbG1&lt;/span&gt;zL&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;Zlc&lt;span class=&quot;hljs-label&quot;&gt;nR4&lt;/span&gt;IiwiYXVkIjoiYW&lt;span class=&quot;hljs-label&quot;&gt;Njb3&lt;/span&gt;VudCIsI&lt;span class=&quot;hljs-label&quot;&gt;nN1&lt;/span&gt;YiI&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;IjI&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;Yj&lt;span class=&quot;hljs-label&quot;&gt;NmYWMwLTlhZWMtNDQyMS04&lt;/span&gt;MW&lt;span class=&quot;hljs-label&quot;&gt;NmLWQ0&lt;/span&gt;YjAy&lt;span class=&quot;hljs-label&quot;&gt;NDI4&lt;/span&gt;ZjkwMSIsI&lt;span class=&quot;hljs-label&quot;&gt;nR5&lt;/span&gt;cCI&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;IkJlYXJlciIsImF&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;cCI&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;I&lt;span class=&quot;hljs-label&quot;&gt;nZlcnR4&lt;/span&gt;LX&lt;span class=&quot;hljs-label&quot;&gt;NlcnZpY2&lt;/span&gt;UiLCJzZX&lt;span class=&quot;hljs-label&quot;&gt;NzaW9&lt;/span&gt;uX&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;N0&lt;/span&gt;YXRlIjoi&lt;span class=&quot;hljs-label&quot;&gt;Njg3&lt;/span&gt;MDgyMTMt&lt;span class=&quot;hljs-label&quot;&gt;NDBiNy00&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;NThhLWFlZTEtMzlkNmY5&lt;/span&gt;ZGEw&lt;span class=&quot;hljs-label&quot;&gt;N2&lt;/span&gt;FkIiwiYW&lt;span class=&quot;hljs-label&quot;&gt;NyIjoiMSIsInJlYWxtX2&lt;/span&gt;FjY&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;VzcyI&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;eyJyb&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;xlcyI&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;WyJvZmZsaW&lt;span class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;lX&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;FjY&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;VzcyIsI&lt;span class=&quot;hljs-label&quot;&gt;nVtYV9&lt;/span&gt;hdXRob&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;JpemF&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;aW&lt;span class=&quot;hljs-number&quot;&gt;9&lt;/span&gt;uIiwidX&lt;span class=&quot;hljs-label&quot;&gt;NlciJdfSwicmVzb3&lt;/span&gt;VyY&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;VfYW&lt;span class=&quot;hljs-label&quot;&gt;NjZXNzIjp7&lt;/span&gt;ImFjY&lt;span class=&quot;hljs-number&quot;&gt;291&lt;/span&gt;b&lt;span class=&quot;hljs-label&quot;&gt;nQiOnsicm9&lt;/span&gt;sZXMiOlsibWFuYWdlLWFjY&lt;span class=&quot;hljs-number&quot;&gt;291&lt;/span&gt;b&lt;span class=&quot;hljs-label&quot;&gt;nQiLCJtYW5&lt;/span&gt;hZ&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;UtYW&lt;span class=&quot;hljs-label&quot;&gt;Njb3&lt;/span&gt;VudC&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;saW&lt;span class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;rcyIsI&lt;span class=&quot;hljs-label&quot;&gt;nZpZXctcHJvZmlsZSJdfX0&lt;/span&gt;sI&lt;span class=&quot;hljs-label&quot;&gt;nNjb3&lt;/span&gt;BlIjoiZW&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;haWwgcHJvZmlsZSIsImVtYWlsX&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;ZlcmlmaWVkIjp&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;c&lt;span class=&quot;hljs-label&quot;&gt;nVlLCJuYW1&lt;/span&gt;lIjoiVGhlbyBUZX&lt;span class=&quot;hljs-label&quot;&gt;N0&lt;/span&gt;ZXIiLCJwcmVmZXJyZWRfdX&lt;span class=&quot;hljs-label&quot;&gt;Nlcm5&lt;/span&gt;hbWUiOiJ&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;ZX&lt;span class=&quot;hljs-label&quot;&gt;N0&lt;/span&gt;ZXIiLCJ&lt;span class=&quot;hljs-label&quot;&gt;naXZlbl9&lt;/span&gt;uYW&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;lIjoiVGhlbyIsImZhbWlseV&lt;span class=&quot;hljs-number&quot;&gt;9&lt;/span&gt;uYW&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;lIjoiVGVzdGVyIiwiZW&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;haWwiOiJ&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;b&lt;span class=&quot;hljs-number&quot;&gt;20&lt;/span&gt;rdGVzdGVyQGxvY&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;Fsa&lt;span class=&quot;hljs-keyword&quot;&gt;G9&lt;/span&gt;zdCJ&lt;span class=&quot;hljs-number&quot;&gt;9.&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;NN1&lt;/span&gt;ZGE&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;f&lt;span class=&quot;hljs-number&quot;&gt;3&lt;/span&gt;LHE&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;u&lt;span class=&quot;hljs-number&quot;&gt;7&lt;/span&gt;T&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;Vfq&lt;span class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;yPMKoZ&lt;span class=&quot;hljs-number&quot;&gt;6&lt;/span&gt;SmrUxoFopAXZ&lt;span class=&quot;hljs-title&quot;&gt;m5&lt;/span&gt;wVgMOsJHB&lt;span class=&quot;hljs-number&quot;&gt;8&lt;/span&gt;BgHQTD&lt;span class=&quot;hljs-title&quot;&gt;m7&lt;/span&gt;u&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;oTVU&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;ZHlKH&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;-&lt;span class=&quot;hljs-preprocessor&quot;&gt;o11&lt;/span&gt;RKK&lt;span class=&quot;hljs-number&quot;&gt;7&lt;/span&gt;Mz&lt;span class=&quot;hljs-number&quot;&gt;0&lt;/span&gt;mLqMy&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;EPdkGY&lt;span class=&quot;hljs-number&quot;&gt;9&lt;/span&gt;Bqtj&lt;span class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;LZ&lt;span class=&quot;hljs-number&quot;&gt;8&lt;/span&gt;oTp&lt;span class=&quot;hljs-number&quot;&gt;8&lt;/span&gt;FaVqY&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;g5&lt;/span&gt;Fr&lt;span class=&quot;hljs-number&quot;&gt;5&lt;/span&gt;veXYpOMbc&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;fke-e&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;h&lt;span class=&quot;hljs-keyword&quot;&gt;G8&lt;/span&gt;sAfSjWz&lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;Mq&lt;span class=&quot;hljs-number&quot;&gt;9&lt;/span&gt;BUhJ&lt;span class=&quot;hljs-number&quot;&gt;7&lt;/span&gt;HdK&lt;span class=&quot;hljs-number&quot;&gt;7&lt;/span&gt;TTIte&lt;span class=&quot;hljs-number&quot;&gt;12&lt;/span&gt;pub&lt;span class=&quot;hljs-number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;nbUs4&lt;/span&gt;APYystJWx&lt;span class=&quot;hljs-number&quot;&gt;49&lt;/span&gt;cYmUwZ&lt;span class=&quot;hljs-number&quot;&gt;-5&lt;/span&gt;c&lt;span class=&quot;hljs-number&quot;&gt;9&lt;/span&gt;X&lt;span class=&quot;hljs-number&quot;&gt;295&lt;/span&gt;V-&lt;span class=&quot;hljs-label&quot;&gt;NX9&lt;/span&gt;UksuMSzFItZ&lt;span class=&quot;hljs-number&quot;&gt;4&lt;/span&gt;cACVKi&lt;span class=&quot;hljs-number&quot;&gt;68&lt;/span&gt;&lt;span class=&quot;hljs-title&quot;&gt;m9&lt;/span&gt;lkR&lt;span class=&quot;hljs-number&quot;&gt;4&lt;/span&gt;Ru&lt;span class=&quot;hljs-label&quot;&gt;NQKFTuLvWsorz9&lt;/span&gt;yRx&lt;span class=&quot;hljs-number&quot;&gt;884&lt;/span&gt;e&lt;span class=&quot;hljs-number&quot;&gt;4&lt;/span&gt;c&lt;span class=&quot;hljs-label&quot;&gt;noT_JmfSfYBIl31&lt;/span&gt;Ff&lt;span class=&quot;hljs-label&quot;&gt;nQzUtCjluUzuD9&lt;/span&gt;jVXc_vgC&lt;span class=&quot;hljs-number&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;hljs-label&quot;&gt;num_0&lt;/span&gt;AreOZiUzpglb&lt;span class=&quot;hljs-number&quot;&gt;8&lt;/span&gt;UjKXjswTHF-v_&lt;span class=&quot;hljs-label&quot;&gt;nEIaq7&lt;/span&gt;Ym&lt;span class=&quot;hljs-title&quot;&gt;M5&lt;/span&gt;WKpeg&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The header and payload sections contain information as a JSON object, whereas the signature is just a plain string. JSON objects contain key value pairs which are called &lt;code&gt;claims&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The claims information can be verified and trusted because it is digitally signed with the private key from a public/private key-pair. 
+The signature can later be verified with a corresponding public key. The identifier of the public/private key-pair used to sign a JWT can be 
+contained in a special claim called &lt;code&gt;kid&lt;/code&gt; (key identifier) in the header section of the JWT.&lt;/p&gt;
+&lt;p&gt;An example for a JWT header that references a public/private key-pair looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;{
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;alg&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;RS256&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;typ&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;JWT&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;kid&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;c7M1_hdZ0-X3re9uvfKHTCQdqarPbpLnUI0ymvAtSTs&quot;&lt;/span&gt;
+&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It is quite common to use JWTs to convey information about authentication (user identity) and authorization (scopes, user roles, permissions and other claims). 
+OpenID providers such as &lt;a href=&quot;https://www.keycloak.org/&quot;&gt;Keycloak&lt;/a&gt; support issuing OAuth2 access tokens after authentication for users to clients in the form of JWTs. 
+An access token can then be used to access other services or APIs on behalf of the user. The server providing those services or APIs is often called &lt;code&gt;resource server&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;An example JWT payload generated by Keycloak looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;{
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;exp&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;1601318422&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;iat&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-number&quot;&gt;1601318122&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;jti&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;7635f5a1-f1d7-457d-b869-ad492352f4d2&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;iss&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;http://localhost:8080/auth/realms/vertx&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;aud&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;account&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;sub&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;27b3fac0-9aec-4421-81cf-d4b02428f901&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;typ&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;Bearer&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;azp&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;vertx-service&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;session_state&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;68708213-40b7-458a-aee1-39d6f9da07ad&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;acr&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;realm_access&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;{
+    &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;roles&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;[
+      &lt;span class=&quot;hljs-string&quot;&gt;&quot;offline_access&quot;&lt;/span&gt;,
+      &lt;span class=&quot;hljs-string&quot;&gt;&quot;uma_authorization&quot;&lt;/span&gt;,
+      &lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;
+    ]
+  &lt;/span&gt;}&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;scope&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;email profile&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;email_verified&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-literal&quot;&gt;true&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;name&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;Theo Tester&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;preferred_username&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;tester&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;given_name&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;Theo&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;family_name&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;Tester&quot;&lt;/span&gt;&lt;/span&gt;,
+  &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;email&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;tom+tester@localhost&quot;&lt;/span&gt;
+&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If a &lt;code&gt;resource server&lt;/code&gt; receives a request with such an access token, it needs to verify and inspect the token before it can trust its content. 
+To verify the token, the &lt;code&gt;resource server&lt;/code&gt; needs to obtain the &lt;code&gt;public key&lt;/code&gt; to check the token signature. 
+This &lt;code&gt;public key&lt;/code&gt; can either be configured statically or fetched dynamically from the OpenID Provider by leveraging the &lt;code&gt;kid&lt;/code&gt; information from the JWT header section. 
+Note that most &lt;code&gt;OpenID providers&lt;/code&gt;, such as Keycloak, provide a dedicated endpoint for dynamic public key lookups, e.g. &lt;code&gt;http://localhost:8080/auth/realms/vertx/protocol/openid-connect/certs&lt;/code&gt;.
+A standard for providing public key information is &lt;a href=&quot;https://tools.ietf.org/html/rfc7517&quot;&gt;JSON Web Key Set (JWKS)&lt;/a&gt;. 
+The JWKS information is usually cached by the resource server to avoid the overhead of fetching JWKS for every request.&lt;/p&gt;
+&lt;p&gt;An example response for Keycloak’s JWKS endpoint looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;{
+   &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;keys&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;[
+      {
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;kid&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;c7M1_hdZ0-X3re9uvfKHTCQdqarPbpLnUI0ymvAtSTs&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;kty&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;RSA&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;alg&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;RS256&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;use&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;sig&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;n&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;iFuX2bAXA99Yrv6YEvpV9tjS52krP5UJ7lFL02Zl83PPV6PiLIWKTqF71bfTKnVDxO421xAsBw9f6dlgoyxxY1H_bzJQQryQkry7DA7tI_SnKVsehLgeF-tCcjRF_MF1kM14F1A5Zsu6oYIkMZvgJIRM-ejtz3aUcdnLcTvpPrmfvj7KwRgNsfm6Q-kO0-OAf6m6LaRvaC5VpTIRoVxXNhSIiGKuZ4d05Yk0-HdOR0D0sfOujYzleJmTGBEIAmdWpZqUXiSWbzmpw8mJmacFTP9v8lsTUYZrXc69xm5fHaNJ6PO_E-IKiPKT7OeoM2l3HIK76a4azVL1Ewbv1UtMFw&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;e&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;AQAB&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;x5c&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;[
+            &lt;span class=&quot;hljs-string&quot;&gt;&quot;MIICmTCCAYECBgFwplKOujANBgkqhkiG9w0BAQsFADAQMQ4wDAYDVQQDDAV2ZXJ0eDAeFw0yMDAzMDQxNjExMzNaFw0zMDAzMDQxNjEzMTNaMBAxDjAMBgNVBAMMBXZlcnR4MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiFuX2bAXA99Yrv6YEvpV9tjS52krP5UJ7lFL02Zl83PPV6PiLIWKTqF71bfTKnVDxO421xAsBw9f6dlgoyxxY1H/bzJQQryQkry7DA7tI/SnKVsehLgeF+tCcjRF/MF1kM14F1A5Zsu6oYIkMZvgJIRM+ejtz3aUcdnLcTvpPrmfvj7KwRgNsfm6Q+kO0+OAf6m6LaRvaC5VpTIRoVxXNhSIiGKuZ4d05Yk0+HdOR0D0sfOujYzleJmTGBEIAmdWpZqUXiSWbzmpw8mJmacFTP9v8lsTUYZrXc69xm5fHaNJ6PO/E+IKiPKT7OeoM2l3HIK76a4azVL1Ewbv1UtMFwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBxcXiTtGoo4/eMNwhagYH8QpK1n7fxgzn4mkESU3wD+rnPOAh/xFmx5c3aq8X+8W2z7oopO86ZBSQ8HfbzViBP0uwvf7s7E6Q8FOqrUNv0Kj308A7hF1IOqOhCJE2nABIWJduYz5dWZN434Q9El30L1eOYTtjBUmCdP7/CM+1bvxIT+CYrWmjI9zCMJxhuixmLffppsLCjGtNgFBemjQyCrLxpEGCfy8QGb4pTY/XaHuJ7k6ZaQkVeTbeDzaZbHc9zT5qgf6w4Gp7y+uPZdAsasrwiqm3YBtyBfaK42luk09nHpV6PRKpftnyLVPwlQiJAW6ZMckvDwmnDst70msnb&quot;&lt;/span&gt;
+         ]&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;x5t&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;MVYTXCx5cUQ8lT1ymIDDRYO7_ZI&quot;&lt;/span&gt;&lt;/span&gt;,
+         &quot;&lt;span class=&quot;hljs-attribute&quot;&gt;x5t#S256&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;yBDVTlfR0e7cv3HxbbkfvGKVs5W1VQtFs7haE_js3DY&quot;&lt;/span&gt;
+      &lt;/span&gt;}
+   ]
+&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+The `keys` array contains the JWKS structure with the public key information that belongs to the public/private key-pair which was used
+to sign the JWT access token from above. Note the matching `kid` claim from our earlier JWT header example.
+
+Now that we have the appropriate public key, we can use the information from the JWT header to validate the signature of the JWT access token.
+If the signature is valid, we can go on and check additional claims from the payload section of the JWT, such as expiration, allowed issuer and audience etc. 
+
+Now that we have the necessary building blocks in place, we can finally look at how to configure JWT authorization in Vert.x.
+
+### JWT Authorization in Vert.x
+
+Setting up JWT authorization in Vert.x is quite easy. First we need to add the `vertx-auth-jwt` module as a dependency to our project.
+
+&lt;pre&gt;&lt;code class=&quot;hljs xml&quot;&gt;&lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;io.vertx&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;hljs-tag&quot;&gt;&amp;lt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;vertx-auth-jwt&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;hljs-tag&quot;&gt;&lt;span class=&quot;hljs-title&quot;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In our example the whole JWT authorization setup happens in the method &lt;code&gt;setupJwtAuth&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We use a &lt;code&gt;WebClient&lt;/code&gt; to dynamically fetch the public key information from the &lt;code&gt;/protocol/openid-connect/certs&lt;/code&gt; JWKS endpoint relative to our Keycloak issuer URL. 
+After that, we configure a &lt;code&gt;JWTAuth&lt;/code&gt; instance and customize the JWT validation via &lt;code&gt;JWTOptions&lt;/code&gt; and &lt;code&gt;JWTAuthOptions&lt;/code&gt;. 
+Note that we use Keycloak’s realm roles for role based authorization via the &lt;code&gt;JWTAuthOptions#setPermissionsClaimKey(..)&lt;/code&gt; method.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; Future &lt;span class=&quot;hljs-title&quot;&gt;setupJwtAuth&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(Startup startup)&lt;/span&gt; &lt;/span&gt;{
+
+    var jwtConfig = startup.config.getJsonObject(&lt;span class=&quot;hljs-string&quot;&gt;&quot;jwt&quot;&lt;/span&gt;);
+    var issuer = jwtConfig.getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;issuer&quot;&lt;/span&gt;);
+    var issuerUri = URI.create(issuer);
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// derive JWKS uri from Keycloak issuer URI&lt;/span&gt;
+    var jwksUri = URI.create(jwtConfig.getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;jwksUri&quot;&lt;/span&gt;, String.format(&lt;span class=&quot;hljs-string&quot;&gt;&quot;%s://%s:%d%s&quot;&lt;/span&gt;,
+            issuerUri.getScheme(), issuerUri.getHost(), issuerUri.getPort(), issuerUri.getPath() + &lt;span class=&quot;hljs-string&quot;&gt;&quot;/protocol/openid-connect/certs&quot;&lt;/span&gt;)));
+
+    var promise = Promise.promise();
+
+    &lt;span class=&quot;hljs-comment&quot;&gt;// fetch JWKS from `/certs` endpoint&lt;/span&gt;
+    webClient.get(jwksUri.getPort(), jwksUri.getHost(), jwksUri.getPath())
+            .as(BodyCodec.jsonObject())
+            .send(ar -&amp;gt; {
+
+                &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (!ar.succeeded()) {
+                    startup.bootstrap.fail(String.format(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Could not fetch JWKS from URI: %s&quot;&lt;/span&gt;, jwksUri));
+                    &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt;;
+                }
+
+                var response = ar.result();
+
+                var jwksResponse = response.body();
+                var keys = jwksResponse.getJsonArray(&lt;span class=&quot;hljs-string&quot;&gt;&quot;keys&quot;&lt;/span&gt;);
+
+                &lt;span class=&quot;hljs-comment&quot;&gt;// Configure JWT validation options&lt;/span&gt;
+                var jwtOptions = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; JWTOptions();
+                jwtOptions.setIssuer(issuer);
+
+                &lt;span class=&quot;hljs-comment&quot;&gt;// extract JWKS from keys array&lt;/span&gt;
+                var jwks = ((List) keys.getList()).stream()
+                        .map(o -&amp;gt; &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; JsonObject((Map) o))
+                        .collect(Collectors.toList());
+
+                &lt;span class=&quot;hljs-comment&quot;&gt;// configure JWTAuth&lt;/span&gt;
+                var jwtAuthOptions = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; JWTAuthOptions();
+                jwtAuthOptions.setJwks(jwks);
+                jwtAuthOptions.setJWTOptions(jwtOptions);
+                jwtAuthOptions.setPermissionsClaimKey(jwtConfig.getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;permissionClaimsKey&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;realm_access/roles&quot;&lt;/span&gt;));
+
+                JWTAuth jwtAuth = JWTAuth.create(vertx, jwtAuthOptions);
+                promise.complete(jwtAuth);
+            });
+
+    &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; promise.future().compose(auth -&amp;gt; {
+        jwtAuth = auth;
+        &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; Future.succeededFuture(startup);
+    });
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;protecting-routes-with-jwtauthhandler&quot;&gt;Protecting routes with JWTAuthHandler&lt;/h3&gt;
+&lt;p&gt;Now that our &lt;code&gt;JWTAuth&lt;/code&gt; is configured, we can use the &lt;code&gt;JWTAuthHandler&lt;/code&gt; in the &lt;code&gt;setupRouter&lt;/code&gt; method to apply 
+JWT authorization to all routes matching the path pattern &lt;code&gt;/api/*&lt;/code&gt;. The &lt;code&gt;JWTAuthHandler&lt;/code&gt; validates received JWTs and performs 
+additional checks like expiration and allowed issuers. With that in place, we configure our actual routes in &lt;code&gt;setupRoutes&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; Future &lt;span class=&quot;hljs-title&quot;&gt;setupRouter&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(Startup startup)&lt;/span&gt; &lt;/span&gt;{
+
+    router = Router.router(vertx);
+
+    router.route(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/api/*&quot;&lt;/span&gt;).handler(JWTAuthHandler.create(jwtAuth));
+
+    &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; Future.succeededFuture(startup);
+}
+
+&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; Future &lt;span class=&quot;hljs-title&quot;&gt;setupRoutes&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(Startup startup)&lt;/span&gt; &lt;/span&gt;{
+
+    router.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/api/greet&quot;&lt;/span&gt;).handler(&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;::handleGreet);
+    router.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/api/user&quot;&lt;/span&gt;).handler(&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;::handleUserData);
+    router.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/api/admin&quot;&lt;/span&gt;).handler(&lt;span class=&quot;hljs-keyword&quot;&gt;this&lt;/span&gt;::handleAdminData);
+
+    &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; Future.succeededFuture(startup);
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;extracting-user-information-from-jwtuser&quot;&gt;Extracting user information from JWTUser&lt;/h3&gt;
+&lt;p&gt;To access user information in our &lt;code&gt;handleGreet&lt;/code&gt; method, we cast the result of the &lt;code&gt;io.vertx.ext.web.RoutingContext#user&lt;/code&gt; method to &lt;code&gt;JWTUser&lt;/code&gt; 
+which allows us to access token claim information via the &lt;code&gt;io.vertx.ext.auth.jwt.impl.JWTUser#principal&lt;/code&gt; JSON object.&lt;/p&gt;
+&lt;p&gt;If we’d like to use the JWT access token for other service calls, we could extract the token from the &lt;code&gt;Authorization&lt;/code&gt; header.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;handleGreet&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(RoutingContext ctx)&lt;/span&gt; &lt;/span&gt;{
+
+    var jwtUser = (JWTUser) ctx.user();
+    var username = jwtUser.principal().getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;preferred_username&quot;&lt;/span&gt;);
+    var userId = jwtUser.principal().getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;sub&quot;&lt;/span&gt;);
+
+    var accessToken = ctx.request().getHeader(HttpHeaders.AUTHORIZATION).substring(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Bearer &quot;&lt;/span&gt;.length());
+    &lt;span class=&quot;hljs-comment&quot;&gt;// Use accessToken for down-stream calls if needed...&lt;/span&gt;
+
+    ctx.request().response().end(String.format(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Hi %s (%s) %s%n&quot;&lt;/span&gt;, username, userId, Instant.now()));
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;obtaining-an-access-token-from-keycloak-for-user-tester-&quot;&gt;Obtaining an Access Token from Keycloak for user &lt;code&gt;tester&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;To test our application we can use the following &lt;code&gt;curl&lt;/code&gt; commands in a bash like shell to obtain an JWT access token to call one
+of our endpoints as the user &lt;code&gt;tester&lt;/code&gt; with the role &lt;code&gt;user&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note that this example uses the cli tool &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;jq&lt;/a&gt; for JSON processing.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;KC_USERNAME=tester
+KC_PASSWORD=test
+KC_CLIENT=vertx-service
+KC_CLIENT_SECRET=ecb85cc5&lt;span class=&quot;hljs-operator&quot;&gt;-f&lt;/span&gt;90d-&lt;span class=&quot;hljs-number&quot;&gt;4&lt;/span&gt;a03-&lt;span class=&quot;hljs-number&quot;&gt;8&lt;/span&gt;fac-&lt;span class=&quot;hljs-number&quot;&gt;24&lt;/span&gt;dcde57f40c
+KC_REALM=vertx
+KC_URL=http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;8080&lt;/span&gt;/auth
+KC_RESPONSE=$(curl  -k \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;username=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_USERNAME&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;password=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_PASSWORD&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;'grant_type=password'&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;client_id=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_CLIENT&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;client_secret=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_CLIENT_SECRET&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-string&quot;&gt;&quot;&lt;span class=&quot;hljs-variable&quot;&gt;$KC_URL&lt;/span&gt;/realms/&lt;span class=&quot;hljs-variable&quot;&gt;$KC_REALM&lt;/span&gt;/protocol/openid-connect/token&quot;&lt;/span&gt; \
+    | jq .)
+
+KC_ACCESS_TOKEN=$(&lt;span class=&quot;hljs-built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;$KC_RESPONSE&lt;/span&gt;| jq -r .access_token)
+&lt;span class=&quot;hljs-built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here we use the JWT access token in the &lt;code&gt;Authorization&lt;/code&gt; header with the &lt;code&gt;Bearer&lt;/code&gt; prefix to call our &lt;code&gt;greet&lt;/code&gt; route:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl --silent -H &lt;span class=&quot;hljs-string&quot;&gt;&quot;Authorization: Bearer &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&quot;&lt;/span&gt; http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;3000&lt;/span&gt;/api/greet&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;Hi tester (&lt;span class=&quot;hljs-number&quot;&gt;27&lt;/span&gt;b3fac0-&lt;span class=&quot;hljs-number&quot;&gt;9&lt;/span&gt;aec-&lt;span class=&quot;hljs-number&quot;&gt;4421&lt;/span&gt;-&lt;span class=&quot;hljs-number&quot;&gt;81&lt;/span&gt;cf&lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt;4b02428f901) &lt;span class=&quot;hljs-number&quot;&gt;2020&lt;/span&gt;-&lt;span class=&quot;hljs-number&quot;&gt;09&lt;/span&gt;-&lt;span class=&quot;hljs-number&quot;&gt;28&lt;/span&gt;T21:&lt;span class=&quot;hljs-number&quot;&gt;03&lt;/span&gt;:&lt;span class=&quot;hljs-number&quot;&gt;59.254230700&lt;/span&gt;Z&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;applying-role-based-access-control-with-jwtuser&quot;&gt;Applying Role-based Access-Control with JWTUser&lt;/h3&gt;
+&lt;p&gt;To leverage support for role based access control (RBAC) we can use the &lt;code&gt;io.vertx.ext.auth.User#isAuthorised&lt;/code&gt; method
+to check whether the current user has the required role. If the role is present we return some data about the user, otherwise
+we send a response with status code 403 and a &lt;code&gt;forbidden&lt;/code&gt; error message.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;handleUserData&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(RoutingContext ctx)&lt;/span&gt; &lt;/span&gt;{
+
+    var jwtUser = (JWTUser) ctx.user();
+    var username = jwtUser.principal().getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;preferred_username&quot;&lt;/span&gt;);
+    var userId = jwtUser.principal().getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;sub&quot;&lt;/span&gt;);
+
+    jwtUser.isAuthorized(&lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;, res -&amp;gt; {
+
+        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (!res.succeeded() || !res.result()) {
+            toJsonResponse(ctx).setStatusCode(&lt;span class=&quot;hljs-number&quot;&gt;403&lt;/span&gt;).end(&lt;span class=&quot;hljs-string&quot;&gt;&quot;{\&quot;error\&quot;: \&quot;forbidden\&quot;}&quot;&lt;/span&gt;);
+            &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt;;
+        }
+
+        JsonObject data = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; JsonObject()
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;type&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;)
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;username&quot;&lt;/span&gt;, username)
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;userId&quot;&lt;/span&gt;, userId)
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;, Instant.now());
+
+        toJsonResponse(ctx).end(data.toString());
+    });
+}
+
+&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;handleAdminData&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(RoutingContext ctx)&lt;/span&gt; &lt;/span&gt;{
+
+    var jwtUser = (JWTUser) ctx.user();
+    var username = jwtUser.principal().getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;preferred_username&quot;&lt;/span&gt;);
+    var userId = jwtUser.principal().getString(&lt;span class=&quot;hljs-string&quot;&gt;&quot;sub&quot;&lt;/span&gt;);
+
+    jwtUser.isAuthorized(&lt;span class=&quot;hljs-string&quot;&gt;&quot;admin&quot;&lt;/span&gt;, res -&amp;gt; {
+
+        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (!res.succeeded() || !res.result()) {
+            toJsonResponse(ctx).setStatusCode(&lt;span class=&quot;hljs-number&quot;&gt;403&lt;/span&gt;).end(&lt;span class=&quot;hljs-string&quot;&gt;&quot;{\&quot;error\&quot;: \&quot;forbidden\&quot;}&quot;&lt;/span&gt;);
+            &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt;;
+        }
+
+        JsonObject data = &lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt; JsonObject()
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;type&quot;&lt;/span&gt;, &lt;span class=&quot;hljs-string&quot;&gt;&quot;admin&quot;&lt;/span&gt;)
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;username&quot;&lt;/span&gt;, username)
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;userId&quot;&lt;/span&gt;, userId)
+                .put(&lt;span class=&quot;hljs-string&quot;&gt;&quot;timestamp&quot;&lt;/span&gt;, Instant.now());
+
+        toJsonResponse(ctx).end(data.toString());
+    });
+}&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl --silent -H &lt;span class=&quot;hljs-string&quot;&gt;&quot;Authorization: Bearer &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&quot;&lt;/span&gt; http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;3000&lt;/span&gt;/api/user&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs json&quot;&gt;{&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;type&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;username&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;tester&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;userId&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;27b3fac0-9aec-4421-81cf-d4b02428f901&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;timestamp&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;2020-09-28T21:07:49.340950300Z&quot;&lt;/span&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl --silent -H &lt;span class=&quot;hljs-string&quot;&gt;&quot;Authorization: Bearer &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&quot;&lt;/span&gt; http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;3000&lt;/span&gt;/api/admin&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;{&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;error&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;forbidden&quot;&lt;/span&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;obtaining-an-access-token-from-keycloak-for-user-vadmin-&quot;&gt;Obtaining an Access Token from Keycloak for user &lt;code&gt;vadmin&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;To check access with an &lt;code&gt;admin&lt;/code&gt; role, we obtain a new token for the user &lt;code&gt;vadmin&lt;/code&gt; which has the roles &lt;code&gt;admin&lt;/code&gt; and &lt;code&gt;user&lt;/code&gt;. &lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;KC_USERNAME=vadmin
+KC_PASSWORD=test
+KC_CLIENT=vertx-service
+KC_CLIENT_SECRET=ecb85cc5&lt;span class=&quot;hljs-operator&quot;&gt;-f&lt;/span&gt;90d-&lt;span class=&quot;hljs-number&quot;&gt;4&lt;/span&gt;a03-&lt;span class=&quot;hljs-number&quot;&gt;8&lt;/span&gt;fac-&lt;span class=&quot;hljs-number&quot;&gt;24&lt;/span&gt;dcde57f40c
+KC_REALM=vertx
+KC_URL=http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;8080&lt;/span&gt;/auth
+KC_RESPONSE=$(curl  -k \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;username=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_USERNAME&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;password=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_PASSWORD&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;'grant_type=password'&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;client_id=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_CLIENT&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-operator&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&quot;client_secret=&lt;span class=&quot;hljs-variable&quot;&gt;$KC_CLIENT_SECRET&lt;/span&gt;&quot;&lt;/span&gt; \
+        &lt;span class=&quot;hljs-string&quot;&gt;&quot;&lt;span class=&quot;hljs-variable&quot;&gt;$KC_URL&lt;/span&gt;/realms/&lt;span class=&quot;hljs-variable&quot;&gt;$KC_REALM&lt;/span&gt;/protocol/openid-connect/token&quot;&lt;/span&gt; \
+    | jq .)
+
+KC_ACCESS_TOKEN=$(&lt;span class=&quot;hljs-built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;$KC_RESPONSE&lt;/span&gt;| jq -r .access_token)
+&lt;span class=&quot;hljs-built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl --silent -H &lt;span class=&quot;hljs-string&quot;&gt;&quot;Authorization: Bearer &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&quot;&lt;/span&gt; http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;3000&lt;/span&gt;/api/user&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs json&quot;&gt;{&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;type&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;user&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;username&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;vadmin&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;userId&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;75090eac-36ff-4cd8-847d-fc2941bc024e&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;timestamp&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;2020-09-28T21:13:05.099393900Z&quot;&lt;/span&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;curl --&lt;span class=&quot;hljs-literal&quot;&gt;silent&lt;/span&gt; -H &lt;span class=&quot;hljs-string&quot;&gt;&quot;Authorization: Bearer &lt;span class=&quot;hljs-variable&quot;&gt;$KC_ACCESS_TOKEN&lt;/span&gt;&quot;&lt;/span&gt; http://localhost:&lt;span class=&quot;hljs-number&quot;&gt;3000&lt;/span&gt;/api/&lt;span class=&quot;hljs-literal&quot;&gt;admin&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;hljs json&quot;&gt;{&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;type&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;admin&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;username&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;vadmin&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;userId&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;75090eac-36ff-4cd8-847d-fc2941bc024e&quot;&lt;/span&gt;&lt;/span&gt;,&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;timestamp&lt;/span&gt;&quot;:&lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;2020-09-28T21:13:34.945276500Z&quot;&lt;/span&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;We learned how to configure a Vert.x application with JWT authorization powered by Keycloak. Although the configuration is quite complete
+already, there are still some parts that can be improved, like the dynamic JWKS fetching on public-key pair rotation as well as extraction of nested roles.&lt;/p&gt;
+&lt;p&gt;Nevertheless this is a good starting point for securing your own Vert.x services with JWT and Keycloak.&lt;/p&gt;
+&lt;p&gt;You can check out the &lt;a href=&quot;https://github.com/thomasdarimont/vertx-playground/tree/master/jwt-service-vertx&quot;&gt;complete example in keycloak-vertx Examples Repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thank you for your time, stay tuned for more updates! If you want to learn more about Keycloak, feel free to reach out to me. You can find me via &lt;a href=&quot;https://twitter.com/thomasdarimont&quot;&gt;thomasdarimont on twitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy Hacking!&lt;/p&gt;
+&lt;/article&gt;</description>
+	<pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Ditto: Announcing Eclipse Ditto Release 1.3.0</title>
+	<guid isPermaLink="true">https://www.eclipse.org/ditto/2020-09-30-release-announcement-130.html</guid>
+	<link>https://www.eclipse.org/ditto/2020-09-30-release-announcement-130.html</link>
+	<description>&lt;p&gt;Today, the Ditto team is happy to announce the next feature update of Ditto &lt;code class=&quot;highlighter-rouge&quot;&gt;1.x&lt;/code&gt;: &lt;strong&gt;Eclipse Ditto 1.3.0&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;1.3.0 focuses on the following areas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Implicit/automatic creation of digital twins (things)&lt;/li&gt;
+  &lt;li&gt;Use response of HTTP push connections as live message response&lt;/li&gt;
+  &lt;li&gt;“Raw” payload mapper for “pass-through” connectivity scenarios not affecting the twin&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please have a look at the &lt;a href=&quot;https://www.eclipse.org/ditto/release_notes_130.html&quot;&gt;1.3.0 release notes&lt;/a&gt; for a more detailed information on the release.&lt;/p&gt;
+
+&lt;p&gt;Also, some bugs were fixed which are not backported to Ditto 1.2.x - it is recommended to update to Ditto 1.3.0 right
+away and skip 1.2.x.&lt;/p&gt;
+
+&lt;h2 id=&quot;artifacts&quot;&gt;Artifacts&lt;/h2&gt;
+
+&lt;p&gt;The new Java artifacts have been published at the &lt;a href=&quot;https://repo.eclipse.org/content/repositories/ditto/&quot;&gt;Eclipse Maven repository&lt;/a&gt;
+as well as &lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/ditto/&quot;&gt;Maven central&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Also the &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Ditto Java client&lt;/a&gt;’s artifacts were published to Maven central.&lt;/p&gt;
+
+&lt;p&gt;The Docker images have been pushed to Docker Hub:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-policies/&quot;&gt;eclipse/ditto-policies&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things/&quot;&gt;eclipse/ditto-things&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things-search/&quot;&gt;eclipse/ditto-things-search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-gateway/&quot;&gt;eclipse/ditto-gateway&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-connectivity/&quot;&gt;eclipse/ditto-connectivity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-concierge/&quot;&gt;eclipse/ditto-concierge&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kubernetes-ready-helm-chart&quot;&gt;Kubernetes ready: Helm chart&lt;/h2&gt;
+
+&lt;p&gt;In order to run Eclipse Ditto in a Kubernetes environment, best rely on the official 
+&lt;a href=&quot;https://hub.helm.sh/charts/eclipse-iot/ditto&quot;&gt;Helm chart&lt;/a&gt; and deploy Ditto via the Helm package manager.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
+
+&lt;p&gt;–&lt;br /&gt;
+The Eclipse Ditto team&lt;/p&gt;</description>
+	<pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>vert.x project: Eclipse Vert.x 4 beta 3 released!</title>
 	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-4-beta-3-released</guid>
 	<link>https://vertx.io/blog/eclipse-vert-x-4-beta-3-released</link>
@@ -453,27 +964,6 @@ fmp-demo-project : $
 	<link>https://medium.com/javarevisited/exception-handling-in-eclipse-collections-9e37a68fc6a9?source=rss-df39b86e9f04------2</link>
 	<description>&lt;p&gt;Some strategies for handling exceptions in &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; before and after Java 8&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*PQd876my5P5hED-Ay9SRag.jpeg&quot; /&gt;&lt;figcaption&gt;Handling checked exceptions with iteration patterns and lambdas can feel like walking on ice&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;The Inspiration for this post&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/u/584c4eb5fcd9&quot;&gt;Brian Vermeer&lt;/a&gt; wrote a great blog on Exception Handling in Java Streams.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://dev.to/brianverm/exception-handling-in-java-streams-2mjh&quot;&gt;Exception Handling in Java Streams&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The post reminded me of the exception handling support we have had in &lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; for a few years now. I thought I would show some simple examples of handling Checked Exceptions using Eclipse Collections before and after Java 8. I will also show examples that will work with &lt;a href=&quot;https://medium.com/javarevisited/7-best-java-tutorials-and-books-to-learn-lambda-expression-and-stream-api-and-other-features-3083e6038e14&quot;&gt;Java Streams&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;The Dependable Appendable&lt;/h3&gt;&lt;p&gt;There is an interface in Java named Appendable. Appendable is a parent interface of StringBuilder, StringBuffer, PrintStream and several other classes. The interface has been around since Java 5. It defines a method append as follows:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*P-XpHDRslrkrCdsFRpI0kA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;If I create a MutableList of String, and attempt to use append as a method reference with the forEach method, my IDE gives me a warning saying there is an Unhandled Exception: java.io.IOException.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*OWzuxQegtqJbSQIPKbp9dg.png&quot; /&gt;&lt;figcaption&gt;Unhandled Exception: java.io.IOException&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;As it turns out, StringBuilder doesn’t actually throw a java.io.IOException in its method signature for the append method. So if I change the type to StringBuilder, the exception will go away.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*D9AUogMJXiusU9260QFv1g.png&quot; /&gt;&lt;figcaption&gt;The StringBuilder accept method doesn’t throw java.io.IOException&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;The same would be true if I changed the code to use StringBuffer. However, all Appendable implementations that deal with files will most likely throw the exception. So if I use the interface, and not specific implementations, I will have to handle the exception. The ugly way of handling the exception &lt;strong&gt;prior to Java 8&lt;/strong&gt;, might look as follows.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*MspVJ_iLw9KZDFEmTe13Dw.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;This is a common pattern, catching a checked exception and throwing a RuntimeException. It was common enough for us before Java 8 that we had specific “Checked” versions of the different functional interfaces in Eclipse Collections. There is a package named “checked” in each of the functional interface packages (function, predicate, procedure). Using a &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/procedure/checked/CheckedProcedure.html&quot;&gt;CheckedProcedure&lt;/a&gt;, we could simplify the code as follows:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*hkm_easz_NcOoYl59ApjAA.png&quot; /&gt;&lt;figcaption&gt;How to deal with checked exceptions before Java 8&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;If an exception is thrown by the Appendable, the exception will be caught and if it is a RuntimeException, it will be bubbled up. If it is a checked exception, a RuntimeException will be created and thrown with the checked exception set as the cause.&lt;/p&gt;&lt;p&gt;After Java 8, we introduced new interfaces to deal with Checked Exceptions. For each Functional Interface type (Function, Predicate, Procedure) there is a corresponding “throwing” type (&lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/function/checked/ThrowingFunction.html&quot;&gt;ThrowingFunction&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/predicate/checked/ThrowingPredicate.html&quot;&gt;ThrowingPredicate&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/procedure/checked/ThrowingProcedure.html&quot;&gt;ThrowingProcedure&lt;/a&gt;). There are also corresponding methods on the factories for the the functional interfaces (&lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/factory/Functions.html#throwing(org.eclipse.collections.impl.block.function.checked.ThrowingFunction)&quot;&gt;Functions.throwing&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/factory/Predicates.html#throwing(org.eclipse.collections.impl.block.predicate.checked.ThrowingPredicate)&quot;&gt;Predicates.throwing&lt;/a&gt;, &lt;a href=&quot;https://www.eclipse.org/collections/javadoc/10.4.0/org/eclipse/collections/impl/block/factory/Procedures.html#throwing(org.eclipse.collections.impl.block.procedure.checked.ThrowingProcedure)&quot;&gt;Procedures.throwing&lt;/a&gt;). Using the combination of these features with Java 8 or above we can now write the following:&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*w-ugred-W9RA1WqXjceVAQ.png&quot; /&gt;&lt;figcaption&gt;Dealing with checked exceptions with Java 8 or above&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;You can also use the same approach with &lt;a href=&quot;https://javarevisited.blogspot.com/2020/04/top-5-courses-to-learn-java-collections-and-streams.html#axzz6XMFoMrEo&quot;&gt;Java Collections&lt;/a&gt; and &lt;a href=&quot;https://javarevisited.blogspot.com/2018/08/top-5-java-8-courses-to-learn-online.html&quot;&gt;Java Streams&lt;/a&gt;.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*E3H0kT_NrTDgOu6PutPdeQ.png&quot; /&gt;&lt;figcaption&gt;Using Java 8+ forEach method on Iterable which takes Consumer&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;This code works, because the Procedure interface in Eclipse Collections extends the Consumer interface. The code will work using as a Stream as well.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*rZ4vpSKI1Tm-2dH7HK04LQ.png&quot; /&gt;&lt;figcaption&gt;Using Stream forEach which also takes Consumer&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Throwing your own RuntimeExceptions&lt;/h3&gt;&lt;p&gt;If you want to control the type of RuntimeException that is thrown, there is an overloaded version of the throwing method that supports this.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*xpFexOQP8YHhWqjo9WSJCg.png&quot; /&gt;&lt;figcaption&gt;The Function2 takes the current element, the exception caught and the RuntimeException type to rethrow&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;Let’s say I want to rethrow an UndependableAppendableException in case an IOException is caught in the call to append. The code might look as follows:&lt;/p&gt;&lt;figure&gt;&lt;a href=&quot;https://www.java67.com/2018/10/java-8-stream-and-functional-programming-interview-questions-answers.html&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*m9jaAWGPmrstZIveW1bsrg.png&quot; /&gt;&lt;/a&gt;&lt;figcaption&gt;The UndependableAppendableException constructor matches the Function2 signature defined in throwing&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;Notice, I kept the code here working with Java Stream. It would work the same using forEach on a List or a MutableList from Eclipse Collections.&lt;/p&gt;&lt;h3&gt;But wait, what about…&lt;/h3&gt;&lt;p&gt;This is the exception handling capability that exists today in Eclipse Collections. If there are additional capabilities you would like, consider submitting issues requesting features or making contributions via pull requests to the Eclipse Collection project. We welcome new contributors to Eclipse Collections. Check out the following blog for more information on how to get started.&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/@donraab/help-wanted-b1acf25d8c8d&quot;&gt;Help Wanted!&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=9e37a68fc6a9&quot; width=&quot;1&quot; /&gt;&lt;hr /&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/javarevisited/exception-handling-in-eclipse-collections-9e37a68fc6a9&quot;&gt;Exception Handling in Eclipse Collections&lt;/a&gt; was originally published in &lt;a href=&quot;https://medium.com/javarevisited&quot;&gt;Javarevisited&lt;/a&gt; on Medium, where people are continuing the conversation by highlighting and responding to this story.&lt;/p&gt;</description>
 	<pubDate>Fri, 18 Sep 2020 14:09:19 +0000</pubDate>
-</item>
-<item>
-	<title>vert.x project: Eclipse Vert.x 3.9.3 released!</title>
-	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-3-9-3-released</guid>
-	<link>https://vertx.io/blog/eclipse-vert-x-3-9-3-released</link>
-	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce that the Eclipse Vert.x version 3.9.3 has been released.&lt;/p&gt;
-&lt;p&gt;Since the release of Vert.x 3.9.3, quite a few bugs have been reported. We would like to thank you all for reporting these issues.&lt;/p&gt;
-&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.3-Release-Notes&quot;&gt;3.9.3 release notes&lt;/a&gt; can be found on the wiki, as well as the
-list of &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.3-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Docker images are available on &lt;a href=&quot;https://hub.docker.com/u/vertx/&quot;&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The Vert.x distribution can be downloaded on the website but is also available from &lt;a href=&quot;http://sdkman.io/index.html&quot;&gt;SDKMan&lt;/a&gt; and &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The event bus client using the SockJS bridge is available from:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/vertx3-eventbus-client&quot;&gt;NPM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/vertx-bus-bower&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.webjars.org/&quot;&gt;WebJars&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.vertx%22%20AND%20v%3A%223.9.3%22&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://bintray.com/vertx/downloads/distribution/3.9.3/view&quot;&gt;Bintray&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Thatâ€™s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
-&lt;/article&gt;</description>
-	<pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>Webtools News: WTP 3.19 Released!</title>
@@ -1363,64 +1853,6 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 	<pubDate>Mon, 24 Aug 2020 07:00:56 +0000</pubDate>
 </item>
 <item>
-	<title>Eclipse Dirigible: Release 5.1</title>
-	<guid isPermaLink="false">http://dirigible.io/release/2020/08/24/news_new_release_5_1</guid>
-	<link>http://dirigible.io/release/2020/08/24/news_new_release_5_1.html</link>
-	<description>&lt;p&gt;New version &lt;a href=&quot;https://download.eclipse.org/dirigible/drops/R-5.1-202008241951/index.html&quot;&gt;5.1&lt;/a&gt; has been released.&lt;/p&gt;
-
-&lt;p&gt;Release is of &lt;em&gt;Type A&lt;/em&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;features&quot;&gt;Features&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Support for required properties&lt;/li&gt;
-  &lt;li&gt;Security Roles management the Entity/Property UIs&lt;/li&gt;
-  &lt;li&gt;Support for more widget types&lt;/li&gt;
-  &lt;li&gt;Support for pattern based validation&lt;/li&gt;
-  &lt;li&gt;Support for widget length&lt;/li&gt;
-  &lt;li&gt;Support for pattern hint&lt;/li&gt;
-  &lt;li&gt;Support for Color widget type&lt;/li&gt;
-  &lt;li&gt;Projection Entity type introduced&lt;/li&gt;
-  &lt;li&gt;Application template separation&lt;/li&gt;
-  &lt;li&gt;SAP Cloud Foundry - Runtime Only Image&lt;/li&gt;
-  &lt;li&gt;Enhanced build of application WAR from the pre-defined packages&lt;/li&gt;
-  &lt;li&gt;SAP Cloud Foundry Ephemeral - Runtime Only&lt;/li&gt;
-  &lt;li&gt;Form Builder - Experimental&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;fixes&quot;&gt;Fixes&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;List the available icon names in a dropdown&lt;/li&gt;
-  &lt;li&gt;SAP Cloud Foundry - Missing Default Database Configuration&lt;/li&gt;
-  &lt;li&gt;SAP CMS - MS files content type override&lt;/li&gt;
-  &lt;li&gt;Minor fixes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;statistics&quot;&gt;Statistics&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;54K+ Users&lt;/li&gt;
-  &lt;li&gt;77K+ Sessions&lt;/li&gt;
-  &lt;li&gt;184 Countries&lt;/li&gt;
-  &lt;li&gt;394 Repositories in DirigibleLabs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;operational&quot;&gt;Operational&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Available packages for download - &lt;a href=&quot;https://download.eclipse.org/dirigible/drops/R-5.1-202008241951/index.html&quot;&gt;https://download.eclipse.org/dirigible/drops/R-5.1-202008241951/index.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Docker images at Docker Hub under DirigibleLabs organization:	&lt;a href=&quot;https://hub.docker.com/u/dirigiblelabs/&quot;&gt;https://hub.docker.com/u/dirigiblelabs/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Maven Central artifacts by org.eclipse.dirigible namespace: &lt;a href=&quot;https://search.maven.org/search?q=org.eclipse.dirigible&quot;&gt;https://search.maven.org/search?q=org.eclipse.dirigible&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The full list of bug-fixes and enhancements can be found here: &lt;a href=&quot;https://github.com/eclipse/dirigible/milestone/35?closed=1&quot;&gt;https://github.com/eclipse/dirigible/milestone/35?closed=1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The source code is available at GitHub repository here: &lt;a href=&quot;https://github.com/eclipse/dirigible/tree/5.1.0&quot;&gt;https://github.com/eclipse/dirigible/tree/5.1.0&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The instant trial is updated accordingly with the released version here: &lt;a href=&quot;http://trial.dirigible.io&quot;&gt;http://trial.dirigible.io&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;enjoy&quot;&gt;Enjoy!&lt;/h4&gt;</description>
-	<pubDate>Mon, 24 Aug 2020 00:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Nikhil Nanivadekar: Eclipse Collections 10.4.0 Released</title>
 	<guid isPermaLink="false">https://medium.com/p/7c5b3f43c0f0</guid>
 	<link>https://medium.com/oracledevs/eclipse-collections-10-4-0-released-7c5b3f43c0f0?source=rss-4285d8a2ca86------2</link>
@@ -1457,8 +1889,8 @@ And keep an eye on our blog for more EclipseCon highlights. Over the coming week
 </item>
 <item>
 	<title>Melanie Bats: SIRIUS-II Mission</title>
-	<guid isPermaLink="true">http://melb.enix.org/2020/08/18/siriusiimission/</guid>
-	<link>http://melb.enix.org/2020/08/18/siriusiimission/</link>
+	<guid isPermaLink="true">http://localhost:4000/2020/08/18/siriusiimission/</guid>
+	<link>http://localhost:4000/2020/08/18/siriusiimission/</link>
 	<description>&lt;p&gt;On &lt;strong&gt;Wednesday, October 21 at 2:00 p.m. CEST&lt;/strong&gt;, Obeo’s Spacecraft 42 will launch the SIRIUS-II mission from Code Launch Complex 42 (CLC-42) at Nantes Dev Force Station in France. SIRIUS-I mission previously launched &lt;a href=&quot;https://www.eclipse.org/sirius/&quot;&gt;Sirius&lt;/a&gt; to the Eclipse Foundation with Obeo’s &amp;amp; Thales astronauts on board back in 2013. The first mission was a success with the adoption of Sirius Desktop, based on the Eclipse platform, by a large community.&lt;/p&gt;
 
 &lt;p&gt;SIRIUS-II Mission aims to &lt;strong&gt;release Sirius Web&lt;/strong&gt;, the Cloud-based evolution of Sirius, 100% Open Source. This mission is also in charge of &lt;strong&gt;the launch of the &lt;a href=&quot;https://www.obeo.fr/en/products/obeo-cloud-platform&quot;&gt;Obeo Cloud Platform&lt;/a&gt; (OCP)&lt;/strong&gt;, the solution offered by Obeo for deploying modeling tools to the web.
@@ -2627,6 +3059,9 @@ will do the right thing.&lt;/p&gt;</description>
       &lt;span class=&quot;date-display-single&quot;&gt;Monday, June 29, 2020&lt;/span&gt;  &lt;/span&gt;
         &lt;div class=&quot;field-item even&quot;&gt;
       In this blog, I am going to show you how to install IBM RDi into the latest and the greatest version of Eclipse. If you prefer to watch a video then scroll down to the end.
+
+**EDIT** DOES NOT WORK WITH ECLIPSE 2020/09 AND HIGHER.
+
       &lt;p class=&quot;clearfix&quot;&gt;&lt;a href=&quot;https://remainsoftware.com/node/693&quot;&gt;Read more&lt;/a&gt;&lt;/p&gt;
     &lt;/div&gt;</description>
 	<pubDate>Tue, 30 Jun 2020 15:57:41 +0000</pubDate>
@@ -3039,57 +3474,6 @@ public interface LaunchService {
 	<pubDate>Wed, 17 Jun 2020 23:55:18 +0000</pubDate>
 </item>
 <item>
-	<title>Melanie Bats: SiriusCon 2020: Sirius to the Web with Obeo Cloud Platform</title>
-	<guid isPermaLink="true">http://melb.enix.org/2020/06/10/siriuscon/</guid>
-	<link>http://melb.enix.org/2020/06/10/siriuscon/</link>
-	<description>&lt;p&gt;&lt;em&gt;TLDR; On June 18th connect to @SiriusCon Live 2020 to watch a demo of the Obeo Cloud Platform.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Here we go again&quot; src=&quot;http://melb.enix.org/img/siriuscon2020/announcement.png&quot; title=&quot;Here we go again&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;“Mamma mia, does it show again &lt;br /&gt;
-My my, just how much I’ve missed you?“ &lt;br /&gt;
-&lt;a href=&quot;https://youtu.be/unfzfe8f9NI&quot;&gt;Mamma Mia&lt;/a&gt; &lt;br /&gt;&lt;/i&gt;&lt;/p&gt;
-
-&lt;p&gt;On the 18th of June, I will have the pleasure of presenting the Obeo Cloud Platform, with my co-speaker &lt;a href=&quot;https://twitter.com/sbegaudeau&quot;&gt;Stéphane Bégaudeau&lt;/a&gt;, at &lt;a href=&quot;https://www.siriuscon.org/&quot;&gt;SiriusCon Live 2020&lt;/a&gt;.
-During SiriusCon 2020, we will not only demonstrate OCP, but also make a big announcement about its future. So, attend SiriusCon and be in for a huge surprise!&lt;/p&gt;
-
-&lt;p&gt;After such a long time, it is great to be able to connect with the &lt;a href=&quot;http://eclipse.org/sirius&quot;&gt;Eclipse Sirius&lt;/a&gt; community.&lt;/p&gt;
-
-&lt;p&gt;If you have to create a graphical modeling workbench for your own DSL, then you know how powerful Sirius is to help you design your own modeler based on EMF. In just a few hours, you get a modeling studio dedicated to your &lt;a href=&quot;https://www.eclipse.org/sirius/gallery.html&quot;&gt;own domain&lt;/a&gt;.
-The main issue faced by our customers arises when they need to distribute the bundle to their end users. A truly effective deployment is difficult to come by. Many struggle to either deploy or maintain their solution. And their team are feeling the pinch.&lt;/p&gt;
-
-&lt;p&gt;To solve these challenges, I am excited to demonstrate the Obeo Cloud Platform (OCP), the Cloud-based solution developed by Obeo for deploying modeling tools to the web. With OCP Modeler, modeling tools developed with Sirius can be installed on a Cloud server and are rendered in a web browser. Our purpose is to carry the spirit of Sirius.
-What our users typically love in Sirius is:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;the ability to define your modeling workbench in a configuration file,&lt;/li&gt;
-  &lt;li&gt;no code generation involved as everything is interpreted at runtime,&lt;/li&gt;
-  &lt;li&gt;flexible even for complex models.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;So we kept all those principles and now allow you to easily define workbenches running in the cloud.
-We rebuilt the Sirius runtime from the ground up, for the long haul.&lt;/p&gt;
-
-&lt;p&gt;I’ve been talking about it for a long time now! And we’re really proud to show that OCP is available and working today, so our talk will be purely a live demo: no slides (almost), no bullet points, not feature lists. Just us, showing the capabilities of this modeling environment!&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;OCP Modeler&quot; src=&quot;http://melb.enix.org/img/siriuscon2020/ocp.png&quot; title=&quot;OCP Modeler&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We will give you as well an overview of the context, the roadmap and how OCP Modeler positions with Sirius.&lt;/p&gt;
-
-&lt;p&gt;Referring to ABBA’s words, take a chance on OCP!&lt;/p&gt;
-
-&lt;p&gt;&lt;i&gt;“Honey I’m still free &lt;br /&gt;
-Take a chance on me &lt;br /&gt;
-Gonna do my very best, baby can’t you see &lt;br /&gt;
-Gotta put me to the test, take a chance on me“ &lt;br /&gt;
-&lt;a href=&quot;https://youtu.be/-crgQGdpZR0&quot;&gt;Take a chance on me&lt;/a&gt; &lt;br /&gt;&lt;/i&gt;&lt;/p&gt;
-
-&lt;p&gt;In the meantime, as a preparation, &lt;a href=&quot;https://youtu.be/xFrGuyw1V8s&quot;&gt;you can dance, you can djibe&lt;/a&gt; and most importantly you have to &lt;a href=&quot;https://bit.ly/Register_SiriusCon2020&quot;&gt;register&lt;/a&gt;. And no, even if I am a big #ABBAFan the surprise is not that I will do my talk in a fancy glittering costume… neither Stéphane even if it could be very memorable :).&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt=&quot;Dancing&quot; src=&quot;http://melb.enix.org/img/siriuscon2020/dancing.jpg&quot; title=&quot;Dancing&quot; /&gt;&lt;/p&gt;</description>
-	<pubDate>Wed, 10 Jun 2020 10:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Frank Appel: Clean Sheet Service Update (0.8)</title>
 	<guid isPermaLink="false">https://www.codeaffine.com/?p=31975</guid>
 	<link>https://www.codeaffine.com/2020/05/23/clean-sheet-service-update-0-8/</link>
@@ -3155,77 +3539,6 @@ Preferences: General &amp;gt; Appearance &amp;gt; Theme: Clean Sheet&lt;/p&gt;
 &lt;p&gt;To have your say, click&lt;a href=&quot;https://www.surveymonkey.com/r/ThabangMashologu20&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-blog-tags field-type-taxonomy-term-reference field-label-above&quot;&gt;&lt;div class=&quot;field-label&quot;&gt;Tags: &lt;/div&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/foundation&quot;&gt;Foundation&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/eclipse-iot-0&quot;&gt;Eclipse IoT&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/edge&quot;&gt;edge&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item odd&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/sparkplug&quot;&gt;sparkplug&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://blogs.eclipse.org/blog-tags/open-source&quot;&gt;Open Source&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
 	<pubDate>Thu, 21 May 2020 13:42:52 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Ditto: Announcing Eclipse Ditto Release 1.1.0</title>
-	<guid isPermaLink="true">https://www.eclipse.org/ditto/2020-04-29-release-announcement-110.html</guid>
-	<link>https://www.eclipse.org/ditto/2020-04-29-release-announcement-110.html</link>
-	<description>&lt;p&gt;Today, approximately 4 months after Eclipse Ditto’s &lt;a href=&quot;https://www.eclipse.org/ditto/2019-12-12-release-announcement-100.html&quot;&gt;1.0.0&lt;/a&gt; release, 
-the team is happy to announce the first minor (feature) update of Ditto &lt;code class=&quot;highlighter-rouge&quot;&gt;1.0&lt;/code&gt;:&lt;br /&gt;
-&lt;strong&gt;Eclipse Ditto 1.1.0&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The Ditto team was quite busy, 1.1.0 focuses on the following areas:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Management of &lt;a href=&quot;https://www.eclipse.org/ditto/basic-policy.html&quot;&gt;Policies&lt;/a&gt; via &lt;a href=&quot;https://www.eclipse.org/ditto/protocol-specification-policies.html&quot;&gt;Ditto Protocol&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Addition of policy APIs in Ditto &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Java client&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Possibility to &lt;a href=&quot;https://www.eclipse.org/ditto/basic-search.html&quot;&gt;search&lt;/a&gt; via &lt;a href=&quot;https://www.eclipse.org/ditto/protocol-specification-things-search.html&quot;&gt;Ditto Protocol&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Addition of search APIs in Ditto &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Java client&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Enrich published Ditto events/message via additional &lt;a href=&quot;https://www.eclipse.org/ditto/basic-enrichment.html&quot;&gt;custom fields&lt;/a&gt; of the affected thing
-    &lt;ul&gt;
-      &lt;li&gt;Addition of enrichment APIs in Ditto &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Java client&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Support for establishing managed &lt;a href=&quot;https://www.eclipse.org/ditto/basic-connections.html&quot;&gt;connections&lt;/a&gt; via &lt;a href=&quot;https://www.eclipse.org/ditto/connectivity-protocol-bindings-mqtt5.html&quot;&gt;MQTT 5&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;End-2-end &lt;a href=&quot;https://www.eclipse.org/ditto/basic-acknowledgements.html&quot;&gt;acknowledgements&lt;/a&gt; preparing Ditto to enable “at least once” processing
-    &lt;ul&gt;
-      &lt;li&gt;Addition of acknowledgement APIs in Ditto &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Java client&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Officially documented &lt;a href=&quot;https://www.eclipse.org/ditto/installation-operating.html#pre-authentication&quot;&gt;pre-authenticated&lt;/a&gt; authentication mechanism&lt;/li&gt;
-  &lt;li&gt;Use of Java 11 for running Ditto containers&lt;/li&gt;
-  &lt;li&gt;Deprecation of API version 1 (authorization via &lt;a href=&quot;https://www.eclipse.org/ditto/basic-acl.html&quot;&gt;ACL&lt;/a&gt; mechanism)&lt;/li&gt;
-  &lt;li&gt;Use of CBOR as cluster internal replacement for JSON serialization&lt;/li&gt;
-  &lt;li&gt;Further improvements on increasing throughput&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Please have a look at the &lt;a href=&quot;https://www.eclipse.org/ditto/release_notes_110.html&quot;&gt;1.1.0 release notes&lt;/a&gt; for a more detailed information on the release.&lt;/p&gt;
-
-&lt;h2 id=&quot;artifacts&quot;&gt;Artifacts&lt;/h2&gt;
-
-&lt;p&gt;The new Java artifacts have been published at the &lt;a href=&quot;https://repo.eclipse.org/content/repositories/ditto/&quot;&gt;Eclipse Maven repository&lt;/a&gt;
-as well as &lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/ditto/&quot;&gt;Maven central&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Also the &lt;a href=&quot;https://www.eclipse.org/ditto/client-sdk-java.html&quot;&gt;Ditto Java client&lt;/a&gt;’s artifacts were published to Maven central.&lt;/p&gt;
-
-&lt;p&gt;The Docker images have been pushed to Docker Hub:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-policies/&quot;&gt;eclipse/ditto-policies&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things/&quot;&gt;eclipse/ditto-things&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-things-search/&quot;&gt;eclipse/ditto-things-search&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-gateway/&quot;&gt;eclipse/ditto-gateway&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-connectivity/&quot;&gt;eclipse/ditto-connectivity&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://hub.docker.com/r/eclipse/ditto-concierge/&quot;&gt;eclipse/ditto-concierge&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;kubernetes-ready-helm-chart&quot;&gt;Kubernetes ready: Helm chart&lt;/h2&gt;
-
-&lt;p&gt;In order to run Eclipse Ditto in a Kubernetes environment, best rely on the official 
-&lt;a href=&quot;https://hub.helm.sh/charts/eclipse-iot/ditto&quot;&gt;Helm chart&lt;/a&gt; and deploy Ditto via the Helm package manager.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;–&lt;br /&gt;
-The Eclipse Ditto team&lt;/p&gt;</description>
-	<pubDate>Wed, 29 Apr 2020 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>Frank Appel: Clean Sheet Service Update (0.7)</title>

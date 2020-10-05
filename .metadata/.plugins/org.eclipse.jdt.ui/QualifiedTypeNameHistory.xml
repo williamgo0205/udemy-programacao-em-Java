@@ -14,8 +14,11 @@
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao11.classes.Conta"/>
 <fullyQualifiedTypeName name="javax.naming.LimitExceededException"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao11.Cliente"/>
-<fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Pessoa"/>
-<fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Aluno"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Professor"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Pessoa"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Aluno"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao13.TreinamentoInicioDaTemporada"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao13.TreinamentoFimDaTemporada"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao13.Treinamento"/>
 </qualifiedTypeNameHistroy>
