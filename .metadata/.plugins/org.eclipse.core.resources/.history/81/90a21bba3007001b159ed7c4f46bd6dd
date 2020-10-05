@@ -1,0 +1,15 @@
+package br.com.geekuniversity.secao15;
+// Métodos Estáticos
+
+/*
+ - Um método estático nao depende de uma instância da classe para ser utilizado.
+ - Pode-se utilizar conforme:
+   - NomeDaClasse.metodo();
+*/
+public class Programa35 {
+
+	public static void main(String[] args) {
+		System.out.println("A próxima conta será: " + Conta.proximaConta());
+	}
+
+}

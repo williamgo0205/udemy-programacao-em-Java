@@ -1,0 +1,7 @@
+package br.com.geekuniversity.secao15;
+
+public class Conta {
+	private int numero;
+	private String cliente;
+
+}

@@ -1,0 +1,19 @@
+package br.com.geekuniversity.secao14;
+// Interfaces - O que é e quando utilizar
+
+/*
+ - Interfaces são conhecidas como "Contratos".
+ 
+Exemplo: 
+  Uma empresa criou um contrato 'com regras' para definir a criação de um produto/serviço. 
+
+  O Joaão decidiu criar um produto/serviço baseado nesse contrato;
+  A Maria, também decidiu criar um produto/serviço baseado no mesmo contrato.
+
+*/
+public class Programa33 {
+	
+	public static void main(String[] args) {
+		
+	}
+}

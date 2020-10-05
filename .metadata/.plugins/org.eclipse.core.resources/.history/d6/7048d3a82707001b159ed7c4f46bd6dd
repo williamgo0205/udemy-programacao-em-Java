@@ -1,0 +1,14 @@
+package br.com.geekuniversity.secao14;
+/*
+ - Uma interface pode conter:
+   - Constantes;
+   - 
+*/
+public interface IEletronico {
+	public String MARCA = "Geek";
+	
+	public void ligar();
+	
+	public void desligar();
+
+}

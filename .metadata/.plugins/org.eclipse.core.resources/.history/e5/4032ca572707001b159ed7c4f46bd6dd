@@ -1,0 +1,10 @@
+package br.com.geekuniversity.secao14;
+
+public interface IEletronico {
+	public String marca = "Geek";
+	
+	public void ligar();
+	
+	public void desligar();
+
+}
