@@ -1,0 +1,11 @@
+package br.com.geekuniversity.secao16;
+// Tratando excessões com try/catch
+
+public class Programa36 {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

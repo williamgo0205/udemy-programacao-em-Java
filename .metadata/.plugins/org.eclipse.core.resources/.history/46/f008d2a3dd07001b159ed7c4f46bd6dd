@@ -1,0 +1,13 @@
+Quando falamos em excessões no Java, a gente tem que compreender da seguinte forma:
+
+Existem dois grupos de exceções:
+
+Checked Exceptions: (Exceções Checadas) - Menos Perigosas
+- Exception
+- IOException
+- SQLException
+
+Unchecked Exceptions: (Exceções Não checadas) - Mais Perigosas
+- RuntimeException
+- NUllPointerException
+- ArrayOutOfBoundException
