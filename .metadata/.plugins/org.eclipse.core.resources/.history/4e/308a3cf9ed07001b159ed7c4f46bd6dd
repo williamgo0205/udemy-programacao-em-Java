@@ -29,11 +29,6 @@ public class Conta {
 		return this.saldo + this.limite;
 	}
 
-	/**
-	 * Método para realizar o saque
-	 * 
-	 * @param valor a ser sacado
-	 */
 	public void sacar(float valor) {
 		if (valor <=  this.saldo) {
 			this.saldo = this.saldo - valor;

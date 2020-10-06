@@ -1,0 +1,28 @@
+>>>> Exportar arquivo JAR  <<<<
+
+1 Selecionar a opção "Project > Export > Jar File"
+
+2 -Selecionar o projeto e informar o nome do Jar
+
+3 - Na tela de JAR Packaging Options desmarcar a opção de exportar classes de arquivos compilados com erros
+                                             (Export class files with compile errors)
+
+4 - Na tela de JAR Manifest Specification, selecionar a Main Class do projeto a ser exportado 
+
+5 - Finalizar
+
+>>>> Gerando a documentação do projeto <<<<
+
+1 - Fazer os comentários com /**
+
+2 - Selecionar a opção "Project - Generate Javadoc"
+
+3 - Na tela inicial especificar o comando Javadoc a ser executado
+
+    Ex: C:\Program Files\Java\jdk1.8.0_141\bin\javadoc.exe
+    
+4 - Selecionar o projeto marcando todos dentro da pasta SRC
+
+5 - Infrmar o caminho dos documentos
+
+6 - Finalizar	
