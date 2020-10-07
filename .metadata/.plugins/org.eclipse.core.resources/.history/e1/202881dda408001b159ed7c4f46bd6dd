@@ -1,0 +1,16 @@
+package br.com.geekuniversity.secao18;
+
+// Object: A mãe de todas as classes
+
+/*
+ - A Classe object, faz parte do pacote java.lang;
+ 
+*/
+public class Programa39 {
+
+	public static void main(String[] args) {
+		String msg = "Um texto qualquer";
+		System.out.println(msg);
+	}
+
+}

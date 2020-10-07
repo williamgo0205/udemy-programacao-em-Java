@@ -1,0 +1,10 @@
+package br.com.geekuniversity.secao18;
+
+public class Programa41 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

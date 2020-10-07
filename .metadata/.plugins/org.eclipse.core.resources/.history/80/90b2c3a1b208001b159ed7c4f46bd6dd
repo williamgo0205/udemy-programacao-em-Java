@@ -1,0 +1,18 @@
+package br.com.geekuniversity.secao18;
+
+import java.util.Scanner;
+
+// Escrevendo em arquivos
+
+public class Programa42 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		
+		
+		System.out.println("Escreva Algo: ");
+		String msg = teclado.nextLine();
+
+	}
+
+}

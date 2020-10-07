@@ -1,0 +1,34 @@
+package br.com.geekuniversity.secao18;
+// Trabalhando com Strings
+
+/*
+ - Em Java Strings são imutáveis, ou seja, não mudam. 
+*/
+public class Programa41 {
+
+	public static void main(String[] args) {
+		String curso = "Programação em Java: Essencial";
+		
+		System.out.println(curso);
+		
+		System.out.println(curso.replace("Java", "Python")); // Altera na string, se encontrar, a primeira palavra pela segunda
+		
+		System.out.println(curso.toLowerCase()); // Converte as letras maiúsculas para minúsculas
+		
+		System.out.println(curso.toUpperCase()); // Converte as letras Minúsculas para maiúsculas
+		
+		System.out.println(curso.charAt(12)); //captura a posição informada no charAt
+		
+		System.out.println("\n>>>> Faz um loop em cada caractere do início para o final");
+		for (int i = 0; i < curso.length(); i++) {
+			System.out.print(curso.charAt(i));
+		}
+		
+		System.out.println("\n>>>> Faz um loop em cada caractere do Final para o início");
+		for (int i = curso.length() -1; i >= 0 ; i--) {
+			System.out.print(curso.charAt(i));
+		}		
+
+	}
+
+}

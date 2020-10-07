@@ -7,11 +7,15 @@ Getter
  - é um método publico que serve para consultar os dados
  - A monenclatura desse método é getNome_do_atributo()
 */
+@SuppressWarnings("unused")
 public class Conta {
 	private int numero;
 	private float saldo;
 	private float limite;
 	private Cliente cliente;
+
+	public Conta() {
+	}
 
 	public Conta(int numero, float saldo, float limite, Cliente cliente) {
 		super();
@@ -20,9 +24,10 @@ public class Conta {
 		this.limite = limite;
 		this.cliente = cliente;
 	}
-	
+
 	/**
 	 * Método getter do atributo saldo
+	 * 
 	 * @return a soma do saldo mais o limite
 	 */
 	public float getSaldo() {
@@ -32,28 +37,29 @@ public class Conta {
 	/**
 	 * Método para realizar o saque
 	 * 
-	 * @param valor a ser sacado
+	 * @param valor
+	 *            a ser sacado
 	 */
 	public void sacar(float valor) {
-		if (valor <=  this.saldo) {
+		if (valor <= this.saldo) {
 			this.saldo = this.saldo - valor;
 			System.out.println("Saque realizado com sucesso.");
-			
-		}else if(valor <= (this.saldo + this.limite)) {
-			float val_ret;			
+
+		} else if (valor <= (this.saldo + this.limite)) {
+			float val_ret;
 			val_ret = (this.saldo + this.limite) - valor;
-			
+
 			this.saldo = 0;
-			
+
 			if (val_ret == 0) {
 				this.limite = 0;
-			}else {
+			} else {
 				this.limite = val_ret;
 			}
-			
+
 			System.out.println("Saque realizado com sucesso.");
-            
-		}else {
+
+		} else {
 			System.out.println("Saldo insuficiente");
 		}
 	}
@@ -61,10 +67,29 @@ public class Conta {
 	/**
 	 * Método para realizar depósito
 	 *
-	 * @param valor a ser depositado
+	 * @param valor
+	 *            a ser depositado
 	 */
 	public void depositar(float valor) {
 		this.saldo = this.saldo + valor;
+	}
+
+	/**
+	 * Método toString sobrescrito
+	 */
+	@Override
+	public String toString() {
+		return "O Saldo da conta é: " + this.getSaldo();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Conta)) {
+			return false;
+		} else {
+			Conta verificar = (Conta) obj; // Cast
+			return verificar.getSaldo() == this.getSaldo();
+		}
 	}
 
 }

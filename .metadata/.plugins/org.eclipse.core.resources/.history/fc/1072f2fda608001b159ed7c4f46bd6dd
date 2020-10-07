@@ -1,0 +1,11 @@
+package br.com.geekuniversity.secao18;
+
+import br.com.geekuniversity.secao11.Conta;
+
+@SuppressWarnings("unused")
+public class Caixa {
+	private Conta[] contas;
+	private int posicaoLivre;
+	
+
+}

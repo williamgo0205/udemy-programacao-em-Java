@@ -1,0 +1,5 @@
+package br.com.geekuniversity.secao18;
+
+public class Caixa {
+
+}

@@ -1,0 +1,10 @@
+package br.com.geekuniversity.secao18;
+// Lendo arquivos
+
+public class Programa43 {
+
+	public static void main(String[] args) {
+
+	}
+
+}
