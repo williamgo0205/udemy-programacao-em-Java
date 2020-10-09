@@ -1,0 +1,33 @@
+package br.com.geekuniversity.secao19;
+
+import java.util.HashSet;
+import java.util.Set;
+
+// Conjuntos
+
+/*
+ - Os conjuntos são implementados com a interface "Set", e uma das classes que implementa essa interface é a "HashSet";
+ - A maioria das coleções possuem os mesmos métodos já conhecidos e utilizados com as listas, mas o comportamento 
+   desses objetos é um pouco diferente;
+ - A performenace é melhor em conjuntos do que em listas.    
+*/
+public class Programa48 {
+
+	public static void main(String[] args) {
+		Set<String> nomes = new HashSet<String>();
+		
+		nomes.add("Maria");
+		nomes.add("Felicity");
+		nomes.add("Angelina");
+		nomes.add("Geek");
+		nomes.add("Felicity"); // Conjuntos não aceitam repetição de valores/itens
+		
+		System.out.println(nomes.size());
+		
+		for (String nome : nomes) {
+			System.out.println(nome);
+		}
+
+	}
+
+}

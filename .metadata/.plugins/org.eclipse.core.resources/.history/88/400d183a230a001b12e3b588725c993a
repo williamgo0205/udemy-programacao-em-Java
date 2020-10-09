@@ -1,0 +1,14 @@
+package br.com.geekuniversity.secao19;
+// HashMap
+
+/*
+ - A classe HasMap implementa a interface Map e trabalha com o conceito de chave/valor
+*/
+public class Programa49 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

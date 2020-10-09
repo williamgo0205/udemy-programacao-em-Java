@@ -10,7 +10,7 @@ import br.com.geekuniversity.secao11.Cliente;
 public class Programa26 {
 
 	public static void main(String[] args) {
-		Cliente cli = new Cliente("Angelina Jolie", "Rua da Barra, 256");
+		Cliente cli = new Cliente(18, "Angelina Jolie", "Rua da Barra, 256");
 //		cli.dizer_oi(); // Protected
  
 // Tornaram-se métodos privados		

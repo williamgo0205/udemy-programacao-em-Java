@@ -1,0 +1,43 @@
+package br.com.geekuniversity.secao19;
+
+import java.util.ArrayList;
+
+/*
+ Arrays (Vetores/Matrizes) - Problemas dos Arrays
+  - Um array tem tamanho fixo. Ou seja, se criarmos um array com 5 elementos, ele terá sempre no máximo 5 elementos.
+  - Um array tem tipo de dado fixo. Ou seja, se criarmos um array de inteiros, ele s[o poderá ter inteiros.
+  - É difícil encontrar um determinado elemento em um array. Precisamos para isso percorrer todo o array, através do seu índice,
+    caso não seja feita a busca pelo índice.
+  
+ Colections (Coleções)
+  - Java possui diversas classes e interfaces que facilitam muito o trabalho quando se trata de coleções de dados. 
+    Essas classes/interfaces são chamadas de colections (coleções)
+    
+  -> Listas 
+     - Aceitam repetição de valores
+     - Possuem tamanho 'INFINITO' (Depende da memória) 
+*/
+public class Programa45 {
+
+	public static void main(String[] args) {
+		ArrayList nomes = new ArrayList<>();
+		
+		nomes.add("Maria");
+		nomes.add("Felicity");
+		nomes.add("Angelina");
+		nomes.add("Geek");
+		nomes.add("Maria");
+		nomes.add("Angelina");
+		nomes.add(44);
+		
+		System.out.println(nomes.get(0));
+		System.out.println(nomes.get(3));
+			
+		System.out.println(nomes.size()); // Verifica o tamanho do array
+		
+		for (int i = 0; i < nomes.size(); i++) {
+			System.out.println(nomes.get(i));
+		}
+	}
+
+}

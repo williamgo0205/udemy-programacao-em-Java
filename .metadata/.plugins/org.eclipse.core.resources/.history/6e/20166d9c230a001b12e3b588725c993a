@@ -1,0 +1,25 @@
+package br.com.geekuniversity.secao19;
+// HashMap
+
+import java.util.HashMap;
+import java.util.Map;
+
+import br.com.geekuniversity.secao11.Cliente;
+import br.com.geekuniversity.secao11.Conta;
+
+/*
+ - A classe HasMap implementa a interface Map e trabalha com o conceito de chave/valor
+*/
+public class Programa49 {
+
+	public static void main(String[] args) {
+		Map<String, Conta> contas = new HashMap<String, Conta>();
+		
+		Cliente cl1 = new Cliente(24, "Agelina Jolie", "Rua 1");
+		Cliente cl2 = new Cliente(34, "Felicity Jones", "Rua 2");
+		
+		
+		
+	}
+
+}

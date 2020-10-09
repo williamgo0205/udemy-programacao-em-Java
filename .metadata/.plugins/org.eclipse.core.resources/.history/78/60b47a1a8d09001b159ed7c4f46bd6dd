@@ -1,0 +1,20 @@
+package br.com.geekuniversity.secao19;
+// Listas
+
+/*
+ Arrays (Vetores/Matrizes) - Problemas dos Arrays
+  - Um array tem tamanho fixo. Ou seja, se criarmos um array com 5 elementos, ele terá sempre no máximo 5 elementos.
+  - Um array tem tipo de dado fixo. Ou seja, se criarmos um array de inteiros, ele s[o poderá ter inteiros.
+  
+  
+ Colections (Coleções)
+  - 
+*/
+public class Programa45 {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

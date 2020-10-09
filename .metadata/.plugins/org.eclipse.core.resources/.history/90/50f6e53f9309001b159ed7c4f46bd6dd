@@ -1,0 +1,61 @@
+package br.com.geekuniversity.secao19;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/*
+ Arrays (Vetores/Matrizes) - Problemas dos Arrays
+  - Um array tem tamanho fixo. Ou seja, se criarmos um array com 5 elementos, ele terá sempre no máximo 5 elementos.
+  - Um array tem tipo de dado fixo. Ou seja, se criarmos um array de inteiros, ele s[o poderá ter inteiros.
+  - É difícil encontrar um determinado elemento em um array. Precisamos para isso percorrer todo o array, através do seu índice,
+    caso não seja feita a busca pelo índice.
+  
+ Colections (Coleções)
+  - Java possui diversas classes e interfaces que facilitam muito o trabalho quando se trata de coleções de dados. 
+    Essas classes/interfaces são chamadas de colections (coleções)
+    
+  -> Listas 
+     - Aceitam repetição de valores
+     - Possuem tamanho 'INFINITO' (Depende da memória)
+     - Pode ser adicionado valores de qualquer tipo, desde que não seja especificado um tipo na declaração do array. 
+*/
+
+public class Programa45 {
+
+
+	public static void main(String[] args) {
+		//ArrayList nomes = new ArrayList(); // Sem definir tipo de dado, pode ser colocado qualquer tipo
+		List<String> nomes = new ArrayList<String>(); // Definido o tipo String
+		
+		nomes.add("Maria");
+		nomes.add("Felicity");
+		nomes.add("Angelina");
+		nomes.add("Geek");
+		nomes.add("Maria");
+		nomes.add("Angelina");
+		
+//		nomes.add(44);
+//		nomes.add(true);
+//		nomes.add(12.4);
+//		nomes.add('e');
+		
+//		System.out.println(nomes.get(0));
+//		System.out.println(nomes.get(3));
+			
+//		System.out.println(nomes.size()); // Verifica o tamanho do array
+		
+//		for (int i = 0; i < nomes.size(); i++) {
+//			System.out.println(nomes.get(i));
+//		}
+		
+		Collections.sort(nomes); // Ordena o array em ordem alfabética
+		
+//		for (Object nome : nomes) {
+//			System.out.println(nome);
+//		}
+		
+		nomes.stream().filter(r -> r.contains("a")).forEach(r -> System.out.println(r));
+	}
+
+}

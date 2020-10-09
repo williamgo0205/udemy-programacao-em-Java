@@ -1,0 +1,26 @@
+package br.com.geekuniversity.secao19;
+
+import java.util.ArrayList;
+
+import br.com.geekuniversity.secao11.Cliente;
+
+// Listas
+public class Programa47 {
+
+	public static void main(String[] args) {
+		ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+		
+		Cliente cli1 = new Cliente("Maria da Silva", "Rua 1");
+		Cliente cli2 = new Cliente("Felicity Jones", "Rua 2");
+		Cliente cli3 = new Cliente("Angelina Jolie", "Rua 3");
+
+		clientes.add(cli1);
+		clientes.add(cli2);
+		clientes.add(cli3);
+		
+		for(Cliente cliente : clientes) {
+			System.out.println(cliente);
+		}
+	}
+
+}

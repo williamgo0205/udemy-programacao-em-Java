@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Boolean"/>
 <fullyQualifiedTypeName name="javax.annotation.Generated"/>
 <fullyQualifiedTypeName name="classes.Produto"/>
@@ -13,7 +10,6 @@
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao11.classes.Cliente"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao11.classes.Conta"/>
 <fullyQualifiedTypeName name="javax.naming.LimitExceededException"/>
-<fullyQualifiedTypeName name="br.com.geekuniversity.secao11.Cliente"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Professor"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao12.Pessoa"/>
@@ -21,4 +17,28 @@
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao13.TreinamentoInicioDaTemporada"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao13.TreinamentoFimDaTemporada"/>
 <fullyQualifiedTypeName name="br.com.geekuniversity.secao13.Treinamento"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao14.IEletronico"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao14.Ventilador"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao15.Conta"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao11.Conta"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao18.Caixa"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="javax.imageio.stream.FileImageInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.util.stream.Collector"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.com.geekuniversity.secao11.Cliente"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
