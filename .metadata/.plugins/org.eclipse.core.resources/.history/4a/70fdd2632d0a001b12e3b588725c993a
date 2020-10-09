@@ -1,0 +1,20 @@
+package br.com.geekuniversity.secao20;
+
+/*
+  - Para executar métodos em paralelos a classe deve implementar a interface Runnable e,
+    o método que precisar ser executadi em paralelo deve ser executado dentro do método Run
+ */
+public class BarraDeProgresso implements Runnable{
+	
+	public void executa() {
+		// For de 0 até 10 milhões
+		for (int i = 0; i < 1000; i++) {
+			System.out.println("Barra de progresso...Aguarde");
+		}
+	}
+
+	@Override
+	public void run() {
+		executa();		
+	}
+}

@@ -1,0 +1,11 @@
+package br.com.geekuniversity.secao20;
+
+public class BarraDeProgresso {
+	
+	public void executa() {
+		// For de 0 até 10 milhões
+		for (int i = 0; i < 10000000; i++) {
+			System.out.println("Barra de progresso...Aguarde");
+		}
+	}
+}
