@@ -1,0 +1,34 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.LinkedList;
+
+// Conjuntos
+
+/*
+ - Uma das características dos conjuntos é a não aceitação de elementos repetidos. 
+ - Gera Performance
+   A ["Angelina", "Angela", "Adriano", ...]
+   B ["Barbara", "Beatriz", "Barnabé", ...]
+   C ["Cassia", "Camila", "Carlos", ...]
+   D ["Daniela", "Daniel", "Danilo", ...]
+   E ["Elisa", "Elisabete", "Elias", ...]
+   F ["Fabiana", "Fracisca", "Fabio", ...]
+   .
+   .
+   .
+   Z ["Zuleica", "Zagalo", "Zamael", ...]
+   
+   String "angelina" -> [a][n][g][e][l][i][n][a]
+*/
+public class Programa64 {
+
+	public static void main(String[] args) {
+		String nome= "Angelina";
+		
+		//nome.toLowerCase().charAt(0) % 26;
+		//System.out.println(nome.toLowerCase().charAt(0));
+		
+		System.out.println(8 % 2);
+	}
+
+}

@@ -1,0 +1,46 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/*
+Lista
+0 -> a
+1 -> b
+.
+.
+.
+25 -> z 
+*/
+
+public class Conjunto {
+	private LinkedList<LinkedList<String>> tabela = new LinkedList<LinkedList<String>>();
+
+	/**
+	 * Cria o construtor de LinkedList para as 26 letras do alfabeto
+	 */
+	public Conjunto() {
+		for (int i = 0; i < 26; i++) {
+			tabela.add(new LinkedList<String>());
+		}
+	}
+
+	private int calculaIndice(String nome) {
+		return nome.toLowerCase().charAt(0) % 26;
+	}
+
+	/**
+	 * Adiciona o nome a lista correta pelo índice
+	 * 
+	 * @param nome
+	 */
+	public void adiciona(String nome) {
+		// 1 - Calculando o índice do nome
+		int indice = calculaIndice(nome);
+		// 2 - Pegando a lista de acordo com o índice
+		List<String> lista = tabela.get(indice);
+		// 3 - Adicionando o nome a lista correta
+		lista.add(nome);
+	}
+
+}

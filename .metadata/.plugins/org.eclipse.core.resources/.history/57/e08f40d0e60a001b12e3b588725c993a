@@ -1,0 +1,28 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.List;
+
+// Armazenamento Sequencial
+
+/*
+ int numeros[] = new int [5];
+ 
+ numeros[0] = 1;
+ numeros[1] = 3;
+ numeros[2] = 5;
+ numeros[3] = 7;
+ numeros[4] = 9;
+*/
+public class Programa55 {
+
+	public static void main(String[] args) {
+		Aluno a1 = new Aluno("Angelina");
+		Aluno a2 = new Aluno("Felicity");
+		
+		Vetor lista = new Vetor();
+		lista.adiciona(a1);
+		lista.adiciona(a2);
+		
+		System.out.println(lista);
+	}
+}

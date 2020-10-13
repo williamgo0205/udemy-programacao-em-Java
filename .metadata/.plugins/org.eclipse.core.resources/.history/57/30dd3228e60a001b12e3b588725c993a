@@ -1,0 +1,14 @@
+package br.com.geekuniversity.secao21;
+
+public class Vetor {
+	private Aluno alunos[] = new Aluno[100];
+	
+	public void adiciona(Aluno aluno) {
+		// TODO redecer um aluno
+	}
+	
+	public Aluno pega(int posicao) {
+		// TODO recebe uma posicão e devolve o aluno
+		return this.alunos[posicao];
+	}
+}

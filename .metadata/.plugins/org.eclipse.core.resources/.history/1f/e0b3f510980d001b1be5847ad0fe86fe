@@ -1,0 +1,18 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Conjunto {
+	private LinkedList<LinkedList<String>> tabela = new LinkedList<LinkedList<String>>();
+	
+	/**
+	 * Cria o construtor de LinkedList para as 27 letras do alfabeto
+	 */
+	public Conjunto() {
+		for (int i = 0; i < 26; i++) {
+			tabela.add(new LinkedList<String>());
+		}
+	}
+
+}

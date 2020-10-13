@@ -1,0 +1,65 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.Arrays;
+
+public class Vetor {
+	private Aluno alunos[] = new Aluno[100];
+	private int total = 0;
+	
+	public void adiciona(Aluno aluno) {
+		//TODO redecer um aluno
+		this.alunos[this.total] = aluno;
+		this.total = this.total + 1;
+	}
+	
+	public void adiciona(int posicao, Aluno aluno) {
+		//TODO redecer um aluno e sua posição
+		if(!posicaoOcupada(posicao)) {
+			throw new IllegalArgumentException("Posição Inválida!!!");
+		}
+		
+		for (int i = this.total -1; i >= posicao; i-=1 ) {
+			this.alunos[i+1] = this.alunos[i];
+		}
+		
+		this.alunos[posicao] = aluno;
+		this.total++; // total = total + 1
+	}
+	
+	public Aluno pega(int posicao) {
+		//TODO recebe uma posicão e devolve o aluno
+		if(!posicaoOcupada(posicao)) {
+			throw new IllegalArgumentException("Posição Inválida!!!");
+		}
+		return this.alunos[posicao];
+	}
+	
+	public void remove(int posicao) {
+		//TODO remove aluno pela posição
+		this.alunos[posicao] = null;
+	}
+	
+	public boolean contem(Aluno aluno) {
+		//TODO descobre se o aluno está ou não na lista
+		for (int i = 0; i < this.total; i++) {
+			if(aluno.equals(this.alunos[i])) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int tamanho() {
+		//TODO devolve a quantdade de alunos no vetor
+		return this.total;
+	}
+	
+	private boolean posicaoOcupada(int posicao){
+		return posicao >= 0 && posicao < this.alunos.length;
+	}
+	
+	@Override
+	public String toString() {
+		return Arrays.toString(this.alunos); // Facilita a visualização do array
+	}
+}

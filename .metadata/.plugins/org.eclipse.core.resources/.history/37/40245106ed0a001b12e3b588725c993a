@@ -1,0 +1,12 @@
+package br.com.geekuniversity.secao21;
+
+public class Programa56 {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 100; i++) {
+			Aluno a = new Aluno("Maria" + i);
+			System.out.println(a);
+		}
+	}
+
+}

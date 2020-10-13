@@ -1,0 +1,37 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.LinkedList;
+
+// Conjuntos
+
+/*
+ - Uma das características dos conjuntos é a não aceitação de elementos repetidos. 
+ - Gera Performance
+   A
+   B
+   C
+   D
+   E
+   F
+   .
+   .
+   .
+   Z
+*/
+public class Programa64 {
+
+	public static void main(String[] args) {
+		LinkedList<String> conjunto = new LinkedList<String>();
+		
+		if(!conjunto.contains("Angelina")) {
+			conjunto.add("Angelina");
+		}
+		conjunto.add("Angelina");
+		conjunto.add("Felicity");
+		conjunto.add("Angelina");
+		
+		System.out.println(conjunto);
+		
+	}
+
+}

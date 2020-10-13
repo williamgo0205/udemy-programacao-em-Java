@@ -1,0 +1,7 @@
+package br.com.geekuniversity.secao21;
+
+public class Celula {
+	private Object elemento;
+	private Celula proximo;
+	
+}

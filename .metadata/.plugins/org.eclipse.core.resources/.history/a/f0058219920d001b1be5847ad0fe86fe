@@ -1,0 +1,17 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Fila {
+	private List<String> nomes = new LinkedList<String>();
+	
+	public void insere(String nome) {
+		
+	}
+	
+	public String remove() {
+		return "";
+	}
+
+}

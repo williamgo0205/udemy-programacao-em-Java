@@ -1,0 +1,37 @@
+package br.com.geekuniversity.secao21;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Fila {
+	private List<String> nomes = new LinkedList<String>();
+	
+	public void adiciona(String nome) {
+		this.nomes.add(nome);		
+	}
+	
+	public String remove() {
+		try {
+			return this.nomes.remove(0);
+		}catch(IndexOutOfBoundsException e) {
+			System.out.println("A fila já está vazia");
+			return null;
+		}
+		
+	}
+	
+	public boolean vazia() {
+		int tam = this.nomes.size();
+		if(tam > 0) {
+			return false;
+		}else {
+			return true;
+		}
+	}
+	
+	@Override
+	public String toString() {
+		return this.nomes.toString();
+	}
+
+}

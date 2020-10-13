@@ -1,0 +1,21 @@
+package br.com.geekuniversity.secao21;
+
+public class ListaLigada {
+
+	public void adicionaNoComeco(Object elemento) {
+		//TODO
+	}
+	
+	public void adiciona(Object elemento) {
+		//TODO
+	}
+	
+	public void adiciona(int posicao, Object elemento) {
+		//TODO
+	}
+	
+	public Object pega(int posicao) {
+		//TODO
+		return null;
+	}
+}

@@ -1,0 +1,29 @@
+package br.com.geekuniversity.secao21;
+
+public class Vetor {
+	private Aluno alunos[] = new Aluno[100];
+	
+	public void adiciona(Aluno aluno) {
+		// TODO redecer um aluno
+	}
+	
+	public Aluno pega(int posicao) {
+		// TODO recebe uma posicão e devolve o aluno
+		return this.alunos[posicao];
+	}
+	
+	public void remove(int posicao) {
+		// TODO remove aluno pela posição
+		this.alunos[posicao] = null;
+	}
+	
+	public boolean contem(Aluno aluno) {
+		// TODO descobre se o aluno está ou não na lista
+		return false;
+	}
+	
+	public int tamanho() {
+		// TODO devolve a quantdade de alunos no vetor
+		return 0;
+	}
+}
