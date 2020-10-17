@@ -1,0 +1,19 @@
+package br.com.geekuniversity.secao22;
+
+import java.util.Comparator;
+
+/*
+ - Estamos criando o próprio comparador de objetos (Strings) para que seja possível, desta forma, ordenar a String pelo
+   seu tamanho ao invés de ordem alfabética 
+*/
+public class ComparadorPorTamanho implements Comparator<String>{
+
+	@Override
+	public int compare(String s1, String s2) {
+		
+		
+		return 0;
+	}
+	
+
+}

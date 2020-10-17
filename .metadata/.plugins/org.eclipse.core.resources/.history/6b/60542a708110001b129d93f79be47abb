@@ -1,0 +1,22 @@
+package br.com.geekuniversity.secao22;
+
+import java.time.LocalDate;
+import java.time.Month;
+
+// Datas
+
+public class Programa82 {
+
+	public static void main(String[] args) {
+		
+		// Data do dia atual ano-mes-dia (Formato ISO - Internacional)
+		LocalDate hoje = LocalDate.now();
+		System.out.println(hoje);
+		
+		// Criando uma data nova
+		LocalDate anoNovo = LocalDate.of(2021, Month.JANUARY, 1);
+		System.out.println(anoNovo);
+		
+	}
+
+}

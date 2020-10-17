@@ -1,0 +1,34 @@
+package br.com.geekuniversity.secao22;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+//Default Methods
+
+/*
+ - Implementada à partir da versão 8 Java
+*/
+public class Programa66 {
+
+	public static void main(String[] args) {
+		List<String> palavras = new ArrayList<String>();
+		
+		palavras.add("Geek");
+		palavras.add("University");
+		palavras.add("Java");
+		palavras.add("Angelina");
+		palavras.add("Playstation 4");
+		palavras.add("OutLast 2");
+		
+		Collections.sort(palavras); // Ordena a lista de forma alfabética
+		
+//		for (int i = 0; i < palavras.size(); i++) {
+//			System.out.println("A palavra " + palavras.get(i) + " tem o tamanho de " + palavras.get(i).length());
+//		};
+		
+		System.out.println(palavras);
+		
+	}
+
+}

@@ -1,0 +1,43 @@
+package br.com.geekuniversity.secao22;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
+// Lambdas
+
+/*
+ - Expressoes lambdas são funções anônimas, ou seja, funções em nome
+ - Já sabemos que podemos utilizar expressões lambdas com intefaces funcionais (Interfaces que possuem um m[etodo para implementação).
+ - Devemos então criar uma função lambda compatível com a função da interface que estivermos utilizando.
+ 
+ - Exemplo:
+   - A interface consumer possui um método que recebe uma string e não retorna nada. Por isso foi possível utilizar a expressão
+     lambda que passa uma string como parâmetro e não retorna nada
+     
+   - A função sort, espera receber dois parâmetros do tipo string como entrada e retorna um inteiro.Por isso foi possível passar
+     a expressão lambda informando as duas strings S1 e S2 e, utilizando a classe Integer.compare que retorna um inteiro.  
+*/
+public class Programa73 {
+
+	public static void main(String[] args) {
+		List<String> palavras = new ArrayList<String>();
+
+		palavras.add("Geek");
+		palavras.add("University");
+		palavras.add("Java");
+		palavras.add("Angelina");
+		palavras.add("Playstation 4");
+		palavras.add("OutLast 2");
+		
+		palavras.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+		
+		palavras.forEach(s -> System.out.println(s));
+		
+		// Comando equivalente à "palavras.forEach(s -> System.out.println(s));"
+		Consumer<String> consumer = s -> System.out.println(s);
+		palavras.forEach(consumer);
+
+	}
+
+}

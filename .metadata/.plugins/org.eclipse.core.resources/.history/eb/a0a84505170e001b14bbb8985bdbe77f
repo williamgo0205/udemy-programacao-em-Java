@@ -1,0 +1,16 @@
+package br.com.geekuniversity.secao22;
+
+//Default Methods
+
+/*
+ - Novidade implementada à partir da versão 8 Java
+ - Atualmente estamos na versão 10 do Java
+*/
+public class Programa66 {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

@@ -1,0 +1,46 @@
+package br.com.geekuniversity.secao22;
+
+import java.util.ArrayList;
+import java.util.List;
+
+// Lambdas
+
+public class Programa72 {
+
+	public static void main(String[] args) {
+		List<String> palavras = new ArrayList<String>();
+
+		palavras.add("Geek");
+		palavras.add("University");
+		palavras.add("Java");
+		palavras.add("Angelina");
+		palavras.add("Playstation 4");
+		palavras.add("OutLast 2");
+
+		// Expressão lambda para ordenar por tamanho no método sort da Lista (forma 1 e forma 2).
+		// Executa o que é feito na classe ComparadorPorTamanho
+
+		System.out.println("Expressão Lambda - forma 1");
+		// Expressão Lambda - forma 1
+		palavras.sort((s1, s2) -> {
+			if (s1.length() < s2.length()) {
+				return -1;
+			}
+			if (s1.length() > s2.length()) {
+				return 1;
+			}
+			return 0;
+		});
+		
+		palavras.forEach(s -> System.out.println(s));
+
+		System.out.println("Expressão Lambda - forma 2");
+		// Expressão Lambda - forma 2
+		palavras.sort((s1, s2) -> 
+			Integer.compare(s1.length(), s2.length())
+		);
+
+		palavras.forEach(s -> System.out.println(s));
+	}
+
+}

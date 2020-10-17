@@ -1,0 +1,41 @@
+package br.com.geekuniversity.secao22;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+// Method References
+
+/*
+ - Podem ser consideradas simplificações das expressões lambdas 
+*/
+public class Programa74 {
+
+	public static void main(String[] args) {
+		List<String> palavras = new ArrayList<String>();
+
+		palavras.add("Geek");
+		palavras.add("University");
+		palavras.add("Java");
+		palavras.add("Angelina");
+		palavras.add("Playstation 4");
+		palavras.add("OutLast 2");
+
+		System.out.println(palavras);
+
+//		Comparator<String> comparador = Comparator.comparing(new Function<String, Integer>() {
+//			@Override
+//			public Integer apply(String s) {
+//				return s.length();
+//			}
+//		});
+//		
+//     palavras.sort(comparator);
+		
+		palavras.sort(Comparator.comparing(s -> s.length()));
+
+		System.out.println(palavras);
+
+	}
+
+}

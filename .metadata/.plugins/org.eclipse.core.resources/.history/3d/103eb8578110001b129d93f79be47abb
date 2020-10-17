@@ -1,0 +1,15 @@
+package br.com.geekuniversity.secao22;
+
+import java.time.LocalDate;
+
+// Datas
+
+public class Programa82 {
+
+	public static void main(String[] args) {
+		LocalDate hoje = LocalDate.now();
+		System.out.println(hoje);
+		
+	}
+
+}
