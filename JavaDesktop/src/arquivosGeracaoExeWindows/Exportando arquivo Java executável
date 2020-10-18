@@ -1,0 +1,31 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Exportando aplicação para abrir ao clicar duas vezes no windows >>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1 - Clicar com o botão direito no projeto
+2 - Export
+3 - Selecionar o tipo "Runable JAR file"
+4 - Selecionar qual projeto será exportado
+5 - Selecionar o caminho do diretório de exportação informando o nome da aplicação
+6 - Finish
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>> Exportando aplicação para abrir no Windows com uma imagem específica >>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+1 - Obter uma imagem e converter para ícone caso não seja (site: https://www.convertico.com/jpg-to-ico/)
+
+2 - Obter o aplicativo que converter o arquivo Jar para um aplicativo Windows:
+    - Acessar o site: https://sourceforge.net/projects/launch4j/
+    - Baixar o launch4j
+    - Instalar o launch4J baixado 
+      
+3 - Abrir o aplicativo Launch4j selecionando o Jar e também a imagem baixada
+    - Output file - arquivo de saída
+    - Jar, o arquivo Jar gerado no passo " Exportando aplicação para abrir ao clicar duas vezes no windows"
+    - Ico buscando o ícone desejado
+    
+4 - Na gui JRE do Launch4j selecionar a versão mínima e máxima para a execução desse exe
+
+5 - Clicar na engrenagem do Launch4j, para gerar um arquivo de configuração
+    - Com isso irá gerar o arquivo XML e o arquivo exe do Windows
