@@ -9,6 +9,134 @@
 	<atom:link rel="self" href="http://planeteclipse.org/rss20.xml" type="application/rss+xml"/>
 
 <item>
+	<title>Mike Milinkovich: 2020 Trends in IoT, Edge, and AI Development</title>
+	<guid isPermaLink="false">http://eclipse-foundation.blog/?p=1557</guid>
+	<link>https://eclipse-foundation.blog/2020/10/19/2020-trends-in-iot-edge-and-ai-development/</link>
+	<description>&lt;p&gt;The results of our 2020 IoT Developer Survey are in, revealing a number of interesting trends that will impact all IoT ecosystem players. Whether you’re a technology manufacturer, a service provider, an enterprise adopter of IoT solutions, or an individual developer, this year’s survey results provide insight that will help you better understand how developers’ choices are impacting IoT strategies and businesses.&lt;/p&gt;
+
+
+
+&lt;p&gt;This year, more than 1,650 individuals from a broad range of industries and organizations around the globe responded to the IoT Developer Survey and I want to thank them for their time. Their valuable input will help ensure the&lt;a href=&quot;https://iot.eclipse.org/&quot;&gt; Eclipse IoT Working Group&lt;/a&gt; and the&lt;a href=&quot;https://edgenative.eclipse.org/&quot;&gt; Eclipse Edge Native Working Group&lt;/a&gt; continue to focus on developers’ top priorities for cloud-to-edge IoT solution development.&lt;/p&gt;
+
+
+
+&lt;p&gt;Here are just a few of the highlights.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Smart Agriculture Is the New Industry Focus Area&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;One of the most significant findings in this year’s survey is that smart agriculture is now the top IoT industry focus area, jumping from 21 percent in our 2019 IoT Developer Survey to 26 percent this year.&lt;/p&gt;
+
+
+
+&lt;p&gt;IoT-based solutions are increasingly being used to boost yields, lower costs, reduce waste, and achieve other efficiencies on farm and dairy enterprises, as well as within food processing plants. Optimizing food production is vital to every country in the world, and a quick internet search on the topic confirms our survey results reflect the overall growth in the global agriculture IoT market.&lt;/p&gt;
+
+
+
+&lt;p&gt;Interestingly, last year’s top industry focus, home automation, dropped significantly in this year’s survey. At 19 percent, this category fell behind industrial automation, education, automotive, and smart cities, which tied for second place at 21 percent.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Artificial Intelligence Is the Top Choice for Edge Computing Workloads&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;IoT and edge computing are intrinsically linked, so it was natural to include questions related to edge computing technologies in this year’s IoT Developer Survey.&lt;/p&gt;
+
+
+
+&lt;p&gt;Notably, the results show that developers are now more focused on artificial intelligence (AI). AI was the most frequently selected edge computing workload at 30 percent. However, other applications follow closely behind:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;Control logic: 29 percent&lt;/li&gt;&lt;li&gt;Data exchange: 27 percent&lt;/li&gt;&lt;li&gt;Data aggregation and filtering (sensor fusion): 27 percent&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;The relatively even rankings among these four options confirm they’re all being actively used for edge computing workloads. It will be interesting to see how their usage evolves over time and how quickly AI adoption progresses.&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;IoT Is Synonymous With Open Source&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;The survey results also reveal that 65 percent of respondents experiment with, use, or contribute to open source projects. In the database domain, open source almost completely dominates with only four percent of survey respondents relying on a proprietary database. These are very strong endorsements of the value developers see in open source software for IoT solutions.&lt;/p&gt;
+
+
+
+&lt;p&gt;At the Eclipse Foundation, we’re experiencing first-hand the momentum toward open source software in IoT.&lt;/p&gt;
+
+
+
+&lt;p&gt;Over the last few years, the Eclipse Foundation IoT community has grown to become one of the largest open source collaborations in the world with 45 projects, 350+ contributors, 40+ corporate members, and more than eight million lines of code produced. Eclipse IoT projects have been adopted by some of the world’s leading companies, including Bosch, Red Hat, Eurotech, and many others, to deliver commercial IoT solutions and services. &lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Get the Complete Survey Results&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;The findings I’ve highlighted here provide just a small glimpse into this year’s IoT Developer Survey results. I encourage everyone to download the full 2020 IoT Developer Survey results to gain additional insight into:&lt;/p&gt;
+
+
+
+&lt;ul&gt;&lt;li&gt;The top IoT developer concerns&lt;/li&gt;&lt;li&gt;The most widely used security techniques in IoT and the growing momentum of distributed ledger technologies&lt;/li&gt;&lt;li&gt;The most widely used programming languages for IoT solutions&lt;/li&gt;&lt;li&gt;The top edge computing artifacts and deployment choices&lt;/li&gt;&lt;li&gt;The top IoT middleware choices&lt;/li&gt;&lt;li&gt;The top public IoT and cloud platforms&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;p&gt;&lt;a href=&quot;https://outreach.eclipse.foundation/eclipse-iot-developer-survey-2020&quot; rel=&quot;noreferrer noopener&quot; target=&quot;_blank&quot;&gt;Download the 2020 IoT Developer Survey results.&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;&lt;strong&gt;Get Involved in Eclipse IoT Communities&lt;/strong&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;To stay current with the happenings in the&lt;a href=&quot;https://iot.eclipse.org/&quot; rel=&quot;noreferrer noopener&quot; target=&quot;_blank&quot;&gt; Eclipse IoT Working Group&lt;/a&gt;, join the mailing list&lt;a href=&quot;https://accounts.eclipse.org/mailing-list/iot-wg&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;p&gt;To join the&lt;a href=&quot;https://edgenative.eclipse.org/&quot; rel=&quot;noreferrer noopener&quot; target=&quot;_blank&quot;&gt; Eclipse Edge Native Working Group&lt;/a&gt; conversation on Slack, click&lt;a href=&quot;https://eclipse-edge-wg.slack.com/join/shared_invite/enQtODI2NjY0MTgxODI1LTU3ODA0NDgxN2E3ZTFlNDlkOTI3N2FlZmQ5MjhmYTY3MWRkNjMxZjAyNWE2MjlhMGM1YTQ1YjdjOTBkOTEyYmU#/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Mon, 19 Oct 2020 13:08:56 +0000</pubDate>
+</item>
+<item>
+	<title>Donald Raab: Immutable Collections in Java using Sealed Types</title>
+	<guid isPermaLink="false">https://medium.com/p/ae8eb580fc1e</guid>
+	<link>https://medium.com/javarevisited/immutable-collections-in-java-using-sealed-types-ae8eb580fc1e?source=rss-df39b86e9f04------2</link>
+	<description>&lt;p&gt;How to define contractual, structural, and verifiable immutable Java collections.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/966/1*ZHUMcJS2IO6GpjTckpFODw.png&quot; /&gt;&lt;figcaption&gt;Designing Immutable Collection using Sealed Types in JDK 15&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Introducing Sealed Types&lt;/h3&gt;&lt;p&gt;JDK 15 was released on September 15, 2020. &lt;a href=&quot;https://openjdk.java.net/jeps/360&quot;&gt;JEP 360 &lt;/a&gt;Sealed Types was included as a preview feature in this release. Sealed Types is part of &lt;a href=&quot;https://openjdk.java.net/projects/amber/&quot;&gt;Project Amber&lt;/a&gt;. Sealed classes or interfaces can be used to restrict the interfaces or classes that are allowed to extend them. This is accomplished by using the sealed, non-sealed, and permits modifiers.&lt;/p&gt;&lt;h3&gt;What is contractual immutability?&lt;/h3&gt;&lt;p&gt;An interface or class is contractually immutable if the available public methods do not allow an instance to be mutated after it is constructed. A contractually &lt;a href=&quot;https://javarevisited.blogspot.com/2018/02/java-9-example-factory-methods-for-collections-immutable-list-set-map.html&quot;&gt;immutable collection&lt;/a&gt; should not expose methods like add, addAll, remove, removeAll, clear and a mutable Iterator . These methods are available on the Collection, List and Set types in Java. Immutable collections that implement these interfaces are not contractually immutable.&lt;/p&gt;&lt;h3&gt;What is structural immutability?&lt;/h3&gt;&lt;p&gt;An object is structurally immutable if all of its data members are &lt;a href=&quot;https://javarevisited.blogspot.com/2012/10/difference-between-private-protected-public-package-access-java.html#axzz6JDcu0RhH&quot;&gt;private&lt;/a&gt;, &lt;a href=&quot;https://javarevisited.blogspot.com/2016/09/21-java-final-modifier-keyword-interview-questions-answers.html&quot;&gt;final&lt;/a&gt;, and cannot be modified after the object is constructed. String is a great example of a class in Java that is structurally immutable. Once a String is constructed, it cannot be changed. Immutable objects like String sometimes have mutable counterparts like StringBuilder.&lt;/p&gt;&lt;h3&gt;What is verifiable immutability?&lt;/h3&gt;&lt;p&gt;A class or interface is verifiably immutable if all of the implementations are contractually and structurally immutable, and are restricted to a specific set of classes that can be verified. This is a capability that can now be more easily achieved via Sealed Types in JDK 15. With Sealed Types a developer can restrict the implementations of interfaces and classes to a specified set of types.&lt;/p&gt;&lt;h3&gt;A Perfect Use Case for Sealed Types in Java&lt;/h3&gt;&lt;p&gt;Immutable collection implementations for Java are available in the Java Collections Framework (since JDK 9), Google Guava and Eclipse Collections. None of the immutable collection alternatives provide the combination of &lt;em&gt;structural&lt;/em&gt;, &lt;em&gt;contractual&lt;/em&gt; and &lt;em&gt;verifiable&lt;/em&gt; immutability today.&lt;/p&gt;&lt;h4&gt;Java 9+&lt;/h4&gt;&lt;p&gt;There are &lt;em&gt;structurally&lt;/em&gt; immutable collections available in the Java Collection Framework via List.of(), Set.of(), Map.of(). The JDK immutable collections are not &lt;em&gt;contractually&lt;/em&gt; immutable, because they implement the mutable List, Set, Map interfaces.&lt;/p&gt;&lt;h4&gt;Google Guava&lt;/h4&gt;&lt;p&gt;Guava has collection types that are &lt;em&gt;structurally&lt;/em&gt; immutable, but not &lt;em&gt;contractually&lt;/em&gt; immutable. The immutable collections in Guava implement the mutable JDK interfaces — List, Set, Map. Guava restricts the implementations of the immutable collection types by using abstract classes with package private constructors, which require all implementations to be in the same package. This restriction is a novel design approach and a key component of &lt;em&gt;verifiable&lt;/em&gt; immutability, but is still lacking &lt;em&gt;contractual&lt;/em&gt; immutability.&lt;/p&gt;&lt;h4&gt;Eclipse Collections&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; has collection types that are both &lt;em&gt;contractually&lt;/em&gt; and &lt;em&gt;structurally&lt;/em&gt; immutable. Unfortunately, there is no way in Java 8 to restrict the implementations of interfaces like ImmutableCollection, ImmutableList, ImmutableSet so that &lt;em&gt;verifiable&lt;/em&gt; immutability can be provided. It is possible to implement the ImmutableCollection interface and its subtypes outside of Eclipse Collections because they are public interfaces. Theoretically, a “bad actor” may implement the ImmutableCollection interface and pass a mutable implementation to a method call expecting an ImmutableCollection. In practice, it is doubtful that this would be an issue, but the potential does exist.&lt;/p&gt;&lt;h4&gt;Sealed Types&lt;/h4&gt;&lt;p&gt;The Sealed Types preview in JDK 15 gives developers the capability to finally provide the trifecta of &lt;em&gt;contractual&lt;/em&gt;, &lt;em&gt;structural&lt;/em&gt; and &lt;em&gt;verifiable&lt;/em&gt; immutability in a collections framework. Using the Sealed Types preview feature, we can restrict the implementations of an ImmutableCollection interface using the sealed and permits modifiers.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*dvOIPu_CihVoGRP4fHPmHA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Similarly, we can restrict the implementations of ImmutableList.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*md3mIyCP9X7pW27LXecENA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;The ImmutableEmptyList implementation of ImmutableList is then declared as final.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*UN6RGrWzg-fhPvixzfWdUw.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Experimenting with Sealed Types in JDK 15 has been interesting and encouraging. I wish this feature was available a decade ago when we first defined the ImmutableCollection hierarchy in Eclipse Collections. I’ve been able to extend the design ideas that we implemented in Eclipse Collections years ago with a feature that provides a more restrictive modeling capability.&lt;/p&gt;&lt;h4&gt;The Deck of Cards Kata: Custom Collections&lt;/h4&gt;&lt;p&gt;The source code for an experimental implementation of a collections framework can be found in the &lt;a href=&quot;https://github.com/BNYMellon/CodeKatas/tree/master/deck-of-cards-kata&quot;&gt;Deck of Cards Kata repo&lt;/a&gt;. The Deck of Cards Kata can be taken to become familiar with multiple collections frameworks including the latest versions of the Java Collections + Streams framework, Apache Commons Collections, Google Guava and Eclipse Collections.&lt;/p&gt;&lt;p&gt;The custom collections framework interfaces and implementations can be browsed online &lt;a href=&quot;https://github.com/BNYMellon/CodeKatas/tree/master/deck-of-cards-kata/src/main/java/bnymellon/codekatas/deckofcards/custom/collections&quot;&gt;here&lt;/a&gt;. The following class diagram shows the interfaces in the framework, including the immutable collection interfaces that leverage Sealed Types.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*pW5H0RibKuIayUWpu3Zq1g.png&quot; /&gt;&lt;figcaption&gt;A Custom Collections framework in the Deck of Cards Kata&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;The experimental collections framework in the kata has been evolving to use &lt;a href=&quot;https://openjdk.java.net/projects/amber/&quot;&gt;Project Amber&lt;/a&gt; features as they become available as preview features in the JDK. The kata was upgraded to JDK 15 the day it was released. The framework now uses the following features from Project Amber:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Local Variable Type Inference (&lt;a href=&quot;https://openjdk.java.net/jeps/286&quot;&gt;JEP 286&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;Pattern Matching for instanceof (&lt;a href=&quot;https://openjdk.java.net/jeps/375&quot;&gt;JEP 375&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;Sealed Types (&lt;a href=&quot;https://openjdk.java.net/jeps/360&quot;&gt;JEP 360&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;In addition, default methods and static interface methods are used extensively to build the rich interfaces in the framework.&lt;/p&gt;&lt;h3&gt;A vision for the future of Java Collections&lt;/h3&gt;&lt;p&gt;The custom collection framework was initially developed to explore and demonstrate what it would be like to have eager methods directly on mutable collection interfaces using API names similar to &lt;a href=&quot;https://javarevisited.blogspot.com/2018/08/top-5-java-8-courses-to-learn-online.html&quot;&gt;Java Streams&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;The intent was to use the latest features available in the most current releases of Java where they were proved useful. The latest evolution shows what is possible by leveraging Sealed Types to implement immutable collection types. I’m quite encouraged by the results of the feature so far. I hope that this use case can be used and discussed as an example of the practical applicability of the Sealed Types feature.&lt;/p&gt;&lt;p&gt;The following blogs explain the evolution of the custom collections framework design over the past six months.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/java-streams-are-great-but-its-time-for-better-java-collections-42d2c04235d1&quot;&gt;Java Streams are great but it’s time for better Java Collections&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/eager-is-easy-lazy-is-labyrinthine-b12605f13048&quot;&gt;Eager is Easy, Lazy is Labyrinthine&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;I hope you found this blog useful. Check out the source code and give the Deck of Cards kata and other code katas included in the repo a try.&lt;/p&gt;&lt;p&gt;Enjoy!&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=ae8eb580fc1e&quot; width=&quot;1&quot; /&gt;&lt;hr /&gt;&lt;p&gt;&lt;a href=&quot;https://medium.com/javarevisited/immutable-collections-in-java-using-sealed-types-ae8eb580fc1e&quot;&gt;Immutable Collections in Java using Sealed Types&lt;/a&gt; was originally published in &lt;a href=&quot;https://medium.com/javarevisited&quot;&gt;Javarevisited&lt;/a&gt; on Medium, where people are continuing the conversation by highlighting and responding to this story.&lt;/p&gt;</description>
+	<pubDate>Sun, 18 Oct 2020 06:15:16 +0000</pubDate>
+</item>
+<item>
+	<title>Melanie Bats: T-4:00 OCP is ready to go</title>
+	<guid isPermaLink="true">http://localhost:4000/2020/10/17/ocp/</guid>
+	<link>http://localhost:4000/2020/10/17/ocp/</link>
+	<description>&lt;p&gt;Atop the Sirius-II Mission’s rocket is the Obeo Cloud Platform (OCP), with two flavors – OCP Modeler and OCP Publication – safely strapped inside.
+The Obeo Cloud Platform is built as an open-core product relying on the open source Eclipse Sirius project (EPL 2.0 licence) and more precisely on the Sirius Web component. As I explained in my previous post, Sirius Web is a framework from Obeo for building cloud graphical modelers for a dedicated DSL.&lt;/p&gt;
+
+&lt;h2 id=&quot;ocp-publication&quot;&gt;OCP Publication&lt;/h2&gt;
+
+&lt;p&gt;OCP Publication exposes models in a read-only mode for fast access from OSLC clients or web browsers. The first version of this product is ready to be deployed to our customers at the end of October.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&quot;&quot; src=&quot;http://melb.enix.org/img/sirius-web/OCP_Publication.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One of the first use cases we developed allows us to reunite two of our chosen fields: Capella and model servers, it is Publication For Capella. Publication for Capella provides a tight integration between OSLC-compliant ALM tools (Polarion, Doors Next…) and the MBSE workbench Capella. It enables a fine grained traceability between your requirements and your system design.&lt;/p&gt;
+
+&lt;h2 id=&quot;ocp-modeler&quot;&gt;OCP Modeler&lt;/h2&gt;
+
+&lt;p&gt;OCP Modeler is a unique technology to easily develop custom and state-of-the-art modeling tools to be deployed to the Cloud.
+The Obeo Cloud Platform Modeler is a Sirius Web build extended with Enterprise features, to deploy on public, private clouds or on premise and including support and upgrade guarantees.
+The Obeo Cloud Platform provides collaborative features: authentication, live collaboration, webhooks…&lt;/p&gt;
+
+
+
+&lt;p&gt;To get more details, attend the OCP Modeler’s launch on &lt;a href=&quot;https://www.eclipsecon.org/2020/sessions/sirius-web-100-open-source-cloud-modeling-platform&quot;&gt;October 21 at 2:00 p.m CET&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Sat, 17 Oct 2020 10:00:00 +0000</pubDate>
+</item>
+<item>
 	<title>Donald Raab: Hi Dennis, thank you for the questions.</title>
 	<guid isPermaLink="false">https://medium.com/p/ba856d7df5ef</guid>
 	<link>https://medium.com/@donraab/hi-dennis-thank-you-for-the-questions-ba856d7df5ef?source=rss-df39b86e9f04------2</link>
@@ -16,11 +144,25 @@
 	<pubDate>Thu, 15 Oct 2020 17:36:58 +0000</pubDate>
 </item>
 <item>
-	<title>Donald Raab: Immutable Collections in Java using Sealed Types</title>
-	<guid isPermaLink="false">https://medium.com/p/ae8eb580fc1e</guid>
-	<link>https://medium.com/@donraab/immutable-collections-in-java-using-sealed-types-ae8eb580fc1e?source=rss-df39b86e9f04------2</link>
-	<description>&lt;p&gt;How to define contractual, structural, and verifiable immutable Java collections.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/966/1*ZHUMcJS2IO6GpjTckpFODw.png&quot; /&gt;&lt;figcaption&gt;Designing Immutable Collection using Sealed Types in JDK 15&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Introducing Sealed Types&lt;/h3&gt;&lt;p&gt;JDK 15 was released on September 15, 2020. &lt;a href=&quot;https://openjdk.java.net/jeps/360&quot;&gt;JEP 360 &lt;/a&gt;Sealed Types was included as a preview feature in this release. Sealed Types is part of &lt;a href=&quot;https://openjdk.java.net/projects/amber/&quot;&gt;Project Amber&lt;/a&gt;. Sealed classes or interfaces can be used to restrict the interfaces or classes that are allowed to extend them. This is accomplished by using the sealed, non-sealed, and permits modifiers.&lt;/p&gt;&lt;h3&gt;What is contractual immutability?&lt;/h3&gt;&lt;p&gt;An interface or class is contractually immutable if the available public methods do not allow an instance to be mutated after it is constructed. A contractually immutable collection should not expose methods like add, addAll, remove, removeAll, clear and a mutable Iterator . These methods are available on the Collection, List and Set types in Java. Immutable collections that implement these interfaces are not contractually immutable.&lt;/p&gt;&lt;h3&gt;What is structural immutability?&lt;/h3&gt;&lt;p&gt;An object is structurally immutable if all of its data members are private, final, and cannot be modified after the object is constructed. String is a great example of a class in Java that is structurally immutable. Once a String is constructed, it cannot be changed. Immutable objects like String sometimes have mutable counterparts like StringBuilder.&lt;/p&gt;&lt;h3&gt;What is verifiable immutability?&lt;/h3&gt;&lt;p&gt;A class or interface is verifiably immutable if all of the implementations are contractually and structurally immutable, and are restricted to a specific set of classes that can be verified. This is a capability that can now be more easily achieved via Sealed Types in JDK 15. With Sealed Types a developer can restrict the implementations of interfaces and classes to a specified set of types.&lt;/p&gt;&lt;h3&gt;A Perfect Use Case for Sealed Types in Java&lt;/h3&gt;&lt;p&gt;Immutable collection implementations for Java are available in the Java Collections Framework (since JDK 9), Google Guava and Eclipse Collections. None of the immutable collection alternatives provide the combination of &lt;em&gt;structural&lt;/em&gt;, &lt;em&gt;contractual&lt;/em&gt; and &lt;em&gt;verifiable&lt;/em&gt; immutability today.&lt;/p&gt;&lt;h4&gt;Java 9+&lt;/h4&gt;&lt;p&gt;There are &lt;em&gt;structurally&lt;/em&gt; immutable collections available in the Java Collection Framework via List.of(), Set.of(), Map.of(). The JDK immutable collections are not &lt;em&gt;contractually&lt;/em&gt; immutable, because they implement the mutable List, Set, Map interfaces.&lt;/p&gt;&lt;h4&gt;Google Guava&lt;/h4&gt;&lt;p&gt;Guava has collection types that are &lt;em&gt;structurally&lt;/em&gt; immutable, but not &lt;em&gt;contractually&lt;/em&gt; immutable. The immutable collections in Guava implement the mutable JDK interfaces — List, Set, Map. Guava restricts the implementations of the immutable collection types by using abstract classes with package private constructors, which require all implementations to be in the same package. This restriction is a novel design approach and a key component of &lt;em&gt;verifiable&lt;/em&gt; immutability, but is still lacking &lt;em&gt;contractual&lt;/em&gt; immutability.&lt;/p&gt;&lt;h4&gt;Eclipse Collections&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;Eclipse Collections&lt;/a&gt; has collection types that are both &lt;em&gt;contractually&lt;/em&gt; and &lt;em&gt;structurally&lt;/em&gt; immutable. Unfortunately, there is no way in Java 8 to restrict the implementations of interfaces like ImmutableCollection, ImmutableList, ImmutableSet so that &lt;em&gt;verifiable&lt;/em&gt; immutability can be provided. It is possible to implement the ImmutableCollection interface and its subtypes outside of Eclipse Collections because they are public interfaces. Theoretically, a “bad actor” may implement the ImmutableCollection interface and pass a mutable implementation to a method call expecting an ImmutableCollection. In practice, it is doubtful that this would be an issue, but the potential does exist.&lt;/p&gt;&lt;h4&gt;Sealed Types&lt;/h4&gt;&lt;p&gt;The Sealed Types preview in JDK 15 gives developers the capability to finally provide the trifecta of &lt;em&gt;contractual&lt;/em&gt;, &lt;em&gt;structural&lt;/em&gt; and &lt;em&gt;verifiable&lt;/em&gt; immutability in a collections framework. Using the Sealed Types preview feature, we can restrict the implementations of an ImmutableCollection interface using the sealed and permits modifiers.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*dvOIPu_CihVoGRP4fHPmHA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Similarly, we can restrict the implementations of ImmutableList.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*md3mIyCP9X7pW27LXecENA.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;The ImmutableEmptyList implementation of ImmutableList is then declared as final.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*UN6RGrWzg-fhPvixzfWdUw.png&quot; /&gt;&lt;/figure&gt;&lt;p&gt;Experimenting with Sealed Types in JDK 15 has been interesting and encouraging. I wish this feature was available a decade ago when we first defined the ImmutableCollection hierarchy in Eclipse Collections. I’ve been able to extend the design ideas that we implemented in Eclipse Collections years ago with a feature that provides a more restrictive modeling capability.&lt;/p&gt;&lt;h4&gt;The Deck of Cards Kata: Custom Collections&lt;/h4&gt;&lt;p&gt;The source code for an experimental implementation of a collections framework can be found in the &lt;a href=&quot;https://github.com/BNYMellon/CodeKatas/tree/master/deck-of-cards-kata&quot;&gt;Deck of Cards Kata repo&lt;/a&gt;. The Deck of Cards Kata can be taken to become familiar with multiple collections frameworks including the latest versions of the Java Collections + Streams framework, Apache Commons Collections, Google Guava and Eclipse Collections. The custom collections framework interfaces and implementations can be browsed online &lt;a href=&quot;https://github.com/BNYMellon/CodeKatas/tree/master/deck-of-cards-kata/src/main/java/bnymellon/codekatas/deckofcards/custom/collections&quot;&gt;here&lt;/a&gt;. The following class diagram shows the interfaces in the framework, including the immutable collection interfaces that leverage Sealed Types.&lt;/p&gt;&lt;figure&gt;&lt;img alt=&quot;&quot; src=&quot;https://cdn-images-1.medium.com/max/1024/1*pW5H0RibKuIayUWpu3Zq1g.png&quot; /&gt;&lt;figcaption&gt;A Custom Collections framework in the Deck of Cards Kata&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;The experimental collections framework in the kata has been evolving to use &lt;a href=&quot;https://openjdk.java.net/projects/amber/&quot;&gt;Project Amber&lt;/a&gt; features as they become available as preview features in the JDK. The kata was upgraded to JDK 15 the day it was released. The framework now uses the following features from Project Amber:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Local Variable Type Inference (&lt;a href=&quot;https://openjdk.java.net/jeps/286&quot;&gt;JEP 286&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;Pattern Matching for instanceof (&lt;a href=&quot;https://openjdk.java.net/jeps/375&quot;&gt;JEP 375&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;Sealed Types (&lt;a href=&quot;https://openjdk.java.net/jeps/360&quot;&gt;JEP 360&lt;/a&gt;)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;In addition, default methods and static interface methods are used extensively to build the rich interfaces in the framework.&lt;/p&gt;&lt;h3&gt;A vision for the future of Java Collections&lt;/h3&gt;&lt;p&gt;The custom collection framework was initially developed to explore and demonstrate what it would be like to have eager methods directly on mutable collection interfaces using API names similar to Java Streams. The intent was to use the latest features available in the most current releases of Java where they were proved useful. The latest evolution shows what is possible by leveraging Sealed Types to implement immutable collection types. I’m quite encouraged by the results of the feature so far. I hope that this use case can be used and discussed as an example of the practical applicability of the Sealed Types feature.&lt;/p&gt;&lt;p&gt;The following blogs explain the evolution of the custom collections framework design over the past six months.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/java-streams-are-great-but-its-time-for-better-java-collections-42d2c04235d1&quot;&gt;Java Streams are great but it’s time for better Java Collections&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://medium.com/javarevisited/eager-is-easy-lazy-is-labyrinthine-b12605f13048&quot;&gt;Eager is Easy, Lazy is Labyrinthine&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;I hope you found this blog useful. Check out the source code and give the Deck of Cards kata and other code katas included in the repo a try.&lt;/p&gt;&lt;p&gt;Enjoy!&lt;/p&gt;&lt;p&gt;&lt;em&gt;I am a Project Lead and Committer for the &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; OSS project at the &lt;/em&gt;&lt;a href=&quot;https://projects.eclipse.org/projects/technology.collections&quot;&gt;&lt;em&gt;Eclipse Foundation&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections&quot;&gt;&lt;em&gt;Eclipse Collections&lt;/em&gt;&lt;/a&gt;&lt;em&gt; is open for &lt;/em&gt;&lt;a href=&quot;https://github.com/eclipse/eclipse-collections/blob/master/CONTRIBUTING.md&quot;&gt;&lt;em&gt;contributions&lt;/em&gt;&lt;/a&gt;&lt;em&gt;. If you like the library, you can let us know by starring it on GitHub.&lt;/em&gt;&lt;/p&gt;&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;https://medium.com/_/stat?event=post.clientViewed&amp;amp;referrerSource=full_rss&amp;amp;postId=ae8eb580fc1e&quot; width=&quot;1&quot; /&gt;</description>
-	<pubDate>Thu, 15 Oct 2020 06:59:43 +0000</pubDate>
+	<title>vert.x project: Eclipse Vert.x 3.9.4 released!</title>
+	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-3-9-4-released</guid>
+	<link>https://vertx.io/blog/eclipse-vert-x-3-9-4-released</link>
+	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce that the Eclipse Vert.x version 3.9.4 has been released.&lt;/p&gt;
+&lt;p&gt;Since the release of Vert.x 3.9.4, quite a few bugs have been reported. We would like to thank you all for reporting these issues.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.4-Release-Notes&quot;&gt;3.9.4 release notes&lt;/a&gt; can be found on the wiki, as well as the
+list of &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/3.9.4-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Docker images are available on &lt;a href=&quot;https://hub.docker.com/u/vertx/&quot;&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Vert.x distribution can be downloaded on the website but is also available from &lt;a href=&quot;http://sdkman.io/index.html&quot;&gt;SDKMan&lt;/a&gt; and &lt;a href=&quot;http://brew.sh/&quot;&gt;HomeBrew&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The event bus client using the SockJS bridge is available from:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/vertx3-eventbus-client&quot;&gt;NPM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vert-x3/vertx-bus-bower&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.webjars.org/&quot;&gt;WebJars&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.vertx%22%20AND%20v%3A%223.9.4%22&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://bintray.com/vertx/downloads/distribution/3.9.4/view&quot;&gt;Bintray&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thatâ€™s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
+&lt;/article&gt;</description>
+	<pubDate>Thu, 15 Oct 2020 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>Maximilian and Jonas: Eclipse Che vs. VS Code (online|codespaces)</title>
@@ -1099,21 +1241,6 @@ This is all made possible thanks to the energy and cohesion of the Obeo team in 
 	<author>cedric.brun@obeo.fr (Cédric Brun)</author>
 </item>
 <item>
-	<title>Melanie Bats: T-16:00 Obeo approves “load-and-go” fueling: EMF-JSON onboard!</title>
-	<guid isPermaLink="true">http://localhost:4000/2020/10/05/emf-json/</guid>
-	<link>http://localhost:4000/2020/10/05/emf-json/</link>
-	<description>&lt;p&gt;At Nantes Dev Force Station Launch Complex 42A, valves are open and code source is beginning to flow into Obeoâ€™s rocket. The first open source project released by the SIRIUS-II Mission is: EMF-JSON.&lt;/p&gt;
-
-&lt;p&gt;The EMF-JSON project will soon be part of the Eclipse Sirius project. It provides a JSON-based implementation of EMF resources which can be used as a drop-in replacement for the default XMI-based format.&lt;/p&gt;
-
-
-
-&lt;p&gt;Although it is part of Sirius, this new EMF resource type can actually be used by any EMF-based application as it does not depend on the rest of the Sirius platform (neither the existing Sirius Desktop nor the upcoming Sirius Web).&lt;/p&gt;
-
-&lt;p&gt;Liftoff on the SIRIUS-II mission to the Eclipse Foundation remains planned for an instantaneous launch window on &lt;a href=&quot;https://www.eclipsecon.org/2020/sessions/sirius-web-100-open-source-cloud-modeling-platform&quot;&gt;October 21 at 2:00 p.m CET&lt;/a&gt;.&lt;/p&gt;</description>
-	<pubDate>Mon, 05 Oct 2020 10:00:00 +0000</pubDate>
-</item>
-<item>
 	<title>Eclipse Dirigible: Release 5.3</title>
 	<guid isPermaLink="false">http://dirigible.io/release/2020/10/05/news_new_release_5_3</guid>
 	<link>http://dirigible.io/release/2020/10/05/news_new_release_5_3.html</link>
@@ -1431,7 +1558,7 @@ which allows us to access token claim information via the &lt;code&gt;io.vertx.e
     ctx.request().response().end(String.format(&lt;span class=&quot;hljs-string&quot;&gt;&quot;Hi %s (%s) %s%n&quot;&lt;/span&gt;, username, userId, Instant.now()));
 }&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;obtaining-an-access-token-from-keycloak-for-user-tester&quot;&gt;Obtaining an Access Token from Keycloak for user &lt;code&gt;tester&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;obtaining-an-access-token-from-keycloak-for-user-tester-&quot;&gt;Obtaining an Access Token from Keycloak for user &lt;code&gt;tester&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;To test our application we can use the following &lt;code&gt;curl&lt;/code&gt; commands in a bash like shell to obtain an JWT access token to call one
 of our endpoints as the user &lt;code&gt;tester&lt;/code&gt; with the role &lt;code&gt;user&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Note that this example uses the cli tool &lt;a href=&quot;https://stedolan.github.io/jq/&quot;&gt;jq&lt;/a&gt; for JSON processing.&lt;/p&gt;
@@ -1520,7 +1647,7 @@ we send a response with status code 403 and a &lt;code&gt;forbidden&lt;/code&gt;
 &lt;p&gt;Output:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;hljs&quot;&gt;{&quot;&lt;span class=&quot;hljs-attribute&quot;&gt;error&lt;/span&gt;&quot;: &lt;span class=&quot;hljs-value&quot;&gt;&lt;span class=&quot;hljs-string&quot;&gt;&quot;forbidden&quot;&lt;/span&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;obtaining-an-access-token-from-keycloak-for-user-vadmin&quot;&gt;Obtaining an Access Token from Keycloak for user &lt;code&gt;vadmin&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;obtaining-an-access-token-from-keycloak-for-user-vadmin-&quot;&gt;Obtaining an Access Token from Keycloak for user &lt;code&gt;vadmin&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;To check access with an &lt;code&gt;admin&lt;/code&gt; role, we obtain a new token for the user &lt;code&gt;vadmin&lt;/code&gt; which has the roles &lt;code&gt;admin&lt;/code&gt; and &lt;code&gt;user&lt;/code&gt;. &lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;KC_USERNAME=vadmin
 KC_PASSWORD=test
@@ -1608,148 +1735,6 @@ as well as &lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/ditto/&qu
 &lt;p&gt;–&lt;br /&gt;
 The Eclipse Ditto team&lt;/p&gt;</description>
 	<pubDate>Wed, 30 Sep 2020 00:00:00 +0000</pubDate>
-</item>
-<item>
-	<title>vert.x project: Eclipse Vert.x 4 beta 3 released!</title>
-	<guid isPermaLink="true">https://vertx.io/blog/eclipse-vert-x-4-beta-3-released</guid>
-	<link>https://vertx.io/blog/eclipse-vert-x-4-beta-3-released</link>
-	<description>&lt;article&gt;&lt;p&gt;We are extremely pleased to announce the third 4.0 beta release of Eclipse Vert.x .&lt;/p&gt;
-&lt;p&gt;Vert.x 4 is the evolution of the Vert.x 3.x series that will bring key features to Vert.x.&lt;/p&gt;
-&lt;h4 id=&quot;http-client-request-creation&quot;&gt;HTTP client request creation&lt;/h4&gt;
-&lt;p&gt;Until Beta3, HTTP client has created lazy HTTP requests, since then creating a request
-has become an asynchronous operation guaranteeing that a slot for performing the request
-is granted:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// Created a request&lt;/span&gt;
-HttpClientRequest request = client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/some-uri&quot;&lt;/span&gt;);
-
-&lt;span class=&quot;hljs-comment&quot;&gt;// Connect to the server or reuse a connection from the pool and then try to send the request&lt;/span&gt;
-request.end();
-
-&lt;span class=&quot;hljs-comment&quot;&gt;// Since Beta3&lt;/span&gt;
-client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;/some-uri&quot;&lt;/span&gt;, ar -&amp;gt; {
-  &lt;span class=&quot;hljs-comment&quot;&gt;// The client connected to the server or reused a connection from the pool&lt;/span&gt;
-  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
-    HttpClientRequest request = ar.result();
-
-    &lt;span class=&quot;hljs-comment&quot;&gt;// Send the request&lt;/span&gt;
-    request.end();
-  }
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Another (hidden) motivation to switch to this model is avoiding data races when the
-HTTP client is used outside the event-loop using futures.&lt;/p&gt;
-&lt;p&gt;Previously you could write code like:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Future get = client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;some-uri&quot;&lt;/span&gt;);
-
-&lt;span class=&quot;hljs-comment&quot;&gt;// Assuming we have a client that returns a future response&lt;/span&gt;
-&lt;span class=&quot;hljs-comment&quot;&gt;// assuging this is *not* on the event-loop&lt;/span&gt;
-Future fut = get.send().compose(response -&amp;gt; {
-
-  &lt;span class=&quot;hljs-comment&quot;&gt;// Response events might have happen already&lt;/span&gt;
-  &lt;span class=&quot;hljs-keyword&quot;&gt;return&lt;/span&gt; response.body();
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Now you can write instead:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;Future fut = client.get(&lt;span class=&quot;hljs-string&quot;&gt;&quot;some-uri&quot;&lt;/span&gt;).compose(request -&amp;gt; {
-  request.send().compose(response -&amp;gt; response.body())
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;httpserverresponse-send-method&quot;&gt;HttpServerResponse send method&lt;/h4&gt;
-&lt;p&gt;In the previous beta, HTTP client request got a new simplified &lt;code&gt;send&lt;/code&gt; method to send
-a body or a stream. We did the same for the HTTP server response API:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;server.requestHandler(req -&amp;gt; {
-  req.pause();
-  getSomeStream().onSuccess(stream -&amp;gt; {
-    req.response().send(stream);
-  });
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;http-tunnel-improvements&quot;&gt;HTTP tunnel improvements&lt;/h4&gt;
-&lt;p&gt;Creating an HTTP tunnel has now become more natural:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;client.request(HttpMethod.CONNECT, &lt;span class=&quot;hljs-string&quot;&gt;&quot;some-uri&quot;&lt;/span&gt;)
-  .onSuccess(request -&amp;gt; {
-
-    &lt;span class=&quot;hljs-comment&quot;&gt;// Connect to the server&lt;/span&gt;
-    request.connect(ar -&amp;gt; {
-      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
-        HttpClientResponse response = ar.result();
-
-        &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (response.statusCode() != &lt;span class=&quot;hljs-number&quot;&gt;200&lt;/span&gt;) {
-          &lt;span class=&quot;hljs-comment&quot;&gt;// Connect failed for some reason&lt;/span&gt;
-        } &lt;span class=&quot;hljs-keyword&quot;&gt;else&lt;/span&gt; {
-          &lt;span class=&quot;hljs-comment&quot;&gt;// Tunnel created, raw buffers are transmitted on the wire&lt;/span&gt;
-          NetSocket socket = response.netSocket();
-        }
-      }
-    });
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The new &lt;code&gt;connect&lt;/code&gt; method tells the client that when a &lt;code&gt;201&lt;/code&gt; response is received
-from the server then the connection should be switched to not interpret HTTP
-data anymore.&lt;/p&gt;
-&lt;p&gt;On the server, the API has become asynchronous and renamed to &lt;code&gt;toNetSocket()&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;server.requestHandler(request -&amp;gt; {
-  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (request.method() == HttpMethod.CONNECT) {
-    &lt;span class=&quot;hljs-comment&quot;&gt;// Will send an HTTP 201 status code and switch the connection to use raw buffers&lt;/span&gt;
-    request.toNetSocket(ar -&amp;gt; {
-      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
-        NetSocket socket = ar.result();
-      }
-    });
-  }
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;websocket-upgrade-improvements&quot;&gt;WebSocket upgrade improvements&lt;/h4&gt;
-&lt;p&gt;The server WebSocket manual upgrade operation has also become asynchronous and renamed
-to &lt;code&gt;toWebSocket()&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;server.requestHandler(request -&amp;gt; {
-  &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (request.method() == HttpMethod.GET &amp;amp;&amp;amp; &lt;span class=&quot;hljs-string&quot;&gt;&quot;Upgrade&quot;&lt;/span&gt;.equals(request.getHeader(&lt;span class=&quot;hljs-string&quot;&gt;&quot;connection&quot;&lt;/span&gt;))) {
-    &lt;span class=&quot;hljs-comment&quot;&gt;// Will do the WebSocket handshake&lt;/span&gt;
-    request.toWebSocket(ar -&amp;gt; {
-      &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (ar.succeeded()) {
-        ServerWebSocket socket = ar.result();
-      }
-    });
-  }
-});&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;row-to-json-conversion&quot;&gt;Row to JSON conversion&lt;/h4&gt;
-&lt;p&gt;SQL client can now easily transform a &lt;code&gt;Row&lt;/code&gt; into a JSON object, this can be convienient
-for applications directly transferring JSON results to the client:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs java&quot;&gt;client
-  .preparedQuery(&lt;span class=&quot;hljs-string&quot;&gt;&quot;SELECT * FROM USERS WHERE ID=$1&quot;&lt;/span&gt;)
-  .execute(Tuple.of(id))
-  .onSuccess(row -&amp;gt; {
-    &lt;span class=&quot;hljs-keyword&quot;&gt;if&lt;/span&gt; (row.size() == &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;) {
-      JsonObject json = row.iterator().next().toJson();
-    }
-  });&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h4 id=&quot;oauth2-oidc-pkce&quot;&gt;OAuth2/OIDC PKCE&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;OAuth2Handler&lt;/code&gt; can now handle &lt;a href=&quot;https://tools.ietf.org/html/rfc7636&quot;&gt;PKCE&lt;/a&gt;, which means another layer of security to your application.&lt;/p&gt;
-&lt;h4 id=&quot;redis-resp3&quot;&gt;Redis RESP3&lt;/h4&gt;
-&lt;p&gt;The redis client can now speak &lt;code&gt;RESP3&lt;/code&gt; with redis servers. This means it can handle all the new types and APIs available on redis from all versions (RESP2, redis &amp;lt; 6) and (RESP3, redis &amp;gt;= 6).&lt;/p&gt;
-&lt;h4 id=&quot;finally&quot;&gt;Finally&lt;/h4&gt;
-&lt;p&gt;This is the Beta3 relase of Vert.x 4, you can of course expect another beta as we get feedback from the community and fix issues that we failed to catch before.&lt;/p&gt;
-&lt;p&gt;You can also read the milestone announces to know more about the overral changes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-beta-1-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-beta-1-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-5-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-4-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-4-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-3-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-3-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-2-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-2-released&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://vertx.io/blog/eclipse-vert-x-4-milestone-1-released&quot;&gt;https://vertx.io/blog/eclipse-vert-x-4-milestone-1-released&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The &lt;a href=&quot;https://github.com/vert-x3/wiki/wiki/4.0.0-Deprecations-and-breaking-changes&quot;&gt;deprecations and breaking changes&lt;/a&gt;
- can be found on the wiki.&lt;/p&gt;
-&lt;p&gt;For this release there are no Docker images.&lt;/p&gt;
-&lt;p&gt;The release artifacts have been deployed to &lt;a href=&quot;https://search.maven.org/search?q=g:io.vertx%20AND%20v:4.0.0.Beta1&quot;&gt;Maven Central&lt;/a&gt; and you can get the distribution on &lt;a href=&quot;https://repo1.maven.org/maven2/io/vertx/vertx-stack-manager/4.0.0.Beta1/&quot;&gt;Maven Central&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can bootstrap a Vert.x 4.0.0.Beta3 project using &lt;a href=&quot;https://start.vertx.io&quot;&gt;https://start.vertx.io&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The documentation has been deployed on this preview web-site &lt;a href=&quot;https://vertx-web-site.github.io/docs/&quot;&gt;https://vertx-web-site.github.io/docs/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Thatâ€™s it! Happy coding and see you soon on our user or dev &lt;a href=&quot;https://vertx.io/community&quot;&gt;channels&lt;/a&gt;.&lt;/p&gt;
-&lt;/article&gt;</description>
-	<pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
 </item>
 <item>
 	<title>Nikhil Nanivadekar: MapIterable.getOrDefault() : New but not so new API</title>
@@ -3669,50 +3654,6 @@ will do the right thing.&lt;/p&gt;</description>
 	<description>&lt;div&gt;I've recently completed the initial support for provisioning the new &lt;a href=&quot;https://www.eclipse.org/justj/&quot;&gt;Eclipse JustJ&lt;/a&gt; project, complete with a logo for it.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/--SJ-lAj4jZU/XvRXKtFcMVI/AAAAAAAACzE/rK6Bv1AXbdgdCC8LvFBLcdfjWNjpqmQMgCK4BGAsYHg/s200/justj_title.png&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/--SJ-lAj4jZU/XvRXKtFcMVI/AAAAAAAACzE/rK6Bv1AXbdgdCC8LvFBLcdfjWNjpqmQMgCK4BGAsYHg/justj_title.png&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;I've learned several new technologies and honed existing technology skills to make this happen. For example, I've previously used Inkscape to create nicer images for Oomph; a *.png with alpha is much better than a *.gif with a transparent pixel, particularly with the vogue, dark-theme fashion trend, which for old people like me feels more like the old days of CRT monitors than something modern, but hey, to each their own. In any case, a *.svg is cool, definitely looks great at every resolution, and can easily be rendered to a *.png.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;By the way, did you know that artwork derivative of  Eclipse artwork requires special approval? Previously the Eclipse Board of Directors had to review and approve such logos, but now our beloved, supreme leader, Mike Milinkovich, is empowered to do that personally.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Getting to the point where we can redistribute JREs at Eclipse has been a long and winding road.  This of course required Board approval and your elected Committer Representatives helped push that to fruition last year.  Speaking of which, now there is an exciting late-breaking development: the move of &lt;a href=&quot;https://adoptopenjdk.net/&quot; target=&quot;_blank&quot;&gt;AdoptOpenJDK&lt;/a&gt; to &lt;a href=&quot;https://www.infoq.com/news/2020/06/adoptopenjdk-eclipse-adoptium/?utm_campaign=infoq_content&amp;amp;utm_source=infoq&amp;amp;utm_medium=feed&amp;amp;utm_term=Eclipse&quot; target=&quot;_blank&quot;&gt;Eclipse Adoptium&lt;/a&gt;.  This will be an important source JREs for JustJ!&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;One of the primary goals of JustJ is to provide JREs via p2 update sites such that a product build can easily incorporate a JRE into the product. With that in place, the product runs out-of-the-box regardless of the JRE installed on the end-user's computer, which is particularly useful for products that are not Java-centric where the end-user doesn't care about the fact that Eclipse is implemented using Java.  This will also enable the Eclipse Installer to run out-of-the-box and will enable the installer to create an installation that, at the user's discretion, uses a JRE provided by Eclipse. In all cases, this includes the ability to update the installation's embedded JRE as new ones are released.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The first stage is to build a JRE from a JDK using &lt;a href=&quot;https://www.eclipse.org/justj/?page=index#jlink&quot;&gt;jlink&lt;/a&gt;.  This must run natively on the JDK's actual supported operating system and hardware architecture.  Of course we want to automate this step, and all the steps involved in producing a p2 repository populated with JREs.  This is where I had to learn about Jenkins pipeline scripts.  I'm particularly grateful to MikaÃ«l Barbero for helping me get started with a simple example.  Now I am a pipeline junkie, and of course I had to learn Groovy as well. &lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;In the initial stage, we &lt;a href=&quot;https://www.eclipse.org/justj/?page=index#jre&quot;&gt;generate the JREs&lt;/a&gt; themselves, and that involves using shell scripts effectively.  I'm not a big fan of shell scripts, but they're a necessary evil.  I authored a single script that produces JREs on all the supported operating systems; one that I can run locally on Windows and on my two virtual boxes as well. The pipeline itself needs to run certain stages on specific agents such that their steps are performed on the appropriate operating system and hardware.  I'm grate to &lt;span class=&quot;gD&quot; name=&quot;Robert.Hilbrich@dlr.de&quot; tabindex=&quot;&quot;&gt;Robert Hilbrich of &lt;a href=&quot;https://www.dlr.de&quot;&gt;DLR&lt;/a&gt; for supporting JustJ's builds with their organization's resource packs!  He's also been kind enough to be one of our first test guinea pigs building a product with a JustJ JRE.  The initial stage produces a &lt;a href=&quot;https://download.eclipse.org/justj/www/?page=download#jre-downloads&quot;&gt;set of JREs&lt;/a&gt;.&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;gD&quot; name=&quot;Robert.Hilbrich@dlr.de&quot; tabindex=&quot;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-r2RYf3l1ZUk/XvRaGEkiLTI/AAAAAAAACzg/9w6Na3rjlEU7rTY_v51gFtZMRzxpibM6QCK4BGAsYHg/s5184/IMG_2959.JPG&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-r2RYf3l1ZUk/XvRaGEkiLTI/AAAAAAAACzg/9w6Na3rjlEU7rTY_v51gFtZMRzxpibM6QCK4BGAsYHg/s320/IMG_2959.JPG&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;span class=&quot;gD&quot; name=&quot;Robert.Hilbrich@dlr.de&quot; tabindex=&quot;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;In the next stage, JREs need to be wrapped into plugins and features to produce a p2 repository via a Maven/Tycho build.  This is a huge amount of boiler plate scaffolding that is error-prone to author and challenging to maintain, especially when providing multiple JRE flavors.  So of course we want to automate the generation of this scaffolding as well.  Naturally if we're going to generate something, we need a model to capture the boiled-down essence of what needs to be generated.  So I whipped together an &lt;a href=&quot;https://www.eclipse.org/modeling/emf/&quot;&gt;EMF&lt;/a&gt; model and used JET templates to sketch out the scaffolding. With the super cool &lt;a href=&quot;https://help.eclipse.org/2020-03/index.jsp?topic=%2Forg.eclipse.emf.doc%2Ftutorials%2Fjet%2Fjet.html&amp;amp;cp%3D30_1_3&quot;&gt;JET Editor&lt;/a&gt;, these are really easy to author and maintain.  This stage is &lt;a href=&quot;https://www.eclipse.org/justj/?page=index#jre-p2&quot;&gt;described in the documentation&lt;/a&gt; and produces a &lt;a href=&quot;https://download.eclipse.org/justj/www/?page=download#p2-update-sites&quot;&gt;p2 update site&lt;/a&gt;.  The sites are automatically maintained and the index pages are automatically generated.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;To author nice documentation I had to learn PHP much better.  It's really quite cool and very powerful, particularly for producing pages with dynamic content.  For example, I used it to implement more flexible browsing support of &lt;a href=&quot;https://download.eclipse.org/justj/?file=&quot;&gt;download.eclipse.org&lt;/a&gt; so that one can really see all the files present, even when there is an index.html or index.php in the folder.  In any case, there is now lots of documentation for JustJ to describe everything in detail, and it was authored with the help of PHP scaffolding.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Last but not least, there is an &lt;a href=&quot;https://wiki.eclipse.org/Eclipse_Oomph_Authoring&quot;&gt;Oomph&lt;/a&gt; setup to automate the provisioning of a full development environment along with &lt;a href=&quot;https://www.eclipse.org/justj/?page=developer#setup&quot;&gt;a tutorial&lt;/a&gt; to describe in detail everything in that workspace.  There's no excuse not to contribute.  While authoring this tutorial, I found that creating nice, appropriately-clipped screen captures is super annoying and very time consuming, so I dropped a little goodie into Oomph to make that easier.   You might want to try it. Just add &quot;-Dorg.eclipse.oomph.ui.screenshot=&amp;lt;some-folder-location&amp;gt;&quot; to your eclipse.ini to enable it.  Then, if you hit Ctrl twice quickly, screen captures will be produced immediately based on where your application currently has focus.  If you hit Shift twice quickly, screen captures will be produced after a short delay.  This allows you to bring up a menu from the menu bar, from a toolbar button, or a context menu, and capture that menu.  In all cases, the captures include the &quot;simulated&quot; mouse cursor and starts with the &quot;focus&quot;, expanding outward to the full enclosing window.&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;The bottom line, JustJ generates &lt;b&gt;everything&lt;/b&gt; given just a set of URLs to JDKs as input, and it maintains &lt;b&gt;everything&lt;/b&gt; automatically.  It even provides an &lt;a href=&quot;https://www.eclipse.org/justj/?page=documentation#products&quot;&gt;example&lt;/a&gt; of how to build a product with an embedded JRE to get you started quickly.  And thanks to some test guinea pigs, we know it really works as advertised.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://1.bp.blogspot.com/-BPgLVPZJvXg/XvRatdCFZ6I/AAAAAAAACz0/lYjJuA3eyikploEn7oxbwSA05ZmksryHQCK4BGAsYHg/s5184/IMG_3029.JPG&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-BPgLVPZJvXg/XvRatdCFZ6I/AAAAAAAACz0/lYjJuA3eyikploEn7oxbwSA05ZmksryHQCK4BGAsYHg/s320/IMG_3029.JPG&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;On the personal front, during this time period, I finished my move to Switzerland.  Getting up early here is a feast for the eyes! The movers were scurrying around my apartment the same days as the 2020-06 release, which was also the same day as one of the Eclipse Board meetings.  That was a little too much to juggle at once! &lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;At this point, I can make anything work and I can make anything that already works work even better. Need help with something?  I'm easy to find...&lt;br /&gt;&lt;/div&gt;</description>
 	<pubDate>Thu, 25 Jun 2020 08:18:32 +0000</pubDate>
 	<author>noreply@blogger.com (Ed Merks)</author>
-</item>
-<item>
-	<title>Mike Milinkovich: Jakarta EE Is Taking Off</title>
-	<guid isPermaLink="false">http://eclipse-foundation.blog/?p=1547</guid>
-	<link>https://eclipse-foundation.blog/2020/06/23/jakarta-ee-is-taking-off/</link>
-	<description>&lt;p&gt;With the results of the &lt;a href=&quot;http://outreach.jakartaee.org/2020-developer-survey-report&quot;&gt;2020 Jakarta EE survey&lt;/a&gt; and the initial milestone release of the &lt;a href=&quot;https://eclipse-ee4j.github.io/jakartaee-platform/jakartaee9/JakartaEE9&quot;&gt;Jakarta EE 9&lt;/a&gt;, it’s clear the community’s collective efforts are resonating with the global Java ecosystem.&lt;/p&gt;
-&lt;p&gt;Before I get to the survey results, I want to say a huge thank you to everyone who took the time to participate in the survey. We received nearly 2,200 responses from software developers, architects, and decision-makers around the world — an increase of almost 20 percent over last year’s survey. With your insight, we’ve gained a clear and comprehensive view of enterprise Java strategies and priorities globally, which in turn we are freely sharing with the ecosystem.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Jakarta EE Adoption and Compatible Implementations Are on the Rise&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Less than a year after its initial release, Jakarta EE has emerged as the second-place cloud native framework with 35 percent of respondents saying they use it. While the Spring and Spring Boot frameworks are still the leading choices for building cloud native applications, their usage share dropped 13 percent to 44 percent in the 2020 survey results.&lt;/p&gt;
-&lt;p&gt;Combined, Java EE 8 and Jakarta EE 8 hit the mainstream with 55 percent adoption. Jakarta EE 8 was responsible for 17 percent of that usage, despite only shipping for the first time in September 2019. This is truly significant growth.&lt;/p&gt;
-&lt;p&gt;We’re also seeing a strong uptick in Jakarta EE 8 compatible products. Companies including IBM, Red Hat, Payara, Primeton, TmaxSoft, and Apusic now have Jakarta EE 8 Full Platform compatible products. Since January 2020, we’ve had four new Full Platform compatible implementations and one new Web Profile compatible implementation. In addition to Eclipse GlassFish 5.1, this brings Jakarta EE 8 adoption to 12 compatible products. This is an outstanding achievement for the Jakarta EE community to have more full platform compatible products in 8 months than Java EE 8 had in over 2 years. You can see the complete list&lt;a href=&quot;https://jakarta.ee/compatibility/&quot;&gt; here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can also expect to see additional compatible implementations in the coming months as more applications are passing Technology Compatibility Kit (TCK) tests and are well on their way to becoming certified as Jakarta EE 8-compatible products.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Architectural Approaches Are Evolving&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;This year’s Jakarta EE survey also showed a slight drop in the popularity of using a microservices architecture for implementing Java systems in the cloud compared to last year. At the same time, use of monolithic architectures for implementing Java systems in the cloud nearly doubled since last year’s survey and is now at 25 percent.&lt;/p&gt;
-&lt;p&gt;These results may indicate that companies are pragmatically choosing to simply “lift and shift” existing applications to the cloud instead of rearchitecting them as microservices.&lt;/p&gt;
-&lt;p&gt;Interestingly, the survey also indicated the Jakarta EE community would like to see better support for microservices in the platform. When you combine this fact with the rise of Jakarta EE, it’s reasonable to believe developers may be starting to favor vendor-neutral standards for building Java microservices over single-vendor microservices frameworks.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;The Industry Is Moving to the New Jakarta EE Namespace&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;The support we’re seeing for the adoption of the new namespace in Jakarta EE 9 reinforces the value the industry sees in Jakarta EE. Technology leaders are already investing to ensure their software supports the Jakarta EE 9 namespace changes and others have indicated they will do the same. Some of these implementations include:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Eclipse GlassFish 6.0 milestone release is available to &lt;a href=&quot;https://eclipse-ee4j.github.io/glassfish/download&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Jetty 11.0.0-alpha0 milestone release is available to &lt;a href=&quot;https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution/11.0.0-alpha0/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Apache Tomcat 10.0 M6 milestone release is available to &lt;a href=&quot;https://tomcat.apache.org/download-10.cgi&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Payara Platform 6 milestone release coming in Q4 2020&lt;/li&gt;
-&lt;li&gt;OpenLiberty 20.0.0.7 Beta release is available with basic Web application support to &lt;a href=&quot;https://openliberty.io/downloads/#runtime_betas&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Apache TomEE 9.0 milestone release using Eclipse Transformer project tools is available to &lt;a href=&quot;http://tomee.apache.org/download-ng.html&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;WildFly 21 is planning a milestone release for fall 2020&lt;/li&gt;
-&lt;li&gt;Piranha Micro p20.6.1 milestone release is available to &lt;a href=&quot;https://piranha.cloud/&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;download&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;While the Jakarta EE 9 tooling release doesn’t include new features, it’s a very&lt;a href=&quot;https://blogs.eclipse.org/post/mike-milinkovich/moving-forward-jakarta-ee-9&quot;&gt; important and necessary step&lt;/a&gt; on the road to Jakarta EE 10 and the next era of innovation using cloud native technologies for Java. With the full Jakarta EE 9 release in fall this year, Jakarta EE will be ideally positioned to drive true open source, cloud native innovation using Java.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Diversity, Achieved&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;One of the items that I am particularly happy about is the achievement of establishing Jakarta EE as a vendor-neutral, community-led technology platform. When we started the process of moving Java EE from Oracle to the Eclipse Foundation there were some who doubted that it could be accomplished successfully. The &lt;a href=&quot;https://projects.eclipse.org/projects/ee4j/who&quot;&gt;numbers tell the story&lt;/a&gt;: Oracle’s contributions are still leading the pack at 27%, but the community-at-large is&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;JakartEEDev v2&quot; class=&quot; size-full wp-image-1551 aligncenter&quot; src=&quot;https://mmilinkov.files.wordpress.com/2020/06/jakarteedev-v2.png?w=700&quot; /&gt;&lt;br /&gt;
-now over 40%. Contributions from our other members are led by Payara, VMware (Pivotal), Red Hat, and IBM. Based on these results, it is clear that Jakarta EE has truly achieved its original objective of becoming a vendor-neutral, community-led industry initiative. A lot of people worked very hard to achieve this, and I’m thrilled by the results.&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Discover Jakarta EE&lt;/b&gt;&lt;/p&gt;
-&lt;p&gt;Here are three ways to learn more about Jakarta EE and understand why it’s gaining mainstream adoption so quickly:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Join the community at the Jakarta EE 9 Milestone Release Virtual Party and networking opportunity on Tuesday, June 23 at 11:00 a.m. EDT. To register for the event, click &lt;a href=&quot;https://www.crowdcast.io/e/jakartaee9_milestonereleaseparty&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Find out more about the Jakarta EE 9 milestone release&lt;a href=&quot;https://jakarta.ee/specifications/platform/&quot;&gt; here&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Review the complete 2020 Jakarta EE Survey results &lt;a href=&quot;https://outreach.jakartaee.org/2020-developer-survey-report&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;small&gt;Edit: Reflect IBM’s contributions&lt;br /&gt;
-Edit #2: Add link to Apache TomEE download&lt;br /&gt;
-&lt;/small&gt;&lt;/p&gt;</description>
-	<pubDate>Tue, 23 Jun 2020 11:03:22 +0000</pubDate>
 </item>
 <item>
 	<title>InfoQ Eclipse feed: AdoptOpenJDK to Become Eclipse Adoptium</title>
