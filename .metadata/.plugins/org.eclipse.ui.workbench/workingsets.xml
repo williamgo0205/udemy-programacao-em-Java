@@ -2,10 +2,11 @@
 <workingSetManager>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1595173287838_2" label="Programação_Em_Java_Basico_ao_Avançado" name="Programação_Em_Java_Basico_ao_Avançado">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GeekJava" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Mercado" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JavaEssencial" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/JavaDesktop" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Game" type="4"/>
-<item elementID="=Mercado" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Banco" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1595172201537_0" label="Window Working Set" name="Aggregate for window 1595172201537"/>
 </workingSetManager>
